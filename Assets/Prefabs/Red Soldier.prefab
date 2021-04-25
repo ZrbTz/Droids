@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1167720378780350417}
   - component: {fileID: 1167720378780350419}
   m_Layer: 0
-  m_Name: Soldier
+  m_Name: Red Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,10 +91,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9a947973a51f6742aa807ff40c33e10, type: 2}
+  - {fileID: 2100000, guid: c6a0cc206b15ea947b1ad8a5e1367e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,6 +116,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &1167720378780350421
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -242,10 +244,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9a947973a51f6742aa807ff40c33e10, type: 2}
+  - {fileID: 2100000, guid: c6a0cc206b15ea947b1ad8a5e1367e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -266,6 +269,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &1167720379031704477
 CapsuleCollider:
   m_ObjectHideFlags: 0
