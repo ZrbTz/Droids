@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2971129861196802901}
   - component: {fileID: 2203466694234465520}
   - component: {fileID: 4139016970570764346}
-  - component: {fileID: 3739797016550029616}
+  - component: {fileID: 6279294033831898495}
   m_Layer: 0
   m_Name: Tile_Strada
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3739797016550029616
-MeshCollider:
+--- !u!65 &6279294033831898495
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -462981019419857548, guid: 9b1af0a1181cdfa468deaa2ef5b10271, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.000100000005, z: 0.02}
+  m_Center: {x: 0, y: -0.00064999994, z: 0}
