@@ -25,7 +25,7 @@ public class AttackSystem : MonoBehaviour
         {
             GameObject projectile_shooted = Instantiate(projectile);
             projectile_shooted.transform.position = shooter.transform.TransformPoint(Vector3.zero);
-            projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
+            projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x + shooter.transform.rotation.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
             projectile_shooted.GetComponent<Shot>().damage = damage;
             projectile_shooted.GetComponent<Rigidbody>().AddForce(velocity * 1000 * shooter.transform.forward, ForceMode.Force);
         }

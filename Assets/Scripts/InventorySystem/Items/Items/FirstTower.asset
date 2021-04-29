@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Test
   iconPrefab: {fileID: 0}
   amount: 1
-  placeableItem: {fileID: 2529727251472555911, guid: 2c74fe0dce5b1034db48395e4c09e527, type: 3}
+  placeableItem: {fileID: 2529727251472555911, guid: 2345e48d7a8e7504fb222cdaa1aac50f, type: 3}
   placeablePreviewItem: {fileID: 0}
   layerMask:
     serializedVersion: 2

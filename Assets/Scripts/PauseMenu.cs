@@ -16,22 +16,30 @@ public class PauseMenu : MonoBehaviour{
         }
     }
     public static void pauseWithoutUI() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0f;
         isPaused = true;
     }
 
     public static void unpauseWithoutUI() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Time.timeScale = 1f;
         isPaused = false;
     }
 
     void pause(){
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
     }
 
     public void resume(){
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;

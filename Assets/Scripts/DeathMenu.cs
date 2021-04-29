@@ -7,6 +7,8 @@ public class DeathMenu : MonoBehaviour{
 
     public GameObject deathMenuUI;
     public void showDeathMenu() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         PauseMenu.pauseWithoutUI();
         deathMenuUI.SetActive(true);
     }
