@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 2529727251472555909}
   - component: {fileID: 3635608231129675102}
   - component: {fileID: 5788703291657854440}
+  - component: {fileID: -7467009793739004398}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -295,6 +296,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 6947469920529991126, guid: 61b51a372261a6a47a85dde596d3351d, type: 3}
+--- !u!114 &-7467009793739004398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529727251472555911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211f3121c008f6b4fa91e451afc915d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  holdTime: 1
+  interactionKey: 102
+  itemObject: {fileID: 11400000, guid: 32d91ebfda87f9740ac8e3f833b3ad55, type: 2}
+  pickSound: {fileID: 0}
 --- !u!1 &2529727251677286297
 GameObject:
   m_ObjectHideFlags: 0
