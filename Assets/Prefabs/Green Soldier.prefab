@@ -13,7 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350416, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: m_Acceleration
-      value: 30
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167720378780350416, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 3600
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350417, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: health
@@ -79,5 +83,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cf163e1c98b9d204485c9d738b76a1e5, type: 2}
+    - target: {fileID: 7170873629195753095, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
+      propertyPath: iconPrefab
+      value: 
+      objectReference: {fileID: 5735984854590085828, guid: 07b2743f9462e424996b0671e8dce6d4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}

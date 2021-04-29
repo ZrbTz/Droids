@@ -18,12 +18,14 @@ public class Soldier : Unit {
     private NavMeshAgent navMeshAgent;
     private SoldierState state;
     private float attackTime;
+    private int randomArea;
 
     protected override void Start() {
         base.Start();
         navMeshAgent = GetComponent<NavMeshAgent>();
         nexus = GameManager.Instance.nexus;
         enemy = true;
+        randomArea = Map.Instance.GetRandomArea();
         StartMarching();
     }
 
@@ -68,6 +70,7 @@ public class Soldier : Unit {
     private void StartMarching() {
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = nexus.transform.position;
+        navMeshAgent.SetAreaCost(randomArea, 1f);
         state = SoldierState.Marching;
     }
 

@@ -79,5 +79,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Soldier
       objectReference: {fileID: 0}
+    - target: {fileID: 7170873629195753095, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
+      propertyPath: iconPrefab
+      value: 
+      objectReference: {fileID: 5735984854590085828, guid: e7e932f6d17713a40adc018b62341d3c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
