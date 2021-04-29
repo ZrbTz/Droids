@@ -3,33 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[System.Serializable]
+public class Horde {
+    public GameObject enemy;
+    public int count;
+    public float delay;
+}
+
+[System.Serializable]
+public class BigHorde {
+    public Horde[] hordes;
+}
+
 public class SpawnEnemy : MonoBehaviour
 {
-    public KeyCode spawnKey;
-    public bool active;
-    Coroutine spawnCoroutine;
-
-    public enum SpawnState { SPAWNING, READY, WAITING};
-
-    [System.Serializable]
-    public class Horde {
-        public GameObject enemy;
-        public int count;
-        public float delay;
-    }
-
-    [System.Serializable]
-    public class BigHorde {
-        public Horde[] hordes;
-        public bool needKey = true;
-    }
-
+    private GameManager gm;
     public BigHorde[] bigHordes;
-    private int nextBigHorde = 0;
-    private float searchCountDown = 1f;
-    public SpawnState state = SpawnState.READY;
 
-    //[SerializeField] GameObject enemy;
     [SerializeField] float block_width = 5.0f;
     [SerializeField] float block_length = 5.0f;
     [SerializeField] int maxtimeSpawn = 2;
@@ -39,7 +29,7 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        active = false;
+        gm = GameManager.Instance;
         _spawnZoneCollider = this.gameObject.GetComponent<BoxCollider>();
         Vector2 zoneNumber = new Vector2(Mathf.Floor(_spawnZoneCollider.size.x / block_width), Mathf.Floor(_spawnZoneCollider.size.z / block_length));
         for (int i = 0; i < zoneNumber[1]; i++)
@@ -60,37 +50,8 @@ public class SpawnEnemy : MonoBehaviour
         }
     }
 
-    bool allKilled() {
-        searchCountDown -= Time.deltaTime;
-        if (searchCountDown <= 0f) {
-            if (GameObject.FindWithTag("Enemy") == null) return true;
-            searchCountDown = 1f;
-        }
-        return false;
-    }
-
-    void LevelEnd() {
-        Debug.Log("Spawner empty");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (state == SpawnState.WAITING) {
-            if (allKilled()) {
-                state = SpawnState.READY;
-                Debug.Log("Press E to new horde");
-            }
-            else return;
-        }
-
-        if (state == SpawnState.READY && (!bigHordes[nextBigHorde].needKey || Input.GetKeyUp(spawnKey)))
-        {
-                state = SpawnState.SPAWNING;
-                active = true;
-                if (nextBigHorde + 1 > bigHordes.Length - 1) LevelEnd();
-                spawnCoroutine = StartCoroutine(RandomicSpawn(bigHordes[nextBigHorde++]));
-        }
+    public void spawnHorde(int nextHorde) {
+        StartCoroutine(RandomicSpawn(bigHordes[nextHorde]));
     }
 
     IEnumerator RandomicSpawn(BigHorde bigHorde)
@@ -114,8 +75,7 @@ public class SpawnEnemy : MonoBehaviour
             }
         }
         Debug.Log("Fine spawn");
-        state = SpawnState.WAITING;
-        active = false;
+        gm.signalSpawnEnd();
         yield break;
     }
 
