@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4030409495853976773}
+  - component: {fileID: 4921314667869152515}
+  - component: {fileID: 7842200963819833551}
+  - component: {fileID: 2761550011173332899}
   m_Layer: 0
   m_Name: SuperTile_Lato_Incrocio
   m_TagString: Untagged
@@ -36,6 +39,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &4921314667869152515
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105901410889778158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8333335, y: 0.005, z: 6}
+  m_Center: {x: 0.08333335, y: -0.0025, z: 0.5}
+--- !u!65 &7842200963819833551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105901410889778158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16666675, y: 0.005, z: 6}
+  m_Center: {x: -0.41666675, y: -0.0325, z: 0.5}
+--- !u!65 &2761550011173332899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105901410889778158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.05, z: 6}
+  m_Center: {x: -0.3250001, y: -0.015, z: 0.5}
 --- !u!1001 &253134602143579622
 PrefabInstance:
   m_ObjectHideFlags: 0
