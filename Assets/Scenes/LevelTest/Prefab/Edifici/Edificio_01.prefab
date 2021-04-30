@@ -11,10 +11,6 @@ GameObject:
   - component: {fileID: 5043956065997128953}
   - component: {fileID: 4075158677236711889}
   - component: {fileID: 5069388116027975604}
-  - component: {fileID: 4647025553532994277}
-  - component: {fileID: 8191796727070549588}
-  - component: {fileID: 7173892029188679225}
-  - component: {fileID: 3166593509196977421}
   m_Layer: 0
   m_Name: Cornice
   m_TagString: Untagged
@@ -85,58 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4647025553532994277
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571531412383782070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.024911404, y: 0.20000005, z: 7.04}
-  m_Center: {x: 3.5075443, y: 1.1, z: 0}
---- !u!65 &8191796727070549588
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571531412383782070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.04, y: 0.20000005, z: 0.049437523}
-  m_Center: {x: 0, y: 1.1, z: 3.4952812}
---- !u!65 &7173892029188679225
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571531412383782070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.049437523, y: 0.20000005, z: 7.037489}
-  m_Center: {x: -3.4952812, y: 1.1, z: 0.0012556314}
---- !u!65 &3166593509196977421
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571531412383782070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.0368023, y: 0.20000005, z: 0.03147602}
-  m_Center: {x: -0.001598835, y: 1.1, z: -3.5060773}
 --- !u!1 &8649362334140957257
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,5 +175,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7, y: 3, z: 7}
+  m_Size: {x: 7.04, y: 3, z: 7.04}
   m_Center: {x: 0, y: 1.5, z: 0}
