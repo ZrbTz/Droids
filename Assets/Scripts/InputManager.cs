@@ -66,7 +66,7 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetKeyDown(throwSecondary))
         {
-            if (inventory.UseItem(1))
+            if (inventory.ShowThrowableTrajectory(1))
             {
                 return true;
             }

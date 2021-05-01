@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Tower", menuName = "Inventory System/Items/Tower")]
+[CreateAssetMenu(fileName = "New Throwable", menuName = "Inventory System/Items/Throwable")]
 public class ThrowableItem : ItemObject
 {
     [Header("Placeable Settings")]
@@ -32,6 +32,15 @@ public class ThrowableItem : ItemObject
         startPoint = player.transform.Find("Direzione");
 
         GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
+
+        if(newPlaced.GetComponent<ProximityPickable>() != null)
+        {
+            newPlaced.GetComponent<ProximityPickable>().DisableInteraction();
+        }
+        if (newPlaced.GetComponentInChildren<GrenadeExplosion>() != null)
+        {
+            newPlaced.GetComponentInChildren<GrenadeExplosion>().puoEsplodere = true;
+        }
 
         newPlaced.transform.position = startPoint.position;
         newPlaced.GetComponent<Rigidbody>().velocity = direction * throwSpeed;
