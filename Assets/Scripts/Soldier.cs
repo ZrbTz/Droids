@@ -59,6 +59,20 @@ public class Soldier : Enemy {
             case SoldierState.Idle:
                 break;
         }*/
+        switch (state)
+        {
+            case SoldierState.Marching:
+                break;
+            case SoldierState.Attacking:
+                if (Time.time - attackTime >= 1 / attackSpeed)
+                {
+                    Attack();
+                    attackTime = Time.time;
+                }
+                break;
+            case SoldierState.Idle:
+                break;
+        }
     }
 
     private void StartMarching() {
@@ -78,8 +92,18 @@ public class Soldier : Enemy {
         StartAttacking();
     }
 
+    override protected void removeTarget(Obstacle bersaglio)
+    {
+        target.Remove(bersaglio);
+        if(target.Count > 0)
+        {
+            StartAttacking();
+        }
+    }
+
     private void StartAttacking()
     {
+        StopMarching();
         currentTarget = target[0];
         Vector3 direction = currentTarget.transform.position - transform.position; direction.y = 0; direction.Normalize();
         transform.rotation = Quaternion.LookRotation(direction);
@@ -96,6 +120,15 @@ public class Soldier : Enemy {
     }
 
     private void Attack() {
+        while (currentTarget == null)
+        {
+            if (target.Count == 0)
+            {
+                StartMarching();
+                return;
+            }
+            currentTarget = target[0];
+        }
         currentTarget.health -= damage;
         if (currentTarget.health <= 0)
         {

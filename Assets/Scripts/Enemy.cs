@@ -57,13 +57,26 @@ public class Enemy : Unit
     {
         if (other.GetComponent<Obstacle>() != null)
         {
-            
+            addTarget(other.GetComponent<Obstacle>());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<Obstacle>() != null)
+        {
+            removeTarget(other.GetComponent<Obstacle>());
         }
     }
 
     protected virtual void addTarget(Obstacle o)
     {
+        target.Add(o);
+    }
 
+    protected virtual void removeTarget(Obstacle o)
+    {
+        target.Remove(o);
     }
 
 }

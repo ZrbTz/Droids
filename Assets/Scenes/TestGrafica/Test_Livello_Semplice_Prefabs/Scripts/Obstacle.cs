@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Obstacle : Unit
 {
-    
+    protected override void Die()
+    {
+        Destroy(gameObject, 0.0f);
+    }
 }

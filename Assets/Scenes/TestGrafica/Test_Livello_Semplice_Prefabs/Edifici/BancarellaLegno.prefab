@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8504389446905945225}
   - component: {fileID: 2212674164679483330}
   - component: {fileID: 8104212900892275520}
+  - component: {fileID: 5438357884979701109}
   m_Layer: 6
   m_Name: BancarellaLegno
   m_TagString: Untagged
@@ -64,6 +65,22 @@ MonoBehaviour:
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 70e28cbc72b4aac4d97c3c5791787d04, type: 2}
   pickSound: {fileID: 0}
+--- !u!114 &5438357884979701109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475021460123897821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52a6147c8790754b9e6cecc3ddc5d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  enemy: 0
+  dead: 0
+  body: {fileID: 0}
 --- !u!1001 &8769123112854992579
 PrefabInstance:
   m_ObjectHideFlags: 0

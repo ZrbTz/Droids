@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2986671562388797171}
   - component: {fileID: 2465819331351536542}
   - component: {fileID: 6712687935024945592}
+  - component: {fileID: -5767446833828175588}
   m_Layer: 6
   m_Name: BancarellaMetallo
   m_TagString: Untagged
@@ -64,6 +65,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.12, z: 1}
   m_Center: {x: 0, y: 0.56, z: 0}
+--- !u!114 &-5767446833828175588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111592731181600257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52a6147c8790754b9e6cecc3ddc5d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  enemy: 0
+  dead: 0
+  body: {fileID: 0}
 --- !u!1001 &3282319698186537211
 PrefabInstance:
   m_ObjectHideFlags: 0

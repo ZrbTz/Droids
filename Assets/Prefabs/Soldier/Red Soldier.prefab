@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1167720378780350417}
   - component: {fileID: 1167720378780350419}
   - component: {fileID: 7170873629195753095}
+  - component: {fileID: 203625638808208958}
   m_Layer: 0
   m_Name: Red Soldier
   m_TagString: Enemy
@@ -174,6 +175,8 @@ MonoBehaviour:
   attackRange: 5
   damage: 1
   destination: {fileID: 0}
+  target: []
+  currentTarget: {fileID: 0}
   fadeSpeed: 1
   rs: []
   cs: []
@@ -206,6 +209,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5735984854590085828, guid: 07b2743f9462e424996b0671e8dce6d4, type: 3}
+--- !u!65 &203625638808208958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167720378780350426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 1.25}
 --- !u!1 &1167720379031704451
 GameObject:
   m_ObjectHideFlags: 0
