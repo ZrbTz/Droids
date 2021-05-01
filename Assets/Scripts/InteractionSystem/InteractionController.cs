@@ -7,6 +7,8 @@ public class InteractionController : MonoBehaviour
     [SerializeField]
     private float interactionDistance;
     private Camera cam;
+    public Interactable interactable;
+    public bool successfulHit;
 
     private int layerMask;
 
@@ -21,15 +23,13 @@ public class InteractionController : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
         RaycastHit hit;
 
-        bool successfulHit = false;
+        successfulHit = false;
 
         if (Physics.Raycast(ray, out hit, interactionDistance, layerMask))
         {
-            Interactable interactable = hit.collider.GetComponent<Interactable>();
-
+            interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null && interactable.IsEnabled())
             {
-                HandleInteraction(interactable);
                 successfulHit = true;
             }
         }
@@ -39,6 +39,16 @@ public class InteractionController : MonoBehaviour
             //gameUI.HideClickButton();
             //gameUI.HideHoldingButton();
         }
+    }
+
+    public bool TryInteracting ()
+    {
+        if (successfulHit)
+        {
+            HandleInteraction(interactable);
+            return true;
+        }
+        return false;
     }
 
     void HandleInteraction(Interactable interactable)

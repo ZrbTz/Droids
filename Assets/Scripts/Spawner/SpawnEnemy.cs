@@ -19,6 +19,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     private GameManager gm;
     public BigHorde[] bigHordes;
+    public GameObject destination;
 
     [SerializeField] float block_width = 5.0f;
     [SerializeField] float block_length = 5.0f;
@@ -69,6 +70,7 @@ public class SpawnEnemy : MonoBehaviour
                 GameObject selectedZone = spawnFreeZones[indexZone];
                 spawnFreeZones.RemoveAt(indexZone);
                 GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy);
+                newEnemy.GetComponent<Soldier>().destination = destination;
                 newEnemy.GetComponent<NavMeshAgent>().Warp(selectedZone.transform.TransformPoint(Vector3.zero));
                 //newEnemy.transform.position = selectedZone.transform.TransformPoint(Vector3.zero);
                 newEnemy.transform.rotation = this.transform.rotation;

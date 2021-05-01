@@ -4,21 +4,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class Soldier : Unit {
+public class Soldier : Enemy {
     private enum SoldierState {
         Marching,
         Attacking,
         Idle
     }
 
-    public float attackSpeed = 1f;
-    public float attackRange = .5f;
-    public float damage = 10f;
-    private Unit nexus;
-    private NavMeshAgent navMeshAgent;
     private SoldierState state;
-    private float attackTime;
-    private int randomArea;
+    private NavMeshAgent navMeshAgent;
 
     protected override void Start() {
         base.Start();
@@ -33,7 +27,7 @@ public class Soldier : Unit {
         base.Update();
         if (dead)
             return;
-        switch (state) {
+        /*switch (state) {
             case SoldierState.Marching:
                 if (nexus.dead) {
                     StopMarching();
@@ -64,12 +58,12 @@ public class Soldier : Unit {
                 break;
             case SoldierState.Idle:
                 break;
-        }
+        }*/
     }
 
     private void StartMarching() {
         navMeshAgent.isStopped = false;
-        navMeshAgent.destination = nexus.transform.position;
+        navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
         state = SoldierState.Marching;
     }
@@ -78,18 +72,36 @@ public class Soldier : Unit {
         navMeshAgent.isStopped = true;
     }
 
-    private void StartAttacking() {
-        Vector3 direction = nexus.transform.position - transform.position; direction.y = 0; direction.Normalize();
+    override protected void addTarget (Obstacle bersaglio)
+    {
+        target.Add(bersaglio);
+        StartAttacking();
+    }
+
+    private void StartAttacking()
+    {
+        currentTarget = target[0];
+        Vector3 direction = currentTarget.transform.position - transform.position; direction.y = 0; direction.Normalize();
         transform.rotation = Quaternion.LookRotation(direction);
         state = SoldierState.Attacking;
     }
 
     private void StopAttacking() {
-
+        if(target.Count > 0)
+        {
+            StartAttacking();
+            return;
+        }
+        StartMarching();
     }
 
     private void Attack() {
-        nexus.health -= damage;
+        currentTarget.health -= damage;
+        if (currentTarget.health <= 0)
+        {
+            target.Remove(currentTarget);
+            StopAttacking();
+        }
     }
 
     protected override void Die() {

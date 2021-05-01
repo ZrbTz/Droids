@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e62d06d9d0946446bb0396c30e9dc78, type: 3}
+  m_Name: BancarellaLegno
+  m_EditorClassIdentifier: 
+  itemType: 0
+  itemName: BancarellaLegno
+  iconPrefab: {fileID: 0}
+  amount: 1
+  placeableItem: {fileID: 919132149155446097, guid: 41318b1d919429e4ba57d1c1bb4ebaa6, type: 3}
+  placeablePreviewItem: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0

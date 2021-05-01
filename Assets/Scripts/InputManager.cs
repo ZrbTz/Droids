@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     private Inventory inventory;
+    public KeyCode placeTurret = KeyCode.E;
 
     void Start()
     {
@@ -13,11 +14,15 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        GetInventoryInput();
+        if (!this.GetComponent<InteractionController>().TryInteracting())
+        {
+            GetInventoryInput();
+        }
     }
 
-    void GetInventoryInput()
+    bool GetInventoryInput()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             inventory.SelectSlot(0);
@@ -46,10 +51,25 @@ public class InputManager : MonoBehaviour
         {
             inventory.SelectPreviousSlot();
         }
-
         if (Input.GetMouseButtonDown(0))
         {
             inventory.UseSelectedItem();
         }
+        */
+        if (Input.GetKeyDown(placeTurret))
+        {
+
+            if (inventory.UseItem(0))
+            {
+                return true;
+            }
+            
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            this.GetComponent<ThirdPersonControllerDash>().Dash();
+        }
+
+        return false;
     }
 }

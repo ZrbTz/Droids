@@ -68,7 +68,7 @@ namespace Invector.vCharacterController
         #region Internal Variables
 
         // movement bools
-        internal bool isJumping;
+        public bool isJumping;
         internal bool isStrafing
         {
             get
@@ -80,7 +80,7 @@ namespace Invector.vCharacterController
                 _isStrafing = value;
             }
         }
-        internal bool isGrounded { get; set; }
+        public bool isGrounded { get; set; }
         internal bool isSprinting { get; set; }
         public bool stopMove { get; protected set; }
 

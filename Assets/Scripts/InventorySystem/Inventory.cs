@@ -12,14 +12,35 @@ public class Inventory : MonoBehaviour
     private InventorySlot[] inventory;
     [SerializeField]
     private int selectedSlot = 0;
+    public int[] inventorySlotSize = { 1, 5 };
 
     void Start()
     {
         inventory = new InventorySlot[size];
     }
 
-    public void AddItem(ItemObject item)
+    public bool AddItem(ItemObject item, int slot)
     {
+        if (slot == -1)
+        {
+            return false;
+        }
+        if (inventory[slot] == null)
+        {
+            inventory[slot] = new InventorySlot(item, item.GetAmount());
+            return true;
+        }
+        if (inventory[slot].item == item)
+        {
+            if (inventory[slot].amount < inventorySlotSize[slot])
+            {
+                inventory[slot].addAmount(1);
+                return true;
+            }
+            return false;
+        }
+        return false;
+        /*
         for (int i = 0; i < size; i++)
         {
             if (inventory[i] == null)
@@ -29,6 +50,7 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
+        */
     }
 
     public void SelectSlot(int newPosition)
@@ -69,6 +91,34 @@ public class Inventory : MonoBehaviour
         if (amount <= 0)
         {
             inventory[selectedSlot] = null;
+            //gameUI.RemoveItem(selectedSlot);
+        }
+        else
+        {
+            //gameUI.UpdateItemCounter(amount, selectedSlot);
+        }
+    }
+
+    public bool UseItem(int slot)
+    {
+        if (inventory[slot] != null)
+        {
+            bool used = inventory[slot].item.Use(this.gameObject);
+            if (used)
+            {
+                DecreaseItemAmount(slot);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public void DecreaseItemAmount(int slot)
+    {
+        int amount = inventory[slot].addAmount(-1);
+        if (amount <= 0)
+        {
+            inventory[slot] = null;
             //gameUI.RemoveItem(selectedSlot);
         }
         else

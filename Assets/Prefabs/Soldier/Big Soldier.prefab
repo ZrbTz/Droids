@@ -13,12 +13,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350417, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: damage
-      value: 100
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350417, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: health
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1167720378780350420, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 00d34b5f1b2e96c49b21aa5786ca6ce0, type: 2}
     - target: {fileID: 1167720378780350422, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: m_RootOrder
       value: 0
