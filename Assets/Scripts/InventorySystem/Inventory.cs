@@ -99,6 +99,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public bool ShowThrowableTrajectory(int slot)
+    {
+        if (inventory[slot] != null)
+        {
+            inventory[slot].item.ShowTrajectory(this.gameObject);
+            return true;
+        }
+        return false;
+    }
+
     public bool UseItem(int slot)
     {
         if (inventory[slot] != null)

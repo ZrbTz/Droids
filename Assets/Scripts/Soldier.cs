@@ -122,6 +122,7 @@ public class Soldier : Enemy {
     private void Attack() {
         while (currentTarget == null)
         {
+            target.Remove(target[0]);
             if (target.Count == 0)
             {
                 StartMarching();

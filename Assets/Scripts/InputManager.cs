@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     private Inventory inventory;
     public KeyCode placeTurret = KeyCode.E;
+    public KeyCode throwSecondary = KeyCode.Q;
 
     void Start()
     {
@@ -58,12 +59,24 @@ public class InputManager : MonoBehaviour
         */
         if (Input.GetKeyDown(placeTurret))
         {
-
             if (inventory.UseItem(0))
             {
                 return true;
             }
-            
+        }
+        if (Input.GetKeyDown(throwSecondary))
+        {
+            if (inventory.UseItem(1))
+            {
+                return true;
+            }
+        }
+        if (Input.GetKeyUp(throwSecondary))
+        {
+            if (inventory.UseItem(1))
+            {
+                return true;
+            }
         }
         if (Input.GetMouseButtonDown(1))
         {

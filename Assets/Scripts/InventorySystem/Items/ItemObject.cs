@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Tower
+    Tower,
+    Throwable
 }
 
 [System.Serializable]
@@ -21,6 +22,11 @@ public abstract class ItemObject : ScriptableObject
     private int amount = 1;
 
     public virtual bool Use(GameObject player)
+    {
+        return false;
+    }
+
+    public virtual bool ShowTrajectory(GameObject player)
     {
         return false;
     }
