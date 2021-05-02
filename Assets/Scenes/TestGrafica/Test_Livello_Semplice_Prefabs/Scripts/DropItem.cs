@@ -6,7 +6,7 @@ public class DropItem : MonoBehaviour
 {
     public GameObject toDrop;
 
-    private void OnDestroy()
+    public void Drop()
     {
         Instantiate(toDrop, this.transform.position, Quaternion.identity);
     }

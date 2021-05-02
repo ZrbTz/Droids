@@ -261,7 +261,7 @@ MonoBehaviour:
   body: {fileID: 0}
   range: 10
   damage: 5
-  fireRate: 1
+  fireRate: 3
   cannonAngularSpeed: 360
   cannonSphere: {fileID: 2529727250776963143}
   cannonMouth: {fileID: 2529727252591151873}

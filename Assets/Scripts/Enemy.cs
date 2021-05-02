@@ -10,7 +10,7 @@ public class Enemy : Unit
     public float damage = 10f;
     protected Unit nexus;
     public GameObject destination;
-    protected List<Obstacle> target;
+    protected List<Obstacle> target = new List<Obstacle>();
     protected Obstacle currentTarget;
     protected float attackTime;
     protected int randomArea;

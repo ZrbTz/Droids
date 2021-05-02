@@ -91,7 +91,7 @@ public class SpawnEnemy : MonoBehaviour
         Debug.Log("Start Spawning");
         for (int j = 0; j < bigHorde.hordes.Length; j++)
         {
-            Debug.Log("Ciclo Timed Spawn");
+
             yield return new WaitForSeconds(bigHorde.hordes[j].delay);
             float elapsedTime = 0.0f;
             float totTime = bigHorde.hordes[j].tempoPerSpawnare;
@@ -99,21 +99,21 @@ public class SpawnEnemy : MonoBehaviour
             while (elapsedTime < totTime)
             {
                 //percentuale tempo passata > percentuale nemici spawnati
-                if (elapsedTime / totTime > counter / bigHorde.hordes[j].count)
+                if (elapsedTime / totTime > (float)counter / bigHorde.hordes[j].count)
                 {
-                    Debug.Log("posso spawnare");
-                    while (spawnFreeZones.Count == 0) yield return new WaitForSeconds(0.1f);
-                    int indexZone = Random.Range(0, spawnFreeZones.Count - 1);
-                    GameObject selectedZone = spawnFreeZones[indexZone];
-                    GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy);
+                    Vector3 spawnPosition = this.transform.position;
+                    spawnPosition.x = spawnPosition.x + Random.Range(-3.0f, 3.0f);
+                    spawnPosition.z = spawnPosition.z + Random.Range(-3.0f, 3.0f);
+                    
+                    GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy, spawnPosition, Quaternion.identity);
                     newEnemy.GetComponent<Enemy>().destination = destination;
-                    newEnemy.GetComponent<NavMeshAgent>().Warp(selectedZone.transform.TransformPoint(Vector3.zero));
-                    newEnemy.transform.rotation = this.transform.rotation;
+
                     counter++;
                 }
                 elapsedTime += Time.deltaTime;
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForFixedUpdate();
             }
+
         }
         Debug.Log("Fine spawn");
         gm.signalSpawnEnd();

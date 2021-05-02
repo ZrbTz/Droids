@@ -18,7 +18,13 @@ public class Unit : MonoBehaviour {
     }
 
     protected virtual void Update() {
-        if(health <= 0 && !dead) {
+        if(health <= 0 && !dead)
+        {
+            DropItem di = this.GetComponent<DropItem>();
+            if (di != null)
+            {
+                di.Drop();
+            }
             Die();
             dead = true;
         }

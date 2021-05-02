@@ -19,6 +19,7 @@ public class NewNexus : MonoBehaviour
         {
             nexus.health -= other.GetComponent<Enemy>().damage;
             other.GetComponent<Enemy>().FadeAndDisappear();
+            Debug.Log("Il nexus ha subito danno!");
         }
     }
 }
