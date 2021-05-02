@@ -10,15 +10,16 @@ public class Enemy : Unit
     public float damage = 10f;
     protected Unit nexus;
     public GameObject destination;
-    public List<Obstacle> target;
-    public Obstacle currentTarget;
+    protected List<Obstacle> target;
+    protected Obstacle currentTarget;
     protected float attackTime;
     protected int randomArea;
 
     public float fadeSpeed = 1.0f;
-    public Renderer[] rs;
-    public List<Color> cs = new List<Color>();
-
+    /*
+    private Renderer[] rs;
+    private List<Color> cs = new List<Color>();
+    */
     public void FadeAndDisappear()
     {
         //in unity la trasparenza ha dei problemi con lo Z-buffer, il che produce artefatti significativi

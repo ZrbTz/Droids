@@ -8,6 +8,7 @@ public class Horde {
     public GameObject enemy;
     public int count;
     public float delay;
+    public float tempoPerSpawnare = 5.0f;
 }
 
 [System.Serializable]
@@ -52,18 +53,22 @@ public class SpawnEnemy : MonoBehaviour
     }
 
     public void spawnHorde(int nextHorde) {
-        StartCoroutine(RandomicSpawn(bigHordes[nextHorde]));
+        //StartCoroutine(RandomicSpawn(bigHordes[nextHorde]));
+        StartCoroutine(TimedSpawn(bigHordes[nextHorde]));
     }
 
     IEnumerator RandomicSpawn(BigHorde bigHorde)
     {
         Debug.Log("Start Spawning");
-        for (int j = 0; j < bigHorde.hordes.Length; j++) {
+        for (int j = 0; j < bigHorde.hordes.Length; j++)
+        {
             yield return new WaitForSeconds(bigHorde.hordes[j].delay);
-            for (int i = 0; i < bigHorde.hordes[j].count; i++) {
+            for (int i = 0; i < bigHorde.hordes[j].count; i++)
+            {
                 float timeToWait = Random.Range(0.0f, maxtimeSpawn);
                 yield return new WaitForSeconds(timeToWait);
-                while (spawnFreeZones.Count == 0) {
+                while (spawnFreeZones.Count == 0)
+                {
                     yield return new WaitForSeconds(1);
                 }
                 int indexZone = Random.Range(0, spawnFreeZones.Count - 1);
@@ -74,6 +79,35 @@ public class SpawnEnemy : MonoBehaviour
                 newEnemy.GetComponent<NavMeshAgent>().Warp(selectedZone.transform.TransformPoint(Vector3.zero));
                 //newEnemy.transform.position = selectedZone.transform.TransformPoint(Vector3.zero);
                 newEnemy.transform.rotation = this.transform.rotation;
+            }
+        }
+        Debug.Log("Fine spawn");
+        gm.signalSpawnEnd();
+        yield break;
+    }
+
+    IEnumerator TimedSpawn(BigHorde bigHorde)
+    {
+        Debug.Log("Start Spawning");
+        for (int j = 0; j < bigHorde.hordes.Length; j++)
+        {
+            yield return new WaitForSeconds(bigHorde.hordes[j].delay);
+            float elapsedTime = 0.0f;
+            float totTime = bigHorde.hordes[j].tempoPerSpawnare;
+            int counter = 0;
+            while (elapsedTime < totTime)
+            {
+                if (elapsedTime / totTime > counter / bigHorde.hordes[j].count)
+                {
+                    int indexZone = Random.Range(0, spawnFreeZones.Count - 1);
+                    GameObject selectedZone = spawnFreeZones[indexZone];
+                    GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy);
+                    newEnemy.GetComponent<Enemy>().destination = destination;
+                    newEnemy.GetComponent<NavMeshAgent>().Warp(selectedZone.transform.TransformPoint(Vector3.zero));
+                    newEnemy.transform.rotation = this.transform.rotation;
+                }
+                elapsedTime += Time.deltaTime;
+                yield return new WaitForSeconds(0);
             }
         }
         Debug.Log("Fine spawn");
