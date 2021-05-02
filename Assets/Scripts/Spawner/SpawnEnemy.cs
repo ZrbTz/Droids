@@ -91,23 +91,28 @@ public class SpawnEnemy : MonoBehaviour
         Debug.Log("Start Spawning");
         for (int j = 0; j < bigHorde.hordes.Length; j++)
         {
+            Debug.Log("Ciclo Timed Spawn");
             yield return new WaitForSeconds(bigHorde.hordes[j].delay);
             float elapsedTime = 0.0f;
             float totTime = bigHorde.hordes[j].tempoPerSpawnare;
             int counter = 0;
             while (elapsedTime < totTime)
             {
+                //percentuale tempo passata > percentuale nemici spawnati
                 if (elapsedTime / totTime > counter / bigHorde.hordes[j].count)
                 {
+                    Debug.Log("posso spawnare");
+                    while (spawnFreeZones.Count == 0) yield return new WaitForSeconds(0.1f);
                     int indexZone = Random.Range(0, spawnFreeZones.Count - 1);
                     GameObject selectedZone = spawnFreeZones[indexZone];
                     GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy);
                     newEnemy.GetComponent<Enemy>().destination = destination;
                     newEnemy.GetComponent<NavMeshAgent>().Warp(selectedZone.transform.TransformPoint(Vector3.zero));
                     newEnemy.transform.rotation = this.transform.rotation;
+                    counter++;
                 }
                 elapsedTime += Time.deltaTime;
-                yield return new WaitForSeconds(0);
+                yield return new WaitForSeconds(0.1f);
             }
         }
         Debug.Log("Fine spawn");
