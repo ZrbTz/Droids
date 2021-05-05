@@ -29,6 +29,6 @@ public class SlowEnemyZone : MonoBehaviour
 
     private void OnDestroy() {
         foreach(Collider c in affected)
-            c.GetComponent<NavMeshAgent>().speed = c.GetComponent<NavMeshAgent>().speed / (1 - slowPercentuale);
+            if(c != null) c.GetComponent<NavMeshAgent>().speed = c.GetComponent<NavMeshAgent>().speed / (1 - slowPercentuale);
     }
 }
