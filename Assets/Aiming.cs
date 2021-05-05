@@ -12,6 +12,12 @@ public class Aiming : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
+        //transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
+        RaycastHit hit;
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+
+        if (Physics.Raycast(ray, out hit)) {
+            transform.LookAt(hit.point);
+        }
     }
 }
