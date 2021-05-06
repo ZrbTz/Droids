@@ -333,6 +333,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140686, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: airSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140686, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: jumpTimer
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140686, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: jumpHeight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140686, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: extraGravity
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140686, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: freeSpeed.sprintSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140686, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: freeSpeed.runningSpeed
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 556552930772955910, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -994,11 +1018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2529727251472555909, guid: 2345e48d7a8e7504fb222cdaa1aac50f, type: 3}
       propertyPath: damage
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2529727251472555909, guid: 2345e48d7a8e7504fb222cdaa1aac50f, type: 3}
       propertyPath: fireRate
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2529727251472555911, guid: 2345e48d7a8e7504fb222cdaa1aac50f, type: 3}
       propertyPath: m_Name
@@ -4718,10 +4742,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f69c1670435ea04b844751237dbe41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 50
+  dashSpeed: 35
   dashTime: 0.3
   dashCountdown: 2
-  dashStopTime: 0.2
+  dashStopTime: 0.01
 --- !u!1001 &1487523386
 PrefabInstance:
   m_ObjectHideFlags: 0

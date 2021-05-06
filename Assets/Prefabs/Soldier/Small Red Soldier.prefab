@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec546a82c6c3ba469c67924c1e5fa5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 2
   enemy: 1
   dead: 0
   body: {fileID: 3251823295560354859}
@@ -145,11 +145,7 @@ MonoBehaviour:
   attackRange: 5
   damage: 1
   destination: {fileID: 0}
-  target: []
-  currentTarget: {fileID: 0}
   fadeSpeed: 1
-  rs: []
-  cs: []
 --- !u!54 &3251823294879767622
 Rigidbody:
   m_ObjectHideFlags: 0
