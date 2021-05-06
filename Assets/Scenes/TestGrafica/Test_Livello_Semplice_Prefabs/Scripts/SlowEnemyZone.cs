@@ -11,6 +11,7 @@ public class SlowEnemyZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Something eee");
         if(other.GetComponent<Enemy>() != null)
         {
             other.GetComponent<NavMeshAgent>().speed = other.GetComponent<NavMeshAgent>().speed * (1 - slowPercentuale);
