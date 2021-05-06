@@ -15,7 +15,7 @@ public class InteractionController : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        layerMask = ~LayerMask.GetMask("Player", "AreaEffect");
+        layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Border", "Item", "Projectile");
     }
 
     void Update()

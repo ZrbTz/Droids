@@ -13,7 +13,7 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] GameObject berserkProjectile;
     [SerializeField] float velocity = 1.0f;
     [SerializeField] float damage = 30.0f;
-    [SerializeField] float berserkTime = 10.0f;
+    [SerializeField] float berserkTime = 15.0f;
     float elapsedBerserkTime = 0.0f;
     [SerializeField] GameObject shooter;
 
@@ -56,11 +56,13 @@ public class AttackSystem : MonoBehaviour
             projectile = berserkProjectile;
             velocity = velocity*1.5f;
             fireDelay = fireDelay/1.5f;
+            damage = damage * 10;
         }
         else {
             projectile = standardProjectile;
             velocity = velocity/1.5f;
             fireDelay = fireDelay*1.5f;
+            damage = damage / 10;
         }
     }
 }

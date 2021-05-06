@@ -37,7 +37,7 @@ public class Unit : MonoBehaviour {
     }
 
     protected virtual void Die() {
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject);
     }
 
     protected virtual void Die(float timeToDie)

@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 8617454769851983961}
   - component: {fileID: 299425163215620365}
   - component: {fileID: 7309525243833964980}
+  - component: {fileID: -3986817633096664607}
   m_Layer: 0
   m_Name: BigBossSoldier
   m_TagString: Enemy
@@ -299,3 +300,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2, z: 1.5}
   m_Center: {x: 0, y: 0, z: 1.25}
+--- !u!114 &-3986817633096664607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8617454769851983952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361895cf814e9c8449be5750c47b91c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDrop: {fileID: 1828886804861613761, guid: d672269bb2091a34a978b770eb07e7b0, type: 3}

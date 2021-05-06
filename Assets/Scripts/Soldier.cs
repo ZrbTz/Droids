@@ -139,7 +139,6 @@ public class Soldier : Enemy {
     }
 
     protected override void Die() {
-        base.Die();
         switch (state) {
             case SoldierState.Attacking:
                 StopAttacking();
@@ -149,5 +148,6 @@ public class Soldier : Enemy {
                 break;
         }
         state = SoldierState.Idle;
+        base.Die();
     }
 }

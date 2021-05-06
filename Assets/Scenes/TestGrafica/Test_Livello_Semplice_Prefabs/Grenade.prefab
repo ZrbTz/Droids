@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4591158821390292114}
   - component: {fileID: 8615975518325970261}
   - component: {fileID: 4105669336973286770}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grenade_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   danno: 3
   raggio: 3
   esplosione: {fileID: 2697049371549225589, guid: 1af081b55a99b774fbdd5d8533749dcd, type: 3}
+  delayEsplosione: 0.5
 --- !u!135 &8615975518325970261
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 5303728209078332695}
   - component: {fileID: 3749880644636196949}
   - component: {fileID: 3589854496029654779}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
