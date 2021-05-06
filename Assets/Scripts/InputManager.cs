@@ -15,10 +15,7 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if (!this.GetComponent<InteractionController>().TryInteracting())
-        {
-            GetInventoryInput();
-        }
+            GetInventoryInput(); 
     }
 
     bool GetInventoryInput()
@@ -57,7 +54,7 @@ public class InputManager : MonoBehaviour
             inventory.UseSelectedItem();
         }
         */
-        if (Input.GetKeyDown(placeTurret))
+        if (!this.GetComponent<InteractionController>().TryInteracting() && Input.GetKeyDown(placeTurret))
         {
             if (inventory.UseItem(0))
             {

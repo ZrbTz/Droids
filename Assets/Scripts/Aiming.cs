@@ -19,6 +19,6 @@ public class Aiming : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
             transform.LookAt(hit.point);
         }
-        else  transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
+        //else  transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
     }
 }
