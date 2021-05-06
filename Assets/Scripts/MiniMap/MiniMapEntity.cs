@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class MiniMapEntity : MonoBehaviour {
     [SerializeField] private Image iconPrefab;
     private Image icon;
+    public bool isPlayer = false;
 
-    private void Start() {
+    protected virtual void Start() {
         icon = Instantiate(iconPrefab);
         MiniMap.Instance.AddEntity(this);
     }

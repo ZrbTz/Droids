@@ -51,7 +51,7 @@ public class MiniMap : MonoBehaviour {
     }
 
     private void LateUpdate() {
-        foreach(var entity in entities) {
+        foreach (var entity in entities) {
             Vector3 position = entity.transform.position; position.y = 0;
             Vector3 iconRotation = entity.Icon.rectTransform.eulerAngles;
             float x = (position.x - bottomLeftCorner.x) * widthScale;
@@ -59,6 +59,8 @@ public class MiniMap : MonoBehaviour {
             iconRotation.z = -entity.transform.eulerAngles.y;
             entity.Icon.rectTransform.localPosition = new Vector2(x, y) - center;
             entity.Icon.rectTransform.eulerAngles = iconRotation;
+            if (entity.isPlayer)
+                entity.Icon.rectTransform.SetAsLastSibling();
         }
     }
 

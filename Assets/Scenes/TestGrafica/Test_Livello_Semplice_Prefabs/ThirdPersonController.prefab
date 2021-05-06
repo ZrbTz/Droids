@@ -480,6 +480,7 @@ MonoBehaviour:
   groundMinDistance: 0.25
   groundMaxDistance: 0.5
   slopeLimit: 45
+  isJumping: 0
 --- !u!114 &556552930742140687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 5
   selectedSlot: 0
+  inventorySlotSize: 0100000005000000
 --- !u!114 &4238733920608669253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionDistance: 100
+  interactable: {fileID: 0}
+  successfulHit: 0
 --- !u!114 &8425319771992597219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff9cb0a56427194991aba5295b5e648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeTurret: 101
+  throwSecondary: 113
 --- !u!54 &556552930742140680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -584,9 +590,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyShoot: 113
-  projectile: {fileID: 7562490761220562059, guid: b4e1c88c56fc81749bf02a0440ad61fe, type: 3}
+  fireDelay: 0.5
+  standardProjectile: {fileID: 0}
+  berserkProjectile: {fileID: 0}
   velocity: 1
   damage: 5
+  berserkTime: 15
   shooter: {fileID: 4238733921841946488}
 --- !u!114 &4238733921505793783
 MonoBehaviour:
@@ -601,6 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5423627041270653400, guid: e6bbd83c7063f45409249f5da7ddee61, type: 3}
+  isPlayer: 1
 --- !u!1 &556552930772955910
 GameObject:
   m_ObjectHideFlags: 0

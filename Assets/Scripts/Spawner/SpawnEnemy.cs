@@ -9,6 +9,14 @@ public class Horde {
     public int count;
     public float delay;
     public float tempoPerSpawnare = 5.0f;
+    public HordeDifficulty difficulty;
+}
+
+public enum HordeDifficulty {
+    None,
+    Easy,
+    Normal,
+    Hard
 }
 
 [System.Serializable]
@@ -28,11 +36,14 @@ public class SpawnEnemy : MonoBehaviour
     List<GameObject> spawnFreeZones = new List<GameObject>();
 
     BoxCollider _spawnZoneCollider;
+    MiniMapSpawner miniMapSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.Instance;
         _spawnZoneCollider = this.gameObject.GetComponent<BoxCollider>();
+        miniMapSpawner = GetComponent<MiniMapSpawner>();
         Vector2 zoneNumber = new Vector2(Mathf.Floor(_spawnZoneCollider.size.x / block_width), Mathf.Floor(_spawnZoneCollider.size.z / block_length));
         for (int i = 0; i < zoneNumber[1]; i++)
         {
@@ -89,6 +100,7 @@ public class SpawnEnemy : MonoBehaviour
     IEnumerator TimedSpawn(BigHorde bigHorde)
     {
         Debug.Log("Start Spawning");
+        AddSpawnDataToMiniMap(bigHorde);
         for (int j = 0; j < bigHorde.hordes.Length; j++)
         {
 
@@ -130,5 +142,15 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (!spawnFreeZones.Contains(zone)) return;
         spawnFreeZones.Remove(zone);
+    }
+
+    private void AddSpawnDataToMiniMap(BigHorde bigHorde) {
+        float time = Time.time;
+        foreach (Horde horde in bigHorde.hordes) {
+            time += horde.delay;
+            if (horde.difficulty != HordeDifficulty.None)
+                miniMapSpawner.AddSpawnData(time, horde.difficulty);
+            time += horde.tempoPerSpawnare;
+        }
     }
 }

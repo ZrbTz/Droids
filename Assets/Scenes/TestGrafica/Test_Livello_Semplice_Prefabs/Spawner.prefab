@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7009300203027223821}
   - component: {fileID: 7009300203027223810}
   - component: {fileID: 7009300203027223811}
+  - component: {fileID: 7707736004573567048}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -141,7 +142,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigHordes:
   - hordes: []
-  obiettivo: {fileID: 0}
+  destination: {fileID: 0}
   block_width: 5
   block_length: 5
   maxtimeSpawn: 2
+--- !u!114 &7707736004573567048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009300203027223808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1211e63c24a6cd54b9ec7c8b895a6da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 576988185931930701, guid: 9431819124a73604ba4167a944fa8e68, type: 3}
+  isPlayer: 0
+  maxDelay: 10
+  spawnIconPrefab: {fileID: 2835215805294407366, guid: 83dd74c8566bff74cba8bc17826fc01c, type: 3}

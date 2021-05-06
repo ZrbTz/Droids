@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1259,6 +1259,7 @@ GameObject:
   - component: {fileID: 336769671}
   - component: {fileID: 336769670}
   - component: {fileID: 336769674}
+  - component: {fileID: 336769675}
   m_Layer: 0
   m_Name: Nexus_L
   m_TagString: Untagged
@@ -1356,6 +1357,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nexus: {fileID: 0}
   test: {fileID: 0}
+--- !u!114 &336769675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336769669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848465fde359c642a3b491d9b9437da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 8379318978433220909, guid: 153d17e5d83754e44bb5d80b8b50e949, type: 3}
+  isPlayer: 0
 --- !u!1001 &431167729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2824,7 +2839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].delay
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].enemy
@@ -2860,7 +2875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].delay
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].enemy
@@ -2895,12 +2910,20 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].enemy
       value: 
       objectReference: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].count
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].delay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].enemy
@@ -2922,6 +2945,22 @@ PrefabInstance:
       propertyPath: bigHordes.Array.data[3].hordes.Array.data[2].enemy
       value: 
       objectReference: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].difficulty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].difficulty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].difficulty
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].tempoPerSpawnare
       value: 0.5
@@ -3282,6 +3321,22 @@ PrefabInstance:
     - target: {fileID: 2363944782531942495, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363944783324927847, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363944783324927847, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363944783388584976, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363944783388584976, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
@@ -6390,6 +6445,7 @@ GameObject:
   - component: {fileID: 2081205499}
   - component: {fileID: 2081205498}
   - component: {fileID: 2081205502}
+  - component: {fileID: 2081205503}
   m_Layer: 0
   m_Name: Nexus_R
   m_TagString: Untagged
@@ -6487,6 +6543,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nexus: {fileID: 0}
   test: {fileID: 0}
+--- !u!114 &2081205503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081205497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848465fde359c642a3b491d9b9437da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 8379318978433220909, guid: 153d17e5d83754e44bb5d80b8b50e949, type: 3}
+  isPlayer: 0
 --- !u!1001 &2101112280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8506,12 +8576,20 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].enemy
       value: 
       objectReference: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].count
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].delay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].enemy
@@ -8552,6 +8630,10 @@ PrefabInstance:
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].count
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].delay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].enemy
@@ -8596,6 +8678,10 @@ PrefabInstance:
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].count
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].delay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].enemy
@@ -8662,6 +8748,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[4].hordes.Array.data[0].delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[4].hordes.Array.data[0].enemy
       value: 
       objectReference: {fileID: 8617454769851983952, guid: c59b7285213062546ba95119cb6c457f, type: 3}
@@ -8709,6 +8799,42 @@ PrefabInstance:
       propertyPath: bigHordes.Array.data[4].hordes.Array.data[5].enemy
       value: 
       objectReference: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[1].hordes.Array.data[0].difficulty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[1].hordes.Array.data[1].difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[2].hordes.Array.data[0].difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[2].hordes.Array.data[1].difficulty
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[3].hordes.Array.data[0].difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[3].hordes.Array.data[2].difficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[3].hordes.Array.data[3].difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: bigHordes.Array.data[4].hordes.Array.data[0].difficulty
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.data[0].hordes.Array.data[0].tempoPerSpawnare
       value: 5
