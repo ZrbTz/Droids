@@ -7,10 +7,14 @@ public class AttackSystem : MonoBehaviour
     public KeyCode keyShoot = KeyCode.Q;
     public float fireDelay = 0.5f;
     float fireElapsedTime;
+    private GameObject projectile;
 
-    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject standardProjectile;
+    [SerializeField] GameObject berserkProjectile;
     [SerializeField] float velocity = 1.0f;
     [SerializeField] float damage = 30.0f;
+    [SerializeField] float berserkTime = 10.0f;
+    float elapsedBerserkTime = 0.0f;
     [SerializeField] GameObject shooter;
 
 
@@ -18,11 +22,20 @@ public class AttackSystem : MonoBehaviour
     void Start()
     {
         fireElapsedTime = fireDelay;
+        projectile = standardProjectile;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(projectile == berserkProjectile) {
+            elapsedBerserkTime += Time.deltaTime;
+            if(elapsedBerserkTime >= berserkTime) {
+                switchMode();
+                elapsedBerserkTime = 0.0f;
+            }
+        }
+
         if (Input.GetKey(keyShoot))
         {
             if(fireElapsedTime >= fireDelay)
@@ -36,5 +49,18 @@ public class AttackSystem : MonoBehaviour
             }
         }
         fireElapsedTime += Time.deltaTime;
+    }
+
+    public void switchMode() {
+        if (projectile == standardProjectile) {
+            projectile = berserkProjectile;
+            velocity = velocity*1.5f;
+            fireDelay = fireDelay/1.5f;
+        }
+        else {
+            projectile = standardProjectile;
+            velocity = velocity/1.5f;
+            fireDelay = fireDelay*1.5f;
+        }
     }
 }
