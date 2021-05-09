@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: -7467009793739004398}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 6947469920529991126, guid: 61b51a372261a6a47a85dde596d3351d, type: 3}
+  isPlayer: 0
 --- !u!114 &-7467009793739004398
 MonoBehaviour:
   m_ObjectHideFlags: 0

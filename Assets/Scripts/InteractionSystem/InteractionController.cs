@@ -27,7 +27,7 @@ public class InteractionController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, interactionDistance, layerMask))
         {
-            interactable = hit.collider.GetComponent<Pickable>();
+            interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null && interactable.IsEnabled())
             {
                 successfulHit = true;
