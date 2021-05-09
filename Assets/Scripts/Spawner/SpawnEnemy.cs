@@ -27,7 +27,9 @@ public class BigHorde {
 public class SpawnEnemy : MonoBehaviour
 {
     private GameManager gm;
-    public BigHorde[] bigHordes;
+    public SO_BigHordes so_BigHordes;
+    private BigHorde[] bigHordes;
+
     public GameObject destination;
 
     [SerializeField] float block_width = 5.0f;
@@ -41,6 +43,9 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        this.bigHordes = so_BigHordes.bigHordes;
+
         gm = GameManager.Instance;
         _spawnZoneCollider = this.gameObject.GetComponent<BoxCollider>();
         miniMapSpawner = GetComponent<MiniMapSpawner>();

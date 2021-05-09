@@ -2875,6 +2875,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2081205497}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: so_BigHordes
+      value: 
+      objectReference: {fileID: 11400000, guid: dfaf09d97592f154e8b5972c49bb13bc, type: 2}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -8628,6 +8632,10 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 336769669}
+    - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
+      propertyPath: so_BigHordes
+      value: 
+      objectReference: {fileID: 11400000, guid: dfaf09d97592f154e8b5972c49bb13bc, type: 2}
     - target: {fileID: 7009300203027223811, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: bigHordes.Array.size
       value: 5
