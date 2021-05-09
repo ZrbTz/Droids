@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 
     public Nexus nexus;
     public DeathMenu deathMenu;
-    public KeyCode spawnKey;
+    //public KeyCode spawnKey;
     public Spawner[] spawners;
     public int numHordes;
 
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour {
             else return;
         }
 
-        if (state == SpawnState.READY && Input.GetKeyUp(spawnKey)) {
+        if (state == SpawnState.READY && Input.GetButtonUp("Spawn")) {
             state = SpawnState.SPAWNING;
             emptySpawners = 0;
             foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);

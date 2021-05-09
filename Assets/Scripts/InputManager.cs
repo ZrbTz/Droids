@@ -5,8 +5,8 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     private Inventory inventory;
-    public KeyCode placeTurret = KeyCode.E;
-    public KeyCode throwSecondary = KeyCode.Q;
+    //public KeyCode placeTurret = KeyCode.E;
+    //public KeyCode throwSecondary = KeyCode.Q;
 
     void Start()
     {
@@ -54,21 +54,21 @@ public class InputManager : MonoBehaviour
             inventory.UseSelectedItem();
         }
         */
-        if (!this.GetComponent<InteractionController>().TryInteracting() && Input.GetKeyDown(placeTurret))
+        if (!this.GetComponent<InteractionController>().TryInteracting() && Input.GetButtonDown("Interact"))
         {
             if (inventory.UseItem(0))
             {
                 return true;
             }
         }
-        if (Input.GetKeyDown(throwSecondary))
+        if (Input.GetButtonDown("Throw"))
         {
             if (inventory.ShowThrowableTrajectory(1))
             {
                 return true;
             }
         }
-        if (Input.GetKeyUp(throwSecondary))
+        if (Input.GetButtonUp("Throw"))
         {
             if (inventory.UseItem(1))
             {

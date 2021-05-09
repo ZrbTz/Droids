@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackSystem : MonoBehaviour
 {
-    public KeyCode keyShoot = KeyCode.Q;
+    //public KeyCode keyShoot = KeyCode.Q;
     public float fireDelay = 0.5f;
     float fireElapsedTime;
     private GameObject projectile;
@@ -36,7 +36,7 @@ public class AttackSystem : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(keyShoot))
+        if (Input.GetButton("Fire1"))
         {
             if(fireElapsedTime >= fireDelay)
             {
