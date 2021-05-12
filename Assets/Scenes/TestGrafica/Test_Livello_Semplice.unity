@@ -281,6 +281,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 556552930742140681, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 556552930742140682, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: m_Name
       value: ThirdPersonController
@@ -2036,7 +2040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6322812510904933973, guid: b0321c32a664a854ba2bc0bd01962f02, type: 3}
       propertyPath: cullingLayer.m_Bits
-      value: 321
+      value: 3393
       objectReference: {fileID: 0}
     - target: {fileID: 6322812510904933974, guid: b0321c32a664a854ba2bc0bd01962f02, type: 3}
       propertyPath: m_Name
