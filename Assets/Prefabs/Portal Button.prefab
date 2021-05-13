@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6a0cc206b15ea947b1ad8a5e1367e02, type: 2}
+  - {fileID: 2100000, guid: cf163e1c98b9d204485c9d738b76a1e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,3 +113,5 @@ MonoBehaviour:
   interactionKey: 101
   portal: {fileID: 0}
   cooldown: 5
+  greenMaterial: {fileID: 2100000, guid: cf163e1c98b9d204485c9d738b76a1e5, type: 2}
+  redMaterial: {fileID: 2100000, guid: c6a0cc206b15ea947b1ad8a5e1367e02, type: 2}
