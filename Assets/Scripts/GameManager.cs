@@ -23,11 +23,6 @@ public class GameManager : MonoBehaviour {
     public Spawner[] spawners;
     public int numHordes;
 
-    /*
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-    */
-
     private void Awake() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

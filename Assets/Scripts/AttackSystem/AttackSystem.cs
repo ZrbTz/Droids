@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackSystem : MonoBehaviour
 {
     //public KeyCode keyShoot = KeyCode.Q;
-    public float fireDelay = 0.5f;
+    public float fireDelay = 0.0001f;
     float fireElapsedTime;
     private GameObject projectile;
 
@@ -36,7 +36,8 @@ public class AttackSystem : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Fire1"))
+        fireElapsedTime += Time.deltaTime;
+        if (Input.GetButtonDown("Fire1"))
         {
             if(fireElapsedTime >= fireDelay)
             {
@@ -48,7 +49,6 @@ public class AttackSystem : MonoBehaviour
                 projectile_shooted.GetComponent<Rigidbody>().AddForce(velocity * 1000 * shooter.transform.forward, ForceMode.Force);
             }
         }
-        fireElapsedTime += Time.deltaTime;
     }
 
     public void switchMode() {
