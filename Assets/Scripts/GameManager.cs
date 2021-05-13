@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Spawner {
-    public string name;
-    public GameObject spawnerObj;
-}
+
 
 public class GameManager : MonoBehaviour {
+
+    [System.Serializable]
+    public class Spawner {
+        public string name;
+        public GameObject spawnerObj;
+    }
 
     private static GameManager instance;
     private enum SpawnState { SPAWNING, READY, WAITING };
@@ -17,7 +19,7 @@ public class GameManager : MonoBehaviour {
     private int nextBigHorde = 0;
     private int emptySpawners = 0;
 
-    public Nexus nexus;
+    public Unit nexus;
     public DeathMenu deathMenu;
     //public KeyCode spawnKey;
     public Spawner[] spawners;
@@ -29,6 +31,14 @@ public class GameManager : MonoBehaviour {
         instance = this;
     }
     public static GameManager Instance { get => instance; }
+
+    public void resetHorde() {
+        nextBigHorde--;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject g in enemies) {
+            Destroy(g);
+        }
+    }
 
     public void gameLost() {
         deathMenu.showDeathMenu();

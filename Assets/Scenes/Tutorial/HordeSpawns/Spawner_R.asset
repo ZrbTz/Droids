@@ -15,3 +15,11 @@ MonoBehaviour:
   bigHordes:
   - hordes: []
   - hordes: []
+  - hordes: []
+  - hordes: []
+  - hordes:
+    - enemy: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
+      count: 50
+      delay: 10
+      tempoPerSpawnare: 10
+      difficulty: 2

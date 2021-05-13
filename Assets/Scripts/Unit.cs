@@ -25,8 +25,8 @@ public class Unit : MonoBehaviour {
             {
                 di.Drop();
             }
-            Die();
             dead = true;
+            Die();
         }
     }
 
