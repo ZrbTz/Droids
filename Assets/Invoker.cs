@@ -99,9 +99,9 @@ public class Invoker : Enemy {
 
     private void StartAttacking() {
         StopMarching();
-        currentTarget = target[0];
-        Vector3 direction = currentTarget.transform.position - transform.position; direction.y = 0; direction.Normalize();
-        transform.rotation = Quaternion.LookRotation(direction);
+        //currentTarget = target[0];
+        //Vector3 direction = currentTarget.transform.position - transform.position; direction.y = 0; direction.Normalize();
+        //transform.rotation = Quaternion.LookRotation(direction);
         state = SoldierState.Attacking;
     }
 
@@ -114,21 +114,22 @@ public class Invoker : Enemy {
     }
 
     private void Attack() {
-        while (currentTarget == null) {
-            target.Remove(target[0]);
-            if (target.Count == 0) {
-                StartMarching();
-                return;
-            }
-            currentTarget = target[0];
-        }
+        //while (currentTarget == null) {
+        //    target.Remove(target[0]);
+        //    if (target.Count == 0) {
+        //        StartMarching();
+        //        return;
+        //    }
+        //    currentTarget = target[0];
+        //}
 
-        Instantiate(soldierToSpawn, transform.position, transform.rotation);
+        GameObject newEnemy = Instantiate(soldierToSpawn, transform.position, transform.rotation);
+        newEnemy.GetComponent<Enemy>().destination = this.destination;
 
-        if (currentTarget.health <= 0) {
-            target.Remove(currentTarget);
-            StopAttacking();
-        }
+        //if (currentTarget.health <= 0) {
+        //    target.Remove(currentTarget);
+        //    StopAttacking();
+        //}
     }
 
     protected override void Die() {

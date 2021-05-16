@@ -310,7 +310,7 @@ MonoBehaviour:
   dead: 0
   body: {fileID: 8617454769005721652}
   attackSpeed: 1
-  attackRange: 10
+  attackRange: 50
   damage: 0
   destination: {fileID: 0}
   fadeSpeed: 1

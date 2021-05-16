@@ -29,7 +29,8 @@ public class ThrowableItem : ItemObject
     {
         //ferma la coroutine che mostra la traiettoria
         Vector3 direction = Camera.main.transform.forward;
-        startPoint = player.transform.Find("Direzione");
+
+        startPoint = GameObject.FindWithTag("Weapon").transform;
 
         GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
 
