@@ -112,6 +112,6 @@ public class Tower : Unit {
     }
 
     private bool CheckTarget() {
-        return !target.dead && Distance(target) <= range && LineOfFire(target);
+        return !target.dead && Distance(target.gameObject) <= range && LineOfFire(target);
     }
 }

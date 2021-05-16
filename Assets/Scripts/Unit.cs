@@ -30,9 +30,9 @@ public class Unit : MonoBehaviour {
         }
     }
 
-    public float Distance(Unit other) {
+    public float Distance(GameObject other) {
         Vector3 p1 = collider.ClosestPoint(other.transform.position);
-        Vector3 p2 = other.collider.ClosestPoint(transform.position);
+        Vector3 p2 = other.GetComponent<Collider>().ClosestPoint(transform.position);
         return Vector3.Distance(p1, p2);
     }
 
