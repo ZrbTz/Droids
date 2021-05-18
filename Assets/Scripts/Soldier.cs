@@ -138,16 +138,16 @@ public class Soldier : Enemy {
         }
     }
 
-    protected override void Die() {
-        switch (state) {
-            case SoldierState.Attacking:
-                StopAttacking();
-                break;
-            case SoldierState.Marching:
-                StopMarching();
-                break;
-        }
-        state = SoldierState.Idle;
-        base.Die();
-    }
+    //protected override void Die() {
+    //    switch (state) {
+    //        case SoldierState.Attacking:
+    //            StopAttacking();
+    //            break;
+    //        case SoldierState.Marching:
+    //            StopMarching();
+    //            break;
+    //    }
+    //    state = SoldierState.Idle;
+    //    base.Die();
+    //}
 }
