@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970009402202948454}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887440633629371706}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5638447962554868999}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 3316043352278318208}
   - component: {fileID: 481532947942262986}
   - component: {fileID: 8783856314447267921}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Pinball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 5367420535582588037}
   - component: {fileID: 2546470555228536991}
   - component: {fileID: 5113289551701290190}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1722868884986018672}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 11087915267582219}
   - component: {fileID: 1909488432543227030}
   - component: {fileID: 8596128321693327481}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 2925593032293663309}
   - component: {fileID: 3783554392600491193}
   - component: {fileID: 7023306600515125485}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 4553152309244942869}
   - component: {fileID: 5128762978711813085}
   - component: {fileID: 4907481489014980877}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 4698560596890996922}
   - component: {fileID: 8225250068311450359}
   - component: {fileID: 8843233083529537103}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Goal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108861184727899882}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7441594526400301048}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 1734114703663372759}
   - component: {fileID: 7954984239164632186}
   - component: {fileID: 3977356593436598831}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 6860633075398235423}
   - component: {fileID: 5742972206506967832}
   - component: {fileID: 2369229600719009054}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Frecce (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 3270852995987925665}
   - component: {fileID: 939963951026852197}
   - component: {fileID: 3814899555067035187}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 8999608713498135382}
   - component: {fileID: 7201760898090806558}
   - component: {fileID: 896780303930253708}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1269,7 @@ GameObject:
   - component: {fileID: 7427962878405777389}
   - component: {fileID: 6756594546932939572}
   - component: {fileID: 718743066797180591}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3966502810294440881}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 8156474498020054711}
   - component: {fileID: 7503840169121362386}
   - component: {fileID: 1042542470622102669}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1493,7 @@ GameObject:
   - component: {fileID: 3700741150835333077}
   - component: {fileID: 1961477145117057787}
   - component: {fileID: 6623018622533586831}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1588,7 +1588,7 @@ GameObject:
   - component: {fileID: 3672201052644948884}
   - component: {fileID: 8261023496390939263}
   - component: {fileID: 8199968177283521795}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Frecce (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1684,7 +1684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6711523040477776230}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,7 +1719,7 @@ GameObject:
   - component: {fileID: 8917103433700850139}
   - component: {fileID: 4760088899076561331}
   - component: {fileID: 4383270747699617445}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1815,7 +1815,7 @@ GameObject:
   - component: {fileID: 6514009987061390379}
   - component: {fileID: 2577270915444522328}
   - component: {fileID: 8414955648041382500}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,7 +1960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970089183718301636}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 5738682269143667935}
   - component: {fileID: 6311959899734225855}
   - component: {fileID: 8966851789448141196}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2121,7 +2121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489096442602635658}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,7 +2156,7 @@ GameObject:
   - component: {fileID: 2723192095117228673}
   - component: {fileID: 2965351639653552855}
   - component: {fileID: 2004378439707824987}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2318,7 @@ GameObject:
   - component: {fileID: 952851782056574759}
   - component: {fileID: 4613068195666412358}
   - component: {fileID: 8325409778507343876}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2411,7 +2411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1322837392582957079}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2446,7 +2446,7 @@ GameObject:
   - component: {fileID: 6040528504427509885}
   - component: {fileID: 1538317443634999210}
   - component: {fileID: 8801814233915169344}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2727,7 +2727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3049599363276989732}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Orientamento
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2764,7 +2764,7 @@ GameObject:
   - component: {fileID: 8052220299190629056}
   - component: {fileID: 986051245076631086}
   - component: {fileID: 570564196241410898}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Goal (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2875,7 +2875,7 @@ GameObject:
   - component: {fileID: 6015218561719327350}
   - component: {fileID: 2533254735570530059}
   - component: {fileID: 2193636316470606665}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2970,7 +2970,7 @@ GameObject:
   - component: {fileID: 4475920420309581463}
   - component: {fileID: 1325531596637013866}
   - component: {fileID: 4829222371869140111}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Frecce (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3036,7 +3036,7 @@ GameObject:
   - component: {fileID: 8561230612232032020}
   - component: {fileID: 1458992855319075903}
   - component: {fileID: 2101738102285406709}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3132,7 +3132,7 @@ GameObject:
   - component: {fileID: 7391192521002835081}
   - component: {fileID: 9166988133663859135}
   - component: {fileID: 8606654235328078238}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3228,7 +3228,7 @@ GameObject:
   - component: {fileID: 8801268772750227537}
   - component: {fileID: 4739199782468261067}
   - component: {fileID: 1785353196228377468}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3324,7 +3324,7 @@ GameObject:
   - component: {fileID: 5842345753486606166}
   - component: {fileID: 4607309663177441876}
   - component: {fileID: 1403663572475224995}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3453,7 +3453,7 @@ GameObject:
   - component: {fileID: 7942599697005680434}
   - component: {fileID: 914754332549476174}
   - component: {fileID: 2920414355584805063}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_SX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3549,7 +3549,7 @@ GameObject:
   - component: {fileID: 707465045363463274}
   - component: {fileID: 5606049841390408672}
   - component: {fileID: 8015142007553560313}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3642,7 +3642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6312450676531077955}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Freccia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3677,7 +3677,7 @@ GameObject:
   - component: {fileID: 1357738150284103198}
   - component: {fileID: 8072378513067880620}
   - component: {fileID: 3219306178579427484}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Ala_DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
