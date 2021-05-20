@@ -6,6 +6,9 @@ using Invector.vCharacterController;
 public class PinballMotion: MonoBehaviour
 {
     public Vector3 direction;
+    public float velocity = 10.0f;
+    public float height_limit = 0.3f;
+
     private Rigidbody rb;
     private vThirdPersonController controller;
 
@@ -21,11 +24,13 @@ public class PinballMotion: MonoBehaviour
     {
         controller.isJumping = true;
         controller.isGrounded = false;
-        rb.velocity = direction * 10;
-        if(this.gameObject.transform.position.y > 0.3f)
+        rb.velocity = direction * velocity;
+        rb.transform.forward = direction;
+
+        if (this.gameObject.transform.position.y > height_limit)
         {
             Vector3 pos = this.gameObject.transform.position;
-            pos.y = 0.3f;
+            pos.y = height_limit;
             this.gameObject.transform.position = pos;
         }
     }

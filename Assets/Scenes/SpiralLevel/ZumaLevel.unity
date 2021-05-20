@@ -4986,6 +4986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
+  velocity: 20
+  height_limit: 0.3
 --- !u!1 &366314173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
@@ -6332,6 +6334,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2066359728}
     m_Modifications:
+    - target: {fileID: 6322812510904933973, guid: b0321c32a664a854ba2bc0bd01962f02, type: 3}
+      propertyPath: lockCamera
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6322812510904933973, guid: b0321c32a664a854ba2bc0bd01962f02, type: 3}
       propertyPath: cullingLayer.m_Bits
       value: 3521
@@ -30053,6 +30059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147085164}
     m_Modifications:
+    - target: {fileID: 1557538892887794648, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7310756024892749132, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -30100,6 +30110,22 @@ PrefabInstance:
     - target: {fileID: 7310756024892749133, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
       propertyPath: m_Name
       value: Edificio_Scorciatoia
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327709017004194616, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327709017376386713, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535249196042878477, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988646507478609899, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84e009aafc1a894bba0636a64e8df59, type: 3}
