@@ -5,11 +5,14 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public float damage = 30.0f;
+    public float timeToLive = 5f;
+    public float shotgunTimeToLive = 0.2f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, timeToLive);
     }
 
     // Update is called once per frame

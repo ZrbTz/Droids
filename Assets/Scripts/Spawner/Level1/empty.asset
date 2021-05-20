@@ -10,13 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e053730d1ee2f14ebc33c21da8e36a2, type: 3}
-  m_Name: Spawtest
+  m_Name: empty
   m_EditorClassIdentifier: 
   bigHordes:
-  - hordes:
-    - enemy: {fileID: 1167720378780350426, guid: 5cc4c41e1a96784499a88173d5942672, type: 3}
-      count: 1
-      delay: 1
-      tempoPerSpawnare: 0.1
-      difficulty: 1
+  - hordes: []
   - hordes: []
