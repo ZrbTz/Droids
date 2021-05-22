@@ -22,10 +22,7 @@ public class PinballMotion: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        controller.isJumping = true;
-        controller.isGrounded = false;
         rb.velocity = direction * velocity;
-        rb.transform.forward = direction;
 
         if (this.gameObject.transform.position.y > height_limit)
         {

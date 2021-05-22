@@ -14,4 +14,12 @@ public class PinballDirection : MonoBehaviour
             percorso.SetActive(false);
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        GameObject player = other.gameObject;
+        if (player.layer == 10)
+        {
+            percorso.SetActive(true);
+        }
+    }
 }
