@@ -5,7 +5,8 @@ using UnityEngine;
 public class AttackSystem : MonoBehaviour
 {
     //public KeyCode keyShoot = KeyCode.Q;
-    public float fireDelay = 0.0001f;
+    public float fireDelay = 0.01f;
+    public float shotgunFireDelay = 1f;
     float fireElapsedTime;
     private GameObject projectile;
 
@@ -14,11 +15,9 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] float velocity = 1.0f;
     [SerializeField] float damage = 30.0f;
     [SerializeField] float berserkTime = 15.0f;
-    float elapsedBerserkTime = 0.0f;
+    private float elapsedBerserkTime = 0.0f;
     [SerializeField] GameObject shooter;
-    //[SerializeField] float shotgunHoldTime = 1.0f;
     private bool weaponSelector = true;
-    //float holdTime = 0.0f;
 
 
     // Start is called before the first frame update
@@ -40,7 +39,7 @@ public class AttackSystem : MonoBehaviour
 
         if (Input.GetButtonDown("WeaponSwitch")) {
             weaponSelector = !weaponSelector;
-            fireElapsedTime = fireDelay;
+            fireElapsedTime = 0.0f;
         }
 
         fireElapsedTime += Time.deltaTime;
@@ -57,7 +56,7 @@ public class AttackSystem : MonoBehaviour
             }
         }
         else if (!weaponSelector)
-            if (fireElapsedTime >= fireDelay) {
+            if (fireElapsedTime >= shotgunFireDelay) {
                 if (Input.GetButtonDown("Fire1")) {
                     fireElapsedTime = 0.0f;
                     for (int i = 0; i < 10; i++) {
