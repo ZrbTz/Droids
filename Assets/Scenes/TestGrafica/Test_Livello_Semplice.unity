@@ -675,7 +675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: fireDelay
-      value: 0.12
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
+      propertyPath: shotgunFireDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: berserkProjectile
