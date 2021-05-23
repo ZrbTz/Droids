@@ -247,4 +247,13 @@ public class vThirdPersonCamera : MonoBehaviour
 
         return hitInfo.collider && value;
     }
+
+    public void SetMouseX(float value)
+    {
+        mouseX = value;
+    }
+    public void SetMouseY(float value)
+    {
+        mouseY = value;
+    }
 }
