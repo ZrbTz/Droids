@@ -16,8 +16,9 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] float berserkTime = 15.0f;
     float elapsedBerserkTime = 0.0f;
     [SerializeField] GameObject shooter;
-    [SerializeField] float shotgunHoldTime = 1.0f;
-    float holdTime = 0.0f;
+    //[SerializeField] float shotgunHoldTime = 1.0f;
+    private bool weaponSelector = true;
+    //float holdTime = 0.0f;
 
 
     // Start is called before the first frame update
@@ -28,36 +29,37 @@ public class AttackSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(projectile == berserkProjectile) {
+    void Update() {
+        if (projectile == berserkProjectile) {
             elapsedBerserkTime += Time.deltaTime;
-            if(elapsedBerserkTime >= berserkTime) {
+            if (elapsedBerserkTime >= berserkTime) {
                 switchMode();
                 elapsedBerserkTime = 0.0f;
             }
         }
 
-        fireElapsedTime += Time.deltaTime;
-        if (Input.GetButton("Fire1")){
-            holdTime += Time.deltaTime;
+        if (Input.GetButtonDown("WeaponSwitch")) {
+            weaponSelector = !weaponSelector;
+            fireElapsedTime = fireDelay;
         }
 
-        if (Input.GetButtonUp("Fire1")) {
-            if (fireElapsedTime >= fireDelay) {
-                if (holdTime < shotgunHoldTime) {
+        fireElapsedTime += Time.deltaTime;
+        if (weaponSelector) {
+            if (Input.GetButton("Fire1")) {
+                if (fireElapsedTime >= fireDelay) {
                     fireElapsedTime = 0.0f;
-                    holdTime = 0;
                     GameObject projectile_shooted = Instantiate(projectile);
                     projectile_shooted.transform.position = shooter.transform.TransformPoint(Vector3.zero);
                     projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x + shooter.transform.rotation.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
                     projectile_shooted.GetComponent<Shot>().damage = damage;
                     projectile_shooted.GetComponent<Rigidbody>().AddForce(velocity * 1000 * shooter.transform.forward, ForceMode.Force);
                 }
-                else if (holdTime >= shotgunHoldTime) {
-                    //shotgun
+            }
+        }
+        else if (!weaponSelector)
+            if (fireElapsedTime >= fireDelay) {
+                if (Input.GetButtonDown("Fire1")) {
                     fireElapsedTime = 0.0f;
-                    holdTime = 0;
                     for (int i = 0; i < 10; i++) {
                         GameObject projectile_shooted = Instantiate(projectile);
                         projectile_shooted.GetComponent<Shot>().timeToLive = projectile_shooted.GetComponent<Shot>().shotgunTimeToLive;
@@ -71,8 +73,8 @@ public class AttackSystem : MonoBehaviour
                     }
                 }
             }
-        }
     }
+
 
     public void switchMode() {
         if (projectile == standardProjectile) {
