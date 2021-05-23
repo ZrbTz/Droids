@@ -123,7 +123,7 @@ public class Invoker : Enemy {
         //    currentTarget = target[0];
         //}
 
-        GameObject newEnemy = Instantiate(soldierToSpawn, transform.position, transform.rotation);
+        GameObject newEnemy = Instantiate(soldierToSpawn, transform.position + 2*transform.forward, transform.rotation);
         newEnemy.GetComponent<Enemy>().destination = this.destination;
 
         //if (currentTarget.health <= 0) {
