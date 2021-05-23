@@ -16,6 +16,8 @@ public class ThirdPersonControllerDash : MonoBehaviour
     public float dashStopTime = 0.1f;
     private float dashRempainingStopTime = 0.0f;
     bool stopDash = false;
+
+    public Vector3 directionz;
      
     void Start()
     {
@@ -24,8 +26,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        directionz = rb.transform.forward;
         if(dashRemainingTime >= 0.0f)
         {
             controller.isJumping = true;
@@ -33,12 +36,11 @@ public class ThirdPersonControllerDash : MonoBehaviour
             direction = rb.transform.forward;
             rb.velocity = direction * dashSpeed;
         }
-        else if (stopDash)
-        {
+        else if (stopDash) {
+            direction = rb.transform.forward;
             rb.velocity = direction * Mathf.Lerp(dashSpeed, 0.0f, dashRempainingStopTime / dashStopTime);
             dashRempainingStopTime += Time.deltaTime;
-            if(dashRempainingStopTime >= dashStopTime)
-            {
+            if (dashRempainingStopTime >= dashStopTime) {
                 stopDash = false;
             }
         }
