@@ -129,8 +129,9 @@ GameObject:
   - component: {fileID: 8039630698750668964}
   - component: {fileID: 6247829594294169498}
   - component: {fileID: 9054074884850229501}
+  - component: {fileID: 5319852590669815831}
   m_Layer: 0
-  m_Name: Torre 1
+  m_Name: Torre (con script)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,6 +236,24 @@ MonoBehaviour:
   lineOfFireLayerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &5319852590669815831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2289459228356400894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211f3121c008f6b4fa91e451afc915d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  holdTime: 1
+  interactionKey: 101
+  inventorySlot: 0
+  itemObject: {fileID: 11400000, guid: 5c3592f4b44823a46aaaf4b138f6a2df, type: 2}
+  pickSound: {fileID: 0}
 --- !u!1 &4673041295552426488
 GameObject:
   m_ObjectHideFlags: 0
