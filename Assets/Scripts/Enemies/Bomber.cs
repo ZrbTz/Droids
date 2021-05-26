@@ -131,9 +131,11 @@ public class Bomber : Enemy {
         //    }
         //    currentTarget = target[0];
         //}
-        Debug.Log(player.transform.position);
         //Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-        Instantiate(bomb, player.transform.position + bomb.transform.position, bomb.transform.rotation);
+        RaycastHit hit;
+        int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
+        Physics.Raycast(player.transform.position + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask);
+        Instantiate(bomb, hit.point, bomb.transform.rotation);
         //if (currentTarget.health <= 0) {
         //    target.Remove(currentTarget);
         //    StopAttacking();
