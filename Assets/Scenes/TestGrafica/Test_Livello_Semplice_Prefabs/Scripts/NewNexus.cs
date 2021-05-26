@@ -14,9 +14,15 @@ public class NewNexus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        test = other.gameObject;
         if (other.GetComponent<Enemy>() != null)
         {
+            StartCoroutine(damageNexus(other));
+        }
+    }
+
+    IEnumerator damageNexus(Collider other) {
+        yield return new WaitForSeconds(1);
+        if (other.GetComponent<Enemy>().dead == false) {
             nexus.health -= other.GetComponent<Enemy>().damage;
             other.GetComponent<Enemy>().FadeAndDisappear();
             Debug.Log("Il nexus ha subito danno!");
