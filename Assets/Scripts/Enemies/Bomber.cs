@@ -131,9 +131,9 @@ public class Bomber : Enemy {
         //    }
         //    currentTarget = target[0];
         //}
-
-        Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-        Debug.Log(player.GetComponent<Invector.vCharacterController.vThirdPersonController>().moveSpeed);
+        Debug.Log(player.transform.position);
+        //Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+        Instantiate(bomb, player.transform.position + bomb.transform.position, bomb.transform.rotation);
         //if (currentTarget.health <= 0) {
         //    target.Remove(currentTarget);
         //    StopAttacking();
