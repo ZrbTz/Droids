@@ -132,10 +132,14 @@ public class Bomber : Enemy {
         //    currentTarget = target[0];
         //}
         //Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-        RaycastHit hit;
+        Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);
+        Vector3 shooter = this.transform.position;
         int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
-        Physics.Raycast(player.transform.position + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask);
-        Instantiate(bomb, hit.point, bomb.transform.rotation);
+        if (!Physics.Linecast(shooter, target, layerMask, QueryTriggerInteraction.Ignore)) {
+            RaycastHit hit;
+            Physics.Raycast(player.transform.position + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore);
+            Instantiate(bomb, hit.point, bomb.transform.rotation);
+        }
         //if (currentTarget.health <= 0) {
         //    target.Remove(currentTarget);
         //    StopAttacking();
