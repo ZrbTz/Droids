@@ -17,4 +17,8 @@ public class Pickable : Interactable
         }
         
     }
+
+    public ItemObject getItemObject() {
+        return itemObject;
+    }
 }
