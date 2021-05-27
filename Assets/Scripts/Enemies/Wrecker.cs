@@ -152,6 +152,7 @@ public class Wrecker : Enemy {
                 dropItem.toDrop = t.GetPlaceableItemPrefab();
                 //Inventory inventory = this.gameObject.GetComponent<Inventory>();
                 tower.Interact(this.gameObject);
+                this.gameObject.GetComponent<SphereCollider>().enabled = false;
             }
         }
 }
