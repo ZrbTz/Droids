@@ -35,7 +35,7 @@ public class Shot : MonoBehaviour
             if (collision.collider.gameObject.name == "Core") {
                 invoker.health -= damage;
             }
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return;
         }
 
