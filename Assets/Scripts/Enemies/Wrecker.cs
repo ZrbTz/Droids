@@ -14,9 +14,11 @@ public class Wrecker : Enemy {
 
     private SoldierState state;
     private NavMeshAgent navMeshAgent;
+    private DropItem dropItem;
 
     protected override void Start() {
         base.Start();
+        dropItem = this.gameObject.GetComponent<DropItem>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         nexus = GameManager.Instance.nexus;
         enemy = true;
@@ -145,9 +147,9 @@ public class Wrecker : Enemy {
     //}
 
     private void OnTriggerEnter(Collider other) {
-            if (other.gameObject.CompareTag("Tower")) {
+        if (other.gameObject.CompareTag("Tower") && dropItem.toDrop == null) {
                 Pickable tower = other.gameObject.GetComponent<Pickable>();
-                DropItem dropItem = this.gameObject.GetComponent<DropItem>();
+                //DropItem dropItem = this.gameObject.GetComponent<DropItem>();
                 TowerItem t = (TowerItem)tower.getItemObject();
                 dropItem.toDrop = t.GetPlaceableItemPrefab();
                 //Inventory inventory = this.gameObject.GetComponent<Inventory>();

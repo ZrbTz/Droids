@@ -214,7 +214,7 @@ MonoBehaviour:
   enemy: 1
   dead: 0
   body: {fileID: 1167720378571614142}
-  attackSpeed: 0.5
+  attackSpeed: 0.3
   attackRange: 5
   damage: 1
   destination: {fileID: 0}

@@ -28,14 +28,14 @@ public class BomberBomb : MonoBehaviour {
     }
 
     private void Update() {
-        if (hit) return;
         if (dead) return;
         timer += Time.deltaTime;
         if (timer >= 0.75*timeout)
         {
+            Debug.Log("Mod");
             m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", Mathf.Lerp(altezza, inversoAltezzaFinale, ((timer - 0.75f * timeout) / (timeout - 0.75f))));
         }
-        if (timer >= timeout) {
+        if (timer >= timeout && !hit) {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f, layerMask);
             if (hitColliders.Length > 0 && hit == false) {
                 hit = true;
@@ -44,9 +44,9 @@ public class BomberBomb : MonoBehaviour {
                 player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed /= slowDown;
                 StartCoroutine(resetSpeed(timeout, effectDuration));
             }
+            else Destroy(this.gameObject);
             dead = true;
             m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", 1.0f);
-            Destroy(this.gameObject, effectDuration + 1f);
         }
     }
 
@@ -57,5 +57,6 @@ public class BomberBomb : MonoBehaviour {
         player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.runningSpeed *= slowDown;
         player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed *= slowDown;
         hit = false;
+        Destroy(this.gameObject);
     }
 }
