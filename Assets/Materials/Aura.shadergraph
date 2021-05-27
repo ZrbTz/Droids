@@ -648,10 +648,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -923.9999389648438,
-            "y": 311.9999694824219,
-            "width": 107.99999237060547,
-            "height": 33.999996185302737
+            "x": -958.666748046875,
+            "y": 322.66668701171877,
+            "width": 148.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -1230,7 +1230,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "97a1400aa64f4d879989a74b3895e0f6",
     "m_Id": 0,
-    "m_DisplayName": "Offset",
+    "m_DisplayName": "AltezzaBordo",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1595,7 +1595,7 @@
     "m_Guid": {
         "m_GuidSerialized": "70fa53df-55aa-48e1-b040-57a5976da1f5"
     },
-    "m_Name": "Offset",
+    "m_Name": "AltezzaBordo",
     "m_DefaultReferenceName": "Vector1_e13e019d51d54a858419bc043499bafd",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
