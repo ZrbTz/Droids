@@ -36,7 +36,7 @@ public class BomberBomb : MonoBehaviour {
             m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", Mathf.Lerp(altezza, inversoAltezzaFinale, ((timer - 0.75f * timeout) / (timeout - 0.75f))));
         }
         if (timer >= timeout && !hit) {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f, layerMask);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.2f, layerMask);
             if (hitColliders.Length > 0 && hit == false) {
                 hit = true;
                 player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.sprintSpeed /= slowDown;

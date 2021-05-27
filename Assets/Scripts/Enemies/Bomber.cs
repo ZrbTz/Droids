@@ -137,7 +137,7 @@ public class Bomber : Enemy {
         int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
         if (!Physics.Linecast(shooter, target, layerMask, QueryTriggerInteraction.Ignore)) {
             RaycastHit hit;
-            Physics.Raycast(player.transform.position + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore);
+            Physics.Raycast(player.transform.position + player.transform.up*10 + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore);
             Instantiate(bomb, hit.point, bomb.transform.rotation);
         }
         //if (currentTarget.health <= 0) {
