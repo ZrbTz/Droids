@@ -20,7 +20,6 @@ public class Projectile : MonoBehaviour {
         if(other.transform.root.GetComponent<Unit>() == target) {
             target.health -= damage;
             Destroy(gameObject);
-            Debug.Log("Coll2");
         }
     }
 
