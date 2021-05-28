@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigHordes:
   - hordes:
-    - enemy: {fileID: 1167720378780350426, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 10
       delay: 30
       tempoPerSpawnare: 3
       difficulty: 1
   - hordes:
-    - enemy: {fileID: 1167720378780350426, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 10
       delay: 30
       tempoPerSpawnare: 3
-      difficulty: 0
+      difficulty: 1

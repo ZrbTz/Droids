@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2394213769199747568}
   - component: {fileID: 1839724051339585616}
   m_Layer: 0
-  m_Name: Soldier 1
+  m_Name: Soldier (scripts)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2302424956403857244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.053982, y: 10.0125, z: 38.403347}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4825452310119660960}
   m_Father: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf28073b55c03e429a99a0af4dcb152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 3
   enemy: 1
   dead: 0
   body: {fileID: 6697911790245636654}

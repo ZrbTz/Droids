@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 9054074884850229501}
   - component: {fileID: 5319852590669815831}
   m_Layer: 0
-  m_Name: Torre (con script)
-  m_TagString: Untagged
+  m_Name: Torre (script)
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   dead: 0
   body: {fileID: 0}
   range: 10
-  damage: 50
+  damage: 3
   fireRate: 1
   cannonAngularSpeed: 360
   cannonBase: {fileID: 8400692729369161363}
@@ -235,7 +235,7 @@ MonoBehaviour:
   state: 0
   lineOfFireLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
 --- !u!114 &5319852590669815831
 MonoBehaviour:
   m_ObjectHideFlags: 0

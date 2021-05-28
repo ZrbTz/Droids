@@ -75,7 +75,7 @@ public class Tower : Unit {
         float minDistance = Mathf.Infinity;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range);
         foreach (Collider hitCollider in hitColliders) {
-            if (!(hitCollider.TryGetComponent<Unit>(out Unit unit) && !unit.dead && unit.enemy))
+            if (!(hitCollider.transform.root.TryGetComponent<Unit>(out Unit unit) && !unit.dead && unit.enemy))
                 continue;
             if (!LineOfFire(unit))
                 continue;

@@ -11,24 +11,26 @@ public class SlowEnemyZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Enemy>() != null)
+        if(other.transform.root.GetComponent<Enemy>() != null)
         {
-            other.GetComponent<NavMeshAgent>().speed = other.GetComponent<NavMeshAgent>().speed * (1 - slowPercentuale);
+            var navMeshAgent = other.transform.root.GetComponent<NavMeshAgent>();
+            navMeshAgent.speed *= (1 - slowPercentuale);
             affected.Add(other);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<Enemy>() != null)
+        if (other.transform.root.GetComponent<Enemy>() != null)
         {
-            other.GetComponent<NavMeshAgent>().speed = other.GetComponent<NavMeshAgent>().speed / (1 - slowPercentuale);
+            var navMeshAgent = other.transform.root.GetComponent<NavMeshAgent>();
+            navMeshAgent.speed /= (1 - slowPercentuale);
             affected.Remove(other);
         }
     }
 
     private void OnDestroy() {
         foreach(Collider c in affected)
-            if(c != null) c.GetComponent<NavMeshAgent>().speed = c.GetComponent<NavMeshAgent>().speed / (1 - slowPercentuale);
+            if(c != null) c.transform.root.GetComponent<NavMeshAgent>().speed = c.transform.root.GetComponent<NavMeshAgent>().speed / (1 - slowPercentuale);
     }
 }

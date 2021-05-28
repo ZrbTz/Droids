@@ -24,6 +24,11 @@ public class NewSoldier : Enemy {
         StartMarching();
     }
 
+    protected override void Update() {
+        base.Update();
+        animator.SetFloat("Speed", navMeshAgent.speed);
+    }
+
     private void StartMarching() {
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = destination.transform.position;

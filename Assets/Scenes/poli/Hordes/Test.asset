@@ -24,4 +24,4 @@ MonoBehaviour:
       count: 10
       delay: 5
       tempoPerSpawnare: 5
-      difficulty: 0
+      difficulty: 2

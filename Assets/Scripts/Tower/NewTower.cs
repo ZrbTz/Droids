@@ -72,7 +72,7 @@ public class NewTower : Unit {
         float minDistance = Mathf.Infinity;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range);
         foreach (Collider hitCollider in hitColliders) {
-            if (!(hitCollider.TryGetComponent(out Unit unit) && !unit.dead && unit.enemy))
+            if (!(hitCollider.transform.root.TryGetComponent(out Unit unit) && !unit.dead && unit.enemy))
                 continue;
             if (!LineOfFire(unit))
                 continue;
@@ -122,6 +122,6 @@ public class NewTower : Unit {
     }
 
     private bool CheckTarget() {
-        return !target.dead && Distance(target.gameObject) <= range && LineOfFire(target);
+        return !target.dead && Vector3.Distance(transform.position, target.transform.position) <= range && LineOfFire(target);
     }
 }

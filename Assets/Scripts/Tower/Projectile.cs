@@ -12,14 +12,22 @@ public class Projectile : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        Vector3 direction = target.transform.position - transform.position; direction.Normalize();
+        Vector3 direction = target.body.position - transform.position; direction.Normalize();
         transform.position += direction * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.GetComponent<Unit>() == target) {
+        if(other.transform.root.GetComponent<Unit>() == target) {
+            target.health -= damage;
+            Destroy(gameObject);
+            Debug.Log("Coll2");
+        }
+    }
+
+    /*private void OnCollisionEnter(Collision collision) {
+        if (collision.collider.transform.root.GetComponent<Unit>() == target) {
             target.health -= damage;
             Destroy(gameObject);
         }
-    }
+    }*/
 }

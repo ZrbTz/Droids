@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
 public class Unit : MonoBehaviour {
     public float health = 100f;
     public bool enemy;

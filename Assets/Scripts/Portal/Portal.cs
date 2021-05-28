@@ -27,7 +27,7 @@ public class Portal : MonoBehaviour {
 
     private List<GameObject> GetTowers() {
         var towers = Physics.OverlapBox(transform.position, new Vector3(width / 2, 2, length / 2)).Where(collider => collider.CompareTag("Tower"))
-            .Select(collider => collider.gameObject).ToList();
+            .Select(collider => collider.gameObject).Distinct().ToList();
         //towers = towers.Where(tower => tower != null).ToList();
         return towers;
     }
@@ -39,7 +39,7 @@ public class Portal : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    /*private void OnTriggerEnter(Collider other) {
         Debug.Log("Enter : " + other.tag);
         if (other.CompareTag("Tower")) {
             towers.Add(other.gameObject);
@@ -51,7 +51,7 @@ public class Portal : MonoBehaviour {
         Debug.Log("Exit : " + other.tag);
         if (other.CompareTag("Tower"))
             towers.Remove(other.gameObject);
-    }
+    }*/
 
     private void OnDrawGizmosSelected() {
         Gizmos.DrawWireCube(transform.position, new Vector3(width, 0.5f, length));

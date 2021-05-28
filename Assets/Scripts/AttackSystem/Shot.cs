@@ -22,7 +22,7 @@ public class Shot : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Unit enemy = collision.collider.GetComponent<Unit>();
+        Unit enemy = collision.collider.transform.root.GetComponent<Unit>();
         if (enemy && enemy.enemy)
         {
             enemy.health -= damage;

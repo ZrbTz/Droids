@@ -12,7 +12,7 @@ public class GrenadeExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (puoEsplodere && other.GetComponent<Enemy>()!=null)
+        if (puoEsplodere && other.transform.root.GetComponent<Enemy>()!=null)
         {
             StartCoroutine(Explode());
         }
@@ -27,9 +27,9 @@ public class GrenadeExplosion : MonoBehaviour
         Destroy(newPlaced, 0.2f);
         foreach (Collider c in hitColliders)
         {
-            if (c.GetComponent<Enemy>() != null)
+            if (c.transform.root.GetComponent<Enemy>() != null)
             {
-                c.GetComponent<Unit>().health -= danno;
+                c.transform.root.GetComponent<Unit>().health -= danno;
             }
         }
         Destroy(this.transform.parent.gameObject);
