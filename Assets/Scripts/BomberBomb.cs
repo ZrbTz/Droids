@@ -15,18 +15,28 @@ public class BomberBomb : MonoBehaviour {
 
     private bool dead = false;
 
+    Material m;
+    float altezza;
+    public float inversoAltezzaFinale =  0;
+
 
     private void Start() {
         player = GameObject.FindWithTag("Player");
         layerMask = LayerMask.GetMask("Player");
+        m = this.GetComponent<Renderer>().material;
+        altezza = m.GetFloat("Vector1_e13e019d51d54a858419bc043499bafd");
     }
 
     private void Update() {
-        if (hit) return;
         if (dead) return;
         timer += Time.deltaTime;
-        if (timer >= timeout) {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f, layerMask);
+        if (timer >= 0.75*timeout)
+        {
+            Debug.Log("Mod");
+            m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", Mathf.Lerp(altezza, inversoAltezzaFinale, ((timer - 0.75f * timeout) / (timeout - 0.75f))));
+        }
+        if (timer >= timeout && !hit) {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.2f, layerMask);
             if (hitColliders.Length > 0 && hit == false) {
                 hit = true;
                 player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.sprintSpeed /= slowDown;
@@ -34,8 +44,9 @@ public class BomberBomb : MonoBehaviour {
                 player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed /= slowDown;
                 StartCoroutine(resetSpeed(timeout, effectDuration));
             }
+            else Destroy(this.gameObject);
             dead = true;
-            Destroy(this.gameObject, effectDuration + 1f);
+            m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", 1.0f);
         }
     }
 
@@ -46,5 +57,6 @@ public class BomberBomb : MonoBehaviour {
         player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.runningSpeed *= slowDown;
         player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed *= slowDown;
         hit = false;
+        Destroy(this.gameObject);
     }
 }

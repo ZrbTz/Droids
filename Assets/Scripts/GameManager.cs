@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
     public int numHordes;
 
     private void Awake() {
-        Application.targetFrameRate = 300;
+        Application.targetFrameRate = 1000;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;

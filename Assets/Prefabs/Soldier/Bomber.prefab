@@ -143,7 +143,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 1
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 3600
@@ -214,12 +214,12 @@ MonoBehaviour:
   enemy: 1
   dead: 0
   body: {fileID: 1167720378571614142}
-  attackSpeed: 0.2
+  attackSpeed: 0.3
   attackRange: 5
   damage: 1
   destination: {fileID: 0}
   fadeSpeed: 0
-  bomb: {fileID: 3990772861265749761, guid: 70f82da7e3db94a449f231ab7b28f81d, type: 3}
+  bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}
 --- !u!1 &1167720379031704451
 GameObject:
   m_ObjectHideFlags: 0
