@@ -20,8 +20,26 @@ public class Shot : MonoBehaviour
     {
     }
 
+    private Invoker isInvoker(GameObject g) {
+        Invoker invoker = g.transform.root.GetComponent<Invoker>();
+        if (invoker != null) return invoker;
+
+        invoker = g.transform.root.GetComponent<Invoker>();
+        return invoker;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
+        Invoker invoker = isInvoker(collision.collider.gameObject);
+        if (invoker != null) {
+            if (collision.collider.gameObject.name == "Core") {
+                invoker.health -= damage;
+            }
+
+            //Destroy(gameObject);
+            return;
+        }
+
         Unit enemy = collision.collider.transform.root.GetComponent<Unit>();
         if (enemy && enemy.enemy)
         {
