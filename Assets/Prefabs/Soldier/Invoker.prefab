@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39286c4d1ac73c24eb6974a2212e3e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 30
   enemy: 1
   dead: 0
   body: {fileID: 8617454769005721652}

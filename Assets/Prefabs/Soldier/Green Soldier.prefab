@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1167720378780350416, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: m_Speed
-      value: 30
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350416, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: m_Acceleration
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350417, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: health
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1167720378780350417, guid: 0623c41f1c423a446a89019b93a56d9e, type: 3}
       propertyPath: m_Enabled

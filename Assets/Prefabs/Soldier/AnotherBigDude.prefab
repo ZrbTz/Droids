@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec546a82c6c3ba469c67924c1e5fa5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 18
   enemy: 1
   dead: 0
   body: {fileID: 8617454769005721652}
