@@ -1263,7 +1263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: damage
-      value: 0.201
+      value: 0.401
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: keyShoot
@@ -1279,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: shotgunFireDelay
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: berserkProjectile
@@ -1287,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 7562490761220562059, guid: 6d31365753cf2e54995d86a1f9c487e8, type: 3}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: shotgunTotalDamage
-      value: 9
+      value: 16.001
       objectReference: {fileID: 0}
     - target: {fileID: 4238733921505793289, guid: 0bba3b70017f4444f8a1a6deda944cd0, type: 3}
       propertyPath: standardProjectile
