@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,11 +26,16 @@ public class GameManager : MonoBehaviour {
     public Spawner[] spawners;
     public int numHordes;
 
+    public GameDifficulty difficulty;
+    public bool ignoreDifficulty = true;
+
     private void Awake() {
         Application.targetFrameRate = 1000;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;
+
+        difficulty = (GameDifficulty)Enum.Parse(typeof(GameDifficulty), PlayerPrefs.GetString("Difficulty", "Normal"));
     }
     public static GameManager Instance { get => instance; }
 
