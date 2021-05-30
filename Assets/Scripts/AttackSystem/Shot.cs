@@ -28,15 +28,21 @@ public class Shot : MonoBehaviour
         return invoker;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Invoker invoker = isInvoker(collision.collider.gameObject);
-        if (invoker != null) {
+    private void OnCollisionEnter(Collision collision) {
+        Transform root = collision.transform.root;
+        if (root.TryGetComponent(out Invoker invoker)) {
             if (collision.collider.gameObject.name == "Core") {
                 invoker.health -= damage;
+                Destroy(gameObject);
             }
+            return;
+        }
 
-            //Destroy(gameObject);
+        if(root.TryGetComponent(out NewInvoker newInvoker)) {
+            if (collision.collider.gameObject.name == "Core") {
+                newInvoker.health -= damage;
+                Destroy(gameObject);
+            }
             return;
         }
 

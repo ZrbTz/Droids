@@ -84,7 +84,14 @@ public class NewBomber : Enemy {
     }
 
     public void Shoot() {
-        Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+        //Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+        int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
+        Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);
+        if (!Physics.Linecast(transform.position, target, layerMask, QueryTriggerInteraction.Ignore)) {
+            RaycastHit hit;
+            Physics.Raycast(player.transform.position + player.transform.up * 10 + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore);
+            Instantiate(bomb, hit.point, bomb.transform.rotation);
+        }
         shootTime = Time.time;
         shoot = true;
         animator.ResetTrigger("Shoot");
