@@ -200,18 +200,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb53c4b0e36c0c4d97a4eaba1802247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 30
   enemy: 1
   dead: 0
   body: {fileID: 7098805375692381926}
-  attackSpeed: 1
+  attackSpeed: 0.5
   attackRange: 0.5
-  damage: 10
+  damage: 1
   destination: {fileID: 0}
   fadeSpeed: 1
-  spawnCount: 3
+  spawnCount: 5
   spawnInterval: 1
-  spawnCooldown: 10
+  spawnCooldown: 7
   spawnDelay: 5
   spawnTransform: {fileID: 8865912680459723953}
   state: 0
@@ -245,7 +245,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &8865912680459723952
 GameObject:
   m_ObjectHideFlags: 0

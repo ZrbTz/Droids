@@ -71,7 +71,7 @@ public class NewInvoker : Enemy {
     public void StartSpawning() {
         state = InvokerState.Spawning;
         spawn = true;
-        spawnIndex = 0;
+        spawnIndex = 1;
     }
 
     private void StopSpawning() {

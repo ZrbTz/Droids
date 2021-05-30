@@ -85,20 +85,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8df30d42bbf41409a4a75e49687da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 8
   enemy: 1
   dead: 0
   body: {fileID: 6718546466345027400}
   attackSpeed: 1
   attackRange: 0.5
-  damage: 10
+  damage: 1
   destination: {fileID: 0}
   fadeSpeed: 1
-  bomb: {fileID: 3990772861265749761, guid: 70f82da7e3db94a449f231ab7b28f81d, type: 3}
+  bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}
   state: 0
   animator: {fileID: 387868700596538387}
-  shootRange: 12.5
-  shootCooldown: 12.5
+  shootRange: 50
+  shootCooldown: 10
   shootDelay: 4
 --- !u!114 &9094333859740269141
 MonoBehaviour:
@@ -201,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 996806a260fe55741a3c33407b64816f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.245
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 996806a260fe55741a3c33407b64816f, type: 3}
       propertyPath: m_LocalPosition.z
