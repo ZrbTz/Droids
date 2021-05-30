@@ -254,7 +254,7 @@ MonoBehaviour:
   body: {fileID: 8617454769005721652}
   attackSpeed: 1
   attackRange: 5
-  damage: 100
+  damage: 1
   destination: {fileID: 0}
   fadeSpeed: 1
 --- !u!54 &8617454769851983961

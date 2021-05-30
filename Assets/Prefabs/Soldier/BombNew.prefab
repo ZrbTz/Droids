@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bb3f04a22b5ef40873a0041cd08e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeout: 2
+  timeout: 1
   slowDown: 2
-  effectDuration: 2
+  effectDuration: 4
   inversoAltezzaFinale: -0.5
 --- !u!33 &5342401754091792717
 MeshFilter:
