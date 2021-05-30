@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigHordes:
   - hordes:
-    - enemy: {fileID: 1167720378780350426, guid: 5cc4c41e1a96784499a88173d5942672, type: 3}
+    - enemy: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
       count: 1
       delay: 1
       tempoPerSpawnare: 0.1

@@ -255,7 +255,7 @@ MonoBehaviour:
   body: {fileID: 8617454769005721652}
   attackSpeed: 1
   attackRange: 5
-  damage: 100
+  damage: 1
   destination: {fileID: 0}
   fadeSpeed: 1
 --- !u!54 &8617454769851983961
@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5735984854590085828, guid: 07b2743f9462e424996b0671e8dce6d4, type: 3}
+  isPlayer: 0
 --- !u!65 &7309525243833964980
 BoxCollider:
   m_ObjectHideFlags: 0

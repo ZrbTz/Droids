@@ -161,7 +161,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &6814035172248534290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5735984854590085828, guid: 07b2743f9462e424996b0671e8dce6d4, type: 3}
+  isPlayer: 0
 --- !u!65 &4595698024710843819
 BoxCollider:
   m_ObjectHideFlags: 0

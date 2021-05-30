@@ -8,6 +8,7 @@ public class AttackSystem : MonoBehaviour
     public float fireDelay = 0.01f;
     public float shotgunFireDelay = 1f;
     float fireElapsedTime;
+    float shotgunFireElapsedTime;
     private GameObject projectile;
 
     [SerializeField] GameObject standardProjectile;
@@ -15,6 +16,7 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] float velocity = 1.0f;
     [SerializeField] float damage = 30.0f;
     [SerializeField] float berserkTime = 15.0f;
+    [SerializeField] float shotgunTotalDamage = 5f;
     private float elapsedBerserkTime = 0.0f;
     [SerializeField] GameObject shooter;
     private bool weaponSelector = true;
@@ -24,6 +26,7 @@ public class AttackSystem : MonoBehaviour
     void Start()
     {
         fireElapsedTime = fireDelay;
+        shotgunFireElapsedTime = shotgunFireDelay;
         projectile = standardProjectile;
     }
 
@@ -39,10 +42,10 @@ public class AttackSystem : MonoBehaviour
 
         if (Input.GetButtonDown("WeaponSwitch")) {
             weaponSelector = !weaponSelector;
-            fireElapsedTime = 0.0f;
         }
 
         fireElapsedTime += Time.deltaTime;
+        shotgunFireElapsedTime += Time.deltaTime;
         if (weaponSelector) {
             if (Input.GetButton("Fire1")) {
                 if (fireElapsedTime >= fireDelay) {
@@ -56,15 +59,15 @@ public class AttackSystem : MonoBehaviour
             }
         }
         else if (!weaponSelector)
-            if (fireElapsedTime >= shotgunFireDelay) {
+            if (shotgunFireElapsedTime >= shotgunFireDelay) {
                 if (Input.GetButtonDown("Fire1")) {
-                    fireElapsedTime = 0.0f;
+                    shotgunFireElapsedTime = 0.0f;
                     for (int i = 0; i < 10; i++) {
                         GameObject projectile_shooted = Instantiate(projectile);
                         projectile_shooted.GetComponent<Shot>().timeToLive = projectile_shooted.GetComponent<Shot>().shotgunTimeToLive;
                         projectile_shooted.transform.position = shooter.transform.TransformPoint(Vector3.zero);
                         projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x + shooter.transform.rotation.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
-                        projectile_shooted.GetComponent<Shot>().damage = damage;
+                        projectile_shooted.GetComponent<Shot>().damage = shotgunTotalDamage/10f;
                         Vector3 forwardForce = shooter.transform.forward * 1000 * velocity;
                         Vector3 rightJitter = shooter.transform.right * Random.Range(-100f, 100f);
                         Vector3 upJitter = shooter.transform.up * Random.Range(-100f, 100f);
