@@ -20,11 +20,21 @@ public class BomberBomb : MonoBehaviour {
     public float inversoAltezzaFinale =  0;
 
 
+    private float sprintSpeed;
+    private float runSpeed;
+    private float walkSpeed;
+
+
     private void Start() {
         player = GameObject.FindWithTag("Player");
         layerMask = LayerMask.GetMask("Player");
         m = this.GetComponent<Renderer>().material;
         altezza = m.GetFloat("Vector1_e13e019d51d54a858419bc043499bafd");
+
+        sprintSpeed = player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.sprintSpeed;
+        runSpeed = player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.runningSpeed;
+        walkSpeed = player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed;
+
     }
 
     private void Update() {
@@ -39,9 +49,9 @@ public class BomberBomb : MonoBehaviour {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.2f, layerMask);
             if (hitColliders.Length > 0 && hit == false) {
                 hit = true;
-                player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.sprintSpeed /= slowDown;
-                player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.runningSpeed /= slowDown;
-                player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed /= slowDown;
+                sprintSpeed /= slowDown;
+                runSpeed /= slowDown;
+                walkSpeed /= slowDown;
                 StartCoroutine(resetSpeed(timeout, effectDuration));
             }
             else Destroy(this.gameObject);
@@ -53,9 +63,9 @@ public class BomberBomb : MonoBehaviour {
     IEnumerator resetSpeed(float timeout, float slowDown) {
         GameObject playerCO = GameObject.FindWithTag("Player");
         yield return new WaitForSeconds(timeout);
-        player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.sprintSpeed *= slowDown;
-        player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.runningSpeed *= slowDown;
-        player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed *= slowDown;
+        sprintSpeed *= slowDown;
+        runSpeed *= slowDown;
+        walkSpeed *= slowDown;
         hit = false;
         Destroy(this.gameObject);
     }

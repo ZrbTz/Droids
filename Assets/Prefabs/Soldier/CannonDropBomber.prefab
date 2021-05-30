@@ -47,8 +47,9 @@ GameObject:
   - component: {fileID: 7170873629195753095}
   - component: {fileID: 203625638808208958}
   - component: {fileID: -3147388337358616136}
+  - component: {fileID: 8470150563828327352}
   m_Layer: 0
-  m_Name: Bomber
+  m_Name: CannonDropBomber
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,6 +221,19 @@ MonoBehaviour:
   destination: {fileID: 0}
   fadeSpeed: 0
   bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}
+--- !u!114 &8470150563828327352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167720378780350426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361895cf814e9c8449be5750c47b91c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDrop: {fileID: 2529727251472555911, guid: cf0ffe03b0901724395bba2fdaf4d7c8, type: 3}
 --- !u!1 &1167720379031704451
 GameObject:
   m_ObjectHideFlags: 0

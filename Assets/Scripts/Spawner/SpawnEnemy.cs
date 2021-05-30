@@ -27,7 +27,9 @@ public class BigHorde {
 public class SpawnEnemy : MonoBehaviour
 {
     private GameManager gm;
+    public SO_BigHordes so_BigHordes_Easy;
     public SO_BigHordes so_BigHordes;
+    public SO_BigHordes so_BigHordes_Hard;
     private BigHorde[] bigHordes;
 
     public GameObject destination;
@@ -43,8 +45,21 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        this.bigHordes = so_BigHordes.bigHordes;
+        if(GameManager.Instance.ignoreDifficulty)
+            this.bigHordes = so_BigHordes.bigHordes;
+        else {
+            switch (GameManager.Instance.difficulty) {
+                case GameDifficulty.Easy:
+                    bigHordes = so_BigHordes_Easy.bigHordes;
+                    break;
+                case GameDifficulty.Normal:
+                    bigHordes = so_BigHordes.bigHordes;
+                    break;
+                case GameDifficulty.Hard:
+                    bigHordes = so_BigHordes_Hard.bigHordes;
+                    break;
+            }
+        }
 
         gm = GameManager.Instance;
         _spawnZoneCollider = this.gameObject.GetComponent<BoxCollider>();

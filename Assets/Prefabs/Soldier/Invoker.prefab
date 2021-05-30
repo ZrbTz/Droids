@@ -408,7 +408,7 @@ MonoBehaviour:
   body: {fileID: 8617454769005721652}
   attackSpeed: 1
   attackRange: 40
-  damage: 0
+  damage: 1
   destination: {fileID: 0}
   fadeSpeed: 1
   soldierToSpawn: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
