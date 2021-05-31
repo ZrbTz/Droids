@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bb3f04a22b5ef40873a0041cd08e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeout: 1
+  timeout: 0.5
   slowDown: 2
   effectDuration: 4
   inversoAltezzaFinale: -0.5

@@ -19,10 +19,7 @@ public class BomberBomb : MonoBehaviour {
     float altezza;
     public float inversoAltezzaFinale =  0;
 
-
-    private float sprintSpeed;
-    private float runSpeed;
-    private float walkSpeed;
+    Invector.vCharacterController.vThirdPersonController speedController;
 
 
     private void Start() {
@@ -31,10 +28,7 @@ public class BomberBomb : MonoBehaviour {
         m = this.GetComponent<Renderer>().material;
         altezza = m.GetFloat("Vector1_e13e019d51d54a858419bc043499bafd");
 
-        sprintSpeed = player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.sprintSpeed;
-        runSpeed = player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.runningSpeed;
-        walkSpeed = player.GetComponent<Invector.vCharacterController.vThirdPersonController>().freeSpeed.walkSpeed;
-
+        speedController = player.GetComponent<Invector.vCharacterController.vThirdPersonController>();
     }
 
     private void Update() {
@@ -46,13 +40,14 @@ public class BomberBomb : MonoBehaviour {
             m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", Mathf.Lerp(altezza, inversoAltezzaFinale, ((timer - 0.75f * timeout) / (timeout - 0.75f))));
         }
         if (timer >= timeout && !hit) {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.2f, layerMask);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.2f, layerMask);
             if (hitColliders.Length > 0 && hit == false) {
                 hit = true;
-                sprintSpeed /= slowDown;
-                runSpeed /= slowDown;
-                walkSpeed /= slowDown;
-                StartCoroutine(resetSpeed(timeout, effectDuration));
+                Debug.Log("bomber hit");
+                speedController.freeSpeed.walkSpeed /= slowDown;
+                speedController.freeSpeed.sprintSpeed /= slowDown;
+                speedController.freeSpeed.runningSpeed /= slowDown;
+                StartCoroutine(resetSpeed(effectDuration, slowDown));
             }
             else Destroy(this.gameObject);
             dead = true;
@@ -63,9 +58,9 @@ public class BomberBomb : MonoBehaviour {
     IEnumerator resetSpeed(float timeout, float slowDown) {
         GameObject playerCO = GameObject.FindWithTag("Player");
         yield return new WaitForSeconds(timeout);
-        sprintSpeed *= slowDown;
-        runSpeed *= slowDown;
-        walkSpeed *= slowDown;
+        speedController.freeSpeed.walkSpeed *= slowDown;
+        speedController.freeSpeed.sprintSpeed *= slowDown;
+        speedController.freeSpeed.runningSpeed *= slowDown;
         hit = false;
         Destroy(this.gameObject);
     }

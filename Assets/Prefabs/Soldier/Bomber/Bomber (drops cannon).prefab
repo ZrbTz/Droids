@@ -98,8 +98,8 @@ MonoBehaviour:
   bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}
   state: 0
   animator: {fileID: 387868700596538387}
-  shootRange: 50
-  shootCooldown: 10
+  shootRange: 100
+  shootCooldown: 8
   shootDelay: 4
 --- !u!114 &9094333859740269141
 MonoBehaviour:
