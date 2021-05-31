@@ -122,6 +122,7 @@ public class NewTower : Unit {
     }
 
     private bool CheckTarget() {
+        if (target == null) return false;
         return !target.dead && Vector3.Distance(transform.position, target.transform.position) <= range && LineOfFire(target);
     }
 }
