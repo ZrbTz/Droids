@@ -6580,7 +6580,7 @@ PrefabInstance:
       objectReference: {fileID: 1056930753}
     - target: {fileID: 2363944782531942494, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
       propertyPath: numHordes
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2363944782531942494, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
       propertyPath: spawners.Array.data[0].spawnerObj
