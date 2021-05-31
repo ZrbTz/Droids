@@ -11,7 +11,7 @@ public class TowerItem : ItemObject
     [SerializeField]
     private GameObject placeablePreviewItem;
     [SerializeField]
-    private LayerMask layerMask;
+    private LayerMask ignoreLayers;
 
     public override bool Use(GameObject player)
     {
@@ -26,16 +26,20 @@ public class TowerItem : ItemObject
     public bool Place()
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
+        LayerMask tmpIgnoreLayers = ~ignoreLayers;
 
         RaycastHit hitInfo;
-        if (Physics.Raycast(ray, out hitInfo, 20f, layerMask))
+        if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
         {
-            GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+                GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
 
-            newPlaced.transform.position = hitInfo.point;
-            newPlaced.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                newPlaced.transform.position = hitInfo.point;
+                newPlaced.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
 
-            return true;
+                return true;
+            }
+            return false;
         }
         else
         {

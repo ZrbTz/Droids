@@ -18,6 +18,6 @@ MonoBehaviour:
   amount: 1
   placeableItem: {fileID: 2529727251472555911, guid: e09ba3dfccac2af4486ef09c9833be62, type: 3}
   placeablePreviewItem: {fileID: 0}
-  layerMask:
+  ignoreLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1312
