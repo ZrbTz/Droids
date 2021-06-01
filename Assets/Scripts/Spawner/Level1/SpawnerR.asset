@@ -45,9 +45,9 @@ MonoBehaviour:
       difficulty: 2
     - enemy: {fileID: 5825187849785514744, guid: 4be0f751435b73d499e0ee74ae5788b9, type: 3}
       count: 5
-      delay: 0
+      delay: 0.1
       tempoPerSpawnare: 1
-      difficulty: 2
+      difficulty: 0
   - hordes:
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 25
@@ -131,9 +131,9 @@ MonoBehaviour:
       count: 50
       delay: 20
       tempoPerSpawnare: 15
-      difficulty: 0
+      difficulty: 2
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 50
       delay: 20
       tempoPerSpawnare: 15
-      difficulty: 0
+      difficulty: 2
