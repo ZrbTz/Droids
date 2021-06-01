@@ -212,7 +212,7 @@ MonoBehaviour:
   spawnCount: 5
   spawnInterval: 1
   spawnCooldown: 7
-  spawnDelay: 5
+  spawnDelay: 8
   spawnTransform: {fileID: 8865912680459723953}
   state: 0
   soldierToSpawn: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}

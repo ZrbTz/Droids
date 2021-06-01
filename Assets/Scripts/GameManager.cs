@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     private enum SpawnState { SPAWNING, READY, WAITING };
     private SpawnState state = SpawnState.READY;
 
-    private int nextBigHorde = 0;
+    public int nextBigHorde = 0;
     private int emptySpawners = 0;
 
     public Unit nexus;
