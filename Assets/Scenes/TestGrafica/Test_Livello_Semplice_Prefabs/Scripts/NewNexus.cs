@@ -22,7 +22,8 @@ public class NewNexus : MonoBehaviour
     IEnumerator damageNexus(Collider other) {
         yield return new WaitForSeconds(1);
         if (other.transform.root.GetComponent<Enemy>().dead == false) {
-            other.gameObject.GetComponent<DropItem>().Drop();
+            DropItem dropItem = other.gameObject.GetComponent<DropItem>(); 
+            if(dropItem != null) dropItem.Drop();
             nexus.health -= other.transform.root.GetComponent<Enemy>().damage;
             other.transform.root.GetComponent<Enemy>().FadeAndDisappear();
             Debug.Log("Il nexus ha subito danno!");
