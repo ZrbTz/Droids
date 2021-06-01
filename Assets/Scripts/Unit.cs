@@ -31,7 +31,9 @@ public class Unit : MonoBehaviour {
 
     public float Distance(GameObject other) {
         Vector3 p1 = collider.ClosestPoint(other.transform.position);
-        Vector3 p2 = other.GetComponent<Collider>().ClosestPoint(transform.position);
+        Collider p = other.GetComponent<Collider>();
+        if (p == null) return 1000f;
+        Vector3 p2 = p.ClosestPoint(transform.position);
         return Vector3.Distance(p1, p2);
     }
 
