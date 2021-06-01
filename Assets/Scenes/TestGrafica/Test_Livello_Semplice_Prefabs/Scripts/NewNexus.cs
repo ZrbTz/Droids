@@ -14,7 +14,9 @@ public class NewNexus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetType() == typeof(CapsuleCollider) && other.transform.root.GetComponent<Enemy>() != null) {
+        Enemy e = other.transform.root.GetComponent<Enemy>();
+        if (e != null && !e.hitNexus) {
+            e.hitNexus = true;
             StartCoroutine(damageNexus(other));
         }
     }
@@ -22,8 +24,8 @@ public class NewNexus : MonoBehaviour
     IEnumerator damageNexus(Collider other) {
         yield return new WaitForSeconds(1);
         if (other.transform.root.GetComponent<Enemy>().dead == false) {
-            DropItem dropItem = other.gameObject.GetComponent<DropItem>(); 
-            if(dropItem != null) dropItem.Drop();
+            DropItem dropItem = other.gameObject.GetComponent<DropItem>();
+            if (dropItem != null) dropItem.Drop();
             nexus.health -= other.transform.root.GetComponent<Enemy>().damage;
             other.transform.root.GetComponent<Enemy>().FadeAndDisappear();
             Debug.Log("Il nexus ha subito danno!");

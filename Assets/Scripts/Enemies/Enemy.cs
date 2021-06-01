@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Unit
 {
-
+    public bool hitNexus = false;
     public float attackSpeed = 1f;
     public float attackRange = .5f;
     public float damage = 10f;

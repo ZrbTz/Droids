@@ -9,5 +9,6 @@ public class DropItem : MonoBehaviour
     public void Drop()
     {
         if(toDrop != null) Instantiate(toDrop, this.transform.position, Quaternion.identity);
+        toDrop = null;
     }
 }
