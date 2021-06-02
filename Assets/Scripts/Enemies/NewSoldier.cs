@@ -12,13 +12,13 @@ public class NewSoldier : Enemy {
     }
 
     private NavMeshAgent navMeshAgent;
-    private Animator animator;
+    [SerializeField] private Animator animator;
     private SoldierState state;
 
     protected override void Start() {
         base.Start();
         navMeshAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         nexus = GameManager.Instance.nexus;
         enemy = true;
         randomArea = Map.Instance.GetRandomArea();
@@ -77,7 +77,7 @@ public class NewSoldier : Enemy {
         animator.SetBool("Attacking", false);
     }
 
-    private void Attack() {
+    public void Attack() {
         currentTarget.health -= damage;
     }
 }

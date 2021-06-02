@@ -56,6 +56,7 @@ public class Enemy : Unit
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Here");
         if (other.GetComponent<Obstacle>() != null)
         {
             addTarget(other.GetComponent<Obstacle>());
