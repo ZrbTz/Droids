@@ -6173,7 +6173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 996058686099202234, guid: d2add2243e957eb42859f92d633d2994, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: GameUI
       objectReference: {fileID: 0}
     - target: {fileID: 996058686099202238, guid: d2add2243e957eb42859f92d633d2994, type: 3}
       propertyPath: m_Pivot.x
@@ -8959,10 +8959,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672614581}
     m_Modifications:
-    - target: {fileID: 5918368235264970297, guid: efbe24b2f6f402e468350476b157a072, type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5918368235264970298, guid: efbe24b2f6f402e468350476b157a072, type: 3}
       propertyPath: m_RootOrder
       value: 2

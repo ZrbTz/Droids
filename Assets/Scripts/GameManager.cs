@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
     //public KeyCode spawnKey;
     public Spawner[] spawners;
     public int numHordes;
+    private GameUI gameUI;
 
     public GameDifficulty difficulty;
     public bool ignoreDifficulty = true;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour {
         instance = this;
 
         difficulty = (GameDifficulty)Enum.Parse(typeof(GameDifficulty), PlayerPrefs.GetString("Difficulty", "Normal"));
+
+        gameUI = FindObjectOfType<GameUI>();
     }
     public static GameManager Instance { get => instance; }
 
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour {
         foreach (GameObject g in enemies) {
             Destroy(g);
         }
+
+        gameUI.UpdateHordeNumber(nextBigHorde);
     }
 
     public void gameLost() {
@@ -89,6 +94,8 @@ public class GameManager : MonoBehaviour {
             emptySpawners = 0;
             foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
             nextBigHorde++;
+
+            gameUI.UpdateHordeNumber(nextBigHorde);
         }
     }
 }
