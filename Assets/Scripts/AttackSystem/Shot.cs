@@ -20,25 +20,25 @@ public class Shot : MonoBehaviour
     {
     }
 
-    private Invoker isInvoker(GameObject g) {
-        Invoker invoker = g.transform.root.GetComponent<Invoker>();
-        if (invoker != null) return invoker;
+    //private Invoker isInvoker(GameObject g) {
+    //    Invoker invoker = g.transform.root.GetComponent<Invoker>();
+    //    if (invoker != null) return invoker;
 
-        invoker = g.transform.root.GetComponent<Invoker>();
-        return invoker;
-    }
+    //    invoker = g.transform.root.GetComponent<Invoker>();
+    //    return invoker;
+    //}
 
     private void OnCollisionEnter(Collision collision) {
         Transform root = collision.transform.root;
-        if (root.TryGetComponent(out Invoker invoker)) {
-            if (collision.collider.gameObject.name == "Core") {
-                invoker.health -= damage;
-                Destroy(gameObject);
-            }
-            return;
-        }
+        //if (root.TryGetComponent(out Invoker invoker)) {
+        //    if (collision.collider.gameObject.name == "Core") {
+        //        invoker.health -= damage;
+        //        Destroy(gameObject);
+        //    }
+        //    return;
+        //}
 
-        if(root.TryGetComponent(out NewInvoker newInvoker)) {
+        if (root.TryGetComponent(out NewInvoker newInvoker)) {
             if (collision.collider.gameObject.name == "Core") {
                 newInvoker.health -= damage;
                 Destroy(gameObject);
