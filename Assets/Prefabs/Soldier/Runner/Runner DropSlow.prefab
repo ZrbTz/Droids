@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 8781907178362870932}
   - component: {fileID: 8781907178362870938}
   - component: {fileID: 5073725025295540908}
+  - component: {fileID: 2684157809774384001}
   m_Layer: 0
   m_Name: Runner DropSlow
   m_TagString: Enemy
@@ -111,7 +112,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.25
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf28073b55c03e429a99a0af4dcb152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 0.95
   enemy: 1
   dead: 0
   body: {fileID: 3920470482415837806}
@@ -188,6 +189,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toDrop: {fileID: 6171487001421686886, guid: caa188d42b2c6d749989b3dac698022e, type: 3}
+--- !u!114 &2684157809774384001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781907178362870937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848465fde359c642a3b491d9b9437da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 5735984854590085828, guid: 07b2743f9462e424996b0671e8dce6d4, type: 3}
+  isPlayer: 0
 --- !u!1 &8781907178907353666
 GameObject:
   m_ObjectHideFlags: 0
