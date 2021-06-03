@@ -90,6 +90,7 @@ MonoBehaviour:
   enemy: 1
   dead: 0
   body: {fileID: 6718546466345027400}
+  hitNexus: 0
   attackSpeed: 1
   attackRange: 0.5
   damage: 1
@@ -127,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361895cf814e9c8449be5750c47b91c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toDrop: {fileID: 2529727251472555911, guid: cf0ffe03b0901724395bba2fdaf4d7c8, type: 3}
+  toDrop: {fileID: 1503102137465925833, guid: 8286590d6072f1448a5e1acfe6fc7541, type: 3}
 --- !u!95 &387868700596538387
 Animator:
   serializedVersion: 3
