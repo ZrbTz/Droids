@@ -54,13 +54,15 @@ public class NewBomber : Enemy {
     }
 
     private bool CanShoot() {
-        if (Vector3.Distance(transform.position, player.transform.position) >= shootRange)
+        int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
+        Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);
+        if (Vector3.Distance(transform.position, player.transform.position) >= shootRange 
+            || Physics.Linecast(transform.position, target, layerMask, QueryTriggerInteraction.Ignore))
             return false;
         else if (!shoot)
             return Time.time - shootTime >= shootDelay;
         else
             return Time.time - shootTime >= shootCooldown;
-       
     }
 
     public void StartMarching() {

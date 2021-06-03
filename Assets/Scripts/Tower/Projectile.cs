@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour {
         }
 
         if (root.TryGetComponent(out NewBomber newbomber)) {
-            newInvoker.health -= damage * 0.5f;
+            newbomber.health -= damage * 0.5f;
             Destroy(gameObject);
             return;
         }
