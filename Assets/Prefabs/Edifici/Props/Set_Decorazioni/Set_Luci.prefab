@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LampadaLunga (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7056708277968746001, guid: c78b2d25db1d690418ae6b778ac2abb0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c78b2d25db1d690418ae6b778ac2abb0, type: 3}
 --- !u!4 &8672045871872838704 stripped
@@ -128,6 +132,10 @@ PrefabInstance:
     - target: {fileID: 3930964523509432797, guid: c78b2d25db1d690418ae6b778ac2abb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056708277968746001, guid: c78b2d25db1d690418ae6b778ac2abb0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c78b2d25db1d690418ae6b778ac2abb0, type: 3}

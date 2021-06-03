@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &3442975465360040976
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208554564718333903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.40000007, y: 2.778604, z: 0.40000007}
-  m_Center: {x: 0, y: 1.389302, z: 0}
 --- !u!65 &8033076259539206787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26,6 +13,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5474967, y: 0.5796306, z: 0.40000007}
   m_Center: {x: 0, y: 2.2465901, z: 0}
+--- !u!65 &3442975465360040976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208554564718333903}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000007, y: 2.778604, z: 0.40000007}
+  m_Center: {x: 0, y: 1.389302, z: 0}
 --- !u!1 &1632179413595746764
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,8 +199,8 @@ Light:
   m_Color: {r: 0.59607846, g: 0.9607843, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
-  m_SpotAngle: 130
-  m_InnerSpotAngle: 110
+  m_SpotAngle: 120
+  m_InnerSpotAngle: 120
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -292,7 +292,7 @@ Light:
   m_Color: {r: 0.59607846, g: 0.9607843, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
-  m_SpotAngle: 140
+  m_SpotAngle: 120
   m_InnerSpotAngle: 120
   m_CookieSize: 10
   m_Shadows:
