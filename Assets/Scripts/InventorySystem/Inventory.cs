@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    //[SerializeField]
-    //private GameUI gameUI = default;
+    private GameUI gameUI;
 
     [SerializeField]
     private int size = 5;
@@ -13,6 +12,11 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private int selectedSlot = 0;
     public int[] inventorySlotSize = { 1, 5 };
+
+    void Awake()
+    {
+        gameUI = FindObjectOfType<GameUI>();
+    }
 
     void Start()
     {
@@ -28,6 +32,12 @@ public class Inventory : MonoBehaviour
         if (inventory[slot] == null)
         {
             inventory[slot] = new InventorySlot(item, item.GetAmount());
+
+            if (slot == 1)
+            {
+                gameUI.UpdateGrenadeAmount(item.GetAmount());
+            }
+
             return true;
         }
         if (inventory[slot].item == item)
@@ -35,6 +45,12 @@ public class Inventory : MonoBehaviour
             if (inventory[slot].amount < inventorySlotSize[slot])
             {
                 inventory[slot].addAmount(1);
+
+                if (slot == 1)
+                {
+                    gameUI.UpdateGrenadeAmount(1);
+                }
+
                 return true;
             }
             return false;
@@ -134,6 +150,11 @@ public class Inventory : MonoBehaviour
         else
         {
             //gameUI.UpdateItemCounter(amount, selectedSlot);
+        }
+
+        if (slot == 1)
+        {
+            gameUI.UpdateGrenadeAmount(amount);
         }
     }
 

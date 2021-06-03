@@ -10,7 +10,7 @@ public class NexusHealthUI : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.Image nexusHealthBar;
 
-    [Header("Nexus Health Settings")]
+    [Header("Horde Number Settings")]
     [SerializeField]
     private TMPro.TextMeshProUGUI hordeNumber;
 

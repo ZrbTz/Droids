@@ -21,6 +21,11 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] GameObject shooter;
     private bool weaponSelector = true;
 
+    private GameUI gameUI;
+
+    void Awake() {
+        gameUI = FindObjectOfType<GameUI>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +47,7 @@ public class AttackSystem : MonoBehaviour
 
         if (Input.GetButtonDown("WeaponSwitch")) {
             weaponSelector = !weaponSelector;
+            gameUI.UpdateWeaponType(weaponSelector);
         }
 
         fireElapsedTime += Time.deltaTime;
