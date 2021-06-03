@@ -102,11 +102,13 @@ MonoBehaviour:
   enemy: 1
   dead: 0
   body: {fileID: 6697911790245636654}
+  hitNexus: 0
   attackSpeed: 1
   attackRange: 1
   damage: 1
   destination: {fileID: 0}
   fadeSpeed: 1
+  animator: {fileID: 2394213769199747572}
 --- !u!195 &2394213769199747568
 NavMeshAgent:
   m_ObjectHideFlags: 0
