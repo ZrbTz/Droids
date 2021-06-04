@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemName: BancarellaLegno
-  iconPrefab: {fileID: 0}
+  iconSprite: {fileID: 21300000, guid: 665d6544245180c409a7662c1349ef0f, type: 3}
   amount: 1
   placeableItem: {fileID: 2475021460123897821, guid: c67a8ddcd9ea31d438a9c6b7292daad8, type: 3}
   placeablePreviewItem: {fileID: 0}

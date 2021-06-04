@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemName: Test
-  iconPrefab: {fileID: 0}
+  iconSprite: {fileID: 21300000, guid: 665d6544245180c409a7662c1349ef0f, type: 3}
   amount: 1
   placeableItem: {fileID: 2529727251472555911, guid: cf0ffe03b0901724395bba2fdaf4d7c8, type: 3}
   placeablePreviewItem: {fileID: 0}

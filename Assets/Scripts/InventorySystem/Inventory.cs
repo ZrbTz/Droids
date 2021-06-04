@@ -37,6 +37,10 @@ public class Inventory : MonoBehaviour
             {
                 gameUI.UpdateGrenadeAmount(item.GetAmount());
             }
+            else if (slot == 0)
+            {
+                gameUI.AddTowerIcon(item.GetIconSprite());
+            }
 
             return true;
         }
@@ -48,71 +52,15 @@ public class Inventory : MonoBehaviour
 
                 if (slot == 1)
                 {
-                    gameUI.UpdateGrenadeAmount(1);
+                    gameUI.UpdateGrenadeAmount(inventory[slot].amount);
                 }
 
                 return true;
             }
             return false;
         }
+
         return false;
-        /*
-        for (int i = 0; i < size; i++)
-        {
-            if (inventory[i] == null)
-            {
-                inventory[i] = new InventorySlot(item, item.GetAmount());
-                //gameUI.AddItem(item.GetIconPrefab(), item.GetAmount(), i);
-                break;
-            }
-        }
-        */
-    }
-
-    public void SelectSlot(int newPosition)
-    {
-        //gameUI.UpdateSelectedSlot(newPosition, selectedSlot);
-        selectedSlot = newPosition;
-    }
-
-    public void SelectNextSlot()
-    {
-        int newPosition = (selectedSlot + 1) % 5;
-        //gameUI.UpdateSelectedSlot(newPosition, selectedSlot);
-        selectedSlot = newPosition;
-    }
-
-    public void SelectPreviousSlot()
-    {
-        int newPosition = (selectedSlot - 1 + 5) % 5;
-        //gameUI.UpdateSelectedSlot(newPosition, selectedSlot);
-        selectedSlot = newPosition;
-    }
-
-    public void UseSelectedItem()
-    {
-        if (inventory[selectedSlot] != null)
-        {
-            bool used = inventory[selectedSlot].item.Use(this.gameObject);
-            if (used)
-            {
-                DecreaseSelectedItemAmount();
-            }
-        }
-    }
-
-    public void DecreaseSelectedItemAmount()
-    {
-        int amount = inventory[selectedSlot].addAmount(-1);
-        if (amount <= 0)
-        {
-            inventory[selectedSlot] = null;
-            //gameUI.RemoveItem(selectedSlot);
-        }
-        else
-        {
-            //gameUI.UpdateItemCounter(amount, selectedSlot);
-        }
     }
 
     public bool ShowThrowableTrajectory(int slot)
@@ -145,16 +93,15 @@ public class Inventory : MonoBehaviour
         if (amount <= 0)
         {
             inventory[slot] = null;
-            //gameUI.RemoveItem(selectedSlot);
-        }
-        else
-        {
-            //gameUI.UpdateItemCounter(amount, selectedSlot);
-        }
 
-        if (slot == 1)
-        {
-            gameUI.UpdateGrenadeAmount(amount);
+            if (slot == 1)
+            {
+                gameUI.UpdateGrenadeAmount(amount);
+            }
+            else if (slot == 0)
+            {
+                gameUI.RemoveTowerIcon();
+            }
         }
     }
 

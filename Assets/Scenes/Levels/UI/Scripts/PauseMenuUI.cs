@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour{
+public class PauseMenuUI : MonoBehaviour{
 
     public static bool isPaused = false;
-    public GameObject pauseMenuUI;
-
+    
     // Update is called once per frame
     void Update(){
         if (Input.GetKeyDown(KeyCode.Escape)){
@@ -32,7 +31,7 @@ public class PauseMenu : MonoBehaviour{
     void pause(){
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        pauseMenuUI.SetActive(true);
+        gameObject.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -40,7 +39,7 @@ public class PauseMenu : MonoBehaviour{
     public void resume(){
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        pauseMenuUI.SetActive(false);
+        gameObject.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }

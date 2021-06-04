@@ -17,7 +17,7 @@ public abstract class ItemObject : ScriptableObject
     [SerializeField]
     private string itemName;
     [SerializeField]
-    private GameObject iconPrefab;
+    private Sprite iconSprite;
     [SerializeField]
     private int amount = 1;
 
@@ -47,9 +47,9 @@ public abstract class ItemObject : ScriptableObject
         return amount;
     }
 
-    public GameObject GetIconPrefab()
+    public Sprite GetIconSprite()
     {
-        return iconPrefab;
+        return iconSprite;
     }
 
     public string GetItemName()

@@ -12,6 +12,8 @@ public class GameUI : MonoBehaviour
     private WeaponTypeUI weaponTypeUI;
     [SerializeField]
     private DashCooldownUI dashCooldownUI;
+    [SerializeField]
+    private TowerSlotUI towerSlotUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -44,5 +46,15 @@ public class GameUI : MonoBehaviour
     public void UpdateDashCooldown(float cooldown)
     {
         dashCooldownUI.SetDashCooldown(cooldown);
+    }
+
+    public void AddTowerIcon(Sprite sprite)
+    {
+        towerSlotUI.AddIcon(sprite);
+    }
+
+    public void RemoveTowerIcon()
+    {
+        towerSlotUI.RemoveIcon();
     }
 }
