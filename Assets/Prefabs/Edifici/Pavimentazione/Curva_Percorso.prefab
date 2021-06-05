@@ -509,10 +509,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9120616872022895747}
     m_Modifications:
-    - target: {fileID: 1406982529396814937, guid: 97a6ce1db059eaf4e90fc8f4c42d9e2b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1605795735573882166, guid: 97a6ce1db059eaf4e90fc8f4c42d9e2b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -560,14 +556,6 @@ PrefabInstance:
     - target: {fileID: 2090582934125264780, guid: 97a6ce1db059eaf4e90fc8f4c42d9e2b, type: 3}
       propertyPath: m_Name
       value: Tile_Angolo_Inverso_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090582934125264780, guid: 97a6ce1db059eaf4e90fc8f4c42d9e2b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7923452843788515941, guid: 97a6ce1db059eaf4e90fc8f4c42d9e2b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a6ce1db059eaf4e90fc8f4c42d9e2b, type: 3}
