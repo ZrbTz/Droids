@@ -28,8 +28,12 @@ public class ThirdPersonControllerDash : MonoBehaviour
     {
         if(dashRemainingTime >= 0.0f)
         {
+            //TODO: brutto
+            //controller.isJumping = true;
+            controller.isDashing = true;
             direction = rb.transform.forward;
             rb.velocity = direction * dashSpeed;
+            //rb.AddForce(direction * 1000f);
         }
         else if (stopDash) {
             direction = rb.transform.forward;
@@ -37,6 +41,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
             dashRempainingStopTime += Time.deltaTime;
             if (dashRempainingStopTime >= dashStopTime) {
                 stopDash = false;
+                controller.isDashing = false;
             }
         }
         dashRemainingTime -= Time.deltaTime;

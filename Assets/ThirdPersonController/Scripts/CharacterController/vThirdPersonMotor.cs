@@ -81,6 +81,7 @@ namespace Invector.vCharacterController
             }
         }
         public bool isGrounded { get; set; }
+        public bool isDashing { get; set; }
         internal bool isSprinting { get; set; }
         public bool stopMove { get; protected set; }
 
@@ -168,7 +169,7 @@ namespace Invector.vCharacterController
             // calculate input smooth
             inputSmooth = Vector3.Lerp(inputSmooth, input, (isStrafing ? strafeSpeed.movementSmooth : freeSpeed.movementSmooth) * Time.deltaTime);
 
-            if (!isGrounded || isJumping) return;
+            if (!isGrounded || isJumping || isDashing) return;
 
             _direction.y = 0;
             _direction.x = Mathf.Clamp(_direction.x, -1f, 1f);
