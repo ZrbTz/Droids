@@ -9,18 +9,18 @@ public class DeathMenu : MonoBehaviour{
     public void showDeathMenu() {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        PauseMenuUI.pauseWithoutUI();
+        //PauseMenuUI.pauseWithoutUI();
         deathMenuUI.SetActive(true);
     }
 
     public void restartLevel() {
         deathMenuUI.SetActive(false);
-        PauseMenuUI.unpauseWithoutUI();
+        //PauseMenuUI.unpauseWithoutUI();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void loadMenu() {
         deathMenuUI.SetActive(false);
-        PauseMenuUI.unpauseWithoutUI();
+        //PauseMenuUI.unpauseWithoutUI();
         SceneManager.LoadScene(0);
     }
 

@@ -14,6 +14,8 @@ public class GameUI : MonoBehaviour
     private DashCooldownUI dashCooldownUI;
     [SerializeField]
     private TowerSlotUI towerSlotUI;
+    [SerializeField]
+    private PauseMenuUI pauseMenuUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -56,5 +58,15 @@ public class GameUI : MonoBehaviour
     public void RemoveTowerIcon()
     {
         towerSlotUI.RemoveIcon();
+    }
+
+    public void ShowPauseMenu()
+    {
+        pauseMenuUI.gameObject.SetActive(true);
+    }
+
+    public void HidePauseMenu()
+    {
+        pauseMenuUI.gameObject.SetActive(false);
     }
 }

@@ -22,9 +22,11 @@ public class AttackSystem : MonoBehaviour
     private bool weaponSelector = true;
 
     private GameUI gameUI;
+    private InputManager inputManager;
 
     void Awake() {
         gameUI = FindObjectOfType<GameUI>();
+        inputManager = FindObjectOfType<InputManager>();
     }
 
     // Start is called before the first frame update
@@ -45,7 +47,7 @@ public class AttackSystem : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("WeaponSwitch")) {
+        if (inputManager.WeaponSwitched) {
             weaponSelector = !weaponSelector;
             gameUI.UpdateWeaponType(weaponSelector);
         }
@@ -53,7 +55,7 @@ public class AttackSystem : MonoBehaviour
         fireElapsedTime += Time.deltaTime;
         shotgunFireElapsedTime += Time.deltaTime;
         if (weaponSelector) {
-            if (Input.GetButton("Fire1")) {
+            if (inputManager.WeaponFire) {
                 if (fireElapsedTime >= fireDelay) {
                     fireElapsedTime = 0.0f;
                     GameObject projectile_shooted = Instantiate(projectile);
@@ -66,7 +68,7 @@ public class AttackSystem : MonoBehaviour
         }
         else if (!weaponSelector)
             if (shotgunFireElapsedTime >= shotgunFireDelay) {
-                if (Input.GetButtonDown("Fire1")) {
+                if (inputManager.WeaponFireDown) {
                     shotgunFireElapsedTime = 0.0f;
                     for (int i = 0; i < 10; i++) {
                         GameObject projectile_shooted = Instantiate(projectile);
