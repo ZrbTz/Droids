@@ -144,6 +144,7 @@ namespace Invector.vCharacterController
             colliderHeight = GetComponent<CapsuleCollider>().height;
 
             isGrounded = true;
+            isDashing = false;
         }
 
         public virtual void UpdateMotor()

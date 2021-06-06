@@ -26,10 +26,11 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(dashRemainingTime >= 0.0f)
+        if(dashRemainingTime > 0.0f)
         {
             //TODO: brutto
             //controller.isJumping = true;
+            Debug.Log("dashing");
             controller.isDashing = true;
             direction = rb.transform.forward;
             rb.velocity = direction * dashSpeed;
