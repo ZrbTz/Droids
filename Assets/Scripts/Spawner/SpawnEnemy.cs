@@ -41,6 +41,7 @@ public class SpawnEnemy : MonoBehaviour
 
     BoxCollider _spawnZoneCollider;
     MiniMapSpawner miniMapSpawner;
+    [SerializeField] GameObject SpawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -133,7 +134,7 @@ public class SpawnEnemy : MonoBehaviour
                 //percentuale tempo passata > percentuale nemici spawnati
                 if (elapsedTime / totTime > (float)counter / bigHorde.hordes[j].count)
                 {
-                    Vector3 spawnPosition = this.transform.position;
+                    Vector3 spawnPosition = SpawnPoint.transform.position;
                     spawnPosition.x = spawnPosition.x + Random.Range(-3.0f, 3.0f);
                     spawnPosition.z = spawnPosition.z + Random.Range(-3.0f, 3.0f);
                     
