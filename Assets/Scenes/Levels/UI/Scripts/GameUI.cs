@@ -16,6 +16,8 @@ public class GameUI : MonoBehaviour
     private TowerSlotUI towerSlotUI;
     [SerializeField]
     private PauseMenuUI pauseMenuUI;
+    [SerializeField]
+    private KeyInfosUI keyInfosUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -68,5 +70,31 @@ public class GameUI : MonoBehaviour
     public void HidePauseMenu()
     {
         pauseMenuUI.gameObject.SetActive(false);
+    }
+
+
+    public void ShowClickButton(string key)
+    {
+        keyInfosUI.ShowClickButton(key);
+    }
+
+    public void ShowHoldingButton(string key)
+    {
+        keyInfosUI.ShowHoldingButton(key);
+    }
+
+    public void UpdateHoldingButton(float value)
+    {
+        keyInfosUI.UpdateHoldingButton(value);
+    }
+
+    public void HideClickButton()
+    {
+        keyInfosUI.HideClickButton();
+    }
+
+    public void HideHoldingButton()
+    {
+        keyInfosUI.HideHoldingButton();
     }
 }

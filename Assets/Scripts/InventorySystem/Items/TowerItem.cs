@@ -31,7 +31,8 @@ public class TowerItem : ItemObject
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
         {
-            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
                 GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
 
                 newPlaced.transform.position = hitInfo.point;
@@ -57,4 +58,8 @@ public class TowerItem : ItemObject
         return placeablePreviewItem;
     }
 
+    public LayerMask GetLayerMask()
+    {
+        return ignoreLayers;
+    }
 }

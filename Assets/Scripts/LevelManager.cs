@@ -20,6 +20,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(i);
     }
 
+    public void Load(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
     /*IEnumerator SceneTransition(int i)
     {
         transitionPanel.SetTrigger("End");

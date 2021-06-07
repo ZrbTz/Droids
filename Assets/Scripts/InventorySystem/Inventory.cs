@@ -13,6 +13,9 @@ public class Inventory : MonoBehaviour
     private int selectedSlot = 0;
     public int[] inventorySlotSize = { 1, 5 };
 
+    private bool isShowingPreview = false;
+    private GameObject previewItem;
+
     void Awake()
     {
         gameUI = FindObjectOfType<GameUI>();
@@ -21,6 +24,50 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         inventory = new InventorySlot[size];
+    }
+
+    void Update()
+    {
+        if (inventory[0] != null)
+        {
+            TowerItem towerItem = (TowerItem)inventory[0].item;
+            if (!isShowingPreview)
+            {
+                SpawnPreview(towerItem);
+            }
+            else
+            {
+                MovePreview(towerItem);
+            }
+        }
+    }
+
+    private void SpawnPreview(TowerItem towerItem)
+    {
+        previewItem = (GameObject)Instantiate((towerItem.GetPlaceablePreviewItemPrefab()));
+        previewItem.SetActive(false);
+        isShowingPreview = true;
+    }
+
+    private void MovePreview(TowerItem towerItem)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
+        LayerMask tmpIgnoreLayers = ~towerItem.GetLayerMask();
+
+        RaycastHit hitInfo;
+        if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
+        {
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                previewItem.SetActive(true);
+                previewItem.transform.position = hitInfo.point;
+                previewItem.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+
+                return;
+            }
+        }
+
+        previewItem.SetActive(false);
     }
 
     public bool AddItem(ItemObject item, int slot)
@@ -101,6 +148,8 @@ public class Inventory : MonoBehaviour
             else if (slot == 0)
             {
                 gameUI.RemoveTowerIcon();
+                isShowingPreview = false;
+                Destroy(previewItem);
             }
         }
     }
