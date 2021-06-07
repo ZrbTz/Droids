@@ -14575,6 +14575,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_Strada_Lunga (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569306958923516527, guid: 87a622e9d8e8130479a6fc598ffa0117, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715132985193476394, guid: 87a622e9d8e8130479a6fc598ffa0117, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a622e9d8e8130479a6fc598ffa0117, type: 3}
 --- !u!4 &1895949812 stripped
