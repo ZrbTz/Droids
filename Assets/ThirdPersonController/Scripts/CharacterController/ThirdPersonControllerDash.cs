@@ -16,11 +16,13 @@ public class ThirdPersonControllerDash : MonoBehaviour
     public float dashStopTime = 0.1f;
     private float dashRempainingStopTime = 0.0f;
     bool stopDash = false;
+    private int callCount;
      
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         controller = this.GetComponent<vThirdPersonController>();
+        callCount = 2;
     }
 
     // Update is called once per frame
@@ -30,7 +32,6 @@ public class ThirdPersonControllerDash : MonoBehaviour
         {
             //TODO: brutto
             //controller.isJumping = true;
-            Debug.Log("dashing");
             controller.isDashing = true;
             direction = rb.transform.forward;
             rb.velocity = direction * dashSpeed;
@@ -47,12 +48,19 @@ public class ThirdPersonControllerDash : MonoBehaviour
         }
         dashRemainingTime -= Time.deltaTime;
         dashRemainingCountdown -= Time.deltaTime;
+        if (dashRemainingCountdown < 0) {
+            callCount++;
+            dashRemainingCountdown = dashTime + dashCountdown;
+        }
+        if (callCount > 2) callCount = 2;
     }
 
     public void Dash()
     {
-        if(dashRemainingCountdown <= 0.0f)
+        if(callCount > 0 && !controller.isDashing)
         {
+            Debug.Log("dash");
+            callCount--;
             stopDash = true;
             dashRempainingStopTime = 0.0f;
             dashRemainingTime = dashTime;
