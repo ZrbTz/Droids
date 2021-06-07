@@ -32,12 +32,22 @@ public class TowerItem : ItemObject
         if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
         {
             if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-                GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
+                GameObject prefab = GetPlaceableItemPrefab();
+                Vector3 boxSize = prefab.GetComponent<BoxCollider>().size / 2;
+                Vector3 boxCenter = prefab.GetComponent<BoxCollider>().center;
+                int boxlayerMask = ~LayerMask.GetMask("AreaEffect", "Projectile", "Item", "Ground");
+                Collider[] boxHit = Physics.OverlapBox(hitInfo.point + boxCenter, boxSize, Quaternion.identity, boxlayerMask, QueryTriggerInteraction.Ignore);
+                Debug.Log(boxHit);
+                if (boxHit.Length == 0) {
+                    GameObject newPlaced = Instantiate(GetPlaceableItemPrefab());
 
-                newPlaced.transform.position = hitInfo.point;
-                newPlaced.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                    newPlaced.transform.position = hitInfo.point;
+                    newPlaced.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                    return true;
+                }
+                else return false;
 
-                return true;
+                
             }
             return false;
         }
