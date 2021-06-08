@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7216862440406976864}
   - component: {fileID: 5466342040464533734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MarciapiedeFlatAngolo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 689748600867949859}
   - component: {fileID: 9101844814701716257}
   - component: {fileID: 4565342537354297220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 2967696764107452648}
   - component: {fileID: 5379218074730960499}
   - component: {fileID: 5325487957432581201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 8337148769123644178}
   - component: {fileID: 4217680915445677049}
   - component: {fileID: 3083933756799146113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marciapiede
   m_TagString: Untagged
   m_Icon: {fileID: 0}

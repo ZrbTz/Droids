@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4708935994318598189}
   - component: {fileID: 3379140628459471731}
   - component: {fileID: 593552354455198154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4062617724829748571}
   - component: {fileID: 6242796927745036986}
   - component: {fileID: 5871968910408267773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 973474560936282321}
   - component: {fileID: 2400993352870246715}
   - component: {fileID: 6896195386632836109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 6836429288085159415}
   - component: {fileID: 3860725573439887830}
   - component: {fileID: 2150776948626904500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 1411967090378236772}
   - component: {fileID: 5308172107086462500}
   - component: {fileID: 21260580759947596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 5691041481895703787}
   - component: {fileID: 7986848844716027671}
   - component: {fileID: 6037145914693199367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 5609454925394732635}
   - component: {fileID: 9126849836152382718}
   - component: {fileID: 7615276604897838057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 5820777101317206613}
   - component: {fileID: 3029310735513093999}
   - component: {fileID: 922488488175710834}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 1684681421624014914}
   - component: {fileID: 6798893938632503465}
   - component: {fileID: 5629188475710542801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marciapiede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 4652898585412968812}
   - component: {fileID: 7660098966366701819}
   - component: {fileID: 1804428041420714418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 162217079513169496}
   - component: {fileID: 283515454653201794}
   - component: {fileID: 5355641541666465911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 5351388837853737467}
   - component: {fileID: 3465088944892518607}
   - component: {fileID: 1079700359244544268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 1741799797690295806}
   - component: {fileID: 1512446515152818168}
   - component: {fileID: 7336153217411435433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marciapiede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 2969362866819821585}
   - component: {fileID: 441089316007924820}
   - component: {fileID: 6464679598252217224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 5619876652891323320}
   - component: {fileID: 3347408343375895843}
   - component: {fileID: 3257614794995922689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 488119956956671770}
   - component: {fileID: 4734285502546706737}
   - component: {fileID: 8922145565504320193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,7 +1383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3963615228161244646}
   - component: {fileID: 5012160388952914762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MarciapiedeFlat (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1437,7 +1437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69175046903120432}
   - component: {fileID: 3390904228884407222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MarciapiedeFlat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 3058619682422311119}
   - component: {fileID: 7544986394495215908}
   - component: {fileID: 3383035573437975375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1573,7 @@ GameObject:
   - component: {fileID: 4720074261444325778}
   - component: {fileID: 2721547964944715704}
   - component: {fileID: 2336177796584072746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 7926959699007720841}
   - component: {fileID: 890053185736136742}
   - component: {fileID: 6936265709096129645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 7726877570368089160}
   - component: {fileID: 7008335474672826092}
   - component: {fileID: 3656534067048365871}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BloccoLaterale (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

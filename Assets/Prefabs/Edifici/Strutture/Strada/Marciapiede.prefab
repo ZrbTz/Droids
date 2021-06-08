@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068020134849663738}
   - component: {fileID: 2389570407105622908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marciapiede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,6 +126,10 @@ PrefabInstance:
       value: Tile_Centro_03
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a1775664d2db0c4fbe9ceecfb57b295, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a1775664d2db0c4fbe9ceecfb57b295, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -200,8 +204,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -210,6 +222,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -286,8 +302,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -296,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -376,6 +404,10 @@ PrefabInstance:
       value: Tile_Centro_01
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9596bee726323624b8af77b852ee7859, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9596bee726323624b8af77b852ee7859, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -450,8 +482,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -460,6 +500,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -540,6 +584,10 @@ PrefabInstance:
       value: Tile_Centro_03 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a1775664d2db0c4fbe9ceecfb57b295, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a1775664d2db0c4fbe9ceecfb57b295, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -616,6 +664,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9596bee726323624b8af77b852ee7859, type: 3}
       propertyPath: m_Name
       value: Tile_Centro_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9596bee726323624b8af77b852ee7859, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9596bee726323624b8af77b852ee7859, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -696,6 +748,10 @@ PrefabInstance:
       value: Tile_Centro_03 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a1775664d2db0c4fbe9ceecfb57b295, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a1775664d2db0c4fbe9ceecfb57b295, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -770,8 +826,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -780,6 +844,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -856,8 +924,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -866,6 +942,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -946,6 +1026,10 @@ PrefabInstance:
       value: Tile_Centro_02
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba254800e7cb9c84b97d4cdcee15283d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba254800e7cb9c84b97d4cdcee15283d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -1020,8 +1104,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1030,6 +1122,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1106,8 +1202,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1116,6 +1220,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1194,6 +1302,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ba254800e7cb9c84b97d4cdcee15283d, type: 3}
       propertyPath: m_Name
       value: Tile_Centro_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba254800e7cb9c84b97d4cdcee15283d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba254800e7cb9c84b97d4cdcee15283d, type: 3}
       propertyPath: m_StaticEditorFlags
