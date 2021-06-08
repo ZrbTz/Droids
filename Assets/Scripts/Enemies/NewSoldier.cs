@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class NewSoldier : Enemy {
     private enum SoldierState {
         Marching,
-        Attacking
+        Attacking,
     }
 
     private NavMeshAgent navMeshAgent;
@@ -18,7 +18,6 @@ public class NewSoldier : Enemy {
     protected override void Start() {
         base.Start();
         navMeshAgent = GetComponent<NavMeshAgent>();
-        //animator = GetComponent<Animator>();
         nexus = GameManager.Instance.nexus;
         enemy = true;
         randomArea = Map.Instance.GetRandomArea();
