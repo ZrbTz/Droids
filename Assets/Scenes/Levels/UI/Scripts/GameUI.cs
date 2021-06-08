@@ -18,6 +18,8 @@ public class GameUI : MonoBehaviour
     private PauseMenuUI pauseMenuUI;
     [SerializeField]
     private KeyInfosUI keyInfosUI;
+    [SerializeField]
+    private EnemyHealthUI enemyHealthUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -96,5 +98,16 @@ public class GameUI : MonoBehaviour
     public void HideHoldingButton()
     {
         keyInfosUI.HideHoldingButton();
+    }
+
+    public void ShowEnemyHealth(float percentage)
+    {
+        enemyHealthUI.gameObject.SetActive(true);
+        enemyHealthUI.SetEnemyHealth(percentage);
+    }
+
+    public void HideEnemyHealth()
+    {
+        enemyHealthUI.gameObject.SetActive(false);
     }
 }
