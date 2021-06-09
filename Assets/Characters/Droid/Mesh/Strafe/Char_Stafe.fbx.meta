@@ -1,0 +1,1595 @@
+fileFormatVersion: 2
+guid: 416dc2f8886bb9942ac1ee0f9a9cc00c
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 7225694673960352581
+    second: RestPosition
+  - first:
+      74: -8693272100567678227
+    second: Camminata
+  - first:
+      74: -1407796459208557862
+    second: CamminataAvantiDestra
+  - first:
+      74: -1299190692824820479
+    second: CamminataAvantiSinistra
+  - first:
+      74: 4441616893047124009
+    second: CamminataDestra
+  - first:
+      74: 1190509216764922807
+    second: CamminataSinistra
+  - first:
+      74: 3488352844841691615
+    second: CamminataIndietro
+  - first:
+      74: 1111659074292988761
+    second: CamminataIndietroDestra
+  - first:
+      74: 4324925324710564398
+    second: CamminataIndietroSinistra
+  - first:
+      74: -6188887004488268297
+    second: Corsa
+  - first:
+      74: -6534593482716215024
+    second: CorsaAvantiDestra
+  - first:
+      74: -7268220530988332577
+    second: CorsaAvantiSinistra
+  - first:
+      74: 5617105413687735986
+    second: CorsaDestra
+  - first:
+      74: 7413265656432187247
+    second: CorsaSinistra
+  - first:
+      74: 4019110374860176319
+    second: CorsaIndietro
+  - first:
+      74: 4824669181279513424
+    second: CorsaIndietroDestra
+  - first:
+      74: 7460410499767162610
+    second: CorsaIndietroSinistra
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: 7147512649436828061
+    second: SaltoMovimento
+  - first:
+      74: 924168436916939797
+    second: SaltoFermo
+  - first:
+      74: 2382770076964807914
+    second: Caduta
+  - first:
+      74: -8413615187226786738
+    second: CadutaMorbida
+  - first:
+      74: -5869666474783242210
+    second: Armature|Camminata
+  - first:
+      74: -6132136973076297336
+    second: Armature|Camminata.001
+  - first:
+      74: -5795756842752965800
+    second: Armature|Camminata.002
+  - first:
+      74: 943450084681347586
+    second: Armature|Camminata.003
+  - first:
+      74: -365930932610438455
+    second: Armature|Camminata.004
+  - first:
+      74: 3493187480150907964
+    second: Armature|Camminata.005
+  - first:
+      74: -2657672493494541172
+    second: Armature|Camminata.006
+  - first:
+      74: 2906410920381898585
+    second: Armature|Camminata.007
+  - first:
+      74: -3704923832458296749
+    second: Armature|Camminata.008
+  - first:
+      74: -5334158154728227259
+    second: Armature|Camminata.009
+  - first:
+      74: -6097491296639969229
+    second: Armature|Camminata.010
+  - first:
+      74: -7410253123412089152
+    second: Armature|Camminata.011
+  - first:
+      74: -5769039944283235715
+    second: Armature|Camminata.012
+  - first:
+      74: 9020433666099998830
+    second: Armature|Corsa
+  - first:
+      74: -3236184195239716069
+    second: Armature|Corsa.001
+  - first:
+      74: 845553178622476249
+    second: Armature|Corsa.002
+  - first:
+      74: -9164705570833977772
+    second: Armature|Corsa.003
+  - first:
+      74: 4842823874585701956
+    second: Armature|Corsa.005
+  - first:
+      74: 1820076031307587550
+    second: Armature|RestPosition
+  - first:
+      74: -2296169313771378828
+    second: Armature|Sparo
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: Center
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Camminata' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'UpLeg_Right' has scale animation that will
+      be discarded.\n\t'Leg_Right' has scale animation that will be discarded.\n\t'Foot_Right'
+      has scale animation that will be discarded.\n\t'UpLeg_Left' has scale animation
+      that will be discarded.\n\t'Leg_Left' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'CamminataAvantiDestra'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CamminataAvantiSinistra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CamminataDestra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CamminataSinistra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CamminataIndietro' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CamminataIndietroDestra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CamminataIndietroSinistra' has import animation warnings that might lower
+      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
+      quality.\n\t'UpLeg_Right' has scale animation that will be discarded.\n\t'Leg_Right'
+      has scale animation that will be discarded.\n\t'Foot_Right' has scale animation
+      that will be discarded.\n\t'UpLeg_Left' has scale animation that will be discarded.\n\t'Leg_Left'
+      has scale animation that will be discarded.\n\t'Foot_Left' has scale animation
+      that will be discarded.\n\nClip 'Corsa' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'UpLeg_Right' has scale animation that will
+      be discarded.\n\t'Leg_Right' has scale animation that will be discarded.\n\t'Foot_Right'
+      has scale animation that will be discarded.\n\t'UpLeg_Left' has scale animation
+      that will be discarded.\n\t'Leg_Left' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'CorsaAvantiDestra' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CorsaAvantiSinistra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CorsaDestra' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CorsaSinistra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CorsaIndietro' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CorsaIndietroDestra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'CorsaIndietroSinistra' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'Idle' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Leg_Left'
+      has scale animation that will be discarded.\n\t'Foot_Left' has scale animation
+      that will be discarded.\n\nClip 'SaltoMovimento' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'UpLeg_Right' has scale animation that will
+      be discarded.\n\t'Leg_Right' has scale animation that will be discarded.\n\t'Foot_Right'
+      has scale animation that will be discarded.\n\t'UpLeg_Left' has scale animation
+      that will be discarded.\n\t'Leg_Left' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'SaltoFermo' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right' has scale animation
+      that will be discarded.\n\t'Leg_Right' has scale animation that will be discarded.\n\t'Foot_Right'
+      has scale animation that will be discarded.\n\t'UpLeg_Left' has scale animation
+      that will be discarded.\n\t'Leg_Left' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Caduta' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right' has scale animation
+      that will be discarded.\n\t'Leg_Right' has scale animation that will be discarded.\n\t'Foot_Right'
+      has scale animation that will be discarded.\n\t'UpLeg_Left' has scale animation
+      that will be discarded.\n\t'Leg_Left' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'CadutaMorbida' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right' has scale animation
+      that will be discarded.\n\t'Leg_Right' has scale animation that will be discarded.\n\t'Foot_Right'
+      has scale animation that will be discarded.\n\t'UpLeg_Left' has scale animation
+      that will be discarded.\n\t'Leg_Left' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.001'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.002'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.003'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'Armature|Camminata.004' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.005'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.006'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.007'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.008'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'Foot_Left'
+      has scale animation that will be discarded.\n\nClip 'Armature|Camminata.009'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Camminata.010' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Camminata.011' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Camminata.012' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n\nClip
+      'Armature|Corsa' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Corsa.001' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Corsa.002' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Corsa.003' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Corsa.005' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\nClip
+      'Armature|Sparo' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'UpLeg_Right'
+      has scale animation that will be discarded.\n\t'Leg_Right' has scale animation
+      that will be discarded.\n\t'Foot_Right' has scale animation that will be discarded.\n\t'UpLeg_Left'
+      has scale animation that will be discarded.\n\t'Leg_Left' has scale animation
+      that will be discarded.\n\t'Foot_Left' has scale animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RestPosition
+      takeName: RestPosition
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Camminata
+      takeName: Camminata
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataAvantiDestra
+      takeName: CamminataAvantiDestra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataAvantiSinistra
+      takeName: CamminataAvantiSinistra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataDestra
+      takeName: CamminataDestra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataSinistra
+      takeName: CamminataSinistra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataIndietro
+      takeName: CamminataIndietro
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataIndietroDestra
+      takeName: CamminataIndietroDestra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CamminataIndietroSinistra
+      takeName: CamminataIndietroSinistra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Corsa
+      takeName: Corsa
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaAvantiDestra
+      takeName: CorsaAvantiDestra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaAvantiSinistra
+      takeName: CorsaAvantiSinistra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaDestra
+      takeName: CorsaDestra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaSinistra
+      takeName: CorsaSinistra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaIndietro
+      takeName: CorsaIndietro
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaIndietroDestra
+      takeName: CorsaIndietroDestra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CorsaIndietroSinistra
+      takeName: CorsaIndietroSinistra
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      internalID: 0
+      firstFrame: 2
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SaltoMovimento
+      takeName: SaltoMovimento
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SaltoFermo
+      takeName: SaltoFermo
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Caduta
+      takeName: Caduta
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CadutaMorbida
+      takeName: CadutaMorbida
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpLeg_Left
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpLeg_Right
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Leg_Left
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Leg_Right
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_Left
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_Right
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ShoulderL
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ShoulderR
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm_Left
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm_Right
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Forearm_Left
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Forearm_Right
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand_Left
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand_Right
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: char_strafe_v3(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: char_strafe_v3(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.46294996, y: 0.46294996, z: 0.46294996}
+    - name: Root
+      parentName: Armature
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0.50000006, y: -0.49999994, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Controller_Foot_Left
+      parentName: Root
+      position: {x: 0.0000000118832375, y: 0.41605282, z: -0.24698724}
+      rotation: {x: 0.59468883, y: 0.5946888, z: -0.38255095, w: -0.38255104}
+      scale: {x: 0.99999976, y: 1, z: 0.9999998}
+    - name: Controller_Foot_Left_end
+      parentName: Controller_Foot_Left
+      position: {x: 0, y: 0, z: -0.3796572}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Controller_Foot_Right
+      parentName: Root
+      position: {x: -0.0000000118832375, y: -0.41605282, z: -0.24698718}
+      rotation: {x: 0.594689, y: 0.59468865, z: -0.3825508, w: -0.382551}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: Controller_Foot_Right_end
+      parentName: Controller_Foot_Right
+      position: {x: 0, y: 0, z: -0.37965715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Root
+      position: {x: 0, y: 0, z: -1.919106}
+      rotation: {x: 0, y: 0, z: 0.000000059604645, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine
+      parentName: Hips
+      position: {x: 0, y: 0, z: -0.38594317}
+      rotation: {x: 0, y: 0, z: 1.4210855e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_Left_facing
+      parentName: Spine
+      position: {x: -2.0010002, y: 1.1040438, z: 0.0023875237}
+      rotation: {x: 0.5000001, y: 0.4999999, z: 0.4999999, w: 0.5000001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_Left_facing_end
+      parentName: Arm_Left_facing
+      position: {x: 0, y: 0, z: -0.5}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_Right_facing
+      parentName: Spine
+      position: {x: -2.0010002, y: -1.1040431, z: 0.0023875237}
+      rotation: {x: 0.5000001, y: 0.4999999, z: 0.4999999, w: 0.5000001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_Right_facing_end
+      parentName: Arm_Right_facing
+      position: {x: 0, y: 0, z: -0.5}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body_Low
+      parentName: Spine
+      position: {x: 0, y: 0, z: 2.3050487}
+      rotation: {x: -0.70441604, y: -0.061628334, z: 0.061628334, w: 0.70441604}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Chest
+      parentName: Spine
+      position: {x: 0, y: 0, z: -0.38594317}
+      rotation: {x: 0, y: 0, z: -1.4210855e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Chest
+      position: {x: 0, y: 0, z: 2.6909924}
+      rotation: {x: -0.7071068, y: 0.000000042146834, z: -0.00000004214683, w: 0.7071067}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Core_Base
+      parentName: Body
+      position: {x: 0, y: 1.3246981, z: 0}
+      rotation: {x: -0, y: 0.7071067, z: 0, w: 0.7071068}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Core_Sostegni
+      parentName: Core_Base
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Core
+      parentName: Core_Sostegni
+      position: {x: -0.0000000024835458, y: 0.24604964, z: -6.3108872e-30}
+      rotation: {x: -0.7071068, y: -0.000000010098159, z: 0.000000010098156, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body_Anteriore
+      parentName: Chest
+      position: {x: 0, y: 0, z: 2.690992}
+      rotation: {x: -0.7071068, y: 0.00000007419555, z: -0.00000007419554, w: 0.7071067}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Body_Contenimento
+      parentName: Chest
+      position: {x: 0, y: 0, z: 2.690992}
+      rotation: {x: -0.7071068, y: 0.00000007419555, z: -0.00000007419554, w: 0.7071067}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Body_Occhi
+      parentName: Chest
+      position: {x: 0, y: 0, z: 2.690992}
+      rotation: {x: -0.7071068, y: 0.00000007419555, z: -0.00000007419554, w: 0.7071067}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Body_OcchiContorno
+      parentName: Chest
+      position: {x: 0, y: 0, z: 2.690992}
+      rotation: {x: -0.7071068, y: 0.00000007419555, z: -0.00000007419554, w: 0.7071067}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Neck
+      parentName: Chest
+      position: {x: 0, y: 0, z: -0.60940504}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Neck
+      position: {x: 0, y: 0, z: -0.09934616}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_end
+      parentName: Head
+      position: {x: 0, y: 0, z: -0.19985819}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ShoulderL
+      parentName: Chest
+      position: {x: 0, y: 0, z: -0.60940504}
+      rotation: {x: 0.70641816, y: -0.000000034913995, z: -0.00000006960961, w: 0.7077947}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_Left
+      parentName: ShoulderL
+      position: {x: 5.684342e-14, y: 0.0000004726462, z: -1.1040454}
+      rotation: {x: 0.003771484, y: 0.0037755843, z: -0.70649904, w: 0.7076939}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000006}
+    - name: Forearm_Left
+      parentName: Arm_Left
+      position: {x: -0.000000057309364, y: 4.1086423e-10, z: -0.9998868}
+      rotation: {x: 0.0019332449, y: 0.00000007593346, z: -0.00000001595624, w: 0.99999815}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Finger_L_0
+      parentName: Forearm_Left
+      position: {x: -0.12690642, y: -0.000051808955, z: -0.8166716}
+      rotation: {x: -0.00064396637, y: -0.00000006509237, z: 0.00000006675038, w: 0.9999998}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Finger_L_0_end
+      parentName: Finger_L_0
+      position: {x: 0, y: 0, z: -0.3431585}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger_L_1
+      parentName: Forearm_Left
+      position: {x: 0.12744102, y: -0.00005182761, z: -0.8166716}
+      rotation: {x: -0.0006439664, y: 0.000000021775561, z: 0.00000009902814, w: 0.9999998}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Finger_L_1_end
+      parentName: Finger_L_1
+      position: {x: 0, y: 0, z: -0.3431585}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_LOW
+      parentName: Finger_L_1
+      position: {x: -1.2314835, y: -0.000499842, z: -1.4859885}
+      rotation: {x: 0.49998388, y: 0.50014794, z: 0.49985218, w: 0.500016}
+      scale: {x: 2.1600602, y: 2.1600595, z: 2.1600604}
+    - name: Hand_Left
+      parentName: Forearm_Left
+      position: {x: 0.00000008511393, y: -3.2724756e-10, z: -0.7764382}
+      rotation: {x: -0.00064396654, y: -0.000000034326057, z: -0.00000008485152, w: 0.9999998}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Hand_Left_end
+      parentName: Hand_Left
+      position: {x: 0, y: 0, z: -0.50000024}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_Up
+      parentName: Arm_Left
+      position: {x: -1.1040434, y: 0.004144005, z: -3.3025413}
+      rotation: {x: 0.5003121, y: 0.49968508, z: 0.50031495, w: 0.4996874}
+      scale: {x: 2.1600597, y: 2.1600583, z: 2.1600604}
+    - name: ShoulderR
+      parentName: Chest
+      position: {x: 0, y: 0, z: -0.60940504}
+      rotation: {x: -0.70641816, y: 0.000000052142845, z: -0.000000052347197, w: 0.7077947}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_Right
+      parentName: ShoulderR
+      position: {x: -1.3544721e-14, y: -0.0000004726462, z: -1.1040454}
+      rotation: {x: 0.0037756863, y: 0.0037717186, z: 0.7076588, w: -0.7065342}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+    - name: Forearm_Right
+      parentName: Arm_Right
+      position: {x: -0.00000018030934, y: -9.183765e-10, z: -0.99988675}
+      rotation: {x: 0.0018198524, y: -0.00000007606548, z: 0.000000084178374, w: 0.99999833}
+      scale: {x: 1, y: 1, z: 1.0000004}
+    - name: Arma
+      parentName: Forearm_Right
+      position: {x: 1.1040429, y: -0.0023078436, z: -2.302659}
+      rotation: {x: 0.49962276, y: 0.50037867, z: 0.49962094, w: 0.500377}
+      scale: {x: 2.16006, y: 2.1600595, z: 2.1600602}
+    - name: Finger_R_0
+      parentName: Forearm_Right
+      position: {x: 0.12690654, y: -0.00005182214, z: -0.8166717}
+      rotation: {x: -0.00064396654, y: 0.000000065245914, z: 0.00000017167498, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Finger_R_0_end
+      parentName: Finger_R_0
+      position: {x: 0, y: 0, z: -0.34315848}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger_R_1
+      parentName: Forearm_Right
+      position: {x: -0.1274409, y: -0.000051814503, z: -0.8166715}
+      rotation: {x: -0.0006439665, y: -0.000000021622022, z: 0.00000013938822, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Finger_R_1_end
+      parentName: Finger_R_1
+      position: {x: 0, y: 0, z: -0.34315848}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand_Right
+      parentName: Forearm_Right
+      position: {x: 0.000000034584584, y: -3.858549e-10, z: -0.77643806}
+      rotation: {x: -0.0006439664, y: 0.00000003401899, z: -0.00000015356349, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Hand_Right_end
+      parentName: Hand_Right
+      position: {x: 0, y: 0, z: -0.50000024}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_Up
+      parentName: Arm_Right
+      position: {x: 1.1040435, y: 0.0038774041, z: -3.3025436}
+      rotation: {x: 0.5002708, y: 0.4996836, z: 0.50031644, w: 0.4997289}
+      scale: {x: 2.1600595, y: 2.1600592, z: 2.1600604}
+    - name: Spalle
+      parentName: Chest
+      position: {x: 0, y: 0, z: 2.690992}
+      rotation: {x: -0.7071068, y: 0.00000007419555, z: -0.00000007419554, w: 0.7071067}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600606}
+    - name: Controller_Arm_Left
+      parentName: Spine
+      position: {x: 0.00000016314581, y: 1.1040435, z: 0.77882504}
+      rotation: {x: 0.7071068, y: 0.7071067, z: 4.32978e-17, w: 4.3297806e-17}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Controller_Arm_Left_end
+      parentName: Controller_Arm_Left
+      position: {x: 0, y: 0, z: -0.5}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Controller_Arm_Right
+      parentName: Spine
+      position: {x: -0.00000016314581, y: -1.1040435, z: 0.77882504}
+      rotation: {x: 0.7071068, y: 0.7071067, z: 4.32978e-17, w: 4.3297806e-17}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Controller_Arm_Right_end
+      parentName: Controller_Arm_Right
+      position: {x: 0, y: 0, z: -0.5}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpLeg_Left
+      parentName: Hips
+      position: {x: 0.000000061480605, y: 0.41605282, z: -0.38343215}
+      rotation: {x: 0.00000013315724, y: 0.9999939, z: 4.645707e-10, w: -0.003488867}
+      scale: {x: 1.004133, y: 1, z: 1}
+    - name: L_Leg_High
+      parentName: UpLeg_Left
+      position: {x: 0.016083114, y: -0.41605285, z: -2.3024821}
+      rotation: {x: -0.002469638, y: 0.7071025, z: 0.7071025, w: 0.002469638}
+      scale: {x: 2.1600606, y: 2.1600604, z: 2.1600606}
+    - name: Leg_Left
+      parentName: UpLeg_Left
+      position: {x: -0.000000003593616, y: 0.000000028441095, z: -0.9986545}
+      rotation: {x: -0.000000013238601, y: -0.006771199, z: -0.00000007368794, w: 0.9999771}
+      scale: {x: 0.9999997, y: 0.99999994, z: 1.0000002}
+    - name: Foot_Left
+      parentName: Leg_Left
+      position: {x: 3.8181014e-10, y: 0.000000023169989, z: -1.056944}
+      rotation: {x: 0.3847664, y: 0.38422093, z: 0.5928252, w: 0.5940434}
+      scale: {x: 1, y: 1.0000066, z: 1.0000035}
+    - name: Foot_Left_end
+      parentName: Foot_Left
+      position: {x: 0, y: 0, z: -0.38877913}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Foot
+      parentName: Foot_Left
+      position: {x: -0.4160528, y: -0.22475718, z: -0.10196474}
+      rotation: {x: 0.15000403, y: 0.69101286, z: 0.15000403, w: 0.6910129}
+      scale: {x: 2.1600604, y: 2.1600606, z: 2.160061}
+    - name: L_Leg_Low
+      parentName: Leg_Left
+      position: {x: -0.0016300215, y: -0.41605273, z: -1.3039259}
+      rotation: {x: 0.0023333936, y: 0.70710295, z: 0.70710295, w: -0.0023333936}
+      scale: {x: 2.160061, y: 2.1600604, z: 2.1600606}
+    - name: UpLeg_Right
+      parentName: Hips
+      position: {x: -0.000000061480605, y: -0.41605282, z: -0.38343215}
+      rotation: {x: -6.14472e-17, y: 0.99999386, z: -6.14472e-17, w: -0.0035149662}
+      scale: {x: 1.0193546, y: 1, z: 1.0000004}
+    - name: Leg_Right
+      parentName: UpLeg_Right
+      position: {x: -0.0000000021252475, y: 0.000000039008, z: -0.998654}
+      rotation: {x: -0.000000014681557, y: -0.0067686536, z: -0.000000074502495, w: 0.9999771}
+      scale: {x: 0.9999991, y: 0.99999994, z: 1.0000011}
+    - name: Foot_Right
+      parentName: Leg_Right
+      position: {x: 1.9234392e-10, y: 2.4717856e-10, z: -1.0569434}
+      rotation: {x: 0.38573563, y: 0.38320062, z: 0.59061265, w: 0.5962735}
+      scale: {x: 0.9999998, y: 1.000144, z: 1.0000732}
+    - name: Foot_Right_end
+      parentName: Foot_Right
+      position: {x: 0, y: 0, z: -0.38877916}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Foot
+      parentName: Foot_Right
+      position: {x: 0.4160528, y: -0.22475713, z: -0.10036263}
+      rotation: {x: 0.15000407, y: 0.6910128, z: 0.15000416, w: 0.6910129}
+      scale: {x: 2.1600606, y: 2.1600606, z: 2.1600611}
+    - name: R_Leg_Low
+      parentName: Leg_Right
+      position: {x: -0.0016321407, y: 0.4160527, z: -1.3039254}
+      rotation: {x: 0.0023363123, y: 0.70710295, z: 0.7071029, w: -0.0023363126}
+      scale: {x: 2.1600602, y: 2.1600606, z: 2.1600606}
+    - name: R_Leg_High
+      parentName: UpLeg_Right
+      position: {x: 0.01610333, y: 0.4160527, z: -2.3024821}
+      rotation: {x: -0.002472651, y: 0.7071025, z: 0.7071025, w: 0.002472651}
+      scale: {x: 2.1600606, y: 2.1600604, z: 2.1600604}
+    - name: Leg_Left_facing
+      parentName: Root
+      position: {x: 2.0000002, y: 0.41605276, z: -1.3038838}
+      rotation: {x: -0.50000006, y: -0.49999997, z: 0.49999997, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Leg_Left_facing_end
+      parentName: Leg_Left_facing
+      position: {x: 0, y: 0, z: -0.5}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_Right_facing
+      parentName: Root
+      position: {x: 2.0000002, y: -0.41605288, z: -1.3038838}
+      rotation: {x: -0.000000021073427, y: -0.70710665, z: -0.000000021073419, w: 0.70710695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_Right_facing_end
+      parentName: Leg_Right_facing
+      position: {x: 0, y: 0, z: -0.5}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Center
+      parentName: char_strafe_v3(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.46294996, y: 0.46294996, z: 0.46294996}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
