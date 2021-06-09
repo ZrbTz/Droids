@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestGrafica/Test_Livello_Semplice.unity
     guid: 4f834ffcfb46db54c9e67f0125105438
+  - enabled: 1
+    path: Assets/Scenes/TestGrafica/Test_Luci.unity
+    guid: 453b6c0330c53be4287acf88f1e666d8
   m_configObjects: {}

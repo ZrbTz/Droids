@@ -5,10 +5,12 @@ using UnityEngine;
 
 
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     [System.Serializable]
-    public class Spawner {
+    public class Spawner
+    {
         public string name;
         public GameObject spawnerObj;
     }
@@ -29,54 +31,74 @@ public class GameManager : MonoBehaviour {
     public GameDifficulty difficulty;
     public bool ignoreDifficulty = true;
 
-    private void Awake() {
+    private GameUI gameUI;
+    private bool isPaused;
+
+    private void Awake()
+    {
         Application.targetFrameRate = 1000;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;
 
         difficulty = (GameDifficulty)Enum.Parse(typeof(GameDifficulty), PlayerPrefs.GetString("Difficulty", "Normal"));
+
+        gameUI = FindObjectOfType<GameUI>();
+        Resume();
     }
     public static GameManager Instance { get => instance; }
 
-    public void resetHorde() {
+    public void resetHorde()
+    {
         nextBigHorde--;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject g in enemies) {
+        foreach (GameObject g in enemies)
+        {
             Destroy(g);
         }
+
+        gameUI.UpdateHordeNumber(nextBigHorde);
     }
 
-    public void gameLost() {
+    public void gameLost()
+    {
         deathMenu.showDeathMenu();
     }
 
-    public void gameWon() {
+    public void gameWon()
+    {
         //Show victory menu, for the moment i show the death menu XD
         deathMenu.showDeathMenu();
     }
 
     private float searchCountDown = 1f;
-    bool allKilled() {
+    bool allKilled()
+    {
         searchCountDown -= Time.deltaTime;
-        if (searchCountDown <= 0f) {
+        if (searchCountDown <= 0f)
+        {
             if (GameObject.FindWithTag("Enemy") == null) return true;
             searchCountDown = 1f;
         }
         return false;
     }
 
-    public void signalSpawnEnd() {
+    public void signalSpawnEnd()
+    {
         emptySpawners++;
     }
 
-    void Update() {
-        if(state == SpawnState.SPAWNING) {
+    void Update()
+    {
+        if (state == SpawnState.SPAWNING)
+        {
             if (emptySpawners == spawners.Length) state = SpawnState.WAITING;
         }
 
-        if (state == SpawnState.WAITING) {
-            if (allKilled()) {
+        if (state == SpawnState.WAITING)
+        {
+            if (allKilled())
+            {
                 state = SpawnState.READY;
                 if (nextBigHorde >= numHordes) gameWon();
                 Debug.Log("Press E to new horde");
@@ -84,11 +106,51 @@ public class GameManager : MonoBehaviour {
             else return;
         }
 
-        if (state == SpawnState.READY && Input.GetButtonUp("Spawn")) {
+        if (state == SpawnState.READY && Input.GetButtonUp("Spawn"))
+        {
             state = SpawnState.SPAWNING;
             emptySpawners = 0;
             foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
             nextBigHorde++;
+
+            gameUI.UpdateHordeNumber(nextBigHorde);
         }
+    }
+
+    public void HandlePause()
+    {
+        if (isPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        gameUI.ShowPauseMenu();
+
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        gameUI.HidePauseMenu();
+
+        isPaused = false;
+    }
+
+    public bool IsPaused()
+    {
+        return isPaused;
     }
 }

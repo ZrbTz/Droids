@@ -17,6 +17,12 @@ public class ThirdPersonControllerDash : MonoBehaviour
     private float dashRempainingStopTime = 0.0f;
     bool stopDash = false;
     private int callCount;
+
+    private GameUI gameUI;
+
+    void Awake() {
+        gameUI = FindObjectOfType<GameUI>();
+    }
      
     void Start()
     {
@@ -65,6 +71,8 @@ public class ThirdPersonControllerDash : MonoBehaviour
             dashRempainingStopTime = 0.0f;
             dashRemainingTime = dashTime;
             dashRemainingCountdown = dashTime + dashCountdown;
+
+            gameUI.UpdateDashCooldown(dashRemainingCountdown);
         }
     }
 }

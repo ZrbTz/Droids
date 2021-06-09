@@ -6,10 +6,12 @@ public class NewNexus : MonoBehaviour
 {
     public Unit nexus;
     public GameObject test;
+    private GameUI gameUI;
 
     private void Awake()
     {
         nexus = FindObjectOfType<GameManager>().nexus;
+        gameUI = FindObjectOfType<GameUI>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,6 +31,8 @@ public class NewNexus : MonoBehaviour
             nexus.health -= other.transform.root.GetComponent<Enemy>().damage;
             other.transform.root.GetComponent<Enemy>().FadeAndDisappear();
             Debug.Log("Il nexus ha subito danno!");
+
+            gameUI.UpdateNexusHealth(nexus.health, nexus.GetMaxHealth());
         }
     }
 }

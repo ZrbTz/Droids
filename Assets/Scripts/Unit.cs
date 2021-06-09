@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Unit : MonoBehaviour {
+    private float maxHealth;
     public float health = 100f;
     public bool enemy;
     public bool dead = false;
@@ -14,6 +15,8 @@ public class Unit : MonoBehaviour {
         collider = GetComponent<Collider>();
         if (collider == null)
             Debug.Log(name);
+
+        maxHealth = health;
     }
 
     protected virtual void Update() {
@@ -44,5 +47,9 @@ public class Unit : MonoBehaviour {
     protected virtual void Die(float timeToDie)
     {
         Destroy(gameObject, timeToDie);
+    }
+
+    public float GetMaxHealth() {
+        return maxHealth;
     }
 }

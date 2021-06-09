@@ -65,4 +65,8 @@ public class TowerItem : ItemObject
         return placeablePreviewItem;
     }
 
+    public LayerMask GetLayerMask()
+    {
+        return ignoreLayers;
+    }
 }

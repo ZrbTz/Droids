@@ -7,6 +7,17 @@ public class InputManager : MonoBehaviour
     private Inventory inventory;
     //public KeyCode placeTurret = KeyCode.E;
     //public KeyCode throwSecondary = KeyCode.Q;
+    private GameManager gameManager;
+
+    // Weapon Inputs
+    public bool WeaponSwitched { get; set; }
+    public bool WeaponFire { get; set; }
+    public bool WeaponFireDown { get; set; }
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     void Start()
     {
@@ -15,71 +26,83 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-            GetInventoryInput(); 
+        GetPauseMenuInput();
+        if (!gameManager.IsPaused())
+        {
+            GetInventoryInput();
+            GetDashInput();
+            GetWeaponInput();
+        }
     }
 
-    bool GetInventoryInput()
+    private void GetInventoryInput()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            inventory.SelectSlot(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            inventory.SelectSlot(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            inventory.SelectSlot(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            inventory.SelectSlot(3);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            inventory.SelectSlot(4);
-        }
-        else if (Input.mouseScrollDelta.y > 0)
-        {
-            inventory.SelectNextSlot();
-        }
-        else if (Input.mouseScrollDelta.y < 0)
-        {
-            inventory.SelectPreviousSlot();
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            inventory.UseSelectedItem();
-        }
-        */
         if (!this.GetComponent<InteractionController>().TryInteracting() && Input.GetButtonDown("Interact"))
         {
             if (inventory.UseItem(0))
             {
-                return true;
+                return;
             }
         }
         if (Input.GetButtonDown("Throw"))
         {
             if (inventory.ShowThrowableTrajectory(1))
             {
-                return true;
+                return;
             }
         }
         if (Input.GetButtonUp("Throw"))
         {
             if (inventory.UseItem(1))
             {
-                return true;
+                return;
             }
         }
+    }
+
+    private void GetDashInput()
+    {
         if (Input.GetMouseButtonDown(1))
         {
             this.GetComponent<ThirdPersonControllerDash>().Dash();
         }
+    }
 
-        return false;
+    private void GetPauseMenuInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameManager.HandlePause();
+        }
+    }
+
+    private void GetWeaponInput()
+    {
+        if (Input.GetButtonDown("WeaponSwitch"))
+        {
+            WeaponSwitched = true;
+        }
+        else
+        {
+            WeaponSwitched = false;
+        }
+
+        if (Input.GetButton("Fire1"))
+        {
+            WeaponFire = true;
+        }
+        else
+        {
+            WeaponFire = false;
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            WeaponFireDown = true;
+        }
+        else
+        {
+            WeaponFireDown = false;
+        }
     }
 }

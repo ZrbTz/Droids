@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    //[SerializeField]
-    //private GameUI gameUI = default;
+    private GameUI gameUI;
 
     [SerializeField]
     private int size = 5;
@@ -14,9 +13,61 @@ public class Inventory : MonoBehaviour
     private int selectedSlot = 0;
     public int[] inventorySlotSize = { 1, 5 };
 
+    private bool isShowingPreview = false;
+    private GameObject previewItem;
+
+    void Awake()
+    {
+        gameUI = FindObjectOfType<GameUI>();
+    }
+
     void Start()
     {
         inventory = new InventorySlot[size];
+    }
+
+    void Update()
+    {
+        if (inventory[0] != null)
+        {
+            TowerItem towerItem = (TowerItem)inventory[0].item;
+            if (!isShowingPreview)
+            {
+                SpawnPreview(towerItem);
+            }
+            else
+            {
+                MovePreview(towerItem);
+            }
+        }
+    }
+
+    private void SpawnPreview(TowerItem towerItem)
+    {
+        previewItem = (GameObject)Instantiate((towerItem.GetPlaceablePreviewItemPrefab()));
+        previewItem.SetActive(false);
+        isShowingPreview = true;
+    }
+
+    private void MovePreview(TowerItem towerItem)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
+        LayerMask tmpIgnoreLayers = ~towerItem.GetLayerMask();
+
+        RaycastHit hitInfo;
+        if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
+        {
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                previewItem.SetActive(true);
+                previewItem.transform.position = hitInfo.point;
+                previewItem.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+
+                return;
+            }
+        }
+
+        previewItem.SetActive(false);
     }
 
     public bool AddItem(ItemObject item, int slot)
@@ -28,6 +79,16 @@ public class Inventory : MonoBehaviour
         if (inventory[slot] == null)
         {
             inventory[slot] = new InventorySlot(item, item.GetAmount());
+
+            if (slot == 1)
+            {
+                gameUI.UpdateGrenadeAmount(item.GetAmount());
+            }
+            else if (slot == 0)
+            {
+                gameUI.AddTowerIcon(item.GetIconSprite());
+            }
+
             return true;
         }
         if (inventory[slot].item == item)
@@ -35,68 +96,18 @@ public class Inventory : MonoBehaviour
             if (inventory[slot].amount < inventorySlotSize[slot])
             {
                 inventory[slot].addAmount(1);
+
+                if (slot == 1)
+                {
+                    gameUI.UpdateGrenadeAmount(inventory[slot].amount);
+                }
+
                 return true;
             }
             return false;
         }
+
         return false;
-        /*
-        for (int i = 0; i < size; i++)
-        {
-            if (inventory[i] == null)
-            {
-                inventory[i] = new InventorySlot(item, item.GetAmount());
-                //gameUI.AddItem(item.GetIconPrefab(), item.GetAmount(), i);
-                break;
-            }
-        }
-        */
-    }
-
-    public void SelectSlot(int newPosition)
-    {
-        //gameUI.UpdateSelectedSlot(newPosition, selectedSlot);
-        selectedSlot = newPosition;
-    }
-
-    public void SelectNextSlot()
-    {
-        int newPosition = (selectedSlot + 1) % 5;
-        //gameUI.UpdateSelectedSlot(newPosition, selectedSlot);
-        selectedSlot = newPosition;
-    }
-
-    public void SelectPreviousSlot()
-    {
-        int newPosition = (selectedSlot - 1 + 5) % 5;
-        //gameUI.UpdateSelectedSlot(newPosition, selectedSlot);
-        selectedSlot = newPosition;
-    }
-
-    public void UseSelectedItem()
-    {
-        if (inventory[selectedSlot] != null)
-        {
-            bool used = inventory[selectedSlot].item.Use(this.gameObject);
-            if (used)
-            {
-                DecreaseSelectedItemAmount();
-            }
-        }
-    }
-
-    public void DecreaseSelectedItemAmount()
-    {
-        int amount = inventory[selectedSlot].addAmount(-1);
-        if (amount <= 0)
-        {
-            inventory[selectedSlot] = null;
-            //gameUI.RemoveItem(selectedSlot);
-        }
-        else
-        {
-            //gameUI.UpdateItemCounter(amount, selectedSlot);
-        }
     }
 
     public bool ShowThrowableTrajectory(int slot)
@@ -129,11 +140,17 @@ public class Inventory : MonoBehaviour
         if (amount <= 0)
         {
             inventory[slot] = null;
-            //gameUI.RemoveItem(selectedSlot);
-        }
-        else
-        {
-            //gameUI.UpdateItemCounter(amount, selectedSlot);
+
+            if (slot == 1)
+            {
+                gameUI.UpdateGrenadeAmount(amount);
+            }
+            else if (slot == 0)
+            {
+                gameUI.RemoveTowerIcon();
+                isShowingPreview = false;
+                Destroy(previewItem);
+            }
         }
     }
 

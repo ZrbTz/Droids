@@ -12,6 +12,13 @@ public class InteractionController : MonoBehaviour
 
     private int layerMask;
 
+    private GameUI gameUI;
+
+    void Awake()
+    {
+        gameUI = FindObjectOfType<GameUI>();
+    }
+
     void Start()
     {
         cam = Camera.main;
@@ -36,12 +43,12 @@ public class InteractionController : MonoBehaviour
 
         if (!successfulHit)
         {
-            //gameUI.HideClickButton();
-            //gameUI.HideHoldingButton();
+            gameUI.HideClickButton();
+            gameUI.HideHoldingButton();
         }
     }
 
-    public bool TryInteracting ()
+    public bool TryInteracting()
     {
         if (successfulHit)
         {
@@ -59,7 +66,7 @@ public class InteractionController : MonoBehaviour
         switch (interactionType)
         {
             case Interactable.InteractionType.Click:
-                //gameUI.ShowClickButton(key.ToString());
+                gameUI.ShowClickButton(key.ToString());
 
                 if (Input.GetKeyDown(key))
                 {
@@ -67,7 +74,7 @@ public class InteractionController : MonoBehaviour
                 }
                 break;
             case Interactable.InteractionType.Hold:
-                //gameUI.ShowHoldingButton(key.ToString());
+                gameUI.ShowHoldingButton(key.ToString());
 
                 if (Input.GetKey(key))
                 {
@@ -83,7 +90,7 @@ public class InteractionController : MonoBehaviour
                     interactable.ResetCurrentHoldTime();
                 }
 
-                //gameUI.UpdateHoldingButton(interactable.GetCurrentHoldTime() / interactable.GetHoldTime());
+                gameUI.UpdateHoldingButton(interactable.GetCurrentHoldTime() / interactable.GetHoldTime());
                 break;
             default:
                 throw new System.Exception("Unsupported type of interactable.");
