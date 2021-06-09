@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211f3121c008f6b4fa91e451afc915d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionType: 0
+  interactionType: 1
   holdTime: 1
   interactionKey: 101
   inventorySlot: 0
