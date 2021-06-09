@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6683059727551622595}
   - component: {fileID: 1359010544867979850}
   - component: {fileID: 3103868407098568424}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Torre Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3c36067560b439b4b864f6b638e159a1, type: 2}
     - target: {fileID: -3133498875991405556, guid: a257331098965624f937a3605dcc077a, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -2859109400176981367, guid: a257331098965624f937a3605dcc077a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a257331098965624f937a3605dcc077a, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3339003006492874651, guid: a257331098965624f937a3605dcc077a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3c36067560b439b4b864f6b638e159a1, type: 2}
     - target: {fileID: 4157153843445859358, guid: a257331098965624f937a3605dcc077a, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4318055704609249530, guid: a257331098965624f937a3605dcc077a, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a257331098965624f937a3605dcc077a, type: 3}
