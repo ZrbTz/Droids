@@ -59,14 +59,19 @@ public class Inventory : MonoBehaviour
         {
             if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
-                previewItem.SetActive(true);
-                previewItem.transform.position = hitInfo.point;
-                previewItem.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                GameObject prefab = towerItem.GetPlaceableItemPrefab();
+                BoxCollider box = prefab.GetComponent<BoxCollider>();
+                int boxlayerMask = ~LayerMask.GetMask("AreaEffect", "Projectile", "Item", "Ground");
+                Collider[] boxHit = Physics.OverlapBox(hitInfo.point + box.center, box.size / 2, Quaternion.identity, boxlayerMask, QueryTriggerInteraction.Ignore);
+                if (boxHit.Length == 0) {
+                    previewItem.SetActive(true);
+                    previewItem.transform.position = hitInfo.point;
+                    previewItem.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                    return;
+                }
 
-                return;
             }
         }
-
         previewItem.SetActive(false);
     }
 
