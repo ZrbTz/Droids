@@ -9,12 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2986671562388797171}
-  - component: {fileID: 2465819331351536542}
   - component: {fileID: 6712687935024945592}
-  - component: {fileID: -5767446833828175588}
-  - component: {fileID: 8811943877099586427}
-  m_Layer: 6
-  m_Name: BancarellaMetallo
+  m_Layer: 8
+  m_Name: Bancarella Preview 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,24 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2465819331351536542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111592731181600257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211f3121c008f6b4fa91e451afc915d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionType: 1
-  holdTime: 1
-  interactionKey: 101
-  inventorySlot: 0
-  itemObject: {fileID: 11400000, guid: 35ff19802f28d3643b7bbaae02c661eb, type: 2}
-  pickSound: {fileID: 0}
 --- !u!65 &6712687935024945592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66,38 +45,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.12, z: 1}
   m_Center: {x: 0, y: 0.56, z: 0}
---- !u!114 &-5767446833828175588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111592731181600257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52a6147c8790754b9e6cecc3ddc5d50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  enemy: 0
-  dead: 0
-  body: {fileID: 0}
---- !u!208 &8811943877099586427
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111592731181600257}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1001 &3282319698186537211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,6 +96,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c36067560b439b4b864f6b638e159a1, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c36067560b439b4b864f6b638e159a1, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c36067560b439b4b864f6b638e159a1, type: 2}
     - target: {fileID: 919132149155446097, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}
       propertyPath: m_Name
       value: Bancarella_01
