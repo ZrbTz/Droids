@@ -25,6 +25,8 @@ namespace Invector.vCharacterController
 
         #endregion
 
+        private bool isShooting = false;
+
         void Awake()
         {
             gameManager = FindObjectOfType<GameManager>();
@@ -135,6 +137,14 @@ namespace Invector.vCharacterController
                 cc.Sprint(true);
             else if (Input.GetKeyUp(sprintInput))
                 cc.Sprint(false);
+            else if (cc.isSprinting == true && Input.GetButtonDown("Fire1")) {
+                isShooting = true;
+                cc.Sprint(false);
+            }
+            else if(isShooting = true && Input.GetButtonUp("Fire1")) {
+                isShooting = false;
+                cc.Sprint(true);
+            }
         }
 
         /// <summary>
