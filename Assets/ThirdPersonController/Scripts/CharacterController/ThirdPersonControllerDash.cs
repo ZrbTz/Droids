@@ -34,7 +34,6 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(controller.isGrounded);
         if(dashRemainingTime > 0.0f && (!controller.isStrafing || !controller.isGrounded))
         {
             //TODO: brutto
