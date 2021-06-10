@@ -127,21 +127,22 @@ namespace Invector.vCharacterController
 
         protected virtual void StrafeInput()
         {
-            if (Input.GetKeyDown(strafeInput))
+            if (Input.GetKeyDown(strafeInput) && cc.isSprinting == false)
                 cc.Strafe();
         }
 
         protected virtual void SprintInput()
         {
-            if (Input.GetKeyDown(sprintInput))
+            if (Input.GetKeyDown(sprintInput)) {
                 cc.Sprint(true);
+            }
             else if (Input.GetKeyUp(sprintInput))
                 cc.Sprint(false);
             else if (cc.isSprinting == true && Input.GetButtonDown("Fire1")) {
                 isShooting = true;
                 cc.Sprint(false);
             }
-            else if(isShooting = true && Input.GetButtonUp("Fire1")) {
+            else if (isShooting = true && Input.GetButtonUp("Fire1")) {
                 isShooting = false;
                 cc.Sprint(true);
             }

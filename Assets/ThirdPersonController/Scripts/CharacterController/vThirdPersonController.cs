@@ -80,8 +80,9 @@ namespace Invector.vCharacterController
 
         public virtual void Sprint(bool value)
         {
-            var sprintConditions = (input.sqrMagnitude > 0.1f && isGrounded &&
-                !(isStrafing && !strafeSpeed.walkByDefault && (horizontalSpeed >= 0.5 || horizontalSpeed <= -0.5 || verticalSpeed <= 0.1f)));
+            var sprintConditions = (input.sqrMagnitude > 0.1f && isGrounded);
+
+            //&& !(isStrafing && !strafeSpeed.walkByDefault && (horizontalSpeed >= 0.5 || horizontalSpeed <= -0.5 || verticalSpeed <= 0.1f)));
 
             if (value && sprintConditions)
             {
