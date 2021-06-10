@@ -9,11 +9,13 @@ public class NewSoldier : Enemy {
     private enum SoldierState {
         Marching,
         Attacking,
+        Approaching
     }
 
     private NavMeshAgent navMeshAgent;
     [SerializeField] private Animator animator;
     private SoldierState state;
+    private Obstacle farTarget;
 
     protected override void Start() {
         base.Start();
@@ -27,11 +29,19 @@ public class NewSoldier : Enemy {
     protected override void Update() {
         base.Update();
         switch (state) {
-            case SoldierState.Marching:
+            case SoldierState.Approaching:
                 animator.SetFloat("Speed", navMeshAgent.speed);
                 if (GetTarget()) {
                     StopMarching();
                     StartAttacking();
+                } else if (farTarget == null || farTarget.health <= 0)
+                    StartMarching();
+                break;
+            case SoldierState.Marching:
+                animator.SetFloat("Speed", navMeshAgent.speed);
+                if (GetFarTarget()) {
+                    StopMarching();
+                    StartApproaching();
                 }
                 break;
             case SoldierState.Attacking:
@@ -48,6 +58,14 @@ public class NewSoldier : Enemy {
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
         state = SoldierState.Marching;
+    }
+
+    private void StartApproaching() {
+        navMeshAgent.isStopped = false;
+        //navMeshAgent.destination = farTarget.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
+        navMeshAgent.destination = farTarget.transform.position;
+        navMeshAgent.SetAreaCost(randomArea, 1f);
+        state = SoldierState.Approaching;
     }
 
     private void StopMarching() {
@@ -70,6 +88,20 @@ public class NewSoldier : Enemy {
             return true;
         } else
             return false;
+    }
+
+    private bool GetFarTarget() {
+        var colliders = Physics.OverlapSphere(transform.position, 12.5f);
+        float minDistance = Mathf.Infinity;
+        farTarget = null;
+        foreach(var collider in colliders) {
+            Vector3 direction = collider.transform.position - transform.position; direction.y = 0;
+            if (collider.TryGetComponent(out Obstacle obstacle) && obstacle.health > 0
+            && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(45f * 0.5f * Mathf.Deg2Rad)
+            && Vector3.Distance(transform.position, obstacle.transform.position) < minDistance)
+            farTarget = obstacle;
+        }
+        return (farTarget != null);
     }
 
     private void StopAttacking() {
