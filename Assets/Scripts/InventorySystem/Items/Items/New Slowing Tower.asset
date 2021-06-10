@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemName: 
-  iconPrefab: {fileID: 0}
+  iconSprite: {fileID: 0}
   amount: 1
   placeableItem: {fileID: 6171487001421686886, guid: caa188d42b2c6d749989b3dac698022e, type: 3}
-  placeablePreviewItem: {fileID: 0}
+  placeablePreviewItem: {fileID: 6171487001421686886, guid: 4ec47c56f07d64d44ab5fc667b5756f7, type: 3}
   ignoreLayers:
     serializedVersion: 2
     m_Bits: 1312
