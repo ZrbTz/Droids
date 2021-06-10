@@ -127,24 +127,30 @@ namespace Invector.vCharacterController
 
         protected virtual void StrafeInput()
         {
-            if (Input.GetKeyDown(strafeInput))
+            if (Input.GetKeyDown(strafeInput) && cc.isSprinting == false)
                 cc.Strafe();
         }
 
         protected virtual void SprintInput()
         {
-            if (Input.GetKeyDown(sprintInput))
-                cc.Sprint(true);
-            else if (Input.GetKeyUp(sprintInput))
-                cc.Sprint(false);
-            else if (cc.isSprinting == true && Input.GetButtonDown("Fire1")) {
-                isShooting = true;
-                cc.Sprint(false);
-            }
-            else if(isShooting = true && Input.GetButtonUp("Fire1")) {
-                isShooting = false;
-                cc.Sprint(true);
-            }
+            if (Input.GetButtonDown("Fire1")) isShooting = true;
+            else if (Input.GetButtonUp("Fire1")) isShooting = false;
+
+
+            if (Input.GetKeyDown(sprintInput) && !isShooting) cc.Sprint(true);
+            else if (cc.isSprinting && Input.GetButtonDown("Fire1")) cc.Sprint(false);
+            else if (Input.GetKey(sprintInput) && !cc.isSprinting && Input.GetButtonUp("Fire1")) cc.Sprint(true);
+            else if (Input.GetKeyUp(sprintInput) && cc.isSprinting) cc.Sprint(false);
+            //else if (Input.GetKeyUp(sprintInput) && !isShooting)
+            //    cc.Sprint(false);
+            //else if (cc.isSprinting == true && Input.GetButtonDown("Fire1")) {
+            //    isShooting = true;
+            //    cc.Sprint(false);
+            //}
+            //else if (isShooting = true && Input.GetButtonUp("Fire1")) {
+            //    isShooting = false;
+            //    cc.Sprint(true);
+            //}
         }
 
         /// <summary>
