@@ -34,10 +34,20 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(dashRemainingTime > 0.0f)
+        Debug.Log(controller.isGrounded);
+        if(dashRemainingTime > 0.0f && (!controller.isStrafing || !controller.isGrounded))
         {
             //TODO: brutto
             //controller.isJumping = true;
+            controller.isDashing = true;
+            direction = rb.transform.forward;
+            rb.velocity = direction * dashSpeed;
+            //rb.AddForce(direction * 1000f);
+        }
+        else if (dashRemainingTime > 0.0f && controller.isStrafing) {
+            //TODO: brutto
+            //controller.isJumping = true;
+            Debug.Log("dashhhhhh");
             controller.isDashing = true;
             //direction = rb.transform.forward;
             rb.velocity = rb.velocity.normalized * dashSpeed;
@@ -45,8 +55,8 @@ public class ThirdPersonControllerDash : MonoBehaviour
             //rb.AddForce(direction * 1000f);
         }
         else if (stopDash) {
-            //direction = rb.transform.forward;
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp(dashSpeed, 0.0f, dashRempainingStopTime / dashStopTime);
+            direction = rb.transform.forward;
+            rb.velocity = direction * Mathf.Lerp(dashSpeed, 0.0f, dashRempainingStopTime / dashStopTime);
             dashRempainingStopTime += Time.deltaTime;
             if (dashRempainingStopTime >= dashStopTime) {
                 stopDash = false;
@@ -66,7 +76,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
     {
         if(callCount > 0 && !controller.isDashing)
         {
-            Debug.Log("dash");
+            //Debug.Log("dash");
             callCount--;
             stopDash = true;
             dashRempainingStopTime = 0.0f;
