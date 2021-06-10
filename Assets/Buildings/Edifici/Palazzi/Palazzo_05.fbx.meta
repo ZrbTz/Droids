@@ -3,7 +3,32 @@ guid: 4ae30182c3df69a45b910a9d098f572b
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuceAzzurra
+    second: {fileID: 2100000, guid: 9b1710d1f4326ca41a982e3a0cdd8ac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuceBianca
+    second: {fileID: 2100000, guid: ffac52dd71905014080dd24cd170ed89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuceGialla
+    second: {fileID: 2100000, guid: dccacb9fcc155eb46bc4eca2a5b2451c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuceVioletta
+    second: {fileID: 2100000, guid: 3cca166df5dcf814b89099b72e8efcd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muri
+    second: {fileID: 2100000, guid: f55184fb4d4b1e043a2bee9b4202d81e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

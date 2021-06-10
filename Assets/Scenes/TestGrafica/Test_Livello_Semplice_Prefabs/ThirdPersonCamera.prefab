@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6322812510904933972}
   - component: {fileID: 6322812510904933973}
   - component: {fileID: 8220643787104923882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ThirdPersonCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -101,11 +101,11 @@ MonoBehaviour:
   smoothCameraRotation: 20
   cullingLayer:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 2497
   lockCamera: 0
   rightOffset: 0
-  defaultDistance: 3.2
-  height: 2
+  defaultDistance: 3.1
+  height: 2.5
   smoothFollow: 10
   xMouseSensitivity: 3
   yMouseSensitivity: 3
