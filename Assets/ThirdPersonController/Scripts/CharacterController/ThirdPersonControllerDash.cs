@@ -39,13 +39,14 @@ public class ThirdPersonControllerDash : MonoBehaviour
             //TODO: brutto
             //controller.isJumping = true;
             controller.isDashing = true;
-            direction = rb.transform.forward;
-            rb.velocity = direction * dashSpeed;
+            //direction = rb.transform.forward;
+            rb.velocity = rb.velocity.normalized * dashSpeed;
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             //rb.AddForce(direction * 1000f);
         }
         else if (stopDash) {
-            direction = rb.transform.forward;
-            rb.velocity = direction * Mathf.Lerp(dashSpeed, 0.0f, dashRempainingStopTime / dashStopTime);
+            //direction = rb.transform.forward;
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp(dashSpeed, 0.0f, dashRempainingStopTime / dashStopTime);
             dashRempainingStopTime += Time.deltaTime;
             if (dashRempainingStopTime >= dashStopTime) {
                 stopDash = false;
