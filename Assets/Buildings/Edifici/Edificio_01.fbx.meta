@@ -3,7 +3,17 @@ guid: f6b556280cc511f40ba442ffae3af531
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arancio
+    second: {fileID: 2100000, guid: d2d9406303ef32643901c3a9a6408502, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grigio
+    second: {fileID: 2100000, guid: 4aabf78ddbe1b1843969d53c79b53cef, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

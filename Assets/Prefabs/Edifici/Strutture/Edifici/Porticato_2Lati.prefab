@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60841642b7c68ad45abb385fa15699fb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f55184fb4d4b1e043a2bee9b4202d81e, type: 2}
     - target: {fileID: 919132149155446097, guid: 60841642b7c68ad45abb385fa15699fb, type: 3}
       propertyPath: m_Name
       value: Porticato_2_lati_v2
