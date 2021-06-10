@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palazzo_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adde5f002f385414785f2d1fe69f5922, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adde5f002f385414785f2d1fe69f5922, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adde5f002f385414785f2d1fe69f5922, type: 3}
 --- !u!4 &1932080412945726096 stripped
