@@ -21941,7 +21941,7 @@ MonoBehaviour:
   useRootMotion: 0
   rotateByWorld: 0
   useContinuousSprint: 1
-  sprintOnlyFree: 1
+  sprintOnlyFree: 0
   locomotionType: 1
   freeSpeed:
     movementSmooth: 20
