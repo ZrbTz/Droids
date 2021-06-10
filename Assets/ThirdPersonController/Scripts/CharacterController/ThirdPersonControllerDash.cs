@@ -47,7 +47,6 @@ public class ThirdPersonControllerDash : MonoBehaviour
         else if (dashRemainingTime > 0.0f && controller.isStrafing) {
             //TODO: brutto
             //controller.isJumping = true;
-            Debug.Log("dashhhhhh");
             controller.isDashing = true;
             //direction = rb.transform.forward;
             rb.velocity = rb.velocity.normalized * dashSpeed;
