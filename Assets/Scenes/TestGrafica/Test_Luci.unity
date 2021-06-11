@@ -9699,9 +9699,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSpeed: 22
-  dashTime: 0.165
-  dashCountdown: 0.8
-  dashStopTime: 0.01
+  dashTime: 0.2
+  dashCountdown: 1.2
+  dashStopTime: 0.2
 --- !u!114 &956642877
 MonoBehaviour:
   m_ObjectHideFlags: 0
