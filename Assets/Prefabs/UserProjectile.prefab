@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7562490761220562059}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -58.064, y: 9.449, z: -69.438}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 0.09359232, y: 0.39464834, z: 0.09359232}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dab8a29c0a2f7724a9bca7a553d20a94, type: 2}
+  - {fileID: 2100000, guid: a86ed4016a512744e83ef5c5d7bac96f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,3 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  timeToLive: 5
+  shotgunTimeToLive: 0.2
