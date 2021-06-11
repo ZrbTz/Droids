@@ -80,7 +80,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
             dashRempainingStopTime = 0.0f;
             dashRemainingTime = dashTime;
             dashRemainingCountdown = dashTime + dashCountdown;
-
+            this.GetComponent<PlayerAnimationSounds>().Dash();
             gameUI.UpdateDashCooldown(dashRemainingCountdown);
         }
     }

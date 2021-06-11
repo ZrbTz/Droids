@@ -58,6 +58,7 @@ public class AttackSystem : MonoBehaviour
             if (inputManager.WeaponFire) {
                 if (fireElapsedTime >= fireDelay) {
                     fireElapsedTime = 0.0f;
+                    this.GetComponent<PlayerAnimationSounds>().Shoot(shooter.GetComponent<AudioSource>());
                     GameObject projectile_shooted = Instantiate(projectile);
                     projectile_shooted.transform.position = shooter.transform.TransformPoint(Vector3.zero);
                     projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x + shooter.transform.rotation.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
