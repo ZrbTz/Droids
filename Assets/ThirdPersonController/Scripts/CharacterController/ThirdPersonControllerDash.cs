@@ -18,6 +18,8 @@ public class ThirdPersonControllerDash : MonoBehaviour
     bool stopDash = false;
     private int callCount;
 
+    private Vector3 oldVelocity;
+
     private GameUI gameUI;
 
     void Awake() {
@@ -53,12 +55,13 @@ public class ThirdPersonControllerDash : MonoBehaviour
             //rb.AddForce(direction * 1000f);
         }
         else if (stopDash) {
-            direction = rb.transform.forward;
-            rb.velocity = direction * Mathf.Lerp(dashSpeed, 0.0f, dashRempainingStopTime / dashStopTime);
+            direction = rb.velocity.normalized;
+            rb.velocity = direction * Mathf.Lerp(dashSpeed, oldVelocity.magnitude, dashRempainingStopTime / dashStopTime);
             dashRempainingStopTime += Time.deltaTime;
             if (dashRempainingStopTime >= dashStopTime) {
                 stopDash = false;
                 controller.isDashing = false;
+                rb.velocity = oldVelocity.magnitude * direction;
             }
         }
         dashRemainingTime -= Time.deltaTime;
@@ -80,8 +83,10 @@ public class ThirdPersonControllerDash : MonoBehaviour
             dashRempainingStopTime = 0.0f;
             dashRemainingTime = dashTime;
             dashRemainingCountdown = dashTime + dashCountdown;
-
+            this.GetComponent<PlayerAnimationSounds>().Dash();
             gameUI.UpdateDashCooldown(dashRemainingCountdown);
+
+            oldVelocity = rb.velocity;
         }
     }
 }
