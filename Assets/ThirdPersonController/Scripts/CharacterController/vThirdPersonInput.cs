@@ -168,7 +168,10 @@ namespace Invector.vCharacterController
         protected virtual void JumpInput()
         {
             if (Input.GetKeyDown(jumpInput) && JumpConditions())
+            {
                 cc.Jump();
+                this.GetComponent<PlayerAnimationSounds>().Jump();
+            }
         }
 
         #endregion       
