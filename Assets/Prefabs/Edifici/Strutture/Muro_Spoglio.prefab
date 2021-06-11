@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1000941047142669366}
   - component: {fileID: 1593087332303839822}
   m_Layer: 0
-  m_Name: Edificio_01 (2)
+  m_Name: Muro_Spoglio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8736989667515401050, guid: f6b556280cc511f40ba442ffae3af531, type: 3}
+  - {fileID: 2100000, guid: f55184fb4d4b1e043a2bee9b4202d81e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
