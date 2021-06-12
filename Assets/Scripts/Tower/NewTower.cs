@@ -17,6 +17,8 @@ public class NewTower : Unit {
     public Transform cannonPivot;
     public Transform cannonMouth;
     public Projectile projectilePrefab;
+    public AudioClip shotSound;
+    public AudioSource audioSource;
     private Unit target = null;
     public TowerState state;
     public LayerMask lineOfFireLayerMask;
@@ -119,6 +121,7 @@ public class NewTower : Unit {
         Projectile projectile = Instantiate(projectilePrefab, cannonMouth.position, cannonMouth.rotation);
         projectile.target = target;
         projectile.damage = damage;
+        audioSource.PlayOneShot(shotSound);
     }
 
     private bool CheckTarget() {
