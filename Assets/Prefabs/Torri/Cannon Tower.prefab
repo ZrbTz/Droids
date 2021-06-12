@@ -207,7 +207,7 @@ MonoBehaviour:
   cannonBase: {fileID: 7262418246723612908}
   cannonPivot: {fileID: 1361227843725226726}
   cannonMouth: {fileID: 5786860021983694182}
-  projectilePrefab: {fileID: 4779468621755036295, guid: e6d113a57935eaa40900f0356edef5a1, type: 3}
+  projectilePrefab: {fileID: 4623044352783592287, guid: 14bf0f839866b164cbc599b7ce189881, type: 3}
   shotSound: {fileID: 8300000, guid: c890bf37bb1ddd2428b07d696c2f0433, type: 3}
   audioSource: {fileID: 7829493194977585590}
   state: 0
