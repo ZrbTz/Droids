@@ -34,7 +34,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepForward()
     {
         Debug.Log("StepF");
-        if (_controller.input.z > 0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false)
+        if (_controller.input.z > 0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -43,7 +43,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepForwardSx()
     {
         Debug.Log("StepFS");
-        if (_controller.input.z > 0.01f && _controller.input.x <-0.01f && _controller.isJumping == false)
+        if (_controller.input.z > 0.01f && _controller.input.x <-0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -52,7 +52,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepForwardDx()
     {
         Debug.Log("StepFD");
-        if (_controller.input.z > 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false)
+        if (_controller.input.z > 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -61,7 +61,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepSx()
     {
         Debug.Log("StepS");
-        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x < -0.01f && _controller.isJumping == false)
+        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x < -0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -70,7 +70,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepDx()
     {
         Debug.Log("StepD");
-        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false)
+        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -79,7 +79,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepBackwardSx()
     {
         Debug.Log("StepBS");
-        if (_controller.input.z < -0.01f && _controller.input.x > 0.01f && _controller.isJumping == false)
+        if (_controller.input.z < -0.01f && _controller.input.x > 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -88,7 +88,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepBackwardDx()
     {
         Debug.Log("StepBD");
-        if (_controller.input.z < -0.01f && _controller.input.x < -0.01f && _controller.isJumping == false)
+        if (_controller.input.z < -0.01f && _controller.input.x < -0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -97,7 +97,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepBackward()
     {
         Debug.Log("StepB");
-        if (_controller.input.z < -0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false)
+        if (_controller.input.z < -0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -107,7 +107,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void Run()
     {
         Debug.Log("Run");
-        if (_controller.inputMagnitude > 0.01f && _controller.isJumping==false)
+        if (_controller.inputMagnitude > 0.01f && _controller.isJumping==false && _controller.isSprinting == true)
         {
             _speaker.PlayOneShot(walkStep);
 
