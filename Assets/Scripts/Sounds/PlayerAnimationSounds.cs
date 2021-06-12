@@ -7,6 +7,7 @@ public class PlayerAnimationSounds : MonoBehaviour
 {
     [SerializeField] AudioClip walkStep;
     [SerializeField] AudioClip walkMovement;
+    [SerializeField] [Range(0.0f, 1.0f)] float movementVolume = 0.04f;
     [SerializeField] AudioClip jumpStart;
     [SerializeField] AudioClip singleShot;
     [SerializeField] [Range(0.0f, 1.0f)] float singleShotVolume = 0.02f;
@@ -21,10 +22,8 @@ public class PlayerAnimationSounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mov_speaker = this.gameObject.AddComponent<AudioSource>();
-        mov_speaker.playOnAwake = false;
-        mov_speaker.volume = 0.04f;
         _speaker = this.GetComponent<AudioSource>();
+        mov_speaker = CreateSpeaker(movementVolume);
         _controller = this.GetComponent<vThirdPersonController>();
     }
 
@@ -33,6 +32,16 @@ public class PlayerAnimationSounds : MonoBehaviour
     {
         
     }
+
+    private AudioSource CreateSpeaker(float intensity)
+    {
+        AudioSource newSpeaker = this.gameObject.AddComponent<AudioSource>();
+        newSpeaker.volume = intensity;
+        newSpeaker.playOnAwake = false;
+        newSpeaker.spatialBlend = 1.0f;
+        return newSpeaker;
+    }
+
     #region Step
     public void StepForward()
     {

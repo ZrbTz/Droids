@@ -84,6 +84,20 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0
+        functionName: Movement
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.23190737
+        functionName: Impact
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -112,7 +126,35 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.45852417
+        functionName: Step
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9445293
+        functionName: Step
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.0009569233
+        functionName: Movement
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.50334924
+        functionName: Movement
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
