@@ -91,13 +91,13 @@ public class NewSoldier : Enemy {
     }
 
     private bool GetFarTarget() {
-        var colliders = Physics.OverlapSphere(transform.position, 12.5f);
+        var colliders = Physics.OverlapSphere(transform.position, 7.5f);
         float minDistance = Mathf.Infinity;
         farTarget = null;
         foreach(var collider in colliders) {
             Vector3 direction = collider.transform.position - transform.position; direction.y = 0;
             if (collider.TryGetComponent(out Obstacle obstacle) && obstacle.health > 0
-            && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(45f * 0.5f * Mathf.Deg2Rad)
+            && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(35f * 0.5f * Mathf.Deg2Rad)
             && Vector3.Distance(transform.position, obstacle.transform.position) < minDistance)
             farTarget = obstacle;
         }

@@ -129,3 +129,4 @@ MonoBehaviour:
   damage: 30
   timeToLive: 5
   shotgunTimeToLive: 0.2
+  hitParticle: {fileID: 19800002, guid: 9b83d7b1fd319ed4fa9adea4824e63d7, type: 3}

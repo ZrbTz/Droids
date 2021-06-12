@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour {
     public bool enemy;
     public bool dead = false;
     public Transform body;
+    public ParticleSystem destructionParticle;
 
     private new Collider collider;
 
@@ -42,11 +43,13 @@ public class Unit : MonoBehaviour {
 
     protected virtual void Die() {
         Destroy(gameObject);
+        Instantiate(destructionParticle, body.position, body.rotation);
     }
 
     protected virtual void Die(float timeToDie)
     {
         Destroy(gameObject, timeToDie);
+        //Instantiate(destructionParticle, body.position, body.rotation);
     }
 
     public float GetMaxHealth() {
