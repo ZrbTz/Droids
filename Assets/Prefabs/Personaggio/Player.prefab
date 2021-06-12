@@ -454,6 +454,9 @@ MonoBehaviour:
   walkMovement: {fileID: 8300000, guid: 33a0154fcf7c5cf4bb99712b9f091216, type: 3}
   jumpStart: {fileID: 8300000, guid: ea617f440b1e11941b23a8411eda11df, type: 3}
   singleShot: {fileID: 8300000, guid: 94340c837c5d6834686dfe2329f87a34, type: 3}
+  singleShotVolume: 0.02
+  shotgun: {fileID: 8300000, guid: cd0782e11bb0abf4bb0bb7049ceb6e91, type: 3}
+  shotgunVolume: 0.09
   dash: {fileID: 8300000, guid: 0485588a06707e74792988f22d4ed048, type: 3}
 --- !u!82 &945323987714172971
 AudioSource:

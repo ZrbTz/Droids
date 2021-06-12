@@ -9,6 +9,9 @@ public class PlayerAnimationSounds : MonoBehaviour
     [SerializeField] AudioClip walkMovement;
     [SerializeField] AudioClip jumpStart;
     [SerializeField] AudioClip singleShot;
+    [SerializeField] [Range(0.0f, 1.0f)] float singleShotVolume = 0.02f;
+    [SerializeField] AudioClip shotgun;
+    [SerializeField] [Range(0.0f, 1.0f)] float shotgunVolume = 0.09f;
     [SerializeField] AudioClip dash;
 
     private AudioSource _speaker;
@@ -131,9 +134,16 @@ public class PlayerAnimationSounds : MonoBehaviour
         _speaker.PlayOneShot(walkStep);
     }
 
-    public void Shoot(AudioSource shooter_speaker)
+    public void Rifle(AudioSource shooter_speaker)
     {
+        shooter_speaker.volume = singleShotVolume;
         shooter_speaker.PlayOneShot(singleShot);
+    }
+
+    public void Shotgun(AudioSource shooter_speaker)
+    {
+        shooter_speaker.volume = shotgunVolume;
+        shooter_speaker.PlayOneShot(shotgun);
     }
 
     public void Dash()
