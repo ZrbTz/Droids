@@ -52,6 +52,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: -0.6}
+--- !u!114 &621476793239489447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439450883917172959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mute: 0
+  maxDistance: 30
+  walkStep: {fileID: 8300000, guid: 56b599b8f9e840f49ba887507d5ba3ce, type: 3}
+  engined: 1
+  stepVolume: 1
+  movement: {fileID: 8300000, guid: d296b17a9140ab1459f01c2b5d66d9a1, type: 3}
+  attack: {fileID: 8300000, guid: 3c6897a643a7135429b028304eafccca, type: 3}
+  attackVolume: 0.9
 --- !u!114 &8781907177693715790
 MonoBehaviour:
   m_ObjectHideFlags: 0

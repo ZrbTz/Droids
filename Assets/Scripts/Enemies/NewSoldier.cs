@@ -70,6 +70,7 @@ public class NewSoldier : Enemy {
 
     private void StopMarching() {
         navMeshAgent.isStopped = true;
+        animator.gameObject.GetComponent<EnemyAnimationSounds>().StopEngine();
     }
 
     private void StartAttacking() {
