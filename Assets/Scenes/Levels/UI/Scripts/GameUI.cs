@@ -110,4 +110,9 @@ public class GameUI : MonoBehaviour
     {
         enemyHealthUI.gameObject.SetActive(false);
     }
+
+    public void UpdateDashNumber(int number)
+    {
+        dashCooldownUI.SetDashNumber(number);
+    }
 }

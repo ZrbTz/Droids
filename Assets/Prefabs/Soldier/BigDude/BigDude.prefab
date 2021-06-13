@@ -105,6 +105,7 @@ MonoBehaviour:
   enemy: 1
   dead: 0
   body: {fileID: 9211288005165194373}
+  destructionParticle: {fileID: 198572881580852744, guid: 2ff8ae4f57db87c4a83e0c557f92e690, type: 3}
   hitNexus: 0
   attackSpeed: 1
   attackRange: 0.5

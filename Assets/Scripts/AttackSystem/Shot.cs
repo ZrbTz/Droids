@@ -7,6 +7,7 @@ public class Shot : MonoBehaviour
     public float damage = 30.0f;
     public float timeToLive = 5f;
     public float shotgunTimeToLive = 0.2f;
+    public ParticleSystem hitParticle;
 
 
     // Start is called before the first frame update
@@ -39,25 +40,25 @@ public class Shot : MonoBehaviour
         //}
 
         if (root.TryGetComponent(out NewInvoker newInvoker)) {
-            if (collision.collider.gameObject.name == "Core") {
-                newInvoker.health -= damage;
-                Destroy(gameObject);
-            }
+            if (collision.collider.gameObject.name == "Core")
+                Hit(newInvoker, collision.contacts[0].point);
             return;
         }
 
         Unit enemy = collision.collider.transform.root.GetComponent<Unit>();
         if (enemy && enemy.enemy)
-        {
-            enemy.health -= damage;
-            Destroy(gameObject);
-            //Debug.Log("BECCATO");
-        }
+            Hit(enemy, collision.contacts[0].point);
         else
-        {
-            Destroy(gameObject);
-            //Debug.Log(this.transform.position.ToString());
-        }
+            Hit(collision.contacts[0].point);
+    }
 
+    private void Hit(Unit unit, Vector3 point) {
+        unit.health -= damage;
+        Hit(point);
+    }
+
+    private void Hit(Vector3 point) {
+        Instantiate(hitParticle, point, transform.rotation);
+        Destroy(gameObject);
     }
 }

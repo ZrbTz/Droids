@@ -7,8 +7,12 @@ public class PlayerAnimationSounds : MonoBehaviour
 {
     [SerializeField] AudioClip walkStep;
     [SerializeField] AudioClip walkMovement;
+    [SerializeField] [Range(0.0f, 1.0f)] float movementVolume = 0.04f;
     [SerializeField] AudioClip jumpStart;
     [SerializeField] AudioClip singleShot;
+    [SerializeField] [Range(0.0f, 1.0f)] float singleShotVolume = 0.02f;
+    [SerializeField] AudioClip shotgun;
+    [SerializeField] [Range(0.0f, 1.0f)] float shotgunVolume = 0.09f;
     [SerializeField] AudioClip dash;
 
     private AudioSource _speaker;
@@ -18,10 +22,8 @@ public class PlayerAnimationSounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mov_speaker = this.gameObject.AddComponent<AudioSource>();
-        mov_speaker.playOnAwake = false;
-        mov_speaker.volume = 0.04f;
         _speaker = this.GetComponent<AudioSource>();
+        mov_speaker = CreateSpeaker(movementVolume);
         _controller = this.GetComponent<vThirdPersonController>();
     }
 
@@ -30,11 +32,21 @@ public class PlayerAnimationSounds : MonoBehaviour
     {
         
     }
+
+    private AudioSource CreateSpeaker(float intensity)
+    {
+        AudioSource newSpeaker = this.gameObject.AddComponent<AudioSource>();
+        newSpeaker.volume = intensity;
+        newSpeaker.playOnAwake = false;
+        newSpeaker.spatialBlend = 1.0f;
+        return newSpeaker;
+    }
+
     #region Step
     public void StepForward()
     {
         Debug.Log("StepF");
-        if (_controller.input.z > 0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false)
+        if (_controller.input.z > 0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -43,7 +55,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepForwardSx()
     {
         Debug.Log("StepFS");
-        if (_controller.input.z > 0.01f && _controller.input.x <-0.01f && _controller.isJumping == false)
+        if (_controller.input.z > 0.01f && _controller.input.x <-0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -52,7 +64,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepForwardDx()
     {
         Debug.Log("StepFD");
-        if (_controller.input.z > 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false)
+        if (_controller.input.z > 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -61,7 +73,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepSx()
     {
         Debug.Log("StepS");
-        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x < -0.01f && _controller.isJumping == false)
+        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x < -0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -70,7 +82,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepDx()
     {
         Debug.Log("StepD");
-        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false)
+        if (Mathf.Abs(_controller.input.z) < 0.01f && _controller.input.x > 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -79,7 +91,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepBackwardSx()
     {
         Debug.Log("StepBS");
-        if (_controller.input.z < -0.01f && _controller.input.x > 0.01f && _controller.isJumping == false)
+        if (_controller.input.z < -0.01f && _controller.input.x > 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -88,7 +100,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepBackwardDx()
     {
         Debug.Log("StepBD");
-        if (_controller.input.z < -0.01f && _controller.input.x < -0.01f && _controller.isJumping == false)
+        if (_controller.input.z < -0.01f && _controller.input.x < -0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -97,7 +109,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void StepBackward()
     {
         Debug.Log("StepB");
-        if (_controller.input.z < -0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false)
+        if (_controller.input.z < -0.01f && Mathf.Abs(_controller.input.x) < 0.01f && _controller.isJumping == false && _controller.isSprinting == false)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -107,7 +119,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void Run()
     {
         Debug.Log("Run");
-        if (_controller.inputMagnitude > 0.01f && _controller.isJumping==false)
+        if (_controller.inputMagnitude > 0.01f && _controller.isJumping==false && _controller.isSprinting == true)
         {
             _speaker.PlayOneShot(walkStep);
 
@@ -131,9 +143,16 @@ public class PlayerAnimationSounds : MonoBehaviour
         _speaker.PlayOneShot(walkStep);
     }
 
-    public void Shoot(AudioSource shooter_speaker)
+    public void Rifle(AudioSource shooter_speaker)
     {
+        shooter_speaker.volume = singleShotVolume;
         shooter_speaker.PlayOneShot(singleShot);
+    }
+
+    public void Shotgun(AudioSource shooter_speaker)
+    {
+        shooter_speaker.volume = shotgunVolume;
+        shooter_speaker.PlayOneShot(shotgun);
     }
 
     public void Dash()

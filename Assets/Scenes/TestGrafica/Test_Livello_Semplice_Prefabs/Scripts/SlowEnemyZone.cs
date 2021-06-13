@@ -21,6 +21,8 @@ public class SlowEnemyZone : MonoBehaviour {
     private void OnTriggerExit(Collider other) {
         if (other.transform.root.GetComponent<Enemy>() != null) {
             var navMeshAgent = other.transform.root.GetComponent<NavMeshAgent>();
+            if (!affected.Contains(navMeshAgent))
+                return;
             navMeshAgent.speed /= (1 - slowPercentuale);
             affected.Remove(navMeshAgent);
         }
