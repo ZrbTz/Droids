@@ -86,7 +86,9 @@ public class NewInvoker : Enemy {
         state = InvokerState.Marching;
     }
 
-    private void StopMarching() {
+    private void StopMarching()
+    {
+        this.GetComponent<EnemyAnimationSounds>().StopEngine();
         navMeshAgent.isStopped = true;
         state = InvokerState.Idle;
         animator.SetBool("Spawning", true);

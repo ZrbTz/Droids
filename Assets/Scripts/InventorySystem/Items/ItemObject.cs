@@ -56,4 +56,6 @@ public abstract class ItemObject : ScriptableObject
     {
         return itemName;
     }
+
+    public virtual void setHealth(float newHealth) { return; }
 }

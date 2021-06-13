@@ -12,6 +12,7 @@ public class TowerItem : ItemObject
     private GameObject placeablePreviewItem;
     [SerializeField]
     private LayerMask ignoreLayers;
+    private float health;
 
     public override bool Use(GameObject player)
     {
@@ -41,6 +42,8 @@ public class TowerItem : ItemObject
 
                     newPlaced.transform.position = hitInfo.point;
                     newPlaced.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                    Obstacle o = newPlaced.GetComponent<Obstacle>();
+                    if(o != null) newPlaced.GetComponent<Obstacle>().health = health;
                     return true;
                 }
                 else return false;
@@ -68,5 +71,9 @@ public class TowerItem : ItemObject
     public LayerMask GetLayerMask()
     {
         return ignoreLayers;
+    }
+
+    public override void setHealth(float newHealth) {
+        health = newHealth;
     }
 }
