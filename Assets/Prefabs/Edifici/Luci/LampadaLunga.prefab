@@ -270,6 +270,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7779983775801154414, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -278,13 +282,25 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -3630507774792923845, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3009358004697251269, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -796617171110805700, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 558912030539378640, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 862719526285354870, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
       propertyPath: m_Name
@@ -297,6 +313,14 @@ PrefabInstance:
     - target: {fileID: 1623999898614000674, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539022109045491778, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978229244759845355, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7965807664581672427, guid: 5279d8b4154ebc54492bbe18b7a8b88e, type: 3}
       propertyPath: m_StaticEditorFlags

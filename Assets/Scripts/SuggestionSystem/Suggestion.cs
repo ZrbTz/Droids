@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public abstract class Mission : ScriptableObject
+public abstract class Suggestion : ScriptableObject
 {
     [SerializeField]
     protected string title;

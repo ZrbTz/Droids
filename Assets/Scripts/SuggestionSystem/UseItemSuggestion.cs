@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New UseItemMission", menuName = "Mission System/Use Item Mission")]
-public class UseItemMission : Mission
+[CreateAssetMenu(fileName = "New GetItemSuggestion", menuName = "Suggestion System/Use Item Suggestion")]
+public class UseItemSuggestion : Suggestion
 {
     [SerializeField]
     private ItemObject item;

@@ -24,6 +24,8 @@ public class GameUI : MonoBehaviour
     private WonMenuUI wonMenuUI;
     [SerializeField]
     private LostMenuUI lostMenuUI;
+    [SerializeField]
+    private SuggestionsUI suggestionsUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -128,5 +130,25 @@ public class GameUI : MonoBehaviour
     public void ShowWonMenu()
     {
         wonMenuUI.gameObject.SetActive(true);
+    }
+
+    public void SwitchSuggestionWindow()
+    {
+        suggestionsUI.SwitchWindow();
+    }
+
+    public void UpdateSuggestion(string title, string description)
+    {
+        suggestionsUI.SetSuggestion(title, description);
+    }
+
+    public void ShowSuggestion()
+    {
+        suggestionsUI.ShowSuggestion();
+    }
+
+    public void FullHideSuggestion()
+    {
+        suggestionsUI.FullHideSuggestion();
     }
 }
