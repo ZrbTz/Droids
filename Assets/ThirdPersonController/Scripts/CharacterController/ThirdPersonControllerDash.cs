@@ -40,7 +40,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (dashRemainingTime > 0.0f && (strafing && grounded)) {
+        if (dashRemainingTime > 0.0f && (strafing && grounded && !(controller.input == Vector3.zero))) {
             //controller.isJumping = true;
             controller.isDashing = true;
             //direction = rb.transform.forward;
