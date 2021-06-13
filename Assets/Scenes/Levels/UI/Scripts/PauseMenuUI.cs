@@ -26,6 +26,6 @@ public class PauseMenuUI : MonoBehaviour
 
     public void ResumeButton()
     {
-        gameManager.Resume();
+        gameManager.HandlePause();
     }
 }

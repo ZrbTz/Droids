@@ -3,7 +3,37 @@ guid: 15c778bdafc098644a7cd2858546ab32
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrillanteAzzurro
+    second: {fileID: 2100000, guid: f36219400d7db1042af1f8ed256980f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrillanteFucsia
+    second: {fileID: 2100000, guid: 3cca166df5dcf814b89099b72e8efcd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cromato
+    second: {fileID: 2100000, guid: f77ed4f3e63baec48832f09941bfa582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 0d2847d2cce329848bcc4fac1ef04de4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NeroSchermo
+    second: {fileID: 2100000, guid: 6a732e21f591dc643b44e720a7d81555, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VerniceBianco
+    second: {fileID: 2100000, guid: 4b932d0647a6ec34599ee8bb02516ed2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
