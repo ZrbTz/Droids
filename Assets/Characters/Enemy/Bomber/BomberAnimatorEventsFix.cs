@@ -7,6 +7,7 @@ public class BomberAnimatorEventsFix : MonoBehaviour {
 
     private void Shoot() {
         bomber.Shoot();
+        this.GetComponent<EnemyAnimationSounds>().Impact();
     }
 
     private void StartMarching() {

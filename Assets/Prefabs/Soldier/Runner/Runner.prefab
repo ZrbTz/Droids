@@ -68,6 +68,7 @@ MonoBehaviour:
   maxDistance: 30
   walkStep: {fileID: 8300000, guid: 56b599b8f9e840f49ba887507d5ba3ce, type: 3}
   engined: 1
+  walkStop: {fileID: 8300000, guid: c0bbaa3802f9b8c46910ac94fa49950e, type: 3}
   stepVolume: 0.05
   movement: {fileID: 8300000, guid: d296b17a9140ab1459f01c2b5d66d9a1, type: 3}
   moveVolume: 0.01
