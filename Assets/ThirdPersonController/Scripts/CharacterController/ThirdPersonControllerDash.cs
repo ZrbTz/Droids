@@ -19,7 +19,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
     private int callCount;
     private bool grounded;
     private bool strafing;
-    private bool isThereInput;
+    private Vector3 input;
 
     private Vector3 oldVelocity;
 
@@ -40,11 +40,13 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (dashRemainingTime > 0.0f && (strafing && !isThereInput)){
+        if (dashRemainingTime > 0.0f && (strafing && (input != Vector3.zero))){
             //controller.isJumping = true;
             controller.isDashing = true;
+            //Debug.Log("Dash");
             //direction = rb.transform.forward;
-            rb.velocity = rb.velocity.normalized * dashSpeed;
+            //rb.velocity = rb.velocity.normalized * dashSpeed;
+            rb.velocity = (rb.transform.forward * input.normalized.z + rb.transform.right * input.normalized.x)*dashSpeed;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             //rb.AddForce(direction * 1000f);
         }
@@ -99,7 +101,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
             gameUI.UpdateDashCooldown(dashRemainingCountdown);
             strafing = controller.isStrafing;
             grounded = controller.isGrounded;
-            isThereInput = (controller.input == Vector3.zero);
+            input = (controller.input);
 
             gameUI.UpdateDashNumber(callCount);
 
