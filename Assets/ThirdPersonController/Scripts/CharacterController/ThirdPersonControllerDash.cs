@@ -17,6 +17,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
     private float dashRempainingStopTime = 0.0f;
     bool stopDash = false;
     private int callCount;
+    private bool grounded;
+    private bool strafing;
+    private bool movingBackwards;
 
     private Vector3 oldVelocity;
 
@@ -36,7 +39,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(dashRemainingTime > 0.0f && (!controller.isStrafing || !controller.isGrounded))
+        if(dashRemainingTime > 0.0f && (strafing || !grounded) && !movingBackwards)
         {
             //TODO: brutto
             //controller.isJumping = true;
@@ -45,7 +48,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
             rb.velocity = direction * dashSpeed;
             //rb.AddForce(direction * 1000f);
         }
-        else if (dashRemainingTime > 0.0f && controller.isStrafing) {
+        else if (dashRemainingTime > 0.0f && strafing) {
             //TODO: brutto
             //controller.isJumping = true;
             controller.isDashing = true;
@@ -85,6 +88,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
             dashRemainingCountdown = dashTime + dashCountdown;
             this.GetComponent<PlayerAnimationSounds>().Dash();
             gameUI.UpdateDashCooldown(dashRemainingCountdown);
+            strafing = controller.isStrafing;
+            grounded = controller.isGrounded;
+            movingBackwards = (Input.GetAxis("Vertical") < 0) && !controller.isSprinting;
 
             oldVelocity = rb.velocity;
         }
