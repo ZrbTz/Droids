@@ -20,6 +20,10 @@ public class GameUI : MonoBehaviour
     private KeyInfosUI keyInfosUI;
     [SerializeField]
     private EnemyHealthUI enemyHealthUI;
+    [SerializeField]
+    private WonMenuUI wonMenuUI;
+    [SerializeField]
+    private LostMenuUI lostMenuUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -114,5 +118,15 @@ public class GameUI : MonoBehaviour
     public void UpdateDashNumber(int number)
     {
         dashCooldownUI.SetDashNumber(number);
+    }
+
+    public void ShowLostMenu()
+    {
+        lostMenuUI.gameObject.SetActive(true);
+    }
+
+    public void ShowWonMenu()
+    {
+        wonMenuUI.gameObject.SetActive(true);
     }
 }

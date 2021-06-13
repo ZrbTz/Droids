@@ -7966,13 +7966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8303c2fb4c97ff942905d2d0b86e97a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDatas:
-  - displayName: LEVEL 1
-    sceneName: Test_Luci
-    level: 0
-  - displayName: LEVEL 2
-    sceneName: Test_Luci
-    level: 1
   buttonPrefab: {fileID: 2390280226202198085, guid: e8b41a82d42ac3f4c9b2719916bd28dc, type: 3}
   initPosition: {x: 0, y: 3, z: 0}
 --- !u!1 &2118288046

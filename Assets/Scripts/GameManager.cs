@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     private int emptySpawners = 0;
 
     public Unit nexus;
-    public DeathMenu deathMenu;
     //public KeyCode spawnKey;
     public Spawner[] spawners;
     public int numHordes;
@@ -62,13 +61,14 @@ public class GameManager : MonoBehaviour
 
     public void gameLost()
     {
-        deathMenu.showDeathMenu();
+        gameUI.ShowLostMenu();
+        Pause();
     }
 
     public void gameWon()
     {
-        //Show victory menu, for the moment i show the death menu XD
-        deathMenu.showDeathMenu();
+        gameUI.ShowWonMenu();
+        Pause();
     }
 
     private float searchCountDown = 1f;
@@ -122,9 +122,11 @@ public class GameManager : MonoBehaviour
         if (isPaused)
         {
             Resume();
+            gameUI.HidePauseMenu();
         }
         else
         {
+            gameUI.ShowPauseMenu();
             Pause();
         }
     }
@@ -134,7 +136,6 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0f;
-        gameUI.ShowPauseMenu();
 
         isPaused = true;
     }
@@ -144,7 +145,6 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
-        gameUI.HidePauseMenu();
 
         isPaused = false;
     }
