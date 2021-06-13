@@ -6,23 +6,26 @@ public class EnemyAnimationSounds : MonoBehaviour
 {
     //SOlo per testing
     [SerializeField] bool mute;
-    [SerializeField] float maxDistance = 50.0f;
+    [SerializeField] float maxDistance = 30.0f;
 
     [SerializeField] AudioClip walkStep;
     public bool engined;
     [SerializeField] [Range(0.0f, 1.0f)] float stepVolume;
     [SerializeField] AudioClip movement;
+    [SerializeField] [Range(0.0f, 1.0f)] float moveVolume;
     [SerializeField] AudioClip attack;
     [SerializeField] [Range(0.0f, 1.0f)] float attackVolume;
 
-    private AudioSource _speaker;
+    private AudioSource step_speaker;
+    private AudioSource move_speaker;
     private AudioSource attack_speaker;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _speaker = CreateSpeaker(stepVolume);
+        step_speaker = CreateSpeaker(stepVolume);
+        move_speaker = CreateSpeaker(attackVolume);
         attack_speaker = CreateSpeaker(attackVolume);
 
         if (engined)
@@ -43,9 +46,8 @@ public class EnemyAnimationSounds : MonoBehaviour
         newSpeaker.volume = intensity;
         newSpeaker.playOnAwake = false;
         newSpeaker.spatialBlend = 1.0f;
-        float scaleAnimationCurve = 500 / maxDistance;
-        newSpeaker.maxDistance = 500/scaleAnimationCurve;
-        newSpeaker.minDistance = 1/scaleAnimationCurve;
+        newSpeaker.maxDistance = maxDistance;
+        newSpeaker.rolloffMode = AudioRolloffMode.Linear;
 
         newSpeaker.mute = mute;
         return newSpeaker;
@@ -53,24 +55,24 @@ public class EnemyAnimationSounds : MonoBehaviour
 
     public void Step()
     {
-        _speaker.PlayOneShot(walkStep);
+        step_speaker.PlayOneShot(walkStep);
     }
 
     public void StartEngine()
     {
         Debug.Log("STARTENGINE");
-        _speaker.clip = walkStep;
-        _speaker.Play();
+       step_speaker.clip = walkStep;
+        step_speaker.Play();
     }
 
     public void StopEngine()
     {
-        _speaker.Stop();
+        step_speaker.Stop();
     }
 
     public void Movement()
     {
-        _speaker.PlayOneShot(movement);
+       move_speaker.PlayOneShot(movement);
     }
 
     public void Impact()
