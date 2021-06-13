@@ -10,8 +10,11 @@ public class EnemyAnimationSounds : MonoBehaviour
 
     [SerializeField] AudioClip walkStep;
     public bool engined;
+    private bool running = false;
+    [SerializeField] AudioClip walkStop;
     [SerializeField] [Range(0.0f, 1.0f)] float stepVolume;
     [SerializeField] AudioClip movement;
+    [SerializeField] AudioClip rotation;
     [SerializeField] [Range(0.0f, 1.0f)] float moveVolume;
     [SerializeField] AudioClip attack;
     [SerializeField] [Range(0.0f, 1.0f)] float attackVolume;
@@ -25,7 +28,7 @@ public class EnemyAnimationSounds : MonoBehaviour
     void Start()
     {
         step_speaker = CreateSpeaker(stepVolume);
-        move_speaker = CreateSpeaker(attackVolume);
+        move_speaker = CreateSpeaker(moveVolume);
         attack_speaker = CreateSpeaker(attackVolume);
 
         if (engined)
@@ -63,11 +66,18 @@ public class EnemyAnimationSounds : MonoBehaviour
         Debug.Log("STARTENGINE");
        step_speaker.clip = walkStep;
         step_speaker.Play();
+        running = true;
     }
 
     public void StopEngine()
     {
         step_speaker.Stop();
+        Debug.Log("STOPENGINE");
+        if (walkStop && running)
+        {
+            running = false;
+            step_speaker.PlayOneShot(walkStop);
+        }
     }
 
     public void Movement()
@@ -90,6 +100,13 @@ public class EnemyAnimationSounds : MonoBehaviour
     {
         Debug.Log("Closing");
         attack_speaker.PlayOneShot(attack);
+    }
+    #endregion
+
+    #region Bomber
+    public void Rotate()
+    {
+        move_speaker.PlayOneShot(rotation);
     }
     #endregion
 }

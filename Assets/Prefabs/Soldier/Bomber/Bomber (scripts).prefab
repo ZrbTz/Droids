@@ -148,6 +148,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomber: {fileID: 387868700341570293}
+--- !u!114 &5341660198861935412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693718543379591465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mute: 0
+  maxDistance: 30
+  walkStep: {fileID: 8300000, guid: 097a85486e2d3e24c9d529f0409860b5, type: 3}
+  engined: 0
+  walkStop: {fileID: 0}
+  stepVolume: 0.02
+  movement: {fileID: 8300000, guid: d296b17a9140ab1459f01c2b5d66d9a1, type: 3}
+  rotation: {fileID: 8300000, guid: 55458af2e963bb544985c7d9fe9b94e3, type: 3}
+  moveVolume: 0.02
+  attack: {fileID: 8300000, guid: 1242052a7ff19284098bbcc7ee0a834c, type: 3}
+  attackVolume: 0.05
 --- !u!65 &4876698385735962542
 BoxCollider:
   m_ObjectHideFlags: 0
