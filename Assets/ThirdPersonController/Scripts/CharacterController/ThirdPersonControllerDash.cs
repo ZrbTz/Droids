@@ -17,9 +17,10 @@ public class ThirdPersonControllerDash : MonoBehaviour
     private float dashRemainingStopTime = 0.0f;
     bool stopDash = false;
     private int callCount;
-    private bool grounded;
-    private bool strafing;
+    private bool sprinting;
     private Vector3 input;
+    private Vector3 forwardDirection;
+    private Vector3 rightDirection;
 
     private Vector3 oldVelocity;
 
@@ -40,23 +41,15 @@ public class ThirdPersonControllerDash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (dashRemainingTime > 0.0f && (strafing && (input != Vector3.zero))){
-            //controller.isJumping = true;
+        if (dashRemainingTime > 0.0f && (!sprinting && (input != Vector3.zero))){
             controller.isDashing = true;
-            //Debug.Log("Dash");
-            //direction = rb.transform.forward;
-            //rb.velocity = rb.velocity.normalized * dashSpeed;
-            rb.velocity = (rb.transform.forward * input.normalized.z + rb.transform.right * input.normalized.x)*dashSpeed;
+            rb.velocity = (forwardDirection * input.normalized.z + rightDirection * input.normalized.x)*dashSpeed;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            //rb.AddForce(direction * 1000f);
         }
         else if (dashRemainingTime > 0.0f)
         {
-            //controller.isJumping = true;
             controller.isDashing = true;
-            direction = rb.transform.forward;
-            rb.velocity = direction * dashSpeed;
-            //rb.AddForce(direction * 1000f);
+            rb.velocity = forwardDirection * dashSpeed;
         }
         else if (stopDash)
         {
@@ -99,10 +92,11 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
             dashRemainingCountdown = dashTime + dashCountdown;
             gameUI.UpdateDashCooldown(dashRemainingCountdown);
-            strafing = controller.isStrafing;
-            grounded = controller.isGrounded;
+            sprinting = controller.isSprinting;
             input = (controller.input);
-
+            forwardDirection = rb.transform.forward;
+            rightDirection = rb.transform.right;
+            
             gameUI.UpdateDashNumber(callCount);
 
             oldVelocity = rb.velocity;
