@@ -197,10 +197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mute: 0
   walkStep: {fileID: 8300000, guid: 6c16a81397b2c33439ea3b9df1b708db, type: 3}
-  walkMovement: {fileID: 8300000, guid: d296b17a9140ab1459f01c2b5d66d9a1, type: 3}
-  movementVolume: 0.04
+  endWalk: {fileID: 0}
+  stepVolume: 0.04
+  movement: {fileID: 8300000, guid: d296b17a9140ab1459f01c2b5d66d9a1, type: 3}
   attack: {fileID: 8300000, guid: 3c6897a643a7135429b028304eafccca, type: 3}
+  attackVolume: 0.09
 --- !u!65 &3786018773598566538
 BoxCollider:
   m_ObjectHideFlags: 0

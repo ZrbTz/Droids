@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 8865912680106573418}
   - component: {fileID: 945901195144953124}
   - component: {fileID: 5064368743207988450}
+  - component: {fileID: 4817926801453587184}
   m_Layer: 0
   m_Name: Summoner
   m_TagString: Untagged
@@ -248,6 +249,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &4817926801453587184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865912680106573423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mute: 0
+  walkStep: {fileID: 8300000, guid: 39eb186407d480d43850fbb3dd723cce, type: 3}
+  endWalk: {fileID: 8300000, guid: d65aaf5308928584bb0bdeca3967a81e, type: 3}
+  stepVolume: 0.6
+  movement: {fileID: 8300000, guid: 88aae11d089359145819fb5d4ab15fe3, type: 3}
+  attack: {fileID: 8300000, guid: f0865e21be6e74e4396e705b78653dc2, type: 3}
+  attackVolume: 0.3
 --- !u!1 &8865912680459723952
 GameObject:
   m_ObjectHideFlags: 0
