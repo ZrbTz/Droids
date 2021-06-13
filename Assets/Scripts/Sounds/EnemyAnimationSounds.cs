@@ -6,6 +6,7 @@ public class EnemyAnimationSounds : MonoBehaviour
 {
     //SOlo per testing
     [SerializeField] bool mute;
+    [SerializeField] float maxDistance = 50.0f;
 
     [SerializeField] AudioClip walkStep;
     public bool engined;
@@ -42,6 +43,9 @@ public class EnemyAnimationSounds : MonoBehaviour
         newSpeaker.volume = intensity;
         newSpeaker.playOnAwake = false;
         newSpeaker.spatialBlend = 1.0f;
+        float scaleAnimationCurve = 500 / maxDistance;
+        newSpeaker.maxDistance = 500/scaleAnimationCurve;
+        newSpeaker.minDistance = 1/scaleAnimationCurve;
 
         newSpeaker.mute = mute;
         return newSpeaker;
