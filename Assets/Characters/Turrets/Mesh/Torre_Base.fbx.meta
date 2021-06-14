@@ -3,7 +3,12 @@ guid: a257331098965624f937a3605dcc077a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luminoso
+    second: {fileID: 2100000, guid: 905f82d08d7f672439411475608aa2df, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

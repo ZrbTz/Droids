@@ -3,7 +3,27 @@ guid: f4ddb441e10c1514082d4ae18ee0657a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cromato
+    second: {fileID: 2100000, guid: cebc5d8548027b34dabd82892d6c79c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cromato.001
+    second: {fileID: 2100000, guid: 39da3b88e08e5974399d440d01f1c94e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuceAzzurra
+    second: {fileID: 2100000, guid: 5ac513d8e67b8264b8576925c6004657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metallico
+    second: {fileID: 2100000, guid: a636f0fb4d2d36848878dca7f931fa77, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

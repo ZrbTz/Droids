@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BrillanteFucsia
-    second: {fileID: 2100000, guid: 3cca166df5dcf814b89099b72e8efcd9, type: 2}
+    second: {fileID: 2100000, guid: 6d66e680c3273ed42b3c04fb833be35b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

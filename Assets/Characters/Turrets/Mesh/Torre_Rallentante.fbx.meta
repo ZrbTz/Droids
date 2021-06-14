@@ -165,7 +165,32 @@ ModelImporter:
   - first:
       74: -8964115698051293606
     second: RotazioneCore
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BiancoVernice
+    second: {fileID: 2100000, guid: 47c18a3615e63994a97fef7729dd1c01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrillanteAzzurro
+    second: {fileID: 2100000, guid: f6ae77d9b982412428eb27073200b1d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 18f8d576b2fcb7540a68f5c7e914c1b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metallico
+    second: {fileID: 2100000, guid: e7063f63ed094a54a853deffa5a3c667, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetallicoScuro
+    second: {fileID: 2100000, guid: f77ed4f3e63baec48832f09941bfa582, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

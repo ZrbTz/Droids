@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrillanteAzzurro
+    second: {fileID: 2100000, guid: 850c73cbaed351a46a86f2ac61954fe6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metallic
+    second: {fileID: 2100000, guid: e7063f63ed094a54a853deffa5a3c667, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetallicArancio
+    second: {fileID: 2100000, guid: cdf6b5c7d17af7948a964a8e96e1796f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetallicDark
+    second: {fileID: 2100000, guid: f77ed4f3e63baec48832f09941bfa582, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

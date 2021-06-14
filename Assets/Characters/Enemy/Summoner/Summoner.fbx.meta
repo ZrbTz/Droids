@@ -24,7 +24,32 @@ ModelImporter:
   - first:
       74: -1483003707098771237
     second: Armature|RotazioneCore
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AliInterno
+    second: {fileID: 2100000, guid: 1293c8a0ea9d6e644bee890618b461c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corpo
+    second: {fileID: 2100000, guid: de1a27979d52e6e4c909f4c91b1aef0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 5ac513d8e67b8264b8576925c6004657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metallic
+    second: {fileID: 2100000, guid: 52e479b40c2368f4781aefeda87f69dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rote
+    second: {fileID: 2100000, guid: a3c30e62fe715df4cbc07eef9ad71431, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

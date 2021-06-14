@@ -3,7 +3,17 @@ guid: 5c2fdaddd62b4954fa5e18ec7ae491e9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grigio
+    second: {fileID: 2100000, guid: cebc5d8548027b34dabd82892d6c79c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NeonRosso
+    second: {fileID: 4384848279117725198, guid: 41df1ff4cb976564b83e9770720cb487, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

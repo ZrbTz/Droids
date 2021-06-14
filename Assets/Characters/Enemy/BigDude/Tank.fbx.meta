@@ -30,7 +30,32 @@ ModelImporter:
   - first:
       74: -1483003707098771237
     second: RotazioneCore
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luminoso_Giallo
+    second: {fileID: 2100000, guid: fe4e472df4ad760419064fb5d815bc4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luminoso_Rosso
+    second: {fileID: 2100000, guid: 084717df064aa2d4cbcc2713febed827, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 4d140b0e1c8081b40bccf11a3ad31516, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 52e479b40c2368f4781aefeda87f69dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Surface
+    second: {fileID: 2100000, guid: 5ac513d8e67b8264b8576925c6004657, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

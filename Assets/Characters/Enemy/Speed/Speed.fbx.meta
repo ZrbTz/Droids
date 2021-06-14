@@ -18,7 +18,32 @@ ModelImporter:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Core
+    second: {fileID: 2100000, guid: 5ac513d8e67b8264b8576925c6004657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gomma
+    second: {fileID: 2100000, guid: a3c30e62fe715df4cbc07eef9ad71431, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marmitte
+    second: {fileID: 2100000, guid: e6cf7f5f64dd5bd40a59c16c8e5ee865, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metallic
+    second: {fileID: 2100000, guid: 52e479b40c2368f4781aefeda87f69dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VerniceRossa
+    second: {fileID: 2100000, guid: 4eb63f5f08d3ac44e9ae30200591ed46, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
