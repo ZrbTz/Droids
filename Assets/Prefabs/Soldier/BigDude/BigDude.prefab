@@ -209,6 +209,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldier: {fileID: 263491460740225024}
+--- !u!114 &5509928492148713482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110548284335262195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffec888df58977c409be7c0cbb6b7107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mute: 0
+  maxDistance: 30
+  walkStep: {fileID: 8300000, guid: b1d2d4cbb636548468094e491653dbe6, type: 3}
+  engined: 0
+  walkStop: {fileID: 0}
+  stepVolume: 0.08
+  movement: {fileID: 8300000, guid: 1538839b4c44f0e4a9db38393af49d16, type: 3}
+  rotation: {fileID: 8300000, guid: 55458af2e963bb544985c7d9fe9b94e3, type: 3}
+  moveVolume: 0.01
+  attack: {fileID: 8300000, guid: 54e55e23c15fbf643aa5604d865a73a5, type: 3}
+  attackVolume: 0.04
 --- !u!65 &6943098151580028818
 BoxCollider:
   m_ObjectHideFlags: 0

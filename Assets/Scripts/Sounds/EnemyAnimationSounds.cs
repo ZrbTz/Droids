@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAnimationSounds : MonoBehaviour
 {
+    private GameManager gameManager;
     //SOlo per testing
     [SerializeField] bool mute;
     [SerializeField] float maxDistance = 30.0f;
@@ -30,6 +31,7 @@ public class EnemyAnimationSounds : MonoBehaviour
         step_speaker = CreateSpeaker(stepVolume);
         move_speaker = CreateSpeaker(moveVolume);
         attack_speaker = CreateSpeaker(attackVolume);
+        gameManager = FindObjectOfType<GameManager>();
 
         if (engined)
         {
@@ -40,7 +42,18 @@ public class EnemyAnimationSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameManager.IsPaused())
+        {
+            step_speaker.Pause();
+            move_speaker.Pause();
+            attack_speaker.Pause();
+        }
+        else
+        {
+            step_speaker.UnPause();
+            move_speaker.UnPause();
+            attack_speaker.UnPause();
+        }
     }
 
     private AudioSource CreateSpeaker(float intensity)

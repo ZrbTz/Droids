@@ -5,6 +5,8 @@ using Invector.vCharacterController;
 
 public class PlayerAnimationSounds : MonoBehaviour
 {
+    private GameManager gameManager;
+
     [SerializeField] AudioClip walkStep;
     [SerializeField] AudioClip walkMovement;
     [SerializeField] [Range(0.0f, 1.0f)] float movementVolume = 0.04f;
@@ -25,12 +27,23 @@ public class PlayerAnimationSounds : MonoBehaviour
         _speaker = this.GetComponent<AudioSource>();
         mov_speaker = CreateSpeaker(movementVolume);
         _controller = this.GetComponent<vThirdPersonController>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (gameManager.IsPaused())
+        {
+            _speaker.Pause();
+            mov_speaker.Pause();
+        }
+        else
+        {
+            _speaker.UnPause();
+            mov_speaker.UnPause();
+        }
     }
 
     private AudioSource CreateSpeaker(float intensity)
