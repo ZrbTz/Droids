@@ -89,7 +89,7 @@ public class SpawnEnemy : MonoBehaviour
         StartCoroutine(TimedSpawn(bigHordes[nextHorde]));
     }
 
-    IEnumerator RandomicSpawn(BigHorde bigHorde)
+    /*IEnumerator RandomicSpawn(BigHorde bigHorde)
     {
         Debug.Log("Start Spawning");
         for (int j = 0; j < bigHorde.hordes.Length; j++)
@@ -116,7 +116,7 @@ public class SpawnEnemy : MonoBehaviour
         Debug.Log("Fine spawn");
         gm.signalSpawnEnd();
         yield break;
-    }
+    }*/
 
     IEnumerator TimedSpawn(BigHorde bigHorde)
     {

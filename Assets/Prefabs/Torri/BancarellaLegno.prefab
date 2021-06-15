@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8104212900892275520}
   - component: {fileID: 5438357884979701109}
   - component: {fileID: 8416289585608152464}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BancarellaLegno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 41318b1d919429e4ba57d1c1bb4ebaa6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41318b1d919429e4ba57d1c1bb4ebaa6, type: 3}

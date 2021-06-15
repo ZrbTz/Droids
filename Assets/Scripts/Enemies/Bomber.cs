@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+/*[RequireComponent(typeof(NavMeshAgent))]
 public class Bomber : Enemy {
 
     private GameObject player;
@@ -31,38 +31,6 @@ public class Bomber : Enemy {
         base.Update();
         if (dead)
             return;
-        /*switch (state) {
-            case SoldierState.Marching:
-                if (nexus.dead) {
-                    StopMarching();
-                    state = SoldierState.Idle;
-                    break;
-                }
-                if (Distance(nexus) <= attackRange) {
-                    StopMarching();
-                    StartAttacking();
-                    break;
-                }
-                break;
-            case SoldierState.Attacking:
-                if(nexus.dead) {
-                    StopAttacking();
-                    state = SoldierState.Idle;
-                    break;
-                }
-                if(Distance(nexus) > attackRange) {
-                    StopAttacking();
-                    StartMarching();
-                    break;
-                }
-                if(Time.time - attackTime >= 1 / attackSpeed) {
-                    Attack();
-                    attackTime = Time.time;
-                }
-                break;
-            case SoldierState.Idle:
-                break;
-        }*/
         switch (state) {
             case SoldierState.Marching:
                 break;
@@ -94,13 +62,13 @@ public class Bomber : Enemy {
     }
 
     override protected void addTarget(Obstacle bersaglio) {
-        target.Add(bersaglio);
+        targets.Add(bersaglio);
         StartAttacking();
     }
 
     override protected void removeTarget(Obstacle bersaglio) {
-        target.Remove(bersaglio);
-        if (target.Count > 0) {
+        targets.Remove(bersaglio);
+        if (targets.Count > 0) {
             StartAttacking();
         }
     }
@@ -115,7 +83,7 @@ public class Bomber : Enemy {
     }
 
     private void StopAttacking() {
-        if (target.Count > 0) {
+        if (targets.Count > 0) {
             StartAttacking();
             return;
         }
@@ -158,4 +126,4 @@ public class Bomber : Enemy {
     //    state = SoldierState.Idle;
     //    base.Die();
     //}
-}
+}*/

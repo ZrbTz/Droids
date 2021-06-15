@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class NewBomber : Enemy {
 
     private GameObject player;
@@ -14,8 +13,6 @@ public class NewBomber : Enemy {
     }
 
     public BomberState state;
-    private NavMeshAgent navMeshAgent;
-    [SerializeField] private Animator animator;
     [SerializeField] private float shootRange = 12.5f;
     [SerializeField] private float shootCooldown = 7.5f;
     [SerializeField] private float shootDelay = 5f;
@@ -24,16 +21,10 @@ public class NewBomber : Enemy {
 
     protected override void Start() {
         base.Start();
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        //animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
-        nexus = GameManager.Instance.nexus;
-        enemy = true;
         shoot = false;
         shootTime = Time.time;
-        randomArea = Map.Instance.GetRandomArea();
         StartMarching();
-        navMeshAgent.updateRotation = true;
     }
 
     protected override void Update() {
@@ -42,7 +33,7 @@ public class NewBomber : Enemy {
             return;
         switch (state) {
             case BomberState.Marching:
-                animator.SetFloat("Speed", navMeshAgent.speed);
+                UpdateAnimatorWalkSpeed();
                 if (CanShoot()) {
                     StopMarching();
                     StartShooting();
@@ -70,15 +61,12 @@ public class NewBomber : Enemy {
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
         state = BomberState.Marching;
+        UpdateAnimatorWalkSpeed();
     }
 
     private void StopMarching() {
         navMeshAgent.isStopped = true;
     }
-
-    override protected void addTarget(Obstacle bersaglio) { }
-
-    override protected void removeTarget(Obstacle bersaglio) { }
 
     public void StartShooting() {
         state = BomberState.Shooting;

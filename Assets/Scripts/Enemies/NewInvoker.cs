@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class NewInvoker : Enemy {
     public enum InvokerState {
         Marching,
@@ -20,20 +19,14 @@ public class NewInvoker : Enemy {
     private float spawnTime;
     private int spawnIndex;
     public InvokerState state;
-    private NavMeshAgent navMeshAgent;
     [SerializeField] private GameObject soldierToSpawn;
 
-    private Animator animator;
 
     protected override void Start() {
         base.Start();
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        nexus = GameManager.Instance.nexus;
         enemy = true;
         spawn = false;
         spawnTime = Time.time;
-        randomArea = Map.Instance.GetRandomArea();
         StartMarching();
     }
 
@@ -43,7 +36,7 @@ public class NewInvoker : Enemy {
             return;
         switch (state) {
             case InvokerState.Marching:
-                animator.SetFloat("Speed", navMeshAgent.speed);
+                UpdateAnimatorWalkSpeed();
                 if (CanSpawn())
                     StopMarching();
                 break;
@@ -84,6 +77,7 @@ public class NewInvoker : Enemy {
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
         state = InvokerState.Marching;
+        UpdateAnimatorWalkSpeed();
     }
 
     private void StopMarching()

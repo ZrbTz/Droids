@@ -240,6 +240,9 @@ MonoBehaviour:
   lineOfFireLayerMask:
     serializedVersion: 2
     m_Bits: 192
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!114 &5319852590669815831
 MonoBehaviour:
   m_ObjectHideFlags: 0

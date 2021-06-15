@@ -20,6 +20,7 @@ public class AttackSystem : MonoBehaviour
     private float elapsedBerserkTime = 0.0f;
     [SerializeField] GameObject shooter;
     private bool weaponSelector = true;
+    private List<Shot> shotPool;
 
     private GameUI gameUI;
     private InputManager inputManager;

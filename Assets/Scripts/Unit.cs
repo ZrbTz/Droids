@@ -5,7 +5,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour {
     private float maxHealth;
     public float health = 100f;
-    public bool enemy;
+    [HideInInspector] public bool enemy = false;
     public bool dead = false;
     public Transform body;
     public ParticleSystem destructionParticle;

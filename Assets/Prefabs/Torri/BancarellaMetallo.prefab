@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6712687935024945592}
   - component: {fileID: -5767446833828175588}
   - component: {fileID: 8811943877099586427}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BancarellaMetallo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,11 +156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3412184721145628462, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e47f894d015a9a4448e7ae816ad9ad2e, type: 3}

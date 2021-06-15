@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Enemy : Unit
-{
+[RequireComponent(typeof(NavMeshAgent))]
+public class Enemy : Unit {
     public bool hitNexus = false;
-    public float attackSpeed = 1f;
-    public float attackRange = .5f;
-    public float damage = 10f;
-    protected Unit nexus;
+    public float nexusDamage = 1f;
     public GameObject destination;
-    protected List<Obstacle> target = new List<Obstacle>();
-    protected Obstacle currentTarget;
-    protected float attackTime;
     protected int randomArea;
 
     public float fadeSpeed = 1.0f;
@@ -54,31 +49,22 @@ public class Enemy : Unit
     }
     */
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<Obstacle>() != null)
-        {
-            Debug.Log("Here");
-            addTarget(other.GetComponent<Obstacle>());
+    protected override void Start() {
+        base.Start();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        randomArea = Map.Instance.GetRandomArea();
+        speedTemp = 0f;
+        enemy = true;
+    }
+
+    private float speedTemp;
+    [SerializeField] protected Animator animator;
+    protected NavMeshAgent navMeshAgent;
+
+    protected void UpdateAnimatorWalkSpeed() {
+        if(navMeshAgent.speed != speedTemp) {
+            animator.SetFloat("Speed", navMeshAgent.speed);
+            speedTemp = navMeshAgent.speed;
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<Obstacle>() != null)
-        {
-            removeTarget(other.GetComponent<Obstacle>());
-        }
-    }
-
-    protected virtual void addTarget(Obstacle o)
-    {
-        target.Add(o);
-    }
-
-    protected virtual void removeTarget(Obstacle o)
-    {
-        target.Remove(o);
-    }
-
 }

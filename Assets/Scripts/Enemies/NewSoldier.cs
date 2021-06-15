@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+
 public class NewSoldier : Enemy {
     private enum SoldierState {
         Marching,
@@ -12,17 +12,22 @@ public class NewSoldier : Enemy {
         Approaching
     }
 
-    private NavMeshAgent navMeshAgent;
-    [SerializeField] private Animator animator;
     private SoldierState state;
     private Obstacle farTarget;
+    [SerializeField] private LayerMask obstacleLayerMask;
+    [SerializeField] private float obstacleScanIntervalMin = 0.5f;
+    [SerializeField] private float obstacleScanIntervalMax = 0.75f;
+    [SerializeField] private const float obstacleScanRadius = 7.5f;
+    [SerializeField] private const float obstacleScanAngle = 35f;
+    private float obstacleScanTime;
+    private float obstacleScanInterval;
+    private List<Obstacle> targets = new List<Obstacle>();
+    private Obstacle currentTarget;
+    [SerializeField] private float attackDamage = 1f;
 
     protected override void Start() {
         base.Start();
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        nexus = GameManager.Instance.nexus;
-        enemy = true;
-        randomArea = Map.Instance.GetRandomArea();
+        obstacleScanTime = -Mathf.Infinity;
         StartMarching();
     }
 
@@ -30,7 +35,7 @@ public class NewSoldier : Enemy {
         base.Update();
         switch (state) {
             case SoldierState.Approaching:
-                animator.SetFloat("Speed", navMeshAgent.speed);
+                UpdateAnimatorWalkSpeed();
                 if (GetTarget()) {
                     StopMarching();
                     StartAttacking();
@@ -38,8 +43,8 @@ public class NewSoldier : Enemy {
                     StartMarching();
                 break;
             case SoldierState.Marching:
-                animator.SetFloat("Speed", navMeshAgent.speed);
-                if (GetFarTarget()) {
+                UpdateAnimatorWalkSpeed();
+                if (Time.time - obstacleScanTime >= obstacleScanInterval && GetFarTarget()) {
                     StopMarching();
                     StartApproaching();
                 }
@@ -58,6 +63,7 @@ public class NewSoldier : Enemy {
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
         state = SoldierState.Marching;
+        UpdateAnimatorWalkSpeed();
     }
 
     private void StartApproaching() {
@@ -81,27 +87,29 @@ public class NewSoldier : Enemy {
     }
 
     private bool GetTarget() {
-        if (target.Count <= 0)
+        if (targets.Count <= 0)
             return false;
-        target = target.Where(obstacle => obstacle != null && obstacle.health > 0).ToList();
-        if (target.Count > 0) {
-            currentTarget = target[0];
+        targets = targets.Where(obstacle => obstacle != null && obstacle.health > 0).ToList();
+        if (targets.Count > 0) {
+            currentTarget = targets[0];
             return true;
         } else
             return false;
     }
 
     private bool GetFarTarget() {
-        var colliders = Physics.OverlapSphere(transform.position, 7.5f);
+        var colliders = Physics.OverlapSphere(transform.position, obstacleScanRadius, obstacleLayerMask);
         float minDistance = Mathf.Infinity;
         farTarget = null;
         foreach(var collider in colliders) {
             Vector3 direction = collider.transform.position - transform.position; direction.y = 0;
             if (collider.TryGetComponent(out Obstacle obstacle) && obstacle.health > 0
-            && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(35f * 0.5f * Mathf.Deg2Rad)
+            && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(obstacleScanAngle * 0.5f * Mathf.Deg2Rad)
             && Vector3.Distance(transform.position, obstacle.transform.position) < minDistance)
             farTarget = obstacle;
         }
+        obstacleScanTime = Time.time;
+        obstacleScanInterval = Random.Range(obstacleScanIntervalMin, obstacleScanIntervalMax);
         return (farTarget != null);
     }
 
@@ -110,6 +118,16 @@ public class NewSoldier : Enemy {
     }
 
     public void Attack() {
-        currentTarget.health -= damage;
+        currentTarget.health -= attackDamage;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.TryGetComponent(out Obstacle obstacle))
+            targets.Add(obstacle);
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.TryGetComponent(out Obstacle obstacle))
+            targets.Remove(obstacle);
     }
 }

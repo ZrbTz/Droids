@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+/*[RequireComponent(typeof(NavMeshAgent))]
 public class Invoker : Enemy {
     private enum SoldierState {
         Marching,
@@ -86,27 +86,24 @@ public class Invoker : Enemy {
     }
 
     override protected void addTarget(Obstacle bersaglio) {
-        target.Add(bersaglio);
+        targets.Add(bersaglio);
         StartAttacking();
     }
 
     override protected void removeTarget(Obstacle bersaglio) {
-        target.Remove(bersaglio);
-        if (target.Count > 0) {
+        targets.Remove(bersaglio);
+        if (targets.Count > 0) {
             StartAttacking();
         }
     }
 
     private void StartAttacking() {
         StopMarching();
-        //currentTarget = target[0];
-        //Vector3 direction = currentTarget.transform.position - transform.position; direction.y = 0; direction.Normalize();
-        //transform.rotation = Quaternion.LookRotation(direction);
         state = SoldierState.Attacking;
     }
 
     private void StopAttacking() {
-        if (target.Count > 0) {
+        if (targets.Count > 0) {
             StartAttacking();
             return;
         }
@@ -114,22 +111,8 @@ public class Invoker : Enemy {
     }
 
     private void Attack() {
-        //while (currentTarget == null) {
-        //    target.Remove(target[0]);
-        //    if (target.Count == 0) {
-        //        StartMarching();
-        //        return;
-        //    }
-        //    currentTarget = target[0];
-        //}
-
         GameObject newEnemy = Instantiate(soldierToSpawn, transform.position + 2*transform.forward, transform.rotation);
         newEnemy.GetComponent<Enemy>().destination = this.destination;
-
-        //if (currentTarget.health <= 0) {
-        //    target.Remove(currentTarget);
-        //    StopAttacking();
-        //}
     }
 
     protected override void Die() {
@@ -144,4 +127,4 @@ public class Invoker : Enemy {
         state = SoldierState.Idle;
         base.Die();
     }
-}
+}*/

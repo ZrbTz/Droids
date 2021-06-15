@@ -28,7 +28,7 @@ public class NewNexus : MonoBehaviour
         if (other != null && other.transform.root.GetComponent<Enemy>().dead == false) {
             DropItem dropItem = other.gameObject.GetComponent<DropItem>();
             if (dropItem != null) dropItem.Drop();
-            nexus.health -= other.transform.root.GetComponent<Enemy>().damage;
+            nexus.health -= other.transform.root.GetComponent<Enemy>().nexusDamage;
             other.transform.root.GetComponent<Enemy>().FadeAndDisappear();
             Debug.Log("Il nexus ha subito danno!");
 

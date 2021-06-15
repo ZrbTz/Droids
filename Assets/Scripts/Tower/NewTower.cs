@@ -22,6 +22,7 @@ public class NewTower : Unit {
     private Unit target = null;
     public TowerState state;
     public LayerMask lineOfFireLayerMask;
+    [SerializeField] private LayerMask enemyLayerMask;
     private float attackTime = Mathf.NegativeInfinity;
     private Transform nexus;
 
@@ -72,7 +73,7 @@ public class NewTower : Unit {
     private bool GetTarget() {
         bool found = false;
         float minDistance = Mathf.Infinity;
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, range);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, enemyLayerMask);
         foreach (Collider hitCollider in hitColliders) {
             if (!(hitCollider.transform.root.TryGetComponent(out Unit unit) && !unit.dead && unit.enemy))
                 continue;
