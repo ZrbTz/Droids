@@ -217,12 +217,12 @@ MonoBehaviour:
   walkStep: {fileID: 8300000, guid: b1d2d4cbb636548468094e491653dbe6, type: 3}
   engined: 0
   walkStop: {fileID: 0}
-  stepVolume: 0.08
+  stepVolume: 0.1
   movement: {fileID: 8300000, guid: 1538839b4c44f0e4a9db38393af49d16, type: 3}
   rotation: {fileID: 8300000, guid: 55458af2e963bb544985c7d9fe9b94e3, type: 3}
-  moveVolume: 0.01
+  moveVolume: 0.1
   attack: {fileID: 8300000, guid: 54e55e23c15fbf643aa5604d865a73a5, type: 3}
-  attackVolume: 0.04
+  attackVolume: 0.1
 --- !u!1 &1551767229684506569
 GameObject:
   m_ObjectHideFlags: 0
