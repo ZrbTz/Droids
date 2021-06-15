@@ -9,10 +9,13 @@ public class Shot : MonoBehaviour
     public float shotgunTimeToLive = 0.2f;
     public ParticleSystem hitParticle;
 
+    private bool hit;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        hit = false;
         Destroy(gameObject, timeToLive);
     }
 
@@ -53,8 +56,11 @@ public class Shot : MonoBehaviour
     }
 
     private void Hit(Unit unit, Vector3 point) {
-        unit.health -= damage;
-        Hit(point);
+        if (!hit) {
+            unit.health -= damage;
+            Hit(point);
+            hit = true;
+        }
     }
 
     private void Hit(Vector3 point) {
