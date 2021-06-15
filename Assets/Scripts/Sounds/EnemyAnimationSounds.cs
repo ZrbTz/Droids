@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAnimationSounds : MonoBehaviour
 {
     private GameManager gameManager;
+    private bool audioIsPaused = false;
     //SOlo per testing
     [SerializeField] bool mute;
     [SerializeField] float maxDistance = 30.0f;
@@ -42,14 +43,16 @@ public class EnemyAnimationSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.IsPaused())
+        if (gameManager.IsPaused() && !audioIsPaused)
         {
+            audioIsPaused = true;
             step_speaker.Pause();
             move_speaker.Pause();
             attack_speaker.Pause();
         }
-        else
+        else if(!gameManager.IsPaused() && audioIsPaused)
         {
+            audioIsPaused = false;
             step_speaker.UnPause();
             move_speaker.UnPause();
             attack_speaker.UnPause();

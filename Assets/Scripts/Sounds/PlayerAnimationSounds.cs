@@ -6,6 +6,7 @@ using Invector.vCharacterController;
 public class PlayerAnimationSounds : MonoBehaviour
 {
     private GameManager gameManager;
+    private bool audioIsPaused = false;
 
     [SerializeField] AudioClip walkStep;
     [SerializeField] AudioClip walkMovement;
@@ -34,12 +35,12 @@ public class PlayerAnimationSounds : MonoBehaviour
     void Update()
     {
 
-        if (gameManager.IsPaused())
+        if (gameManager.IsPaused() && !audioIsPaused)
         {
             _speaker.Pause();
             mov_speaker.Pause();
         }
-        else
+        else if (!gameManager.IsPaused() && audioIsPaused)
         {
             _speaker.UnPause();
             mov_speaker.UnPause();
