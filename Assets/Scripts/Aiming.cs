@@ -15,7 +15,7 @@ public class Aiming : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
+        layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item", "Border");
     }
 
     // Update is called once per frame
