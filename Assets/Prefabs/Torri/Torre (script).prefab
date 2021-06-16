@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 9054074884850229501}
   - component: {fileID: 5319852590669815831}
   - component: {fileID: 8018602721361323649}
+  - component: {fileID: 9051863559209821823}
   m_Layer: 0
   m_Name: Torre (script)
   m_TagString: Tower
@@ -234,7 +235,7 @@ MonoBehaviour:
   cannonPivot: {fileID: 6547723205042485393}
   cannonMouth: {fileID: 8012515984369076693}
   projectilePrefab: {fileID: 4779468621755036295, guid: e6d113a57935eaa40900f0356edef5a1, type: 3}
-  shotSound: {fileID: 8300000, guid: 32c5e4c0827a29a439c75d60e3b07092, type: 3}
+  shotSound: {fileID: 8300000, guid: f3572fdd6828dc349958e4ffe473391d, type: 3}
   audioSource: {fileID: 8018602721361323649}
   state: 0
   lineOfFireLayerMask:
@@ -384,6 +385,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9051863559209821823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2289459228356400894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d073c8d9a1b4e41bad174c70344ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4673041295552426488
 GameObject:
   m_ObjectHideFlags: 0

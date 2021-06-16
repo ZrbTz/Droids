@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 7413268833670761733}
   - component: {fileID: 6552233384946119628}
   - component: {fileID: 7829493194977585590}
+  - component: {fileID: 5470036197449022979}
   m_Layer: 0
   m_Name: Cannon Tower
   m_TagString: Tower
@@ -208,7 +209,7 @@ MonoBehaviour:
   cannonPivot: {fileID: 1361227843725226726}
   cannonMouth: {fileID: 5786860021983694182}
   projectilePrefab: {fileID: 4623044352783592287, guid: 14bf0f839866b164cbc599b7ce189881, type: 3}
-  shotSound: {fileID: 8300000, guid: c890bf37bb1ddd2428b07d696c2f0433, type: 3}
+  shotSound: {fileID: 8300000, guid: 92071b52d7069274592674927d1bba0b, type: 3}
   audioSource: {fileID: 7829493194977585590}
   state: 0
   lineOfFireLayerMask:
@@ -401,6 +402,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5470036197449022979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503102137465925833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d073c8d9a1b4e41bad174c70344ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2011831356403592999
 GameObject:
   m_ObjectHideFlags: 0

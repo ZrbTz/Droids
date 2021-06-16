@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 342752718742170731}
   - component: {fileID: 2325574447792564475}
   - component: {fileID: 7926564126331431005}
+  - component: {fileID: 4158780912807370421}
   m_Layer: 0
   m_Name: Slowing Tower
   m_TagString: Tower
@@ -109,7 +110,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8db4ed27b373f6c48a2bac1e9af937b6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 43576363c43f9244ab9c4ccd88f49598, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -213,6 +214,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4158780912807370421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6171487001421686886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d073c8d9a1b4e41bad174c70344ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &172869374088256510
 BoxCollider:
   m_ObjectHideFlags: 0
