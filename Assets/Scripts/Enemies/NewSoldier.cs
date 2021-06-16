@@ -115,6 +115,7 @@ public class NewSoldier : Enemy {
 
     private void StopAttacking() {
         animator.SetBool("Attacking", false);
+        animator.gameObject.GetComponent<EnemyAnimationSounds>().StartEngine();
     }
 
     public void Attack() {

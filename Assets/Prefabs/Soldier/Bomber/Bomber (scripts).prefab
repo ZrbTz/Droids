@@ -164,10 +164,10 @@ MonoBehaviour:
   engined: 0
   walkStop: {fileID: 0}
   stepVolume: 0.1
-  movement: {fileID: 8300000, guid: d296b17a9140ab1459f01c2b5d66d9a1, type: 3}
-  rotation: {fileID: 8300000, guid: 55458af2e963bb544985c7d9fe9b94e3, type: 3}
+  movement: {fileID: 8300000, guid: 0e87114acabbfee40808f516e63a78ad, type: 3}
+  rotation: {fileID: 8300000, guid: 1e2c0a827e087774291efc10858bd43a, type: 3}
   moveVolume: 0.1
-  attack: {fileID: 8300000, guid: 1242052a7ff19284098bbcc7ee0a834c, type: 3}
+  attack: {fileID: 8300000, guid: 5029ec49b54feb84a98d717ff30783c6, type: 3}
   attackVolume: 0.1
 --- !u!65 &4876698385735962542
 BoxCollider:

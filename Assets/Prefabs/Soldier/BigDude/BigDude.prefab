@@ -218,8 +218,8 @@ MonoBehaviour:
   engined: 0
   walkStop: {fileID: 0}
   stepVolume: 0.1
-  movement: {fileID: 8300000, guid: 1538839b4c44f0e4a9db38393af49d16, type: 3}
-  rotation: {fileID: 8300000, guid: 55458af2e963bb544985c7d9fe9b94e3, type: 3}
+  movement: {fileID: 8300000, guid: e6f44a5b73ec6834fb3c935159f8ad52, type: 3}
+  rotation: {fileID: 8300000, guid: 1e2c0a827e087774291efc10858bd43a, type: 3}
   moveVolume: 0.1
   attack: {fileID: 8300000, guid: 54e55e23c15fbf643aa5604d865a73a5, type: 3}
   attackVolume: 0.1

@@ -64,6 +64,7 @@ public class EnemyAnimationSounds : MonoBehaviour
         AudioSource newSpeaker = this.gameObject.AddComponent<AudioSource>();
         newSpeaker.volume = intensity;
         newSpeaker.playOnAwake = false;
+        newSpeaker.loop = true;
         newSpeaker.spatialBlend = 1.0f;
         newSpeaker.maxDistance = maxDistance;
         newSpeaker.rolloffMode = AudioRolloffMode.Linear;
@@ -79,20 +80,26 @@ public class EnemyAnimationSounds : MonoBehaviour
 
     public void StartEngine()
     {
-        Debug.Log("STARTENGINE");
-       step_speaker.clip = walkStep;
-        step_speaker.Play();
-        running = true;
+        if (engined)
+        {
+            Debug.Log("STARTENGINE");
+            step_speaker.clip = walkStep;
+            step_speaker.Play();
+            running = true;
+        }
     }
 
     public void StopEngine()
     {
-        step_speaker.Stop();
-        Debug.Log("STOPENGINE");
-        if (walkStop && running)
+        if (engined)
         {
-            running = false;
-            step_speaker.PlayOneShot(walkStop);
+            step_speaker.Stop();
+            Debug.Log("STOPENGINE");
+            if (walkStop && running)
+            {
+                running = false;
+                step_speaker.PlayOneShot(walkStop);
+            }
         }
     }
 
