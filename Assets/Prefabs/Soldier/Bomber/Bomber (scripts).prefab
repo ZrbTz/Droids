@@ -159,16 +159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mute: 0
+  Volume: 0.1
   maxDistance: 30
   walkStep: {fileID: 8300000, guid: dbcb359349f153b4a8cc15423f7b6830, type: 3}
   engined: 0
   walkStop: {fileID: 0}
-  stepVolume: 0.1
   movement: {fileID: 8300000, guid: 0e87114acabbfee40808f516e63a78ad, type: 3}
   rotation: {fileID: 8300000, guid: 1e2c0a827e087774291efc10858bd43a, type: 3}
-  moveVolume: 0.1
   attack: {fileID: 8300000, guid: 5029ec49b54feb84a98d717ff30783c6, type: 3}
-  attackVolume: 0.1
 --- !u!65 &4876698385735962542
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,30 +8,24 @@ public class EnemyAnimationSounds : MonoBehaviour
     private bool audioIsPaused = false;
     //SOlo per testing
     [SerializeField] bool mute;
+    [SerializeField] [Range(0.0f, 1.0f)] float Volume;
     [SerializeField] float maxDistance = 30.0f;
 
     [SerializeField] AudioClip walkStep;
     public bool engined;
     private bool running = false;
     [SerializeField] AudioClip walkStop;
-    [SerializeField] [Range(0.0f, 1.0f)] float stepVolume;
     [SerializeField] AudioClip movement;
     [SerializeField] AudioClip rotation;
-    [SerializeField] [Range(0.0f, 1.0f)] float moveVolume;
     [SerializeField] AudioClip attack;
-    [SerializeField] [Range(0.0f, 1.0f)] float attackVolume;
 
-    private AudioSource step_speaker;
-    private AudioSource move_speaker;
-    private AudioSource attack_speaker;
+    private AudioSource _speaker;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        step_speaker = CreateSpeaker(stepVolume);
-        move_speaker = CreateSpeaker(moveVolume);
-        attack_speaker = CreateSpeaker(attackVolume);
+        _speaker = CreateSpeaker(Volume);
         gameManager = FindObjectOfType<GameManager>();
 
         if (engined)
@@ -46,16 +40,12 @@ public class EnemyAnimationSounds : MonoBehaviour
         if (gameManager.IsPaused() && !audioIsPaused)
         {
             audioIsPaused = true;
-            step_speaker.Pause();
-            move_speaker.Pause();
-            attack_speaker.Pause();
+            _speaker.Pause();
         }
         else if(!gameManager.IsPaused() && audioIsPaused)
         {
             audioIsPaused = false;
-            step_speaker.UnPause();
-            move_speaker.UnPause();
-            attack_speaker.UnPause();
+            _speaker.UnPause();
         }
     }
 
@@ -75,7 +65,7 @@ public class EnemyAnimationSounds : MonoBehaviour
 
     public void Step()
     {
-        step_speaker.PlayOneShot(walkStep);
+        _speaker.PlayOneShot(walkStep);
     }
 
     public void StartEngine()
@@ -83,8 +73,8 @@ public class EnemyAnimationSounds : MonoBehaviour
         if (engined)
         {
             Debug.Log("STARTENGINE");
-            step_speaker.clip = walkStep;
-            step_speaker.Play();
+            _speaker.clip = walkStep;
+            _speaker.Play();
             running = true;
         }
     }
@@ -93,43 +83,43 @@ public class EnemyAnimationSounds : MonoBehaviour
     {
         if (engined)
         {
-            step_speaker.Stop();
+            _speaker.Stop();
             Debug.Log("STOPENGINE");
             if (walkStop && running)
             {
                 running = false;
-                step_speaker.PlayOneShot(walkStop);
+                _speaker.PlayOneShot(walkStop);
             }
         }
     }
 
     public void Movement()
     {
-       move_speaker.PlayOneShot(movement);
+       _speaker.PlayOneShot(movement);
     }
 
     public void Impact()
     {
-        attack_speaker.PlayOneShot(attack);
+        _speaker.PlayOneShot(attack);
     }
     #region Summoner
     public void OpeningSound()
     {
         Debug.Log("Opening");
-        attack_speaker.PlayOneShot(movement);
+        _speaker.PlayOneShot(movement);
     }
 
     public void ClosingSound()
     {
         Debug.Log("Closing");
-        attack_speaker.PlayOneShot(attack);
+        _speaker.PlayOneShot(attack);
     }
     #endregion
 
     #region Bomber
     public void Rotate()
     {
-        move_speaker.PlayOneShot(rotation);
+        _speaker.PlayOneShot(rotation);
     }
     #endregion
 }

@@ -213,16 +213,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mute: 0
+  Volume: 0.1
   maxDistance: 30
   walkStep: {fileID: 8300000, guid: b1d2d4cbb636548468094e491653dbe6, type: 3}
   engined: 0
   walkStop: {fileID: 0}
-  stepVolume: 0.1
   movement: {fileID: 8300000, guid: e6f44a5b73ec6834fb3c935159f8ad52, type: 3}
   rotation: {fileID: 8300000, guid: 1e2c0a827e087774291efc10858bd43a, type: 3}
-  moveVolume: 0.1
   attack: {fileID: 8300000, guid: 54e55e23c15fbf643aa5604d865a73a5, type: 3}
-  attackVolume: 0.1
 --- !u!1 &1551767229684506569
 GameObject:
   m_ObjectHideFlags: 0
