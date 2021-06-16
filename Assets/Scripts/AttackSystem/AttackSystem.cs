@@ -59,7 +59,7 @@ public class AttackSystem : MonoBehaviour
             if (inputManager.WeaponFire) {
                 if (fireElapsedTime >= fireDelay) {
                     fireElapsedTime = 0.0f;
-                    this.GetComponent<PlayerAnimationSounds>().Rifle(shooter.GetComponent<AudioSource>());
+                    this.GetComponent<PlayerAnimationSounds>().Rifle();
                     GameObject projectile_shooted = Instantiate(projectile);
                     projectile_shooted.transform.position = shooter.transform.TransformPoint(Vector3.zero);
                     projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x + shooter.transform.rotation.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
@@ -72,7 +72,7 @@ public class AttackSystem : MonoBehaviour
             if (shotgunFireElapsedTime >= shotgunFireDelay) {
                 if (inputManager.WeaponFireDown) {
                     shotgunFireElapsedTime = 0.0f;
-                    this.GetComponent<PlayerAnimationSounds>().Shotgun(shooter.GetComponent<AudioSource>());
+                    this.GetComponent<PlayerAnimationSounds>().Shotgun();
                     for (int i = 0; i < 10; i++) {
                         GameObject projectile_shooted = Instantiate(projectile);
                         projectile_shooted.GetComponent<Shot>().timeToLive = projectile_shooted.GetComponent<Shot>().shotgunTimeToLive;

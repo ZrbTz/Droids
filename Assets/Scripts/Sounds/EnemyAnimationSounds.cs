@@ -8,7 +8,7 @@ public class EnemyAnimationSounds : MonoBehaviour
     private bool audioIsPaused = false;
     //SOlo per testing
     [SerializeField] bool mute;
-    [SerializeField] [Range(0.0f, 1.0f)] float Volume;
+    [SerializeField] [Range(0.0f, 1.0f)] float Volume = 0.1f;
     [SerializeField] float maxDistance = 30.0f;
 
     [SerializeField] AudioClip walkStep;
