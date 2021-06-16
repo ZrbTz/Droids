@@ -158,9 +158,9 @@ MonoBehaviour:
       tempoPerSpawnare: 15
       difficulty: 0
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
-      count: 50
-      delay: 15
-      tempoPerSpawnare: 15
+      count: 35
+      delay: 20
+      tempoPerSpawnare: 20
       difficulty: 2
     - enemy: {fileID: 387868700341570295, guid: 56f371d3ee007984bb36a9f8701ad17f, type: 3}
       count: 3
