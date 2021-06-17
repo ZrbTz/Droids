@@ -113,10 +113,10 @@ MonoBehaviour:
   animator: {fileID: 5963480313353242931}
   obstacleLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   obstacleScanIntervalMin: 0.5
   obstacleScanIntervalMax: 0.75
-  attackDamage: 1
+  attackDamage: 2
 --- !u!54 &263491460740225028
 Rigidbody:
   m_ObjectHideFlags: 0

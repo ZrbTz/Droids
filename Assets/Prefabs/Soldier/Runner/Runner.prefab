@@ -212,7 +212,7 @@ MonoBehaviour:
   animator: {fileID: 2933267935741923359}
   obstacleLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   obstacleScanIntervalMin: 0.5
   obstacleScanIntervalMax: 0.75
   attackDamage: 1
