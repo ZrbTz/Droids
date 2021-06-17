@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c91159cd51b244e815078b618eb857, type: 3}
   m_Name: GetGrenade
   m_EditorClassIdentifier: 
-  title: Get a grenade
-  description: Go closed a grenade and get it. You can throw that by pressing the
-    Q button.
+  title: Get a mine
+  description: Go close to a mine to get it. You can place that mine by pressing
+    the Q button.
   item: {fileID: 11400000, guid: 8e8f65d381999434abaeb922f1803b4c, type: 2}
