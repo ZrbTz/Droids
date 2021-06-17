@@ -99,14 +99,16 @@ public class NewSoldier : Enemy {
 
     private bool GetFarTarget() {
         var colliders = Physics.OverlapSphere(transform.position, obstacleScanRadius, obstacleLayerMask);
-        float minDistance = Mathf.Infinity;
         farTarget = null;
+        NavMeshPath path = new NavMeshPath();
         foreach(var collider in colliders) {
             Vector3 direction = collider.transform.position - transform.position; direction.y = 0;
             if (collider.TryGetComponent(out Obstacle obstacle) && obstacle.health > 0
-            && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(obstacleScanAngle * 0.5f * Mathf.Deg2Rad)
-            && Vector3.Distance(transform.position, obstacle.transform.position) < minDistance)
+                && Vector3.Dot(direction.normalized, transform.forward) > Mathf.Cos(obstacleScanAngle * 0.5f * Mathf.Deg2Rad)
+                && NavMesh.CalculatePath(transform.position, obstacle.transform.position, NavMesh.AllAreas, path)
+                && path.status == NavMeshPathStatus.PathComplete)
             farTarget = obstacle;
+            break;
         }
         obstacleScanTime = Time.time;
         obstacleScanInterval = Random.Range(obstacleScanIntervalMin, obstacleScanIntervalMax);
