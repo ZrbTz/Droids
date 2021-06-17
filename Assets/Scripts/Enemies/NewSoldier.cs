@@ -33,6 +33,7 @@ public class NewSoldier : Enemy {
 
     protected override void Update() {
         base.Update();
+        if (dead) return;
         switch (state) {
             case SoldierState.Approaching:
                 UpdateAnimatorWalkSpeed();
