@@ -48,6 +48,7 @@ public class Unit : MonoBehaviour {
 
     protected virtual void Die(float timeToDie)
     {
+        dead = true;
         Destroy(gameObject, timeToDie);
         //Instantiate(destructionParticle, body.position, body.rotation);
     }
