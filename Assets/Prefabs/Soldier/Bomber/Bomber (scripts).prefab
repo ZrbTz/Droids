@@ -99,7 +99,7 @@ MonoBehaviour:
   state: 0
   shootRange: 100
   shootCooldown: 7
-  shootDelay: 4
+  shootDelay: 10
 --- !u!114 &9094333859740269141
 MonoBehaviour:
   m_ObjectHideFlags: 0

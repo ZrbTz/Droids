@@ -24,7 +24,7 @@ public class NewNexus : MonoBehaviour
     }
 
     IEnumerator damageNexus(Collider other) {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         if (other != null && other.transform.root.GetComponent<Enemy>().dead == false) {
             DropItem dropItem = other.transform.root.GetComponent<DropItem>();
             if (dropItem != null) dropItem.Drop();

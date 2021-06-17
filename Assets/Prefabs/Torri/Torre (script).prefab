@@ -240,7 +240,7 @@ MonoBehaviour:
   state: 0
   lineOfFireLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 2240
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 8192

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3547131548967221515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4674017907550551833}
   - component: {fileID: 4779468621755036295}
   - component: {fileID: 7853096458187982869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Turret Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 1396252328892748086}
   - component: {fileID: 8179188668918164362}
   - component: {fileID: 9022937746261463245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TowerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
