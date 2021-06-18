@@ -55,7 +55,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
         {
             direction = rb.velocity.normalized;
             rb.velocity = direction * Mathf.Lerp(dashSpeed, oldVelocity.magnitude, dashRemainingStopTime / dashStopTime);
-            dashRemainingStopTime += Time.deltaTime;
+            dashRemainingStopTime += Time.fixedDeltaTime;
             if (dashRemainingStopTime >= dashStopTime)
             {
                 stopDash = false;
@@ -63,21 +63,19 @@ public class ThirdPersonControllerDash : MonoBehaviour
                 rb.velocity = oldVelocity.magnitude * direction;
             }
         }
-        dashRemainingTime -= Time.deltaTime;
-        dashRemainingCountdown -= Time.deltaTime;
-        if (dashRemainingCountdown < 0)
+        dashRemainingTime -= Time.fixedDeltaTime;
+        dashRemainingCountdown -= Time.fixedDeltaTime;
+        if (callCount < 2 && dashRemainingCountdown < 0)
         {
             callCount++;
-            dashRemainingCountdown = dashTime + dashCountdown;
-            if (callCount > 2)
+            gameUI.UpdateDashNumber(callCount);
+            
+            if (callCount < 2)
             {
-                callCount = 2;
-            }
-            else if (callCount < 2)
-            {
+                dashRemainingCountdown = dashTime + dashCountdown;
                 gameUI.UpdateDashCooldown(dashRemainingCountdown);
             }
-            gameUI.UpdateDashNumber(callCount);
+
         }
     }
 
