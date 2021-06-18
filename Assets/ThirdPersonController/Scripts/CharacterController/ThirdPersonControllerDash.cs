@@ -90,7 +90,11 @@ public class ThirdPersonControllerDash : MonoBehaviour
             dashRemainingStopTime = 0.0f;
             dashRemainingTime = dashTime;
 
-            dashRemainingCountdown = dashTime + dashCountdown;
+            if (dashRemainingCountdown <  0)
+            {
+                dashRemainingCountdown = dashTime + dashCountdown;
+            }
+            
             gameUI.UpdateDashCooldown(dashRemainingCountdown);
             sprinting = controller.isSprinting;
             input = (controller.input);
