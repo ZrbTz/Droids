@@ -61,6 +61,7 @@ public class Pinball : MonoBehaviour
                     pinball_player.enabled = true;
                     dash_player.enabled = false;
                     input_player.enabled = false;
+                    controller.animator.CrossFadeInFixedTime("JumpMove", .2f);
                     controller.UpdateAnimator();
                     Vector3 directionTarget = target.transform.position - player.transform.position;
                     directionTarget.y = 0;
