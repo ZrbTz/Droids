@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2923430232307967503}
   - component: {fileID: 9115480785458182097}
   - component: {fileID: 5557778671802751871}
+  - component: {fileID: 217410559506679017}
   m_Layer: 2
   m_Name: Pistone
   m_TagString: Untagged
@@ -111,6 +112,21 @@ MonoBehaviour:
   riferimento: {fileID: 9178491633075716890}
   molla: {fileID: 7970215671955826451}
   target: {fileID: 0}
+--- !u!114 &217410559506679017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826249242433679342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bc5ace3076f45409d316987c8b1fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: 0.1
+  maxDistance: 30
+  sound_effect: {fileID: 8300000, guid: 1553b3aa005b76943b3d679afa1bae7b, type: 3}
 --- !u!1 &2626305200265327109
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8836876281164663602}
   - component: {fileID: 9083161963912425526}
+  - component: {fileID: 3945936930190281626}
   m_Layer: 0
   m_Name: Molla
   m_TagString: Untagged
@@ -337,6 +354,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   val: 0.1
+--- !u!114 &3945936930190281626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7970215671955826451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bc5ace3076f45409d316987c8b1fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: 0.1
+  maxDistance: 30
+  sound_effect: {fileID: 8300000, guid: f9dc05cf1d7be7f46b4ca17652edb531, type: 3}
 --- !u!1 &8676071742929618286
 GameObject:
   m_ObjectHideFlags: 0

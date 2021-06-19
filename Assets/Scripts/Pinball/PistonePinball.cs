@@ -39,6 +39,7 @@ public class PistonePinball : MonoBehaviour
             Vector3 scale = molla.transform.localScale;
             scale.z = 0.1f;
             molla.transform.localScale = scale;
+            this.GetComponent<PinballSounds>().PlaySound();
         }
     }
 }

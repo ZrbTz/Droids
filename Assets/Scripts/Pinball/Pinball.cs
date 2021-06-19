@@ -70,10 +70,12 @@ public class Pinball : MonoBehaviour
                     rb.transform.forward = directionTarget;
                     camera_controller.SetMouseX(angle);
                     camera_controller.SetMouseY(0.0f);
+                    this.GetComponent<PinballSounds>().PlaySound();
                 }
                 else
                 {
                     Triggerabile.GetComponent<EstensioneMolla>().state = 1;
+                    Triggerabile.GetComponent<PinballSounds>().PlaySound();
                     pinball_player.direction = Vector3.down*0.00001f;
                 }
             }
