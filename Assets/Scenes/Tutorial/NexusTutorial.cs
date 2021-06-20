@@ -5,7 +5,6 @@ using UnityEngine;
 public class NexusTutorial : Unit{
 
     protected override void Die() {
-        Debug.Log("ciao sn morto");
         GameManager gm = GameManager.Instance;
         gm.resetHorde();
         health = 5;

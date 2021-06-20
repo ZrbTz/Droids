@@ -142,7 +142,6 @@ namespace Invector.vCharacterController
         {
             /*if (Input.GetButtonDown("Fire1")) isShooting = true;
             else if (Input.GetButtonUp("Fire1")) isShooting = false;
-            Debug.Log(Input.GetKey(KeyCode.Joystick1Button8));
            
             if (Input.GetButtonDown("Sprint") && !isShooting) cc.Sprint(true);
             else if (cc.isSprinting && Input.GetButtonDown("Fire1")) cc.Sprint(false);

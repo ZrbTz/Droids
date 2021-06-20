@@ -36,14 +36,12 @@ public class BomberBomb : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer >= 0.75*timeout)
         {
-            Debug.Log("Mod");
             m.SetFloat("Vector1_e13e019d51d54a858419bc043499bafd", Mathf.Lerp(altezza, inversoAltezzaFinale, ((timer - 0.75f * timeout) / (timeout - 0.75f))));
         }
         if (timer >= timeout && !hit) {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.2f, layerMask);
             if (hitColliders.Length > 0 && hit == false) {
                 hit = true;
-                Debug.Log("bomber hit");
                 speedController.freeSpeed.walkSpeed /= slowDown;
                 speedController.freeSpeed.sprintSpeed /= slowDown;
                 speedController.freeSpeed.runningSpeed /= slowDown;

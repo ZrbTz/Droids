@@ -72,7 +72,6 @@ public class EnemyAnimationSounds : MonoBehaviour
     {
         if (engined)
         {
-            Debug.Log("STARTENGINE");
             _speaker.clip = walkStep;
             _speaker.Play();
             running = true;
@@ -84,7 +83,6 @@ public class EnemyAnimationSounds : MonoBehaviour
         if (engined)
         {
             _speaker.Stop();
-            Debug.Log("STOPENGINE");
             if (walkStop && running)
             {
                 running = false;
@@ -105,13 +103,11 @@ public class EnemyAnimationSounds : MonoBehaviour
     #region Summoner
     public void OpeningSound()
     {
-        Debug.Log("Opening");
         _speaker.PlayOneShot(movement);
     }
 
     public void ClosingSound()
     {
-        Debug.Log("Closing");
         _speaker.PlayOneShot(attack);
     }
     #endregion

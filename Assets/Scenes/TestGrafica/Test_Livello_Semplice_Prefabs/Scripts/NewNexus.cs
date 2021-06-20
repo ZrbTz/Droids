@@ -31,7 +31,6 @@ public class NewNexus : MonoBehaviour
             nexus.health -= other.transform.root.GetComponent<Enemy>().nexusDamage;
             other.transform.root.GetComponent<Enemy>().FadeAndDisappear();
             other.transform.root.gameObject.SetActive(false);
-            Debug.Log("Il nexus ha subito danno!");
 
             gameUI.UpdateNexusHealth(nexus.health, nexus.GetMaxHealth());
         }

@@ -91,7 +91,6 @@ public class SpawnEnemy : MonoBehaviour
 
     /*IEnumerator RandomicSpawn(BigHorde bigHorde)
     {
-        Debug.Log("Start Spawning");
         for (int j = 0; j < bigHorde.hordes.Length; j++)
         {
             yield return new WaitForSeconds(bigHorde.hordes[j].delay);
@@ -113,14 +112,12 @@ public class SpawnEnemy : MonoBehaviour
                 newEnemy.transform.rotation = this.transform.rotation;
             }
         }
-        Debug.Log("Fine spawn");
         gm.signalSpawnEnd();
         yield break;
     }*/
 
     IEnumerator TimedSpawn(BigHorde bigHorde)
     {
-        Debug.Log("Start Spawning");
         AddSpawnDataToMiniMap(bigHorde);
         for (int j = 0; j < bigHorde.hordes.Length; j++)
         {
@@ -150,7 +147,6 @@ public class SpawnEnemy : MonoBehaviour
             }
 
         }
-        Debug.Log("Fine spawn");
         gm.signalSpawnEnd();
         yield break;
     }

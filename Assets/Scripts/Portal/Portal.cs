@@ -40,7 +40,6 @@ public class Portal : MonoBehaviour {
     }
 
     /*private void OnTriggerEnter(Collider other) {
-        Debug.Log("Enter : " + other.tag);
         if (other.CompareTag("Tower")) {
             towers.Add(other.gameObject);
             
@@ -48,7 +47,6 @@ public class Portal : MonoBehaviour {
     }
 
     private void OnTriggerExit(Collider other) {
-        Debug.Log("Exit : " + other.tag);
         if (other.CompareTag("Tower"))
             towers.Remove(other.gameObject);
     }*/

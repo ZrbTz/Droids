@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour {
+public class Unit : MonoBehaviour
+{
     private float maxHealth;
     public float health = 100f;
     [HideInInspector] public bool enemy = false;
@@ -12,16 +13,20 @@ public class Unit : MonoBehaviour {
 
     private new Collider collider;
 
-    protected virtual void Start() {
+    protected virtual void Start()
+    {
         collider = GetComponent<Collider>();
         if (collider == null)
-            Debug.Log(name);
+        {
+
+        }
 
         maxHealth = health;
     }
 
-    protected virtual void Update() {
-        if(health <= 0 && !dead)
+    protected virtual void Update()
+    {
+        if (health <= 0 && !dead)
         {
             dead = true;
             DropItem di = this.GetComponent<DropItem>();
@@ -33,7 +38,8 @@ public class Unit : MonoBehaviour {
         }
     }
 
-    public float Distance(GameObject other) {
+    public float Distance(GameObject other)
+    {
         Vector3 p1 = collider.ClosestPoint(other.transform.position);
         Collider p = other.GetComponent<Collider>();
         if (p == null) return 1000f;
@@ -41,7 +47,8 @@ public class Unit : MonoBehaviour {
         return Vector3.Distance(p1, p2);
     }
 
-    protected virtual void Die() {
+    protected virtual void Die()
+    {
         Destroy(gameObject);
         Instantiate(destructionParticle, body.position, body.rotation);
     }
@@ -53,7 +60,8 @@ public class Unit : MonoBehaviour {
         //Instantiate(destructionParticle, body.position, body.rotation);
     }
 
-    public float GetMaxHealth() {
+    public float GetMaxHealth()
+    {
         return maxHealth;
     }
 }

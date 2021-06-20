@@ -26,7 +26,6 @@ public class Pinball : MonoBehaviour
         GameObject player = other.gameObject;
         if (player.layer == 10)
         {
-            Debug.Log("Dentro");
             PinballMotion pinball_player = player.GetComponent<PinballMotion>();
             ThirdPersonControllerDash dash_player = player.GetComponent<ThirdPersonControllerDash>();
             Rigidbody rb = player.GetComponent<Rigidbody>();

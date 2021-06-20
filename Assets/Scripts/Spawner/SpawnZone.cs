@@ -20,13 +20,11 @@ public class SpawnZone : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("SomethingEntered");
         enemyCounter++;
         _spawnArea.RemoveFromList(this.gameObject);
     }
     private void OnTriggerExit(Collider other)
     {
-        //Debug.Log("SomethingExited");
         enemyCounter--;
         if (enemyCounter == 0)
         {
