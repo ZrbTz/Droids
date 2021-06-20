@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : Unit {
+    static int priorityCount = 0;
     public bool hitNexus = false;
     public float nexusDamage = 1f;
     public GameObject destination;
@@ -52,6 +53,8 @@ public class Enemy : Unit {
     protected override void Start() {
         base.Start();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.avoidancePriority = priorityCount++;
+        if (priorityCount == 99) priorityCount = 0;
         randomArea = Map.Instance.GetRandomArea();
         speedTemp = 0f;
         enemy = true;
