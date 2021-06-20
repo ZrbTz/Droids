@@ -134,18 +134,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 3251823294879767631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec546a82c6c3ba469c67924c1e5fa5c, type: 3}
+  m_Script: {fileID: 11500000, guid: fcf28073b55c03e429a99a0af4dcb152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  enemy: 1
+  health: 100
+  enemy: 0
   dead: 0
-  body: {fileID: 3251823295560354859}
-  attackSpeed: 1
-  attackRange: 5
-  damage: 1
+  body: {fileID: 0}
+  destructionParticle: {fileID: 0}
+  hitNexus: 0
+  nexusDamage: 1
   destination: {fileID: 0}
+  enemyName: 
+  enemyIcon: {fileID: 0}
   fadeSpeed: 1
+  animator: {fileID: 0}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleScanIntervalMin: 0.5
+  obstacleScanIntervalMax: 0.75
+  attackDamage: 1
 --- !u!54 &3251823294879767622
 Rigidbody:
   m_ObjectHideFlags: 0
