@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemName: BancarellaMetallo
-  iconSprite: {fileID: 21300000, guid: 665d6544245180c409a7662c1349ef0f, type: 3}
+  iconSprite: {fileID: 21300000, guid: 05ffc9a376f978b46b3eb6ba48137d62, type: 3}
   amount: 1
   placeableItem: {fileID: 111592731181600257, guid: e9fb58dfc52e91744a3420516a23890d, type: 3}
   placeablePreviewItem: {fileID: 111592731181600257, guid: 99d8b9ec65b635b46b89e8d3b0f6e283, type: 3}

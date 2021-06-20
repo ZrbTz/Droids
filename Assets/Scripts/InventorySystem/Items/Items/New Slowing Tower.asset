@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemName: 
-  iconSprite: {fileID: 0}
+  iconSprite: {fileID: 21300000, guid: 2ce90f8ad719b25468de7086c0310133, type: 3}
   amount: 1
   placeableItem: {fileID: 6171487001421686886, guid: caa188d42b2c6d749989b3dac698022e, type: 3}
   placeablePreviewItem: {fileID: 6171487001421686886, guid: 4ec47c56f07d64d44ab5fc667b5756f7, type: 3}
