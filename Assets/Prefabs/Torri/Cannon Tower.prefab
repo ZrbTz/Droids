@@ -214,7 +214,7 @@ MonoBehaviour:
   state: 0
   lineOfFireLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 2240
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -246,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 1
   holdTime: 1
-  interactionKey: 101
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 17bc2e8bd3fec1045a6e776758370b5a, type: 2}
   pickSound: {fileID: 0}
