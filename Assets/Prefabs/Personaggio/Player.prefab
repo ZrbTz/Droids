@@ -368,8 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0abd5753da6b31544a209984735aff4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireDelay: 0.2
-  shotgunFireDelay: 2
+  fireDelay: 0.175
+  shotgunFireDelay: 1.25
   standardProjectile: {fileID: 7562490761220562059, guid: b4e1c88c56fc81749bf02a0440ad61fe, type: 3}
   berserkProjectile: {fileID: 7562490761220562059, guid: 6d31365753cf2e54995d86a1f9c487e8, type: 3}
   velocity: 3

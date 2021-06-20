@@ -75,13 +75,13 @@ public class AttackSystem : MonoBehaviour
                     this.GetComponent<PlayerAnimationSounds>().Shotgun();
                     for (int i = 0; i < 10; i++) {
                         GameObject projectile_shooted = Instantiate(projectile);
-                        projectile_shooted.GetComponent<Shot>().timeToLive = projectile_shooted.GetComponent<Shot>().shotgunTimeToLive;
+                        //projectile_shooted.GetComponent<Shot>().timeToLive = projectile_shooted.GetComponent<Shot>().shotgunTimeToLive;
                         projectile_shooted.transform.position = shooter.transform.TransformPoint(Vector3.zero);
                         projectile_shooted.transform.rotation = Quaternion.Euler(projectile_shooted.transform.eulerAngles.x + shooter.transform.rotation.eulerAngles.x, shooter.transform.rotation.eulerAngles.y, shooter.transform.rotation.eulerAngles.z);
                         projectile_shooted.GetComponent<Shot>().damage = shotgunTotalDamage/10f;
                         Vector3 forwardForce = shooter.transform.forward * 1000 * velocity;
-                        Vector3 rightJitter = shooter.transform.right * Random.Range(-100f, 100f);
-                        Vector3 upJitter = shooter.transform.up * Random.Range(-100f, 100f);
+                        Vector3 rightJitter = shooter.transform.right * Random.Range(-250f, 250f);
+                        Vector3 upJitter = shooter.transform.up * Random.Range(-250f, 250f);
                         projectile_shooted.GetComponent<Rigidbody>().AddForce(forwardForce + rightJitter + upJitter, ForceMode.Force);
                     }
                 }
