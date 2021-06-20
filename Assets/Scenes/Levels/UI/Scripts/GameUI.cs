@@ -26,6 +26,8 @@ public class GameUI : MonoBehaviour
     private LostMenuUI lostMenuUI;
     [SerializeField]
     private SuggestionsUI suggestionsUI;
+    [SerializeField]
+    private GameObject startWaveUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -150,5 +152,15 @@ public class GameUI : MonoBehaviour
     public void FullHideSuggestion()
     {
         suggestionsUI.FullHideSuggestion();
+    }
+
+    public void ShowStartWave()
+    {
+        startWaveUI.SetActive(true);
+    }
+
+    public void HideStartWave()
+    {
+        startWaveUI.SetActive(false);
     }
 }

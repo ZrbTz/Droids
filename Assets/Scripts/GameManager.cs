@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     private GameUI gameUI;
     private bool isPaused;
+    private bool isGameOver = false;
 
     private void Awake()
     {
@@ -61,12 +62,14 @@ public class GameManager : MonoBehaviour
 
     public void gameLost()
     {
+        isGameOver = true;
         gameUI.ShowLostMenu();
         Pause();
     }
 
     public void gameWon()
     {
+        isGameOver = true;
         gameUI.ShowWonMenu();
         Pause();
     }
@@ -100,8 +103,14 @@ public class GameManager : MonoBehaviour
             if (allKilled())
             {
                 state = SpawnState.READY;
-                if (nextBigHorde >= numHordes) gameWon();
-                Debug.Log("Press E to new horde");
+                if (nextBigHorde >= numHordes)
+                {
+                    gameWon();
+                }
+                else
+                {
+                    gameUI.ShowStartWave();
+                }
             }
             else return;
         }
@@ -109,25 +118,30 @@ public class GameManager : MonoBehaviour
         if (state == SpawnState.READY && Input.GetButtonUp("Spawn"))
         {
             state = SpawnState.SPAWNING;
+            state = SpawnState.SPAWNING;
             emptySpawners = 0;
             foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
             nextBigHorde++;
 
             gameUI.UpdateHordeNumber(nextBigHorde);
+            gameUI.HideStartWave();
         }
     }
 
     public void HandlePause()
     {
-        if (isPaused)
+        if (!isGameOver)
         {
-            Resume();
-            gameUI.HidePauseMenu();
-        }
-        else
-        {
-            gameUI.ShowPauseMenu();
-            Pause();
+            if (isPaused)
+            {
+                Resume();
+                gameUI.HidePauseMenu();
+            }
+            else
+            {
+                gameUI.ShowPauseMenu();
+                Pause();
+            }
         }
     }
 
