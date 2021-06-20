@@ -11,6 +11,9 @@ public class Enemy : Unit {
     public GameObject destination;
     protected int randomArea;
 
+    public string enemyName;
+    public Sprite enemyIcon;
+
     public float fadeSpeed = 1.0f;
     /*
     private Renderer[] rs;

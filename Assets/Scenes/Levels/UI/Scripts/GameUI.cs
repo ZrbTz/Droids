@@ -108,10 +108,10 @@ public class GameUI : MonoBehaviour
         keyInfosUI.HideHoldingButton();
     }
 
-    public void ShowEnemyHealth(float percentage)
+    public void ShowEnemyHealth(float percentage, string name, Sprite icon)
     {
         enemyHealthUI.gameObject.SetActive(true);
-        enemyHealthUI.SetEnemyHealth(percentage);
+        enemyHealthUI.SetEnemyHealth(percentage, name, icon);
     }
 
     public void HideEnemyHealth()

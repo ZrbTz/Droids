@@ -209,6 +209,8 @@ MonoBehaviour:
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
+  enemyName: Invoker
+  enemyIcon: {fileID: 21300000, guid: f3340d1201027df44a8fa018226b50d1, type: 3}
   fadeSpeed: 1
   animator: {fileID: 8865912680106573420}
   spawnCount: 5

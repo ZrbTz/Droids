@@ -32,7 +32,7 @@ public class Aiming : MonoBehaviour
             if (enemy)
             {
                 // TODO: add enemy icon to show on UI
-                gameUI.ShowEnemyHealth(enemy.health/enemy.GetMaxHealth());
+                gameUI.ShowEnemyHealth(enemy.health/enemy.GetMaxHealth(), enemy.enemyName, enemy.enemyIcon);
             }
             else
             {

@@ -93,6 +93,8 @@ MonoBehaviour:
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
+  enemyName: Bomber
+  enemyIcon: {fileID: 21300000, guid: 858e1313364beee4eb39bfcbceeb8352, type: 3}
   fadeSpeed: 1
   animator: {fileID: 387868700596538387}
   bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}

@@ -109,6 +109,8 @@ MonoBehaviour:
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
+  enemyName: Stomper
+  enemyIcon: {fileID: 21300000, guid: 7a524640f84cf2844874d71f88c2c054, type: 3}
   fadeSpeed: 1
   animator: {fileID: 5963480313353242931}
   obstacleLayerMask:

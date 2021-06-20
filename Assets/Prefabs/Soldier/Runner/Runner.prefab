@@ -208,6 +208,8 @@ MonoBehaviour:
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
+  enemyName: Speedroid
+  enemyIcon: {fileID: 21300000, guid: 5aa0d4e38eab95746979392cd0208947, type: 3}
   fadeSpeed: 1
   animator: {fileID: 2933267935741923359}
   obstacleLayerMask:
