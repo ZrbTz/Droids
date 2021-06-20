@@ -15,9 +15,6 @@ public abstract class Interactable : MonoBehaviour
     private float holdTime = 1.0f;
     private float currentHoldTime;
 
-    [SerializeField]
-    private KeyCode interactionKey;
-
     private bool isEnabled = true;
 
     public void IncreaseCurrentHoldTime()
@@ -56,11 +53,6 @@ public abstract class Interactable : MonoBehaviour
     public float GetHoldTime()
     {
         return holdTime;
-    }
-
-    public KeyCode GetInteractionKey()
-    {
-        return interactionKey;
     }
 
     public bool IsEnabled()

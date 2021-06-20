@@ -34,6 +34,7 @@ namespace Invector.vCharacterController
 
         protected virtual void Start()
         {
+            inputManager = GetComponent<InputManager>();
             InitilizeController();
             InitializeTpCamera();
         }
@@ -131,16 +132,56 @@ namespace Invector.vCharacterController
                 cc.Strafe();
         }
 
+        private InputManager inputManager;
+        private bool sprintingWithController = false;
+        private bool sprintDown = false;
+        private bool sprinting = false;
+        private bool sprintUp = false;
+
         protected virtual void SprintInput()
         {
-            if (Input.GetButtonDown("Fire1")) isShooting = true;
+            /*if (Input.GetButtonDown("Fire1")) isShooting = true;
             else if (Input.GetButtonUp("Fire1")) isShooting = false;
-
-
-            if (Input.GetKeyDown(sprintInput) && !isShooting) cc.Sprint(true);
+            Debug.Log(Input.GetKey(KeyCode.Joystick1Button8));
+           
+            if (Input.GetButtonDown("Sprint") && !isShooting) cc.Sprint(true);
             else if (cc.isSprinting && Input.GetButtonDown("Fire1")) cc.Sprint(false);
-            else if (Input.GetKey(sprintInput) && !cc.isSprinting && Input.GetButtonUp("Fire1")) cc.Sprint(true);
-            else if (Input.GetKeyUp(sprintInput) && cc.isSprinting) cc.Sprint(false);
+            else if (Input.GetButton("Sprint") && !cc.isSprinting && Input.GetButtonUp("Fire1")) cc.Sprint(true);
+            else if (Input.GetButtonUp("Sprint") && cc.isSprinting) cc.Sprint(false);*/
+            isShooting = inputManager.WeaponFire;
+            sprintUp = sprintDown = false;
+
+            if(Input.GetButtonDown("Sprint")
+                && !sprintingWithController) 
+                sprinting = sprintDown = true;
+
+            if (!Input.GetButton("Sprint")
+                && sprinting
+                && !sprintingWithController) {
+                sprinting = false;
+                sprintUp = true;
+            }
+
+            if (Input.GetAxis("Sprint") != 0
+                && !sprintingWithController
+                && !sprinting)
+                sprintingWithController = sprintDown = sprinting = true;
+
+            if (Input.GetAxis("Sprint") == 0
+                && sprintingWithController) {
+                sprintingWithController = sprinting = false;
+                sprintUp = true;
+            }
+
+            if (sprintDown && !isShooting) cc.Sprint(true);
+            else if (cc.isSprinting && inputManager.WeaponFireDown) cc.Sprint(false);
+            else if (sprinting && !cc.isSprinting && !isShooting) cc.Sprint(true);
+            else if (sprintUp && cc.isSprinting) cc.Sprint(false);
+
+            /*if ((Input.GetButtonDown("Sprint") || Input.GetAxis("Sprint") != 0) && !isShooting) cc.Sprint(true);
+            else if (cc.isSprinting && Input.GetButtonDown("Fire1")) cc.Sprint(false);
+            else if ((Input.GetButton("Sprint") || Input.GetAxis("Sprint") != 0) && !cc.isSprinting && Input.GetButtonUp("Fire1")) cc.Sprint(true);
+            else if ((Input.GetButtonUp("Sprint")) && cc.isSprinting) cc.Sprint(false);*/
             //else if (Input.GetKeyUp(sprintInput) && !isShooting)
             //    cc.Sprint(false);
             //else if (cc.isSprinting == true && Input.GetButtonDown("Fire1")) {
@@ -167,7 +208,7 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void JumpInput()
         {
-            if (Input.GetKeyDown(jumpInput) && JumpConditions())
+            if (Input.GetButtonDown("Jump") && JumpConditions())
             {
                 cc.Jump();
                 this.GetComponent<PlayerAnimationSounds>().Jump();

@@ -1,0 +1,11 @@
+Joypad (Xbox One) controls
+Move: Left stick
+Aim: Right stick
+Shoot: RT
+Sprint: LT
+Jump: A
+Interact: X
+Dash: B
+Place mine: Y
+Change weapon: RB
+

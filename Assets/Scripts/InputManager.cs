@@ -62,7 +62,7 @@ public class InputManager : MonoBehaviour
 
     private void GetDashInput()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetButtonDown("Dash"))
         {
             this.GetComponent<ThirdPersonControllerDash>().Dash();
         }
@@ -70,11 +70,13 @@ public class InputManager : MonoBehaviour
 
     private void GetPauseMenuInput()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button7))
         {
             gameManager.HandlePause();
         }
     }
+
+    private bool firingWithController = false;
 
     private void GetWeaponInput()
     {
@@ -87,22 +89,33 @@ public class InputManager : MonoBehaviour
             WeaponSwitched = false;
         }
 
-        if (Input.GetButton("Fire1"))
-        {
-            WeaponFire = true;
-        }
-        else
-        {
+        WeaponFireDown = false;
+
+        if (!Input.GetButton("Fire1")
+            && WeaponFire
+            && !firingWithController) {
             WeaponFire = false;
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            WeaponFireDown = true;
+        if (Input.GetButtonDown("Fire1")) {
+            WeaponFire = WeaponFireDown = true;
+            firingWithController = false;
         }
-        else
-        {
+
+        if (Input.GetAxis("Fire1") == 0 
+            && firingWithController)  {
+            firingWithController = false;
+            WeaponFire = false;
             WeaponFireDown = false;
         }
+
+        if(Input.GetAxis("Fire1") != 0
+            && !WeaponFireDown
+            && !WeaponFire
+            && !firingWithController) {
+            WeaponFire = WeaponFireDown = true;
+            firingWithController = true;
+        }
+        
     }
 }

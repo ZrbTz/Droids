@@ -60,23 +60,22 @@ public class InteractionController : MonoBehaviour
 
     void HandleInteraction(Interactable interactable)
     {
-        KeyCode key = interactable.GetInteractionKey();
         Interactable.InteractionType interactionType = interactable.GetInteractionType();
 
         switch (interactionType)
         {
             case Interactable.InteractionType.Click:
-                gameUI.ShowClickButton(key.ToString());
+                gameUI.ShowClickButton("E");
 
-                if (Input.GetKeyDown(key))
+                if (Input.GetButtonDown("Interact"))
                 {
                     interactable.Interact(this.gameObject);
                 }
                 break;
             case Interactable.InteractionType.Hold:
-                gameUI.ShowHoldingButton(key.ToString());
+                gameUI.ShowHoldingButton("E");
 
-                if (Input.GetKey(key))
+                if (Input.GetButton("Interact"))
                 {
                     interactable.IncreaseCurrentHoldTime();
                     if (interactable.GetCurrentHoldTime() > interactable.GetHoldTime())
