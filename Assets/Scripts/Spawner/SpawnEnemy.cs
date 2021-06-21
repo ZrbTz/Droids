@@ -36,7 +36,6 @@ public class SpawnEnemy : MonoBehaviour
 
     [SerializeField] float block_width = 5.0f;
     [SerializeField] float block_length = 5.0f;
-    [SerializeField] int maxtimeSpawn = 2;
     List<GameObject> spawnFreeZones = new List<GameObject>();
 
     BoxCollider _spawnZoneCollider;

@@ -16,10 +16,12 @@ public class Wrecker : Enemy {
     private DropItem dropItem;
 
     protected override void Start() {
-        base.Start();
-        dropItem = this.gameObject.GetComponent<DropItem>();
-        randomArea = Map.Instance.GetRandomArea();
-        StartMarching();
+        if (true || state == SoldierState.Marching) {
+            base.Start();
+            dropItem = this.gameObject.GetComponent<DropItem>();
+            randomArea = Map.Instance.GetRandomArea();
+            StartMarching();
+        }
     }
 
     private void StartMarching() {
