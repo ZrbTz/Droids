@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8104212900892275520}
   - component: {fileID: 5438357884979701109}
   - component: {fileID: 8416289585608152464}
+  - component: {fileID: 9033228973338325930}
   m_Layer: 14
   m_Name: BancarellaLegno
   m_TagString: Untagged
@@ -62,7 +63,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 1
   holdTime: 1
-  interactionKey: 101
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 70e28cbc72b4aac4d97c3c5791787d04, type: 2}
   pickSound: {fileID: 0}
@@ -99,6 +99,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.5, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &9033228973338325930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475021460123897821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848465fde359c642a3b491d9b9437da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 5423627041270653400, guid: 78be5f8e08aa9e748ad8e2e547800183, type: 3}
+  isPlayer: 0
 --- !u!1001 &8769123112854992579
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0168efc90e8a5a439767adedb141e29, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -145,5 +145,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c686fb2778a28804bb798c671814e212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeOnGame: 0.03
-  volumeOnMenu: 0.3

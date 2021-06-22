@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6712687935024945592}
   - component: {fileID: -5767446833828175588}
   - component: {fileID: 8811943877099586427}
+  - component: {fileID: 753147064065353775}
   m_Layer: 14
   m_Name: BancarellaMetallo
   m_TagString: Untagged
@@ -49,7 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 1
   holdTime: 1
-  interactionKey: 101
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 35ff19802f28d3643b7bbaae02c661eb, type: 2}
   pickSound: {fileID: 0}
@@ -99,6 +99,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.5, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &753147064065353775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111592731181600257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848465fde359c642a3b491d9b9437da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 5423627041270653400, guid: 78be5f8e08aa9e748ad8e2e547800183, type: 3}
+  isPlayer: 0
 --- !u!1001 &3282319698186537211
 PrefabInstance:
   m_ObjectHideFlags: 0
