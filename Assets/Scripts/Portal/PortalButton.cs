@@ -9,21 +9,20 @@ public class PortalButton : Interactable {
     public Material greenMaterial;
     public Material redMaterial;
 
-    private new Renderer renderer;
-
-    private void Start() {
-        renderer = GetComponent<Renderer>();
-    }
+    public Renderer buttonRenderer;
+    public Renderer lightRenderer;
 
     public override void Interact(GameObject player) {
         if (Time.time - portal.time < cooldown)
             return;
         portal.Activate();
-        renderer.material = redMaterial;
+        buttonRenderer.material = redMaterial;
+        lightRenderer.material = redMaterial;
         Invoke(nameof(SetGreenMaterial), cooldown);
     }
 
     private void SetGreenMaterial() {
-        renderer.material = greenMaterial;
+        buttonRenderer.material = greenMaterial;
+        lightRenderer.material = greenMaterial;
     }
 }

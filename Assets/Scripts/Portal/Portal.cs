@@ -6,8 +6,7 @@ using UnityEngine;
 public class Portal : MonoBehaviour {
     public Portal next;
     [HideInInspector] public float time = float.NegativeInfinity;
-    public float width;
-    public float length;
+    public float radius;
 
     private List<GameObject> towers = new List<GameObject>();
 
@@ -26,7 +25,7 @@ public class Portal : MonoBehaviour {
     }
 
     private List<GameObject> GetTowers() {
-        var towers = Physics.OverlapBox(transform.position, new Vector3(width / 2, 2, length / 2)).Where(collider => collider.CompareTag("Tower"))
+        var towers = Physics.OverlapSphere(transform.position, radius).Where(collider => collider.CompareTag("Tower"))
             .Select(collider => collider.gameObject).Distinct().ToList();
         //towers = towers.Where(tower => tower != null).ToList();
         return towers;
@@ -52,6 +51,6 @@ public class Portal : MonoBehaviour {
     }*/
 
     private void OnDrawGizmosSelected() {
-        Gizmos.DrawWireCube(transform.position, new Vector3(width, 0.5f, length));
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
