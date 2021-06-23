@@ -26,6 +26,8 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
     private GameUI gameUI;
 
+    public GameObject dashParticleD, dashParticleL;
+
     void Awake()
     {
         gameUI = FindObjectOfType<GameUI>();
@@ -61,6 +63,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
                 stopDash = false;
                 controller.isDashing = false;
                 rb.velocity = oldVelocity.magnitude * direction;
+
+                dashParticleL.SetActive(false);
+                dashParticleD.SetActive(false);
             }
         }
         dashRemainingTime -= Time.fixedDeltaTime;
@@ -104,6 +109,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
             oldVelocity = rb.velocity;
             this.GetComponent<PlayerAnimationSounds>().Dash();
+
+            dashParticleL.SetActive(true);
+            dashParticleD.SetActive(true);
         }
     }
 
