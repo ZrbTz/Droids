@@ -8,10 +8,11 @@ public class DoActionSuggestion : Suggestion {
     [SerializeField] public string buttonName; //Button name
     [SerializeField] public int timeToPress; //How many times to press that button to complete the mission
 
-    private int pressCounter; 
+    public int pressCounter = 0; 
 
     public override bool IsCompleted(GameObject player) {
         if (Input.GetButtonDown(buttonName)) pressCounter++;
-        return pressCounter == timeToPress;
+        if (pressCounter >= timeToPress) { pressCounter = 0; return true; }
+        else return false;
     }
 }

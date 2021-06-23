@@ -9,6 +9,10 @@ public abstract class Suggestion : ScriptableObject
     protected string title;
     [SerializeField]
     protected string description;
+    [SerializeField]
+    protected bool isBlockingWaves;
+    [SerializeField]
+    protected bool visible;
 
     public abstract bool IsCompleted(GameObject player);
 
@@ -20,5 +24,13 @@ public abstract class Suggestion : ScriptableObject
     public string GetDescription()
     {
         return description.Replace("\\n", "\n");
+    }
+
+    public bool isBlocking() {
+        return isBlockingWaves;
+    }
+
+    public bool isVisible() {
+        return visible;
     }
 }

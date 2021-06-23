@@ -8,7 +8,7 @@ using UnityEngine;
 public class CompleteHordeSuggestion : Suggestion {
 
     [SerializeField] public int hordeToComplete; //Id of the horde to be completed
-    private GameManager gm = GameManager.Instance;
+    private GameManager gm = GameManager.Instance; //Why doesn't it work?
 
     public override bool IsCompleted(GameObject player) {
         return GameManager.Instance.nextBigHorde > hordeToComplete && GameManager.Instance.getState() == 1;

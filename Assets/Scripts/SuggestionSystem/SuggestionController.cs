@@ -15,8 +15,12 @@ public class SuggestionController : MonoBehaviour
     private GameObject player;
     private GameUI gameUI;
 
+    private static SuggestionController instance;
+    public static SuggestionController Instance { get => instance; }
+
     void Awake()
     {
+        instance = this;
         player = FindObjectOfType<InputManager>().gameObject;
         gameUI = FindObjectOfType<GameUI>();
     }
@@ -66,7 +70,14 @@ public class SuggestionController : MonoBehaviour
 
     private void UpdateUI(Suggestion suggestion)
     {
-        gameUI.UpdateSuggestion(suggestion.GetTitle(), suggestion.GetDescription());
-        gameUI.ShowSuggestion();
+        if (currentSuggestion.isVisible()) {
+            gameUI.UpdateSuggestion(suggestion.GetTitle(), suggestion.GetDescription());
+            gameUI.ShowSuggestion();
+        }
+        else gameUI.FullHideSuggestion();
+    }
+
+    public bool isBlocking() {
+        return isActive && currentSuggestion.isBlocking();
     }
 }
