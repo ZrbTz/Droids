@@ -16,7 +16,7 @@ MonoBehaviour:
   - hordes:
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 10
-      delay: 30
+      delay: 0
       tempoPerSpawnare: 3
       difficulty: 1
   - hordes:
