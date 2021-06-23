@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2309022790779428950}
   m_Layer: 0
-  m_Name: Road
+  m_Name: Road Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2309022790779428950
 Transform:
@@ -61,7 +61,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7577480686572338355
 Transform:
@@ -108,7 +108,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4357131487611186369
 Transform:
@@ -203,9 +203,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
@@ -277,9 +289,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
@@ -351,9 +375,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
@@ -425,9 +461,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
@@ -502,6 +550,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b1af0a1181cdfa468deaa2ef5b10271, type: 3}
       propertyPath: m_Name
       value: Tile_Strada
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b1af0a1181cdfa468deaa2ef5b10271, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b1af0a1181cdfa468deaa2ef5b10271, type: 3}
@@ -578,9 +630,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a74a32e7b5d94a4dbe15d8ddfe0a44e, type: 3}
@@ -652,9 +716,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
       propertyPath: m_Name
       value: Tile_Lato_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777d40542a5932f48ba0853cc97f7e44, type: 3}
