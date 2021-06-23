@@ -142,15 +142,15 @@ public class Inventory : MonoBehaviour
     public void DecreaseItemAmount(int slot)
     {
         int amount = inventory[slot].addAmount(-1);
+        if (slot == 1)
+        {
+            gameUI.UpdateGrenadeAmount(amount);
+        }
         if (amount <= 0)
         {
             inventory[slot] = null;
 
-            if (slot == 1)
-            {
-                gameUI.UpdateGrenadeAmount(amount);
-            }
-            else if (slot == 0)
+            if (slot == 0)
             {
                 gameUI.RemoveTowerIcon();
                 isShowingPreview = false;
