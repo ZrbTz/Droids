@@ -56,7 +56,7 @@ public class Shot : MonoBehaviour
     }
 
     private void Hit(Unit unit, Vector3 point) {
-        if (!hit) {
+        if (!hit) { 
             unit.health -= damage;
             Hit(point);
             hit = true;
