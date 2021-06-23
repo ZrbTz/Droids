@@ -20631,7 +20631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: numHordes
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: spawners.Array.data[0].spawnerObj
@@ -20641,6 +20641,22 @@ PrefabInstance:
       propertyPath: spawners.Array.data[1].spawnerObj
       value: 
       objectReference: {fileID: 1408965935}
+    - target: {fileID: 1325514272287259269, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325514272287259269, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 57.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325514272488260082, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -43.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325514272488260082, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -58.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3564251179345429203, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
