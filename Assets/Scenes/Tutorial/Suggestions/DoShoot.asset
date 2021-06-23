@@ -16,6 +16,5 @@ MonoBehaviour:
   description: Try press and hold the fire button (Do it twice)
   isBlockingWaves: 1
   visible: 1
-  buttonName: Fire1
+  actionName: Fire1
   timeToPress: 2
-  pressCounter: 0

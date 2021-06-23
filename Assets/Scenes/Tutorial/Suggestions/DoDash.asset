@@ -17,7 +17,5 @@ MonoBehaviour:
     recharge in a few seconds)
   isBlockingWaves: 1
   visible: 1
-  buttonName: Dash
+  actionName: Dash
   timeToPress: 2
-  cooldown: 0.6
-  timer: 0

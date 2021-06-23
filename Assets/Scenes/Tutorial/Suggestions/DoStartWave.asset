@@ -18,6 +18,5 @@ MonoBehaviour:
     the wave is
   isBlockingWaves: 0
   visible: 1
-  buttonName: Spawn
+  actionName: Spawn
   timeToPress: 1
-  pressCounter: 0

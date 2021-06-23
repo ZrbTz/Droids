@@ -16,6 +16,5 @@ MonoBehaviour:
   description: Press the sprint button to run
   isBlockingWaves: 1
   visible: 1
-  buttonName: Sprint
+  actionName: Sprint
   timeToPress: 1
-  pressCounter: 0

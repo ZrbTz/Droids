@@ -16,7 +16,5 @@ MonoBehaviour:
   description: Try jumping three times
   isBlockingWaves: 1
   visible: 1
-  buttonName: Jump
+  actionName: Jump
   timeToPress: 3
-  cooldown: 0.7
-  timer: 0

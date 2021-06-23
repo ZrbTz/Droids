@@ -17,6 +17,5 @@ MonoBehaviour:
     to switch back to rifle rifle
   isBlockingWaves: 1
   visible: 1
-  buttonName: WeaponSwitch
+  actionName: WeaponSwitch
   timeToPress: 2
-  pressCounter: 0
