@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 34924264}
   m_IndirectSpecularColor: {r: 0.0152156195, g: 0.008061651, b: 0.0135772135, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -20631,7 +20631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: numHordes
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: spawners.Array.data[0].spawnerObj
@@ -20667,7 +20667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3651090487980006206, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651090487980006206, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21651,7 +21651,7 @@ Transform:
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 148.5, y: 145.014, z: 0}
 --- !u!1001 &1582042440
 PrefabInstance:
@@ -27224,7 +27224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2035596210
 GameObject:
