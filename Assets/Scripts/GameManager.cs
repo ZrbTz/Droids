@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         }
 
         gameUI.UpdateHordeNumber(nextBigHorde);
+        gameUI.UpdateNexusHealth(nexus.health, nexus.GetMaxHealth());
     }
 
     public void gameLost()
