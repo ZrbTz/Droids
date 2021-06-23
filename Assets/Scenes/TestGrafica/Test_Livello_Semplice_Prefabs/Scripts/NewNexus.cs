@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewNexus : Unit
+public class NewNexus : MonoBehaviour
 {
     public Unit nexus;
     public GameObject test;
@@ -34,10 +34,5 @@ public class NewNexus : Unit
 
             gameUI.UpdateNexusHealth(nexus.health, nexus.GetMaxHealth());
         }
-    }
-
-    protected override void Die() {
-        GameManager gm = GameManager.Instance;
-        gm.gameLost();
     }
 }
