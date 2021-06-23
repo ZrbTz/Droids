@@ -18,4 +18,5 @@ MonoBehaviour:
   visible: 1
   buttonName: Jump
   timeToPress: 3
-  pressCounter: 0
+  cooldown: 0.7
+  timer: 0

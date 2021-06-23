@@ -7,12 +7,19 @@ public class DoActionSuggestion : Suggestion {
 
     [SerializeField] public string buttonName; //Button name
     [SerializeField] public int timeToPress; //How many times to press that button to complete the mission
+    [SerializeField] public float cooldown;
 
-    public int pressCounter = 0; 
+    public float timer;
+    private int pressCounter;
+
+    public void OnEnable() {
+        timer = cooldown;
+        pressCounter = 0;
+    }
 
     public override bool IsCompleted(GameObject player) {
-        if (Input.GetButtonDown(buttonName)) pressCounter++;
-        if (pressCounter >= timeToPress) { pressCounter = 0; return true; }
-        else return false;
+        timer += Time.deltaTime;
+        if (Input.GetButtonDown(buttonName) && timer >= cooldown) { pressCounter++; timer = 0; }
+        return pressCounter >= timeToPress;
     }
 }

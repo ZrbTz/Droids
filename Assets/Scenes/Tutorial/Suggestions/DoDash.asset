@@ -19,4 +19,5 @@ MonoBehaviour:
   visible: 1
   buttonName: Dash
   timeToPress: 2
-  pressCounter: 0
+  cooldown: 0.6
+  timer: 0
