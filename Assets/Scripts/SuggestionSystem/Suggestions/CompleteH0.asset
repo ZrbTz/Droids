@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
   m_Name: CompleteH0
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Kill the Aracnodroids
+  description: Child's play, isn't it?
   hordeToComplete: 0
