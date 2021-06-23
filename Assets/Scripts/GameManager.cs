@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
             Destroy(g);
         }
 
+        foreach (Spawner s in spawners) s.spawnerObj.GetComponent<SpawnEnemy>().StopSpawning();
         gameUI.UpdateHordeNumber(nextBigHorde);
         gameUI.UpdateNexusHealth(nexus.health, nexus.GetMaxHealth());
     }

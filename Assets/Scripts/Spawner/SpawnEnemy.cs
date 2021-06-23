@@ -171,4 +171,8 @@ public class SpawnEnemy : MonoBehaviour
             time += horde.tempoPerSpawnare;
         }
     }
+
+    public void StopSpawning() {
+        StopAllCoroutines();
+    }
 }
