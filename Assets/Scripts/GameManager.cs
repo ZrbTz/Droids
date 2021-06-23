@@ -167,4 +167,8 @@ public class GameManager : MonoBehaviour
     {
         return isPaused;
     }
+
+    public int getState() {
+        return (int)state;
+    }
 }
