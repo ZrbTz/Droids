@@ -57,6 +57,11 @@ public class GameUI : MonoBehaviour
         }
     }
 
+    public void UpdateShotgunCooldown(float cooldown)
+    {
+        weaponTypeUI.SetShotgunCooldown(cooldown);
+    }
+
     public void UpdateDashCooldown(float cooldown)
     {
         dashCooldownUI.SetDashCooldown(cooldown);

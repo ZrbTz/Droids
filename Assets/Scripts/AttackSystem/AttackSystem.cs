@@ -71,6 +71,7 @@ public class AttackSystem : MonoBehaviour
         else if (!weaponSelector)
             if (shotgunFireElapsedTime >= shotgunFireDelay) {
                 if (inputManager.WeaponFireDown) {
+                    gameUI.UpdateShotgunCooldown(shotgunFireDelay);
                     shotgunFireElapsedTime = 0.0f;
                     this.GetComponent<PlayerAnimationSounds>().Shotgun();
                     for (int i = 0; i < 10; i++) {
