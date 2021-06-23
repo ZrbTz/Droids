@@ -58,7 +58,7 @@ public class SuggestionController : MonoBehaviour
         }
 
         // TODO: go to input manager
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Joystick1Button6))
         {
             gameUI.SwitchSuggestionWindow();
         }

@@ -8,4 +8,6 @@ Interact: X
 Dash: B
 Place mine: Y
 Change weapon: RB
+Spawn wave: L1
+Hide/Show suggestions: Select (back)
 
