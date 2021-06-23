@@ -15,84 +15,98 @@ MonoBehaviour:
   bigHordes:
   - hordes:
     - enemy: {fileID: 8781907178362870937, guid: 7e9e21f65c513b14a97095765968e19b, type: 3}
-      count: 10
-      delay: 5
-      tempoPerSpawnare: 2
+      count: 8
+      delay: 3
+      tempoPerSpawnare: 1
       difficulty: 1
   - hordes:
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 8
-      delay: 7
-      tempoPerSpawnare: 3
+      delay: 3
+      tempoPerSpawnare: 1
       difficulty: 1
   - hordes:
     - enemy: {fileID: 8580281543093442021, guid: 52eca0447fee89741bebe14f472826d7, type: 3}
       count: 1
       delay: 7
       tempoPerSpawnare: 1
-      difficulty: 2
-  - hordes:
-    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
-      count: 40
-      delay: 2
-      tempoPerSpawnare: 5
-      difficulty: 2
-  - hordes:
-    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
-      count: 20
-      delay: 3
-      tempoPerSpawnare: 5
-      difficulty: 2
-    - enemy: {fileID: 263491460740225025, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
-      count: 1
-      delay: 0.1
-      tempoPerSpawnare: 0.1
+      difficulty: 1
+    - enemy: {fileID: 387868700341570295, guid: 56f371d3ee007984bb36a9f8701ad17f, type: 3}
+      count: 4
+      delay: 1
+      tempoPerSpawnare: 1
       difficulty: 0
-    - enemy: {fileID: 2743929212588401993, guid: 8eb687e0f0be25a429bbd668f67ff5b9, type: 3}
-      count: 1
-      delay: 0.1
-      tempoPerSpawnare: 0.1
-      difficulty: 0
-  - hordes:
-    - enemy: {fileID: 263491460740225025, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
-      count: 2
-      delay: 3
-      tempoPerSpawnare: 5
-      difficulty: 3
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 10
       delay: 1
       tempoPerSpawnare: 1
       difficulty: 0
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 39
+      delay: 2
+      tempoPerSpawnare: 5
+      difficulty: 2
     - enemy: {fileID: 2743929212588401993, guid: 8eb687e0f0be25a429bbd668f67ff5b9, type: 3}
       count: 1
-      delay: 0.1
-      tempoPerSpawnare: 0.1
+      delay: 2
+      tempoPerSpawnare: 5
+      difficulty: 0
+    - enemy: {fileID: 387868700341570295, guid: 56f371d3ee007984bb36a9f8701ad17f, type: 3}
+      count: 5
+      delay: 2
+      tempoPerSpawnare: 5
       difficulty: 0
   - hordes:
     - enemy: {fileID: 8781907178362870937, guid: 7e9e21f65c513b14a97095765968e19b, type: 3}
-      count: 1
+      count: 12
       delay: 3
-      tempoPerSpawnare: 0.1
-      difficulty: 1
+      tempoPerSpawnare: 1
+      difficulty: 2
+    - enemy: {fileID: 263491460740225025, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
+      count: 3
+      delay: 1
+      tempoPerSpawnare: 5
+      difficulty: 0
+    - enemy: {fileID: 2743929212588401993, guid: 8eb687e0f0be25a429bbd668f67ff5b9, type: 3}
+      count: 2
+      delay: 1
+      tempoPerSpawnare: 1
+      difficulty: 0
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 26
+      delay: 1
+      tempoPerSpawnare: 1
+      difficulty: 0
+  - hordes:
     - enemy: {fileID: 8781907178362870937, guid: 7e9e21f65c513b14a97095765968e19b, type: 3}
-      count: 8
+      count: 5
       delay: 3
-      tempoPerSpawnare: 8
+      tempoPerSpawnare: 1
+      difficulty: 2
+    - enemy: {fileID: 263491460740225025, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
+      count: 15
+      delay: 1
+      tempoPerSpawnare: 5
+      difficulty: 0
+  - hordes:
+    - enemy: {fileID: 8781907178362870937, guid: 7e9e21f65c513b14a97095765968e19b, type: 3}
+      count: 15
+      delay: 3
+      tempoPerSpawnare: 1
+      difficulty: 2
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 20
+      delay: 10
+      tempoPerSpawnare: 5
+      difficulty: 0
+    - enemy: {fileID: 8781907178362870937, guid: 7e9e21f65c513b14a97095765968e19b, type: 3}
+      count: 4
+      delay: 15
+      tempoPerSpawnare: 5
       difficulty: 0
     - enemy: {fileID: 6800569890918011707, guid: 00002118a6365f147bd1b3b5736c6a96, type: 3}
       count: 1
-      delay: 0.1
-      tempoPerSpawnare: 0.1
-      difficulty: 0
-  - hordes:
-    - enemy: {fileID: 387868700341570295, guid: 56f371d3ee007984bb36a9f8701ad17f, type: 3}
-      count: 1
-      delay: 3
-      tempoPerSpawnare: 0.1
-      difficulty: 1
-    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
-      count: 15
-      delay: 0.1
+      delay: 1
       tempoPerSpawnare: 5
       difficulty: 0

@@ -13,13 +13,44 @@ MonoBehaviour:
   m_Name: Spawner_R
   m_EditorClassIdentifier: 
   bigHordes:
-  - hordes: []
-  - hordes: []
-  - hordes: []
-  - hordes: []
   - hordes:
-    - enemy: {fileID: 3251823294879767631, guid: 578ff1ea2892dd644a6e8e1b6de9d6ac, type: 3}
-      count: 50
-      delay: 10
+    - enemy: {fileID: 0}
+      count: 0
+      delay: 0
+      tempoPerSpawnare: 0
+      difficulty: 0
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 10
+      delay: 3
+      tempoPerSpawnare: 5
+      difficulty: 1
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 9
+      delay: 8
+      tempoPerSpawnare: 5
+      difficulty: 1
+    - enemy: {fileID: 5891634019742126869, guid: 1846a308b206cd049b5477e0edb46101, type: 3}
+      count: 1
+      delay: 0.1
+      tempoPerSpawnare: 0.1
+      difficulty: 0
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 5
+      delay: 8
+      tempoPerSpawnare: 2
+      difficulty: 1
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 30
+      delay: 16
+      tempoPerSpawnare: 10
+      difficulty: 2
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 30
+      delay: 18
       tempoPerSpawnare: 10
       difficulty: 2

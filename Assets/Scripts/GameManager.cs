@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         }
 
         gameUI.UpdateHordeNumber(nextBigHorde);
+        gameUI.UpdateNexusHealth(nexus.health, nexus.GetMaxHealth());
     }
 
     public void gameLost()
@@ -117,14 +118,17 @@ public class GameManager : MonoBehaviour
 
         if (state == SpawnState.READY && Input.GetButtonUp("Spawn"))
         {
-            state = SpawnState.SPAWNING;
-            state = SpawnState.SPAWNING;
-            emptySpawners = 0;
-            foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
-            nextBigHorde++;
+            if (!SuggestionController.Instance.isBlocking()) {
+                state = SpawnState.SPAWNING;
+                state = SpawnState.SPAWNING;
+                emptySpawners = 0;
+                foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
+                nextBigHorde++;
 
-            gameUI.UpdateHordeNumber(nextBigHorde);
-            gameUI.HideStartWave();
+                gameUI.UpdateHordeNumber(nextBigHorde);
+                gameUI.HideStartWave();
+            }
+            else { /* gameUI.ShowPleaseCompleteTheMissionFirst */ Debug.Log("Please, complete the mission"); }
         }
     }
 
@@ -166,5 +170,9 @@ public class GameManager : MonoBehaviour
     public bool IsPaused()
     {
         return isPaused;
+    }
+
+    public int getState() {
+        return (int)state;
     }
 }

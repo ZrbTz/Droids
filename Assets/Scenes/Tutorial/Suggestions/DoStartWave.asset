@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf11e998b6b95e4f84cee1a6bb02172, type: 3}
+  m_Name: DoStartWave
+  m_EditorClassIdentifier: 
+  title: Now you are ready for the action
+  description: Start the wave,  remember, the circle size around the spawn will tell
+    you when the wave will spawn. The circle color will tell you how much difficult
+    the wave is
+  isBlockingWaves: 0
+  visible: 1
+  buttonName: Spawn
+  timeToPress: 1
+  pressCounter: 0
