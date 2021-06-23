@@ -57,6 +57,13 @@ public class GameManager : MonoBehaviour
             Destroy(g);
         }
 
+        if(nextBigHorde == 2) {
+            Debug.Log("object destroy");
+            GameObject tower = GameObject.FindWithTag("Tower");
+            if(tower != null) Destroy(tower);
+            GameObject.FindWithTag("Player").GetComponent<Inventory>().flush();
+        }
+
         foreach (Spawner s in spawners) s.spawnerObj.GetComponent<SpawnEnemy>().StopSpawning();
         state = SpawnState.WAITING;
         gameUI.UpdateHordeNumber(nextBigHorde);
@@ -122,7 +129,7 @@ public class GameManager : MonoBehaviour
         {
             if (!SuggestionController.Instance.isBlocking()) {
                 state = SpawnState.SPAWNING;
-                state = SpawnState.SPAWNING;
+                if (SuggestionController.Instance.actions.TryGetValue("Spawn", out DoActionSuggestion action)) action.incrementPressCounter();
                 emptySpawners = 0;
                 foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
                 nextBigHorde++;

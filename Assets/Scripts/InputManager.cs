@@ -80,9 +80,11 @@ public class InputManager : MonoBehaviour
 
     private void GetWeaponInput()
     {
+        DoActionSuggestion action;
         if (Input.GetButtonDown("WeaponSwitch"))
         {
             WeaponSwitched = true;
+            if (SuggestionController.Instance.actions.TryGetValue("WeaponSwitch", out action)) action.incrementPressCounter();
         }
         else
         {
@@ -116,6 +118,7 @@ public class InputManager : MonoBehaviour
             WeaponFire = WeaponFireDown = true;
             firingWithController = true;
         }
-        
+
+        if (WeaponFireDown && SuggestionController.Instance.actions.TryGetValue("Fire1", out action)) action.incrementPressCounter();  
     }
 }

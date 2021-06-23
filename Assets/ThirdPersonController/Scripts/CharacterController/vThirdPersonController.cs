@@ -83,7 +83,7 @@ namespace Invector.vCharacterController
             var sprintConditions = (input.sqrMagnitude > 0.1f);
 
             //&& isGrounded && !(isStrafing && !strafeSpeed.walkByDefault && (horizontalSpeed >= 0.5 || horizontalSpeed <= -0.5 || verticalSpeed <= 0.1f)));
-
+            bool isSprintingOld = isSprinting;
             if (value && sprintConditions)
             {
                 if (input.sqrMagnitude > 0.1f)
@@ -106,6 +106,8 @@ namespace Invector.vCharacterController
             {
                 isSprinting = false;
             }
+
+            if (!isSprintingOld && isSprinting && SuggestionController.Instance.actions.TryGetValue("Sprint", out DoActionSuggestion action)) action.incrementPressCounter();
         }
 
         public virtual void Strafe()

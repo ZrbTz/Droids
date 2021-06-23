@@ -209,6 +209,7 @@ namespace Invector.vCharacterController
         {
             if (Input.GetButtonDown("Jump") && JumpConditions())
             {
+                if (SuggestionController.Instance.actions.TryGetValue("Jump", out DoActionSuggestion action)) action.incrementPressCounter();
                 cc.Jump();
                 this.GetComponent<PlayerAnimationSounds>().Jump();
             }

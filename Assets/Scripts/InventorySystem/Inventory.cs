@@ -200,6 +200,13 @@ public class Inventory : MonoBehaviour
 
         return 0;
     }
+
+    public void flush() {
+        inventory[0] = null;
+        gameUI.RemoveTowerIcon();
+        isShowingPreview = false;
+        Destroy(previewItem);
+    }
 }
 
 [System.Serializable]

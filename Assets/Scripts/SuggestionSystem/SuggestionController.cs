@@ -14,12 +14,14 @@ public class SuggestionController : MonoBehaviour
 
     private GameObject player;
     private GameUI gameUI;
+    public Dictionary<string, DoActionSuggestion> actions;
 
     private static SuggestionController instance;
     public static SuggestionController Instance { get => instance; }
 
     void Awake()
     {
+        actions = new Dictionary<string, DoActionSuggestion>();
         instance = this;
         player = FindObjectOfType<InputManager>().gameObject;
         gameUI = FindObjectOfType<GameUI>();
@@ -65,6 +67,7 @@ public class SuggestionController : MonoBehaviour
     private void StartSuggestion(int index)
     {
         currentSuggestion = suggestions[currentSuggestionIndex];
+        currentSuggestion.init();
         UpdateUI(suggestions[currentSuggestionIndex]);
     }
 

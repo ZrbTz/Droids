@@ -33,4 +33,6 @@ public abstract class Suggestion : ScriptableObject
     public bool isVisible() {
         return visible;
     }
+
+    public virtual void init() { }
 }

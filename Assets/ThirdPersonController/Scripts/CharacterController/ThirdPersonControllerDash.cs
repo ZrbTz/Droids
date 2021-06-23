@@ -83,6 +83,7 @@ public class ThirdPersonControllerDash : MonoBehaviour
     {
         if (callCount > 0 && !controller.isDashing)
         {
+            if (SuggestionController.Instance.actions.TryGetValue("Dash", out DoActionSuggestion action)) action.incrementPressCounter();
             callCount--;
             stopDash = true;
             dashRemainingStopTime = 0.0f;
@@ -105,4 +106,6 @@ public class ThirdPersonControllerDash : MonoBehaviour
             this.GetComponent<PlayerAnimationSounds>().Dash();
         }
     }
+
+
 }

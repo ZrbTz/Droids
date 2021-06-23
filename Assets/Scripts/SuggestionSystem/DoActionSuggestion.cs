@@ -5,21 +5,27 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New DoActionSuggestion", menuName = "Suggestion System/Do Action Suggestion")]
 public class DoActionSuggestion : Suggestion {
 
-    [SerializeField] public string buttonName; //Button name
+    [SerializeField] public string actionName; //Button name
     [SerializeField] public int timeToPress; //How many times to press that button to complete the mission
-    [SerializeField] public float cooldown;
+    //[SerializeField] public float cooldown;
 
-    public float timer;
+    //public float timer;
     private int pressCounter;
 
-    public void OnEnable() {
-        timer = cooldown;
+    public override void init() {
+        //timer = cooldown;
         pressCounter = 0;
+        SuggestionController.Instance.actions.Add(actionName, this);
     }
 
     public override bool IsCompleted(GameObject player) {
-        timer += Time.deltaTime;
-        if (Input.GetButtonDown(buttonName) && timer >= cooldown) { pressCounter++; timer = 0; }
+        //timer += Time.deltaTime;
+        //if (Input.GetButtonDown(buttonName) && timer >= cooldown) { pressCounter++; /*timer = 0;*/ }
+        //if (pressCounter >= timeToPress) SuggestionController.Instance.actions.Remove(actionName);
         return pressCounter >= timeToPress;
+    }
+
+    public void incrementPressCounter() {
+        pressCounter++;
     }
 }
