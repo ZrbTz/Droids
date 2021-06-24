@@ -132,10 +132,14 @@ MonoBehaviour:
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
-  enemyName: Arcacnodroid
+  marching: 1
+  enemyName: Aracnodroid
   enemyIcon: {fileID: 21300000, guid: bffdb66059f8a484cb0fd2966f188445, type: 3}
   fadeSpeed: 1
+  path: []
+  passedPath: 0
   animator: {fileID: 2394213769199747572}
+  navMeshAgent: {fileID: 0}
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 16384
