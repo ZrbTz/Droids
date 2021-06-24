@@ -140,7 +140,9 @@ public class GameManager : MonoBehaviour
                 gameUI.UpdateHordeNumber(nextBigHorde);
                 gameUI.HideStartWave();
             }
-            else { /* gameUI.ShowPleaseCompleteTheMissionFirst */ Debug.Log("Please, complete the mission"); }
+            else { 
+                gameUI.UpdateNotification("Please, comeplete your suggestion first!");
+            }
         }
     }
 

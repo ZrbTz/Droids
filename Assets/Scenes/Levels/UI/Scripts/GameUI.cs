@@ -28,6 +28,8 @@ public class GameUI : MonoBehaviour
     private SuggestionsUI suggestionsUI;
     [SerializeField]
     private GameObject startWaveUI;
+    [SerializeField]
+    private NotificationUI notificationUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -167,5 +169,10 @@ public class GameUI : MonoBehaviour
     public void HideStartWave()
     {
         startWaveUI.SetActive(false);
+    }
+
+    public void UpdateNotification(string text)
+    {
+        notificationUI.SetNotification(text);
     }
 }
