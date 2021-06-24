@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     public void resetHorde()
     {
         nextBigHorde--;
+        Inventory inv = GameObject.FindWithTag("Player").GetComponent<Inventory>();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject g in enemies)
         {
@@ -64,8 +65,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("object destroy");
             GameObject tower = GameObject.FindWithTag("Tower");
             if(tower != null) Destroy(tower);
-            GameObject.FindWithTag("Player").GetComponent<Inventory>().flush();
+            inv.flush();
         }
+        ProximityPickable[] grenades = GameObject.FindObjectsOfType<ProximityPickable>();
+        int groundGrenades = grenades.Length;
+        foreach (ProximityPickable t in grenades) Destroy(t.gameObject);
+
+        if(nextBigHorde == 1 && inv.getAmountInSlot(1) > 0 ) {
+            inv.DecreaseItemAmount(1);
+        }
+
 
         foreach (Spawner s in spawners) s.spawnerObj.GetComponent<SpawnEnemy>().StopSpawning();
         state = SpawnState.WAITING;

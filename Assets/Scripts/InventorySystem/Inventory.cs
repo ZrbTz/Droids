@@ -207,6 +207,11 @@ public class Inventory : MonoBehaviour
         isShowingPreview = false;
         Destroy(previewItem);
     }
+
+    public int getAmountInSlot(int slot) {
+        if (inventory[slot] == null) return 0;
+        return inventory[slot].GetTotalAmount();
+    }
 }
 
 [System.Serializable]
