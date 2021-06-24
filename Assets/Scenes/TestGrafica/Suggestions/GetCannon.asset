@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GetCannon
   m_EditorClassIdentifier: 
   title: Get the Cannon
-  description: An enemy will drop a cannon .This new tower is more effective against
+  description: An enemy will drop a cannon. This new tower is more effective against
     large enemies.
   isBlockingWaves: 1
   visible: 1
