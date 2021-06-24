@@ -229,7 +229,7 @@ MonoBehaviour:
   destructionParticle: {fileID: 0}
   range: 10
   damage: 2
-  fireRate: 4
+  fireRate: 3
   cannonAngularSpeed: 360
   cannonBase: {fileID: 8400692729369161363}
   cannonPivot: {fileID: 6547723205042485393}
@@ -258,7 +258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 1
   holdTime: 1
-  interactionKey: 101
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 5c3592f4b44823a46aaaf4b138f6a2df, type: 2}
   pickSound: {fileID: 0}
