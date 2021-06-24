@@ -10,6 +10,7 @@ public class Enemy : Unit {
     public float nexusDamage = 1f;
     public GameObject destination;
     protected int randomArea;
+    public bool marching = true;
 
     public string enemyName;
     public Sprite enemyIcon;
@@ -65,7 +66,7 @@ public class Enemy : Unit {
 
     private float speedTemp;
     [SerializeField] protected Animator animator;
-    protected NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
 
     protected void UpdateAnimatorWalkSpeed() {
         if(navMeshAgent.speed != speedTemp) {

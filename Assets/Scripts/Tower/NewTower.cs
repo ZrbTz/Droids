@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NewTower : Unit {
     public enum TowerState {
@@ -76,13 +77,16 @@ public class NewTower : Unit {
                 continue;
             if (!LineOfFire(enemy))
                 continue;
-            float distance = Vector3.Distance(enemy.transform.position, enemy.destination.transform.position);
+            float distance = enemy.navMeshAgent.GetPathRemainingDistance();
+            //Debug.Log(distance);
+            //if (!enemy.marching) { distance = range; }
             if (distance <= minDistance) {
                 target = enemy;
                 found = true;
                 minDistance = distance;
             }
         }
+        if (found) Debug.Log(minDistance);
         return found;
     }
 
@@ -125,5 +129,23 @@ public class NewTower : Unit {
     private bool CheckTarget() {
         if (target == null) return false;
         return !target.dead && Vector3.Distance(transform.position, target.transform.position) <= range && LineOfFire(target);
+    }
+}
+
+
+
+public static class ExtensionMethods {
+    public static float GetPathRemainingDistance(this NavMeshAgent navMeshAgent) {
+        if (navMeshAgent.pathPending || navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
+                navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
+                navMeshAgent.path.corners.Length == 0)
+            return 10000f;
+
+        float distance = 0.0f;
+        for (int i = 0; i < navMeshAgent.path.corners.Length - 1; ++i) {
+            distance += Vector3.Distance(navMeshAgent.path.corners[i], navMeshAgent.path.corners[i + 1]);
+        }
+
+        return distance;
     }
 }

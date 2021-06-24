@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier Drop Grenade
       objectReference: {fileID: 0}
+    - target: {fileID: 2394213769199747567, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6353576534877410783, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       propertyPath: m_RootOrder
       value: 0

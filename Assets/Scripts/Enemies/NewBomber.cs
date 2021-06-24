@@ -18,8 +18,10 @@ public class NewBomber : Enemy {
     [SerializeField] private float shootDelay = 5f;
     private float shootTime;
     private bool shoot;
+    private float rand;
 
     protected override void Start() {
+        rand = Random.Range(-0.5f, 0.5f);
         base.Start();
         player = GameObject.FindWithTag("Player");
         shoot = false;
@@ -51,12 +53,13 @@ public class NewBomber : Enemy {
             || Physics.Linecast(transform.position, target, layerMask, QueryTriggerInteraction.Ignore))
             return false;
         else if (!shoot)
-            return Time.time - shootTime >= shootDelay;
+            return Time.time - shootTime >= shootDelay + rand;
         else
-            return Time.time - shootTime >= shootCooldown;
+            return Time.time - shootTime >= shootCooldown + rand;
     }
 
     public void StartMarching() {
+        marching = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
@@ -65,6 +68,7 @@ public class NewBomber : Enemy {
     }
 
     private void StopMarching() {
+        marching = false;
         navMeshAgent.isStopped = true;
     }
 
@@ -74,6 +78,7 @@ public class NewBomber : Enemy {
     }
 
     public void Shoot() {
+        rand = Random.Range(-0.5f, 0.5f);
         //Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
         int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
         Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);

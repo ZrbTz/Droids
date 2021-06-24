@@ -73,6 +73,7 @@ public class NewInvoker : Enemy {
     }
 
     public void StartMarching() {
+        marching = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
@@ -82,6 +83,7 @@ public class NewInvoker : Enemy {
 
     private void StopMarching()
     {
+        marching = false;
         this.GetComponent<EnemyAnimationSounds>().StopEngine();
         navMeshAgent.isStopped = true;
         state = InvokerState.Idle;

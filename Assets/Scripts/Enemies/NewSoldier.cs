@@ -60,6 +60,7 @@ public class NewSoldier : Enemy {
     }
 
     private void StartMarching() {
+        marching = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
@@ -68,6 +69,7 @@ public class NewSoldier : Enemy {
     }
 
     private void StartApproaching() {
+        
         navMeshAgent.isStopped = false;
         //navMeshAgent.destination = farTarget.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
         navMeshAgent.destination = farTarget.transform.position;
@@ -76,6 +78,7 @@ public class NewSoldier : Enemy {
     }
 
     private void StopMarching() {
+        marching = false;
         navMeshAgent.isStopped = true;
         animator.gameObject.GetComponent<EnemyAnimationSounds>().StopEngine();
     }
