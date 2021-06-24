@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
-  m_Name: CompleteH2
+  m_Script: {fileID: 11500000, guid: 8cf11e998b6b95e4f84cee1a6bb02172, type: 3}
+  m_Name: DoStartAnotherWave
   m_EditorClassIdentifier: 
-  title: Be Fast
-  description: In the next wave they will come from both sides
+  title: Go Ahead
+  description: Start another wave
   isBlockingWaves: 0
   visible: 1
-  hordeToComplete: 2
+  actionName: Spawn
+  timeToPress: 1
