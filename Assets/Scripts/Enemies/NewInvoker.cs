@@ -96,6 +96,9 @@ public class NewInvoker : Enemy {
 
     private void SpawnSoldier() {
         GameObject newEnemy = Instantiate(soldierToSpawn, spawnTransform.position, transform.rotation);
-        newEnemy.GetComponent<Enemy>().destination = this.destination;
+        Enemy enemy = newEnemy.GetComponent<Enemy>();
+        enemy.destination = this.destination;
+        enemy.path = this.path;
+        enemy.passedPath = this.passedPath;
     }
 }
