@@ -673,6 +673,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 82a9fc39343abdf49bbbae68d861b32b, type: 2}
     - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: path.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: path.Array.data[0]
+      value: 
+      objectReference: {fileID: 1689251222}
+    - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: SpawnPoint.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -6735,6 +6743,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 157bad460fecfea4cb7f7cf88c23bde8, type: 2}
     - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: path.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: path.Array.data[0]
+      value: 
+      objectReference: {fileID: 1350205435}
+    - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: SpawnPoint.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9910,6 +9926,14 @@ PrefabInstance:
       propertyPath: so_BigHordes
       value: 
       objectReference: {fileID: 11400000, guid: 160aa4337c76f6e42b44883a5f0199be, type: 2}
+    - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: path.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: path.Array.data[0]
+      value: 
+      objectReference: {fileID: 529336353}
     - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: SpawnPoint.Array.size
       value: 2
