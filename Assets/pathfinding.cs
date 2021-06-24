@@ -6,7 +6,7 @@ public class pathfinding : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         Enemy enemy = other.transform.root.GetComponent<Enemy>();
         if(enemy != null) {
-            Debug.Log("ASD");
+            //Debug.Log("ASD");
             enemy.updatePath(this.gameObject);
         }
     }

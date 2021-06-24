@@ -112,6 +112,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
             dashParticleL.SetActive(true);
             dashParticleD.SetActive(true);
+
+            dashParticleL.GetComponent<TrailRenderer>().Clear();
+            dashParticleD.GetComponent<TrailRenderer>().Clear();
         }
     }
 
