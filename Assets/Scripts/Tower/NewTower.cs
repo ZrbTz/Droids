@@ -24,12 +24,9 @@ public class NewTower : Unit {
     public LayerMask lineOfFireLayerMask;
     [SerializeField] private LayerMask enemyLayerMask;
     private float attackTime = Mathf.NegativeInfinity;
-    private Transform nexus;
 
     protected override void Start() {
         base.Start();
-        //lineOfFireLayerMask = 1 << LayerMask.NameToLayer("Building");
-        nexus = GameManager.Instance.nexus.transform;
         state = TowerState.Idle;
     }
 
@@ -75,13 +72,13 @@ public class NewTower : Unit {
         float minDistance = Mathf.Infinity;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, enemyLayerMask);
         foreach (Collider hitCollider in hitColliders) {
-            if (!(hitCollider.transform.root.TryGetComponent(out Unit unit) && !unit.dead && unit.enemy))
+            if (!(hitCollider.transform.root.TryGetComponent(out Enemy enemy) && !enemy.dead && enemy.enemy))
                 continue;
-            if (!LineOfFire(unit))
+            if (!LineOfFire(enemy))
                 continue;
-            float distance = Vector3.Distance(unit.transform.position, nexus.position);
+            float distance = Vector3.Distance(enemy.transform.position, enemy.destination.transform.position);
             if (distance <= minDistance) {
-                target = unit;
+                target = enemy;
                 found = true;
                 minDistance = distance;
             }
