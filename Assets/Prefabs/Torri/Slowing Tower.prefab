@@ -53,7 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 1
   holdTime: 1
-  interactionKey: 101
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 8f773004d83b6c44c998969be5a242de, type: 2}
   pickSound: {fileID: 0}
@@ -348,6 +347,10 @@ PrefabInstance:
     - target: {fileID: 4182580240032485479, guid: c3a5377340e182e44ac94d354648d223, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598146928578306445, guid: c3a5377340e182e44ac94d354648d223, type: 3}
+      propertyPath: slowPercentuale
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7697258521494756599, guid: c3a5377340e182e44ac94d354648d223, type: 3}
       propertyPath: m_RootOrder

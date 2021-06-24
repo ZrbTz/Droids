@@ -627,6 +627,18 @@ PrefabInstance:
       value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
+      propertyPath: velocity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
+      propertyPath: fireDelay
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
+      propertyPath: shotgunFireDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
       propertyPath: shotgunTotalDamage
       value: 8
       objectReference: {fileID: 0}

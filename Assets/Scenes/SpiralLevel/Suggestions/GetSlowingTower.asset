@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44c91159cd51b244e815078b618eb857, type: 3}
-  m_Name: GetCannon
+  m_Name: GetSlowingTower
   m_EditorClassIdentifier: 
-  title: Get the Cannon
-  description: An enemy will drop a cannon .This new tower is more effective against
-    large enemies.
+  title: Get the Slowing Tower
+  description: An enemy will drop a new tower. This tower is capable of slowing all
+    enemies that are in his range
   isBlockingWaves: 1
   visible: 1
-  item: {fileID: 11400000, guid: 17bc2e8bd3fec1045a6e776758370b5a, type: 2}
+  item: {fileID: 11400000, guid: 8f773004d83b6c44c998969be5a242de, type: 2}
