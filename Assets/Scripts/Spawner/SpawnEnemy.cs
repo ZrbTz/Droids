@@ -42,6 +42,8 @@ public class SpawnEnemy : MonoBehaviour
     MiniMapSpawner miniMapSpawner;
     [SerializeField] GameObject[] SpawnPoint;
 
+    public GameObject[] path;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -138,6 +140,7 @@ public class SpawnEnemy : MonoBehaviour
                     
                     GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy, spawnPosition, Quaternion.identity);
                     newEnemy.GetComponent<Enemy>().destination = destination;
+                    newEnemy.GetComponent<Enemy>().path = this.path;
 
                     counter++;
                 }

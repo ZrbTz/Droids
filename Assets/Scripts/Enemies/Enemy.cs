@@ -16,6 +16,10 @@ public class Enemy : Unit {
     public Sprite enemyIcon;
 
     public float fadeSpeed = 1.0f;
+
+    public GameObject[] path;
+    public int passedPath = 0;
+
     /*
     private Renderer[] rs;
     private List<Color> cs = new List<Color>();
@@ -73,5 +77,16 @@ public class Enemy : Unit {
             animator.SetFloat("Speed", navMeshAgent.speed);
             speedTemp = navMeshAgent.speed;
         }
+    }
+
+    public void updatePath(GameObject currentlyColliding) {
+        if (path[passedPath] == currentlyColliding) {
+            passedPath++;
+        }
+    }
+
+    public float GetPathRemainingDistance() {
+        float distance = Vector3.Distance(this.transform.position, path[passedPath].transform.position);
+        return distance;
     }
 }

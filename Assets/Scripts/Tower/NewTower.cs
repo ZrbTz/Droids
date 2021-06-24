@@ -71,19 +71,21 @@ public class NewTower : Unit {
     private bool GetTarget() {
         bool found = false;
         float minDistance = Mathf.Infinity;
+        int maxPassedPath = -100000;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, enemyLayerMask);
         foreach (Collider hitCollider in hitColliders) {
             if (!(hitCollider.transform.root.TryGetComponent(out Enemy enemy) && !enemy.dead && enemy.enemy))
                 continue;
             if (!LineOfFire(enemy))
                 continue;
-            float distance = enemy.navMeshAgent.GetPathRemainingDistance();
+            float distance = enemy.GetPathRemainingDistance();
             //Debug.Log(distance);
             //if (!enemy.marching) { distance = range; }
-            if (distance <= minDistance) {
+            if (enemy.passedPath >= maxPassedPath && distance <= minDistance) {
                 target = enemy;
                 found = true;
                 minDistance = distance;
+                maxPassedPath = enemy.passedPath;
             }
         }
         if (found) Debug.Log(minDistance);
@@ -132,20 +134,18 @@ public class NewTower : Unit {
     }
 }
 
+//public static class ExtensionMethods {
+//    public static float GetPathRemainingDistance(this NavMeshAgent navMeshAgent) {
+//        if (navMeshAgent.pathPending || navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
+//                navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
+//                navMeshAgent.path.corners.Length == 0)
+//            return 10000f;
 
+//        float distance = 0.0f;
+//        for (int i = 0; i < navMeshAgent.path.corners.Length - 1; ++i) {
+//            distance += Vector3.Distance(navMeshAgent.path.corners[i], navMeshAgent.path.corners[i + 1]);
+//        }
 
-public static class ExtensionMethods {
-    public static float GetPathRemainingDistance(this NavMeshAgent navMeshAgent) {
-        if (navMeshAgent.pathPending || navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
-                navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
-                navMeshAgent.path.corners.Length == 0)
-            return 10000f;
-
-        float distance = 0.0f;
-        for (int i = 0; i < navMeshAgent.path.corners.Length - 1; ++i) {
-            distance += Vector3.Distance(navMeshAgent.path.corners[i], navMeshAgent.path.corners[i + 1]);
-        }
-
-        return distance;
-    }
-}
+//        return distance;
+//    }
+//}
