@@ -19,7 +19,8 @@ public class SelectLevelUI : StartMenuUI
     private void Start()
     {
         levelsData = levelManager.GetLevelsData();
-        int playerLevel = PlayerPrefs.GetInt("Level", 0);
+        //int playerLevel = PlayerPrefs.GetInt("Level", 0);
+        int playerLevel = 10;
         foreach (LevelData levelData in levelsData)
         {
             LevelButton button = Instantiate(buttonPrefab, transform);

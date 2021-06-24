@@ -46,15 +46,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelsData:
+  - displayName: TUTORIAL
+    sceneName: NewTutorial
+    level: 0
   - displayName: LEVEL 1
     sceneName: Test_Luci
-    level: 0
-  - displayName: LEVEL 2
-    sceneName: Test_Luci
     level: 1
-  - displayName: LEVEL 3
-    sceneName: Test_Luci
+  - displayName: LEVEL 2
+    sceneName: ZumaLevel
     level: 2
+  - displayName: LEVEL 3
+    sceneName: poli
+    level: 3
   transitionPanel: {fileID: 4981892999684427768}
   delay: 1
 --- !u!114 &8429066029136301065
