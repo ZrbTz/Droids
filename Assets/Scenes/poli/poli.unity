@@ -692,6 +692,10 @@ PrefabInstance:
       propertyPath: SpawnPoint.Array.data[1]
       value: 
       objectReference: {fileID: 237739222}
+    - target: {fileID: 4939162301918981749, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Size.z
+      value: 8.23
+      objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
       value: Spawner Right
@@ -9946,6 +9950,10 @@ PrefabInstance:
       propertyPath: SpawnPoint.Array.data[1]
       value: 
       objectReference: {fileID: 194692887}
+    - target: {fileID: 4939162301918981749, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Center.z
+      value: -0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
       value: Spawner Left
