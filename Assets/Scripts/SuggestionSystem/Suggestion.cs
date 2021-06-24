@@ -35,4 +35,6 @@ public abstract class Suggestion : ScriptableObject
     }
 
     public virtual void init() { }
+
+    public virtual void reset() { }
 }

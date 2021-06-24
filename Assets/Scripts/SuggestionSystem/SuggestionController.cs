@@ -66,6 +66,7 @@ public class SuggestionController : MonoBehaviour
 
     private void StartSuggestion(int index)
     {
+        if(currentSuggestionIndex > 0) currentSuggestion.reset();
         currentSuggestion = suggestions[currentSuggestionIndex];
         currentSuggestion.init();
         UpdateUI(suggestions[currentSuggestionIndex]);

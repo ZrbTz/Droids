@@ -10,18 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e053730d1ee2f14ebc33c21da8e36a2, type: 3}
-  m_Name: Ground Spawner
+  m_Name: BottomSpawner
   m_EditorClassIdentifier: 
   bigHordes:
   - hordes:
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
       count: 10
-      delay: 0
-      tempoPerSpawnare: 3
+      delay: 20
+      tempoPerSpawnare: 5
       difficulty: 1
   - hordes:
     - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
-      count: 10
-      delay: 30
-      tempoPerSpawnare: 3
+      count: 20
+      delay: 20
+      tempoPerSpawnare: 20
       difficulty: 1
+  - hordes:
+    - enemy: {fileID: 8781907178362870937, guid: 7e9e21f65c513b14a97095765968e19b, type: 3}
+      count: 10
+      delay: 50
+      tempoPerSpawnare: 5
+      difficulty: 1
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 50
+      delay: 40
+      tempoPerSpawnare: 5
+      difficulty: 3
+  - hordes:
+    - enemy: {fileID: 2302424956403857244, guid: 72f9a5328e5b31642aeb159e3aafb5b4, type: 3}
+      count: 50
+      delay: 3
+      tempoPerSpawnare: 5
+      difficulty: 3

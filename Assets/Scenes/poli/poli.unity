@@ -912,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 237739222}
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
-      value: Spawner_L 1
+      value: Spawner Right
       objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981754, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_RootOrder
@@ -1430,9 +1430,25 @@ PrefabInstance:
       propertyPath: spawners.Array.data[3].spawnerObj
       value: 
       objectReference: {fileID: 1645099709}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c36da392a4d63b4f9cf090b246cbdd5, type: 2}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1486fbbca0f2dd4409295c3e2b8287f9, type: 2}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b0ba813b037ada4d83a210ead4f2d9c, type: 2}
     - target: {fileID: 3571231708131961189, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.2196045
+      value: -1.2197266
       objectReference: {fileID: 0}
     - target: {fileID: 3651090487727187380, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1859,7 +1875,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7320459340581021572, guid: 92d5bc73b20098f4ab884b1bfaa24411, type: 3}
       propertyPath: m_Name
-      value: Nexus_L
+      value: Nexus Left
       objectReference: {fileID: 0}
     - target: {fileID: 7320459340581021576, guid: 92d5bc73b20098f4ab884b1bfaa24411, type: 3}
       propertyPath: m_RootOrder
@@ -3730,7 +3746,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7320459340581021572, guid: 92d5bc73b20098f4ab884b1bfaa24411, type: 3}
       propertyPath: m_Name
-      value: Nexus_L (1)
+      value: Nexus Right
       objectReference: {fileID: 0}
     - target: {fileID: 7320459340581021576, guid: 92d5bc73b20098f4ab884b1bfaa24411, type: 3}
       propertyPath: m_RootOrder
@@ -7429,7 +7445,7 @@ PrefabInstance:
       objectReference: {fileID: 1334608753}
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
-      value: Spawner_L 1 (2)
+      value: Spawner Bottom
       objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981754, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_RootOrder
@@ -9174,7 +9190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7320459340581021572, guid: 92d5bc73b20098f4ab884b1bfaa24411, type: 3}
       propertyPath: m_Name
-      value: Nexus_L (2)
+      value: Nexus Bottom
       objectReference: {fileID: 0}
     - target: {fileID: 7320459340581021576, guid: 92d5bc73b20098f4ab884b1bfaa24411, type: 3}
       propertyPath: m_RootOrder
@@ -10814,7 +10830,7 @@ PrefabInstance:
       objectReference: {fileID: 194692887}
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
-      value: Spawner_L 1 (1)
+      value: Spawner Left
       objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981754, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_RootOrder
@@ -12197,6 +12213,10 @@ PrefabInstance:
       propertyPath: portal
       value: 
       objectReference: {fileID: 1616779823}
+    - target: {fileID: 6189092638125943833, guid: 7d110b6bfa1b75449bfb0ca0aedc69ee, type: 3}
+      propertyPath: cooldown
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6423675852348577431, guid: 7d110b6bfa1b75449bfb0ca0aedc69ee, type: 3}
       propertyPath: m_Name
       value: Pulsante A

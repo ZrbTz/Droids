@@ -33,6 +33,7 @@ public class Portal : MonoBehaviour {
 
     private void SetTowers(List<GameObject> towers, Vector3 basePosition) {
         foreach(GameObject tower in towers) {
+            if (SuggestionController.Instance.actions.TryGetValue("Portal", out DoActionSuggestion action)) action.incrementPressCounter();
             Vector3 offset = tower.transform.position - basePosition;
             tower.transform.position = transform.position + offset;
         }

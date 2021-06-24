@@ -10,12 +10,16 @@ public class DoActionSuggestion : Suggestion {
     //[SerializeField] public float cooldown;
 
     //public float timer;
-    private int pressCounter;
+    public int pressCounter;
 
     public override void init() {
         //timer = cooldown;
         pressCounter = 0;
         SuggestionController.Instance.actions.Add(actionName, this);
+    }
+
+    public override void reset() {
+        SuggestionController.Instance.actions.Remove(actionName);
     }
 
     public override bool IsCompleted(GameObject player) {
