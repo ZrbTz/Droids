@@ -21,8 +21,10 @@ public class Map : MonoBehaviour {
     public Vector3 BottomLeftCorner { get => bottomLeftCorner.position; }
     public Vector3 TopRightCorner { get => topRightCorner.position; }
 
+    private int areaCount = 0;
     public int GetRandomArea() {
-        int index = Random.Range(0, randomAreas.Count);
+        int index = areaCount++;
+        if (areaCount >= randomAreaNames.Count) areaCount = 0;
         return randomAreas[index];
     }
 }
