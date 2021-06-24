@@ -624,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 82d1d102dbd1db24e9568a33e5e59220, type: 3}
     - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
       propertyPath: damage
-      value: 0.401
+      value: 0.501
       objectReference: {fileID: 0}
     - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
       propertyPath: shotgunTotalDamage
