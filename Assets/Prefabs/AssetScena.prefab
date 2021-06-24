@@ -392,6 +392,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4092081848115164400, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092081848115164400, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092081848115164400, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092081848115164400, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092081848115164400, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692090774347253146, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692090774347253146, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692090774347253146, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692090774347253146, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692090774347253146, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834493630810049320, guid: d2add2243e957eb42859f92d633d2994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2add2243e957eb42859f92d633d2994, type: 3}
 --- !u!224 &4573952348118980377 stripped
@@ -578,6 +622,14 @@ PrefabInstance:
       propertyPath: dash
       value: 
       objectReference: {fileID: 8300000, guid: 82d1d102dbd1db24e9568a33e5e59220, type: 3}
+    - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
+      propertyPath: damage
+      value: 0.401
+      objectReference: {fileID: 0}
+    - target: {fileID: 945323987714172973, guid: 5194f60994c52d542b62b50a45888457, type: 3}
+      propertyPath: shotgunTotalDamage
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1063961998610681653, guid: 5194f60994c52d542b62b50a45888457, type: 3}
       propertyPath: m_RootOrder
       value: 5
