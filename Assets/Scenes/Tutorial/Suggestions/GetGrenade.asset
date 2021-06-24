@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44c91159cd51b244e815078b618eb857, type: 3}
-  m_Name: GetGatling
+  m_Name: GetGrenade
   m_EditorClassIdentifier: 
-  title: Get The Gatling
-  description: Some enemies will drop you towers. Hold the interaction button to
-    get it
+  title: Get A Mine
+  description: Some enemy will drop you grenades. You can then press the Throw button
+    to throw it
   isBlockingWaves: 1
   visible: 1
-  item: {fileID: 11400000, guid: 5c3592f4b44823a46aaaf4b138f6a2df, type: 2}
+  item: {fileID: 11400000, guid: 8e8f65d381999434abaeb922f1803b4c, type: 2}

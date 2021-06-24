@@ -10,7 +10,7 @@ public class DoActionSuggestion : Suggestion {
     //[SerializeField] public float cooldown;
 
     //public float timer;
-    public int pressCounter;
+    private int pressCounter;
 
     public override void init() {
         //timer = cooldown;
