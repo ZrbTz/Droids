@@ -1403,6 +1403,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: numHordes
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: spawners.Array.size
       value: 3
       objectReference: {fileID: 0}
