@@ -26,7 +26,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
     private GameUI gameUI;
 
-    public GameObject dashParticleD, dashParticleL;
+    public Transform trailTransform1, trailTransform2;
+    public TrailRenderer trailPrefab;
+    private TrailRenderer trail1, trail2;
 
     void Awake()
     {
@@ -38,9 +40,6 @@ public class ThirdPersonControllerDash : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
         controller = this.GetComponent<vThirdPersonController>();
         callCount = 2;
-
-        dashParticleL.GetComponent<TrailRenderer>().emitting = false;
-        dashParticleD.GetComponent<TrailRenderer>().emitting = false;
     }
 
     // Update is called once per frame
@@ -66,9 +65,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
                 stopDash = false;
                 controller.isDashing = false;
                 rb.velocity = oldVelocity.magnitude * direction;
-                
-                dashParticleL.GetComponent<TrailRenderer>().emitting = false;
-                dashParticleD.GetComponent<TrailRenderer>().emitting = false;
+
+                Destroy(trail1.gameObject);
+                Destroy(trail2.gameObject);
             }
         }
         dashRemainingTime -= Time.fixedDeltaTime;
@@ -112,9 +111,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
             oldVelocity = rb.velocity;
             this.GetComponent<PlayerAnimationSounds>().Dash();
-            
-            dashParticleL.GetComponent<TrailRenderer>().emitting = true;
-            dashParticleD.GetComponent<TrailRenderer>().emitting = true;
+
+            trail1 = Instantiate(trailPrefab, trailTransform1);
+            trail2 = Instantiate(trailPrefab, trailTransform2);
         }
     }
 
