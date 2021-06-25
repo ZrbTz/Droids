@@ -57,8 +57,11 @@ public class LevelManager : MonoBehaviour
         }
 
         int nextLevel = currentLevel + 1;
-        string name = levelsData[nextLevel].sceneName;
-        Load(name);
+        if (nextLevel < levelsData.Count) {
+            string name = levelsData[nextLevel].sceneName;
+            Load(name);
+        } else
+            LoadStart();
     }
 
     IEnumerator SceneTransition(int i)
