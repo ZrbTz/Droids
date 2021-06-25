@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf11e998b6b95e4f84cee1a6bb02172, type: 3}
   m_Name: DoJump
   m_EditorClassIdentifier: 
-  title: Hi, let's start
-  description: Try jumping three times. To jump press Spacebar.
+  title: Let's start
+  description: Try jumping <color=#2AFBEA>three<color=#FFFFFF> times. To jump press
+    the <color=#2AFBEA>SPACEBAR<color=#FFFFFF>.
   isBlockingWaves: 1
   visible: 1
   actionName: Jump

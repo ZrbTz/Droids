@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlaceGatling
   m_EditorClassIdentifier: 
   title: Place the Gatling
-  description: Place it anywhere by pressing E again, you will probably need to move
-    it.
+  description: Place it anywhere by pressing the <color=#2AFBEA>E BUTTON<color=#FFFFFF>
+    again, you will probably need to move it.
   isBlockingWaves: 1
   visible: 1
   item: {fileID: 11400000, guid: 5c3592f4b44823a46aaaf4b138f6a2df, type: 2}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
   m_Name: CompleteH7Bomber
   m_EditorClassIdentifier: 
-  title: Bomber
-  description: If he catches you with his shot, you will be slowed down. Try dashing
-    to avoid it.
+  title: The Bomber
+  description: If he catches you with his shot, you will be <color=#2AFBEA>slowed
+    down<color=#FFFFFF>. \nTry dashing to avoid it.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 7

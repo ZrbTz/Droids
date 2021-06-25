@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
   m_Name: CompleteH8Runner
   m_EditorClassIdentifier: 
-  title: Runner
-  description: Just a faster droid, keep an eye on it.
+  title: The Runner
+  description: Just a <color=#2AFBEA>faster droid<color=#FFFFFF>, keep an eye on
+    it.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 8

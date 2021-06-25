@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GetGatling
   m_EditorClassIdentifier: 
   title: Get The Gatling
-  description: Some enemies will drop you towers. Hold the E  button to get it.
+  description: Some enemies will drop you <color=#2AFBEA>towers<color=#FFFFFF>. \nHold
+    the <color=#2AFBEA>E BUTTON<color=#FFFFFF> to get it.
   isBlockingWaves: 1
   visible: 1
   item: {fileID: 11400000, guid: 5c3592f4b44823a46aaaf4b138f6a2df, type: 2}
