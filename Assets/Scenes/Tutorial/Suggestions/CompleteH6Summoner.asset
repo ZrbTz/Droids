@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
   m_Name: CompleteH6Summoner
   m_EditorClassIdentifier: 
-  title: Summoner
-  description: To bring him down you must find it's weak spot. Kill him fast or it
-    will flood droids in his lane.
+  title: The Summoner
+  description: To bring him down you must find it's <color=#2AFBEA>weak spot<color=#FFFFFF>
+    on the back. \nKill him fast or it will flood droids in his lane.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 6

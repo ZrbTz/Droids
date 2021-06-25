@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
   m_Name: CompleteH5Stomper
   m_EditorClassIdentifier: 
-  title: 'Let''s see some enemy: Stomper'
-  description: 'This big dude doesn''t like your shotgun. '
+  title: The Stomper
+  description: This big dude doesn't like your <color=#2AFBEA>shotgun<color=#FFFFFF>,
+    try to use it against him!
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 5

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CompleteH2
   m_EditorClassIdentifier: 
   title: Be Fast
-  description: In the next wave they will come from both sides.
+  description: In the next wave they will come from <color=#2AFBEA>both sides<color=#FFFFFF>.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 2
