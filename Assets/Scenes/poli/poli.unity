@@ -672,6 +672,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.74
       objectReference: {fileID: 0}
+    - target: {fileID: 2723943938587184147, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: destination
       value: 
@@ -707,6 +711,10 @@ PrefabInstance:
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
       value: Spawner Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981754, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_RootOrder
@@ -773,7 +781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194692888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 237739223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6718,7 +6726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1334608754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6746,6 +6754,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2723943938587184147, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: destination
       value: 
@@ -6777,6 +6789,10 @@ PrefabInstance:
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
       value: Spawner Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981754, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_RootOrder
@@ -8756,7 +8772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752376069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9426,7 +9442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1907821475}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9938,6 +9954,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.74
       objectReference: {fileID: 0}
+    - target: {fileID: 2723943938587184147, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981748, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: destination
       value: 
@@ -9973,6 +9993,10 @@ PrefabInstance:
     - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_Name
       value: Spawner Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939162301918981751, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4939162301918981754, guid: de0d329957e711d4f8a9bd793502ddfd, type: 3}
       propertyPath: m_RootOrder
@@ -10789,7 +10813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2140045429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
