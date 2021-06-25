@@ -32,7 +32,7 @@ public class TowerItem : ItemObject
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
         {
-            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground") && Vector3.Dot(hitInfo.normal, Vector3.up) > 0.9) {
                 GameObject prefab = GetPlaceableItemPrefab();
                 BoxCollider box = prefab.GetComponent<BoxCollider>();
                 int boxlayerMask = ~LayerMask.GetMask("AreaEffect", "Projectile", "Item", "Ground");
