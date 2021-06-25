@@ -34,8 +34,8 @@ public class SpawnEnemy : MonoBehaviour
 
     public GameObject destination;
 
-    [SerializeField] float block_width = 5.0f;
-    [SerializeField] float block_length = 5.0f;
+    //[SerializeField] float block_width = 5.0f;
+    //[SerializeField] float block_length = 5.0f;
     List<GameObject> spawnFreeZones = new List<GameObject>();
 
     BoxCollider _spawnZoneCollider;
