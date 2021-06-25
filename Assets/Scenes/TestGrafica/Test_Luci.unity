@@ -1985,7 +1985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 303290967}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5307,7 +5307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 721756696}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SpawnPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5832,7 +5832,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012362596, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2012362596, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5848,7 +5848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_IsActive
@@ -14603,7 +14603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1870103922}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SpawnPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15521,7 +15521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982007248}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18186,7 +18186,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012362596, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2012362596, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18198,7 +18198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_IsActive
