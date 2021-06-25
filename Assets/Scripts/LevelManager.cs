@@ -45,16 +45,20 @@ public class LevelManager : MonoBehaviour
     public void LoadNextLevel()
     {
         string currentName = SceneManager.GetActiveScene().name;
+        Debug.Log(currentName);
         int currentLevel = -1;
         for (int i = 0; i < levelsData.Count; i++)
         {
+            Debug.Log(levelsData[i].sceneName == currentName);
             if (levelsData[i].sceneName == currentName)
             {
                 currentLevel = i;
+                break;
             }
         }
 
-        string name = levelsData[currentLevel++].sceneName;
+        int nextLevel = currentLevel + 1;
+        string name = levelsData[nextLevel].sceneName;
         Load(name);
     }
 

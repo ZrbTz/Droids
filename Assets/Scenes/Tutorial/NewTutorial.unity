@@ -11414,6 +11414,10 @@ PrefabInstance:
       propertyPath: suggestions.Array.data[15]
       value: 
       objectReference: {fileID: 11400000, guid: fd82443d59717e942a599988145ea1c8, type: 2}
+    - target: {fileID: 3469077894543473944, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: levelsData.Array.data[0].displayName
+      value: LEVEL 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3651090487727187380, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
