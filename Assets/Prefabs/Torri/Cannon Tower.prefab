@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 1
-  holdTime: 1
+  holdTime: 0.65
   inventorySlot: 0
   itemObject: {fileID: 11400000, guid: 17bc2e8bd3fec1045a6e776758370b5a, type: 2}
   pickSound: {fileID: 0}
