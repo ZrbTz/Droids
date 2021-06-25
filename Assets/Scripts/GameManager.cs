@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
                 gameUI.HideStartWave();
             }
             else { 
-                gameUI.UpdateNotification("Please, comeplete your suggestion first!");
+                gameUI.UpdateNotification("Please, complete your suggestion first!");
             }
         }
     }
