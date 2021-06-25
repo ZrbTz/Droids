@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, 20f, tmpIgnoreLayers))
         {
-            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground") &&  Vector3.Dot (hitInfo.normal, Vector3.up) > 0.9)
             {
                 GameObject prefab = towerItem.GetPlaceableItemPrefab();
                 BoxCollider box = prefab.GetComponent<BoxCollider>();
