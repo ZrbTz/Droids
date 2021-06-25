@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GetCannon
   m_EditorClassIdentifier: 
   title: Get the Cannon
-  description: An enemy will drop a cannon. This new tower is more effective against
-    large enemies.
+  description: An enemy will drop a <color=#2AFBEA>red cannon<color=#FFFFFF>. \nThis
+    new tower is more effective against <color=#2AFBEA>large and big enemies<color=#FFFFFF>.
   isBlockingWaves: 1
   visible: 1
   item: {fileID: 11400000, guid: 17bc2e8bd3fec1045a6e776758370b5a, type: 2}

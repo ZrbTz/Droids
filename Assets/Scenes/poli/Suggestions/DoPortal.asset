@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DoPortal
   m_EditorClassIdentifier: 
   title: Try out a Portal
-  description: Put a tower in the portal circle then activate it by pressing the
-    button on it's side. (Press E)
+  description: Put a tower in the <color=#2AFBEA>portal circle<color=#FFFFFF> then
+    activate it by pressing the button on it's side (<color=#2AFBEA>E BUTTON<color=#FFFFFF>).
   isBlockingWaves: 1
   visible: 1
   actionName: Portal

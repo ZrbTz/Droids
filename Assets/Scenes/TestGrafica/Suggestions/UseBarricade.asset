@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UseBarricade
   m_EditorClassIdentifier: 
   title: Place the Barricade
-  description: Place it to slow down incoming enemies.
+  description: Place it to <color=#2AFBEA>slow down<color=#FFFFFF> incoming enemies.
   isBlockingWaves: 1
   visible: 1
   item: {fileID: 11400000, guid: 35ff19802f28d3643b7bbaae02c661eb, type: 2}
