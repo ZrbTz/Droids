@@ -81,14 +81,18 @@ public class NewTower : Unit {
             float distance = enemy.GetPathRemainingDistance();
             //Debug.Log(distance);
             //if (!enemy.marching) { distance = range; }
-            if (enemy.passedPath >= maxPassedPath && distance <= minDistance) {
+            if (enemy.passedPath > maxPassedPath || (enemy.passedPath == maxPassedPath && distance <= minDistance)) {
                 target = enemy;
                 found = true;
                 minDistance = distance;
                 maxPassedPath = enemy.passedPath;
             }
         }
-        if (found) Debug.Log(minDistance);
+        /*if (found)
+        {
+            Debug.Log(maxPassedPath);
+            Debug.Log(minDistance);
+        }*/
         return found;
     }
 
