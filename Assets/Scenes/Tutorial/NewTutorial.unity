@@ -8629,7 +8629,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012362596, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2012362597, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_RootOrder
@@ -8657,7 +8657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223810, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Center.x
@@ -9286,7 +9286,7 @@ Transform:
   - {fileID: 437147091}
   - {fileID: 419357317}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1456341479
 PrefabInstance:
@@ -11428,7 +11428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3651090487980006206, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3651090487980006206, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13296,7 +13296,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012362596, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2012362597, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_LocalScale.z
@@ -13316,7 +13316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7009300203027223808, guid: 2b4b9821352636c439ce355068ab04bc, type: 3}
       propertyPath: m_IsActive

@@ -66,7 +66,7 @@ public class SpawnEnemy : MonoBehaviour
         gm = GameManager.Instance;
         _spawnZoneCollider = this.gameObject.GetComponent<BoxCollider>();
         miniMapSpawner = GetComponent<MiniMapSpawner>();
-        Vector2 zoneNumber = new Vector2(Mathf.Floor(_spawnZoneCollider.size.x / block_width), Mathf.Floor(_spawnZoneCollider.size.z / block_length));
+        /*Vector2 zoneNumber = new Vector2(Mathf.Floor(_spawnZoneCollider.size.x / block_width), Mathf.Floor(_spawnZoneCollider.size.z / block_length));
         for (int i = 0; i < zoneNumber[1]; i++)
         {
             for (int j = 0; j < zoneNumber[0]; j++)
@@ -82,7 +82,7 @@ public class SpawnEnemy : MonoBehaviour
                 zone.AddComponent<SpawnZone>();
                 spawnFreeZones.Add(zone);
             }
-        }
+        }*/
     }
 
     public void spawnHorde(int nextHorde) {
