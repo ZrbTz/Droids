@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DoChangeWeapon
   m_EditorClassIdentifier: 
   title: Bored of rifles?
-  description: Press the WeaponSwitch button to switch to shotgun, press R again
-    to switch back to rifle rifle
+  description: Press the R button to switch to shotgun, press R again to switch back
+    to rifle.
   isBlockingWaves: 1
   visible: 1
   actionName: WeaponSwitch

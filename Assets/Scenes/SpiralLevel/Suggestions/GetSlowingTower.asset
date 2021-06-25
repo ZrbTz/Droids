@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Get the Slowing Tower
   description: An enemy will drop a new tower. This tower is capable of slowing all
-    enemies that are in his range
+    enemies that are in his range.
   isBlockingWaves: 1
   visible: 1
   item: {fileID: 11400000, guid: 8f773004d83b6c44c998969be5a242de, type: 2}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DoPortal
   m_EditorClassIdentifier: 
   title: Try out a Portal
-  description: Put a tower in the portal circle, and press the button.
+  description: Put a tower in the portal circle then activate it by pressing the
+    button on it's side. (Press E)
   isBlockingWaves: 1
   visible: 1
   actionName: Portal
   timeToPress: 1
-  pressCounter: 0

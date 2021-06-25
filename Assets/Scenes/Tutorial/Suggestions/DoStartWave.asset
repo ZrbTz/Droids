@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: DoStartWave
   m_EditorClassIdentifier: 
   title: Start the Fight
-  description: Remember, the circle size around the spawn will tell you WHEN the
-    enemies will spawn. The circle color will tell your how DIFFICULT that wave is.
+  description: Press F and remember the circle size around the spawn will tell you
+    WHEN the enemies will spawn. The circle color will tell your how DIFFICULT that
+    wave is.
   isBlockingWaves: 0
   visible: 1
   actionName: Spawn

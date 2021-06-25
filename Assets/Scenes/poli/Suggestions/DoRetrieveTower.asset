@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: DoRetrieveTower
   m_EditorClassIdentifier: 
   title: Don't forget your tower
-  description: Wait the cooldown, and press the button again to get it back
+  description: Wait the cooldown, and press the button again to get it back.
   isBlockingWaves: 1
   visible: 1
   actionName: Portal
   timeToPress: 1
-  pressCounter: 1

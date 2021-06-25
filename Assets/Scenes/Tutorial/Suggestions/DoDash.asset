@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DoDash
   m_EditorClassIdentifier: 
   title: We REALLY are in a hurry
-  description: Try dashing twice. You have two charges (don't spare them, they will
-    recharge in a few seconds)
+  description: Try dashing twice by pressing Mouse2. You have two charges (don't
+    spare them, they will recharge in a few seconds).
   isBlockingWaves: 1
   visible: 1
   actionName: Dash

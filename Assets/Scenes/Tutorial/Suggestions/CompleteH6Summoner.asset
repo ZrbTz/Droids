@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8c6bf6b92b261d47ae06a00f585b9cd, type: 3}
-  m_Name: CompleteH5
+  m_Name: CompleteH6Summoner
   m_EditorClassIdentifier: 
-  title: Final Round
-  description: Use what you learned and survive
+  title: Summoner
+  description: To bring him down you must find it's weak spot. Kill him fast or it
+    will flood droids in his lane.
   isBlockingWaves: 0
   visible: 1
-  hordeToComplete: 5
+  hordeToComplete: 6

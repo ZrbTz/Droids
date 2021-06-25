@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CompleteH0
   m_EditorClassIdentifier: 
   title: Get in the Action
-  description: Be careful of enemies in the bottom lane
+  description: Be careful of enemies in the bottom lane.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 0

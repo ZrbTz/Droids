@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DoJump
   m_EditorClassIdentifier: 
   title: Hi, let's start
-  description: Try jumping three times
+  description: Try jumping three times. To jump press Spacebar.
   isBlockingWaves: 1
   visible: 1
   actionName: Jump

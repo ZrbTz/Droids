@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DoShoot
   m_EditorClassIdentifier: 
   title: Want to shoot something?
-  description: Try press and hold the fire button (Do it twice)
+  description: Try pressing and holding Mouse1 (Do it twice).
   isBlockingWaves: 1
   visible: 1
   actionName: Fire1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CompleteH4
   m_EditorClassIdentifier: 
   title: Things Gets Messy
-  description: They will be a lot from bot spawns. Try to move the gatling accordingly
+  description: They will be a lot from bot spawns. Try to move the gatling accordingly.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 4

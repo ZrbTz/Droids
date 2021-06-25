@@ -11320,7 +11320,7 @@ PrefabInstance:
       objectReference: {fileID: 730413077}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: numHordes
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1325514271703142091, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: spawners.Array.data[0].spawnerObj
@@ -11348,7 +11348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: suggestions.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: suggestions.Array.data[0]
@@ -11412,6 +11412,22 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2ae99260d6d03f04e9094a6ff1829ed5, type: 2}
     - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: suggestions.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: cae059d10cccb8e4cb8c67641bb4395b, type: 2}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: b5a7c7d9250aa634896320846ae83910, type: 2}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: ea58fc43cd52e6941ab64b70ce1db27b, type: 2}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: b86621e162ad4f94192686c2a35c63cc, type: 2}
+    - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: suggestions.Array.data[19]
       value: 
       objectReference: {fileID: 11400000, guid: fd82443d59717e942a599988145ea1c8, type: 2}
     - target: {fileID: 3651090487727187380, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}

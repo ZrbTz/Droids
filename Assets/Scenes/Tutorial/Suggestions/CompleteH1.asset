@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CompleteH1
   m_EditorClassIdentifier: 
   title: Eyes Open
-  description: In the next wave, they might come from both sides
+  description: In the next wave, they might come from both sides.
   isBlockingWaves: 0
   visible: 1
   hordeToComplete: 1

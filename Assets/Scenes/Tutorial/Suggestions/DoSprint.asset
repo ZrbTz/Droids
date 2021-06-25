@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DoSprint
   m_EditorClassIdentifier: 
   title: We are in a hurry
-  description: Press the sprint button to run
+  description: Press Left Shift button to run.
   isBlockingWaves: 1
   visible: 1
   actionName: Sprint
