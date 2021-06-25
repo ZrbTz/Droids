@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelsData:
-  - displayName: TUTORIAL
+  - displayName: LEVEL 0
     sceneName: NewTutorial
     level: 0
   - displayName: LEVEL 1
