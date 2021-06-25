@@ -173,7 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   holdTime: 1
-  interactionKey: 0
   inventorySlot: 1
   itemObject: {fileID: 11400000, guid: 8e8f65d381999434abaeb922f1803b4c, type: 2}
   pickSound: {fileID: 0}
@@ -232,6 +231,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2492859465218597723}
     m_Modifications:
+    - target: {fileID: 2827338528647081345, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000764238102621092, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6237852474497690457, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -291,6 +298,18 @@ PrefabInstance:
     - target: {fileID: 6762890870066360803, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
       propertyPath: m_Name
       value: Esplosivo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762890870066360803, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179546095973794482, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328570125304458148, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c298f32546aabcb45bbf86c2b828bfe0, type: 3}
