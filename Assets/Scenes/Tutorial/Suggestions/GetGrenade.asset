@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GetGrenade
   m_EditorClassIdentifier: 
   title: Get A Mine
-  description: Some enemy will drop you grenades. You can then press Q to throw it.
+  description: Some enemy will drop you <color=#2AFBEA>mines<color=#FFFFFF>. \nYou
+    can then press the <color=#2AFBEA>Q BUTTON<color=#FFFFFF> to throw it.
   isBlockingWaves: 1
   visible: 1
   item: {fileID: 11400000, guid: 8e8f65d381999434abaeb922f1803b4c, type: 2}

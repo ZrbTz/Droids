@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf11e998b6b95e4f84cee1a6bb02172, type: 3}
   m_Name: DoDash
   m_EditorClassIdentifier: 
-  title: We REALLY are in a hurry
-  description: Try dashing twice by pressing Mouse2. You have two charges (don't
-    spare them, they will recharge in a few seconds).
+  title: Faster than light
+  description: Try dashing twice by pressing <color=#2AFBEA>MOUSE 2<color=#FFFFFF>.
+    \nRemember, you have <color=#2AFBEA>two charges<color=#FFFFFF> so don't spare
+    them, they will recharge in a few seconds.
   isBlockingWaves: 1
   visible: 1
   actionName: Dash
