@@ -38,6 +38,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
         controller = this.GetComponent<vThirdPersonController>();
         callCount = 2;
+
+        dashParticleL.GetComponent<TrailRenderer>().emitting = false;
+        dashParticleD.GetComponent<TrailRenderer>().emitting = false;
     }
 
     // Update is called once per frame
@@ -63,9 +66,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
                 stopDash = false;
                 controller.isDashing = false;
                 rb.velocity = oldVelocity.magnitude * direction;
-
-                dashParticleL.SetActive(false);
-                dashParticleD.SetActive(false);
+                
+                dashParticleL.GetComponent<TrailRenderer>().emitting = false;
+                dashParticleD.GetComponent<TrailRenderer>().emitting = false;
             }
         }
         dashRemainingTime -= Time.fixedDeltaTime;
@@ -109,12 +112,9 @@ public class ThirdPersonControllerDash : MonoBehaviour
 
             oldVelocity = rb.velocity;
             this.GetComponent<PlayerAnimationSounds>().Dash();
-
-            dashParticleL.SetActive(true);
-            dashParticleD.SetActive(true);
-
-            dashParticleL.GetComponent<TrailRenderer>().Clear();
-            dashParticleD.GetComponent<TrailRenderer>().Clear();
+            
+            dashParticleL.GetComponent<TrailRenderer>().emitting = true;
+            dashParticleD.GetComponent<TrailRenderer>().emitting = true;
         }
     }
 
