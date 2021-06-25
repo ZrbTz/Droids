@@ -5707,6 +5707,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barriera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5831937079265250537, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585497442973957121, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
 --- !u!4 &766589139 stripped
@@ -9240,6 +9248,14 @@ PrefabInstance:
     - target: {fileID: 5831937079265250537, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
       propertyPath: m_Name
       value: Barriera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831937079265250537, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585497442973957121, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84ff04c83371974a930beb69bc7789d, type: 3}
