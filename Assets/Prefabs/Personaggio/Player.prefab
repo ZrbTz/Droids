@@ -4210,6 +4210,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063961998610681653}
     m_Modifications:
+    - target: {fileID: 6322812510904933973, guid: b0321c32a664a854ba2bc0bd01962f02, type: 3}
+      propertyPath: cullingLayer.m_Bits
+      value: 2241
+      objectReference: {fileID: 0}
     - target: {fileID: 6322812510904933974, guid: b0321c32a664a854ba2bc0bd01962f02, type: 3}
       propertyPath: m_Name
       value: vThirdPersonCamera
