@@ -8,6 +8,8 @@ public class Portal : MonoBehaviour {
     [HideInInspector] public float time = float.NegativeInfinity;
     public float radius;
 
+    private List<GameObject> towers = new List<GameObject>();
+
     public void Activate() {
         List<GameObject> copy = GetTowers();
         Portal previous = this;
@@ -24,7 +26,7 @@ public class Portal : MonoBehaviour {
 
     private List<GameObject> GetTowers() {
         var towers = Physics.OverlapSphere(transform.position, radius).Where(collider => collider.CompareTag("Tower"))
-            .Select(collider => collider.transform.root.gameObject).Distinct().ToList();
+            .Select(collider => collider.gameObject).Distinct().ToList();
         //towers = towers.Where(tower => tower != null).ToList();
         return towers;
     }
@@ -36,6 +38,18 @@ public class Portal : MonoBehaviour {
             tower.transform.position = transform.position + offset;
         }
     }
+
+    /*private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Tower")) {
+            towers.Add(other.gameObject);
+            
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Tower"))
+            towers.Remove(other.gameObject);
+    }*/
 
     private void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(transform.position, radius);
