@@ -5,6 +5,6 @@ using UnityEngine;
 public class InvokerOpenShellSMB : StateMachineBehaviour {
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.GetComponent<NewInvoker>().StartSpawning();
+        animator.GetComponent<Summoner>().StartSpawning();
     }
 }

@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-/*[RequireComponent(typeof(NavMeshAgent))]
 public class Bomber : Enemy {
 
     private GameObject player;
     [SerializeField] private GameObject bomb;
-    private enum SoldierState {
+    public enum BomberState {
         Marching,
-        Attacking,
-        Idle
+        Shooting
     }
 
-    private SoldierState state;
-    private NavMeshAgent navMeshAgent;
+    public BomberState state;
+    [SerializeField] private float shootRange = 12.5f;
+    [SerializeField] private float shootCooldown = 7.5f;
+    [SerializeField] private float shootDelay = 5f;
+    private float shootTime;
+    private bool shoot;
+    private float rand;
 
     protected override void Start() {
+        rand = Random.Range(-0.5f, 0.5f);
         base.Start();
-        navMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
-        nexus = GameManager.Instance.nexus;
-        enemy = true;
-        randomArea = Map.Instance.GetRandomArea();
+        shoot = false;
+        shootTime = Time.time;
         StartMarching();
     }
 
@@ -32,98 +34,61 @@ public class Bomber : Enemy {
         if (dead)
             return;
         switch (state) {
-            case SoldierState.Marching:
-                break;
-            case SoldierState.Attacking:
-                if (Time.time - attackTime >= 1 / attackSpeed) {
-                    Attack();
-                    attackTime = Time.time;
+            case BomberState.Marching:
+                UpdateAnimatorWalkSpeed();
+                if (CanShoot()) {
+                    StopMarching();
+                    StartShooting();
                 }
                 break;
-            case SoldierState.Idle:
+            case BomberState.Shooting:
                 break;
-        }
-
-        if (Time.time - attackTime >= 1 / attackSpeed) {
-            Attack();
-            attackTime = Time.time;
         }
     }
 
-    private void StartMarching() {
+    private bool CanShoot() {
+        int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
+        Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);
+        if (Vector3.Distance(transform.position, player.transform.position) >= shootRange 
+            || Physics.Linecast(transform.position, target, layerMask, QueryTriggerInteraction.Ignore))
+            return false;
+        else if (!shoot)
+            return Time.time - shootTime >= shootDelay + rand;
+        else
+            return Time.time - shootTime >= shootCooldown + rand;
+    }
+
+    public void StartMarching() {
+        marching = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
-        state = SoldierState.Marching;
+        state = BomberState.Marching;
+        UpdateAnimatorWalkSpeed();
     }
 
     private void StopMarching() {
+        marching = false;
         navMeshAgent.isStopped = true;
     }
 
-    override protected void addTarget(Obstacle bersaglio) {
-        targets.Add(bersaglio);
-        StartAttacking();
+    public void StartShooting() {
+        state = BomberState.Shooting;
+        animator.SetTrigger("Shoot");
     }
 
-    override protected void removeTarget(Obstacle bersaglio) {
-        targets.Remove(bersaglio);
-        if (targets.Count > 0) {
-            StartAttacking();
-        }
-    }
-
-    private void StartAttacking() {
-        StopMarching();
-
-        //currentTarget = target[0];
-        //Vector3 direction = currentTarget.transform.position - transform.position; direction.y = 0; direction.Normalize();
-        //transform.rotation = Quaternion.LookRotation(direction);
-        state = SoldierState.Attacking;
-    }
-
-    private void StopAttacking() {
-        if (targets.Count > 0) {
-            StartAttacking();
-            return;
-        }
-        StartMarching();
-    }
-
-    private void Attack() {
-        //while (currentTarget == null) {
-        //    target.Remove(target[0]);
-        //    if (target.Count == 0) {
-        //        StartMarching();
-        //        return;
-        //    }
-        //    currentTarget = target[0];
-        //}
+    public void Shoot() {
+        rand = Random.Range(-0.5f, 0.5f);
         //Instantiate(bomb, player.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-        Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);
-        Vector3 shooter = this.transform.position;
         int layerMask = ~LayerMask.GetMask("Player", "AreaEffect", "Projectile", "Item");
-        if (!Physics.Linecast(shooter, target, layerMask, QueryTriggerInteraction.Ignore)) {
+        Vector3 target = player.transform.position + new Vector3(0, 1.5f, 0);
+        if (!Physics.Linecast(transform.position, target, layerMask, QueryTriggerInteraction.Ignore)) {
             RaycastHit hit;
-            Physics.Raycast(player.transform.position + player.transform.up*10 + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore);
+            Physics.Raycast(player.transform.position + player.transform.up * 10 + bomb.transform.position, transform.TransformDirection(-1 * Vector3.up), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore);
             Instantiate(bomb, hit.point, bomb.transform.rotation);
         }
-        //if (currentTarget.health <= 0) {
-        //    target.Remove(currentTarget);
-        //    StopAttacking();
-        //}
+        shootTime = Time.time;
+        shoot = true;
+        animator.ResetTrigger("Shoot");
     }
-
-    //protected override void Die() {
-    //    switch (state) {
-    //        case SoldierState.Attacking:
-    //            StopAttacking();
-    //            break;
-    //        case SoldierState.Marching:
-    //            StopMarching();
-    //            break;
-    //    }
-    //    state = SoldierState.Idle;
-    //    base.Die();
-    //}
-}*/
+}

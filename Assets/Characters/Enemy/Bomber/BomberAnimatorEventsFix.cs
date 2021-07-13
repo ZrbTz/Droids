@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BomberAnimatorEventsFix : MonoBehaviour {
-    [SerializeField] private NewBomber bomber;
+    [SerializeField] private Bomber bomber;
 
     private void Shoot() {
         bomber.Shoot();
