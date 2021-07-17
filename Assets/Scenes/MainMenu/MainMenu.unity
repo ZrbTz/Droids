@@ -5840,6 +5840,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184617361062045913, guid: 09148b1124e49d64ebdd84209fe36c0c, type: 3}
+      propertyPath: levelsData.Array.data[1].sceneName
+      value: livello1
+      objectReference: {fileID: 0}
     - target: {fileID: 184617361062045914, guid: 09148b1124e49d64ebdd84209fe36c0c, type: 3}
       propertyPath: m_RootOrder
       value: 3
