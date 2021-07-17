@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf388db1f516574fb80ecee0cba6111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomber: {fileID: 0}
+  bomber: {fileID: 1911481541036137361}
 --- !u!114 &5341660198861935412
 MonoBehaviour:
   m_ObjectHideFlags: 0
