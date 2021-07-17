@@ -50,12 +50,12 @@ GameObject:
   - component: {fileID: 6353576534877410783}
   - component: {fileID: 2394213769199747567}
   - component: {fileID: 2394213769199747572}
-  - component: {fileID: 2394213769199747569}
   - component: {fileID: 2394213769199747568}
   - component: {fileID: 1839724051339585616}
   - component: {fileID: 1087469766683317112}
+  - component: {fileID: 1209767235152516735}
   m_Layer: 13
-  m_Name: Soldier (scripts)
+  m_Name: Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,40 +112,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2394213769199747569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2302424956403857244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf28073b55c03e429a99a0af4dcb152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
-  enemy: 1
-  dead: 0
-  body: {fileID: 6697911790245636654}
-  destructionParticle: {fileID: 198572881580852744, guid: ac5a8f22cfc3962499589a1b65cd844f, type: 3}
-  hitNexus: 0
-  nexusDamage: 1
-  destination: {fileID: 0}
-  marching: 1
-  enemyName: Aracnodroid
-  enemyIcon: {fileID: 21300000, guid: bffdb66059f8a484cb0fd2966f188445, type: 3}
-  fadeSpeed: 1
-  path: []
-  passedPath: 0
-  animator: {fileID: 2394213769199747572}
-  navMeshAgent: {fileID: 0}
-  obstacleLayerMask:
-    serializedVersion: 2
-    m_Bits: 16384
-  obstacleScanIntervalMin: 0.5
-  obstacleScanIntervalMax: 0.75
-  attackDamage: 1
 --- !u!195 &2394213769199747568
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -203,6 +169,40 @@ MonoBehaviour:
   movement: {fileID: 8300000, guid: 7c35d7caa03c054458164ddeb6d0ef2b, type: 3}
   rotation: {fileID: 0}
   attack: {fileID: 8300000, guid: 3c6897a643a7135429b028304eafccca, type: 3}
+--- !u!114 &1209767235152516735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302424956403857244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec546a82c6c3ba469c67924c1e5fa5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  enemy: 0
+  dead: 0
+  body: {fileID: 6697911790245636654}
+  destructionParticle: {fileID: 198572881580852744, guid: ac5a8f22cfc3962499589a1b65cd844f, type: 3}
+  hitNexus: 0
+  nexusDamage: 1
+  destination: {fileID: 0}
+  marching: 1
+  enemyName: Aracnodroid
+  enemyIcon: {fileID: 21300000, guid: bffdb66059f8a484cb0fd2966f188445, type: 3}
+  fadeSpeed: 1
+  path: []
+  passedPath: 0
+  animator: {fileID: 2394213769199747572}
+  navMeshAgent: {fileID: 0}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 16384
+  obstacleScanIntervalMin: 0.5
+  obstacleScanIntervalMax: 0.75
+  attackDamage: 1
 --- !u!65 &3786018773598566538
 BoxCollider:
   m_ObjectHideFlags: 0

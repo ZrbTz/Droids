@@ -22,7 +22,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 263491460740225025, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
       propertyPath: m_Name
-      value: BigDude Variant
+      value: BigDudeDropGatling
       objectReference: {fileID: 0}
     - target: {fileID: 263491460740225030, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
       propertyPath: m_RootOrder
@@ -68,7 +68,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3685851377350748851, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
+      propertyPath: soldier
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 263491460740225024, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 448d6089887a1f942a0bce6f9f7b1abd, type: 3}
 --- !u!1 &8580281543093442021 stripped
 GameObject:

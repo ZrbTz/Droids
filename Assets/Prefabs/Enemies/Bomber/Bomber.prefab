@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 387868700341570294}
   - component: {fileID: 387868700341570289}
   - component: {fileID: 387868700341570290}
-  - component: {fileID: 387868700341570293}
   - component: {fileID: 9094333859740269141}
+  - component: {fileID: 1911481541036137361}
   m_Layer: 13
-  m_Name: Bomber (scripts)
+  m_Name: Bomber
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,35 +73,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &387868700341570293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387868700341570295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8df30d42bbf41409a4a75e49687da1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 8
-  enemy: 1
-  dead: 0
-  body: {fileID: 6718546466345027400}
-  destructionParticle: {fileID: 198572881580852744, guid: c4f8e65e71be6b94fb5861a862b13146, type: 3}
-  hitNexus: 0
-  nexusDamage: 1
-  destination: {fileID: 0}
-  enemyName: Bomber
-  enemyIcon: {fileID: 21300000, guid: 858e1313364beee4eb39bfcbceeb8352, type: 3}
-  fadeSpeed: 1
-  animator: {fileID: 387868700596538387}
-  bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}
-  state: 0
-  shootRange: 100
-  shootCooldown: 7
-  shootDelay: 10
 --- !u!114 &9094333859740269141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +87,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5735984854590085828, guid: e7e932f6d17713a40adc018b62341d3c, type: 3}
   isPlayer: 0
+--- !u!114 &1911481541036137361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387868700341570295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b92541cef3ce943b55dd1831fad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 8
+  enemy: 0
+  dead: 0
+  body: {fileID: 6718546466345027400}
+  destructionParticle: {fileID: 198572881580852744, guid: c4f8e65e71be6b94fb5861a862b13146, type: 3}
+  hitNexus: 0
+  nexusDamage: 1
+  destination: {fileID: 0}
+  marching: 1
+  enemyName: Bomber
+  enemyIcon: {fileID: 21300000, guid: 858e1313364beee4eb39bfcbceeb8352, type: 3}
+  fadeSpeed: 1
+  path: []
+  passedPath: 0
+  animator: {fileID: 387868700596538387}
+  navMeshAgent: {fileID: 0}
+  bomb: {fileID: 3990772861265749761, guid: 1e1bca52a92f08249bdf60814576140e, type: 3}
+  state: 0
+  shootRange: 100
+  shootCooldown: 7
+  shootDelay: 10
 --- !u!95 &387868700596538387
 Animator:
   serializedVersion: 3
@@ -147,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf388db1f516574fb80ecee0cba6111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomber: {fileID: 387868700341570293}
+  bomber: {fileID: 0}
 --- !u!114 &5341660198861935412
 MonoBehaviour:
   m_ObjectHideFlags: 0

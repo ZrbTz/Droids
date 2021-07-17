@@ -41,9 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 263491460740225030}
   - component: {fileID: 263491460740225031}
-  - component: {fileID: 263491460740225024}
   - component: {fileID: 263491460740225028}
   - component: {fileID: -4492698384091762860}
+  - component: {fileID: 5230187121076987320}
   m_Layer: 13
   m_Name: BigDude
   m_TagString: Enemy
@@ -89,36 +89,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &263491460740225024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263491460740225025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf28073b55c03e429a99a0af4dcb152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 22
-  enemy: 1
-  dead: 0
-  body: {fileID: 9211288005165194373}
-  destructionParticle: {fileID: 198572881580852744, guid: 2ff8ae4f57db87c4a83e0c557f92e690, type: 3}
-  hitNexus: 0
-  nexusDamage: 1
-  destination: {fileID: 0}
-  enemyName: Stomper
-  enemyIcon: {fileID: 21300000, guid: 7a524640f84cf2844874d71f88c2c054, type: 3}
-  fadeSpeed: 1
-  animator: {fileID: 5963480313353242931}
-  obstacleLayerMask:
-    serializedVersion: 2
-    m_Bits: 16384
-  obstacleScanIntervalMin: 0.5
-  obstacleScanIntervalMax: 0.75
-  attackDamage: 2
 --- !u!54 &263491460740225028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,6 +119,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconPrefab: {fileID: 5735984854590085828, guid: e7e932f6d17713a40adc018b62341d3c, type: 3}
   isPlayer: 0
+--- !u!114 &5230187121076987320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263491460740225025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec546a82c6c3ba469c67924c1e5fa5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 22
+  enemy: 0
+  dead: 0
+  body: {fileID: 9211288005165194373}
+  destructionParticle: {fileID: 198572881580852744, guid: 2ff8ae4f57db87c4a83e0c557f92e690, type: 3}
+  hitNexus: 0
+  nexusDamage: 1
+  destination: {fileID: 0}
+  marching: 1
+  enemyName: Stomper
+  enemyIcon: {fileID: 21300000, guid: 7a524640f84cf2844874d71f88c2c054, type: 3}
+  fadeSpeed: 1
+  path: []
+  passedPath: 0
+  animator: {fileID: 5963480313353242931}
+  navMeshAgent: {fileID: 0}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleScanIntervalMin: 0.5
+  obstacleScanIntervalMax: 0.75
+  attackDamage: 2
 --- !u!64 &5916866677915569125
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -201,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28b49b8e7fcb6a49990fec68f754041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldier: {fileID: 263491460740225024}
+  soldier: {fileID: 0}
 --- !u!114 &5509928492148713482
 MonoBehaviour:
   m_ObjectHideFlags: 0
