@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b92541cef3ce943b55dd1831fad7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 8
+  _health: 8
   enemy: 0
   dead: 0
   body: {fileID: 6718546466345027400}

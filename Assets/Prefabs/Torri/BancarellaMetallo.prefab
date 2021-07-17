@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52a6147c8790754b9e6cecc3ddc5d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  _health: 10
   enemy: 0
   dead: 0
   body: {fileID: 0}

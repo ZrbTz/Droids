@@ -5,28 +5,42 @@ using UnityEngine;
 public class SoundPauseController : MonoBehaviour
 {
     private GameManager gameManager;
-    private bool audioIsPaused = false;
     private AudioSource _speaker;
 
     // Start is called before the first frame update
     void Start()
     {
         _speaker = this.GetComponent<AudioSource>();
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = GameManager.Instance;
+        gameManager.pauseEvent.AddListener(pauseAudio);
+        gameManager.resumeEvent.AddListener(unpauseAudio);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (gameManager.IsPaused() && !audioIsPaused)
-        {
-            audioIsPaused = true;
-            _speaker.Pause();
-        }
-        else if(!gameManager.IsPaused() && audioIsPaused)
-        {
-            audioIsPaused = false;
-            _speaker.UnPause();
-        }
+    void pauseAudio() {
+        _speaker.Pause();
+    }
+
+    void unpauseAudio() {
+        _speaker.UnPause();
+    }
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (gameManager.IsPaused() && !audioIsPaused)
+    //    {
+    //        audioIsPaused = true;
+    //        _speaker.Pause();
+    //    }
+    //    else if(!gameManager.IsPaused() && audioIsPaused)
+    //    {
+    //        audioIsPaused = false;
+    //        _speaker.UnPause();
+    //    }
+    //}
+
+    private void OnDestroy() {
+        gameManager.pauseEvent.RemoveListener(pauseAudio);
+        gameManager.resumeEvent.RemoveListener(unpauseAudio);
     }
 }

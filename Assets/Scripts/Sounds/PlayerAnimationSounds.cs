@@ -28,23 +28,36 @@ public class PlayerAnimationSounds : MonoBehaviour
         _speaker = CreateSpeaker(Volume, this.gameObject);
         gun_speaker = CreateSpeaker(Volume, shootingPoint);
         _controller = this.GetComponent<vThirdPersonController>();
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = GameManager.Instance;
+        gameManager.pauseEvent.AddListener(pauseAudio);
+        gameManager.resumeEvent.AddListener(unpauseAudio);
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
 
-        if (gameManager.IsPaused() && !audioIsPaused)
-        {
-            _speaker.Pause();
-            gun_speaker.Pause();
-        }
-        else if (!gameManager.IsPaused() && audioIsPaused)
-        {
-            _speaker.UnPause();
-            gun_speaker.UnPause();
-        }
+    //    if (gameManager.IsPaused() && !audioIsPaused)
+    //    {
+    //        _speaker.Pause();
+    //        gun_speaker.Pause();
+    //    }
+    //    else if (!gameManager.IsPaused() && audioIsPaused)
+    //    {
+    //        _speaker.UnPause();
+    //        gun_speaker.UnPause();
+    //    }
+    //}
+
+
+    void pauseAudio() {
+        _speaker.Pause();
+        gun_speaker.Pause();
+    }
+
+    void unpauseAudio() {
+        _speaker.UnPause();
+        gun_speaker.UnPause();
     }
 
     private AudioSource CreateSpeaker(float intensity, GameObject origin)
@@ -162,5 +175,9 @@ public class PlayerAnimationSounds : MonoBehaviour
     public void Dash()
     {
         _speaker.PlayOneShot(dash);
+    }
+    private void OnDestroy() {
+        gameManager.pauseEvent.RemoveListener(pauseAudio);
+        gameManager.resumeEvent.RemoveListener(unpauseAudio);
     }
 }

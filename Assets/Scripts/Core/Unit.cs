@@ -5,7 +5,24 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     private float maxHealth;
-    public float health = 100f;
+
+    public float health { 
+        get => _health; 
+        set { 
+            _health = value;
+            if(_health <= 0 && !dead) {
+                dead = true;
+                DropItem di = this.GetComponent<DropItem>();
+                if (di != null) {
+                    di.Drop();
+                }
+                Die();
+            }
+        } 
+    }
+    [SerializeField]
+    private float _health;
+
     [HideInInspector] public bool enemy = false;
     public bool dead = false;
     public Transform body;
@@ -24,19 +41,7 @@ public class Unit : MonoBehaviour
         maxHealth = health;
     }
 
-    protected virtual void Update()
-    {
-        if (health <= 0 && !dead)
-        {
-            dead = true;
-            DropItem di = this.GetComponent<DropItem>();
-            if (di != null)
-            {
-                di.Drop();
-            }
-            Die();
-        }
-    }
+    protected virtual void Update(){}
 
     public float Distance(GameObject other)
     {

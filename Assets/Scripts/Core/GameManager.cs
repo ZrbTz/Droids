@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent spawnEvent;
 
+    public UnityEvent pauseEvent;
+    public UnityEvent resumeEvent;
+
     private void Awake()
     {
         Application.targetFrameRate = 1000;
@@ -182,6 +185,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
 
         isPaused = true;
+        pauseEvent.Invoke();
     }
 
     public void Resume()
@@ -191,6 +195,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
 
         isPaused = false;
+        resumeEvent.Invoke();
     }
 
     public bool IsPaused()

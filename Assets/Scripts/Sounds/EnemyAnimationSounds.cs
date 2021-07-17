@@ -26,7 +26,9 @@ public class EnemyAnimationSounds : MonoBehaviour
     void Start()
     {
         _speaker = CreateSpeaker(Volume);
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = GameManager.Instance;
+        gameManager.pauseEvent.AddListener(pauseAudio);
+        gameManager.resumeEvent.AddListener(unpauseAudio);
 
         if (engined)
         {
@@ -35,18 +37,26 @@ public class EnemyAnimationSounds : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (gameManager.IsPaused() && !audioIsPaused)
-        {
-            audioIsPaused = true;
-            _speaker.Pause();
-        }
-        else if(!gameManager.IsPaused() && audioIsPaused)
-        {
-            audioIsPaused = false;
-            _speaker.UnPause();
-        }
+    //void Update()
+    //{
+    //    if (gameManager.IsPaused() && !audioIsPaused)
+    //    {
+    //        audioIsPaused = true;
+    //        _speaker.Pause();
+    //    }
+    //    else if(!gameManager.IsPaused() && audioIsPaused)
+    //    {
+    //        audioIsPaused = false;
+    //        _speaker.UnPause();
+    //    }
+    //}
+
+    void pauseAudio() {
+        _speaker.Pause();
+    }
+
+    void unpauseAudio() {
+        _speaker.UnPause();
     }
 
     private AudioSource CreateSpeaker(float intensity)
@@ -99,6 +109,11 @@ public class EnemyAnimationSounds : MonoBehaviour
     public void Impact()
     {
         _speaker.PlayOneShot(attack);
+    }
+
+    private void OnDestroy() {
+        gameManager.pauseEvent.RemoveListener(pauseAudio);
+        gameManager.resumeEvent.RemoveListener(unpauseAudio);
     }
     #region Summoner
     public void OpeningSound()
