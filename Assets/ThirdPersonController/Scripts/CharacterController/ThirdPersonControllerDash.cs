@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Invector.vCharacterController;
+using UnityEngine.Events;
 
 public class ThirdPersonControllerDash : MonoBehaviour
 {
@@ -30,8 +31,11 @@ public class ThirdPersonControllerDash : MonoBehaviour
     public TrailRenderer trailPrefab;
     private TrailRenderer trail1, trail2;
 
+    public UnityEvent dashEvent;
+
     void Awake()
     {
+        EventTable.AddEvent("Dash", dashEvent);
         gameUI = FindObjectOfType<GameUI>();
     }
 
@@ -90,7 +94,8 @@ public class ThirdPersonControllerDash : MonoBehaviour
     {
         if (callCount > 0 && !controller.isDashing)
         {
-            if (SuggestionController.Instance.actions.TryGetValue("Dash", out DoActionSuggestion action)) action.incrementPressCounter();
+            //if (SuggestionController.Instance.actions.TryGetValue("Dash", out DoActionSuggestion action)) action.incrementPressCounter();
+            dashEvent?.Invoke();
             callCount--;
             stopDash = true;
             dashRemainingStopTime = 0.0f;

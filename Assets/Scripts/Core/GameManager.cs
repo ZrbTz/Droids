@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +33,8 @@ public class GameManager : MonoBehaviour
     private bool isPaused;
     private bool isGameOver = false;
 
+    public UnityEvent spawnEvent;
+
     private void Awake()
     {
         Application.targetFrameRate = 1000;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         difficulty = (GameDifficulty)Enum.Parse(typeof(GameDifficulty), PlayerPrefs.GetString("Difficulty", "Normal"));
+        EventTable.AddEvent("Spawn", spawnEvent);
 
         gameUI = FindObjectOfType<GameUI>();
         Resume();
@@ -141,7 +143,8 @@ public class GameManager : MonoBehaviour
         {
             if (!SuggestionController.Instance.isBlocking()) {
                 state = SpawnState.SPAWNING;
-                if (SuggestionController.Instance.actions.TryGetValue("Spawn", out DoActionSuggestion action)) action.incrementPressCounter();
+                spawnEvent?.Invoke();
+                //if (SuggestionController.Instance.actions.TryGetValue("Spawn", out DoActionSuggestion action)) action.incrementPressCounter();
                 emptySpawners = 0;
                 foreach (Spawner spawner in spawners) spawner.spawnerObj.GetComponent<SpawnEnemy>().spawnHorde(nextBigHorde);
                 nextBigHorde++;

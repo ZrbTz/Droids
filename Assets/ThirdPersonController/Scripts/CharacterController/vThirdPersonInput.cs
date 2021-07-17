@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Invector.vCharacterController
 {
@@ -26,10 +27,12 @@ namespace Invector.vCharacterController
         #endregion
 
         private bool isShooting = false;
+        public UnityEvent jumpEvent;
 
         void Awake()
         {
             gameManager = FindObjectOfType<GameManager>();
+            EventTable.AddEvent("Jump", jumpEvent);
         }
 
         protected virtual void Start()
@@ -209,7 +212,8 @@ namespace Invector.vCharacterController
         {
             if (Input.GetButtonDown("Jump") && JumpConditions())
             {
-                if (SuggestionController.Instance.actions.TryGetValue("Jump", out DoActionSuggestion action)) action.incrementPressCounter();
+                jumpEvent?.Invoke();
+                //if (SuggestionController.Instance.actions.TryGetValue("Jump", out DoActionSuggestion action)) action.incrementPressCounter();
                 cc.Jump();
                 this.GetComponent<PlayerAnimationSounds>().Jump();
             }

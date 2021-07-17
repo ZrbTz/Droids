@@ -15,11 +15,13 @@ public class DoActionSuggestion : Suggestion {
     public override void init() {
         //timer = cooldown;
         pressCounter = 0;
-        SuggestionController.Instance.actions.Add(actionName, this);
+        //SuggestionController.Instance.actions.Add(actionName, this);
+        EventTable.AddListener(actionName, incrementPressCounter);
     }
 
     public override void reset() {
-        SuggestionController.Instance.actions.Remove(actionName);
+        //SuggestionController.Instance.actions.Remove(actionName);
+        EventTable.RemoveListener(actionName, incrementPressCounter);
     }
 
     public override bool IsCompleted(GameObject player) {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
@@ -14,9 +15,14 @@ public class InputManager : MonoBehaviour
     public bool WeaponFire { get; set; }
     public bool WeaponFireDown { get; set; }
 
+    public UnityEvent weaponSwitchEvent;
+    public UnityEvent weaponFireEvent;
+
     void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        EventTable.AddEvent("WeaponSwitch", weaponSwitchEvent);
+        EventTable.AddEvent("Fire1", weaponFireEvent);
     }
 
     void Start()
@@ -80,11 +86,12 @@ public class InputManager : MonoBehaviour
 
     private void GetWeaponInput()
     {
-        DoActionSuggestion action;
+        //DoActionSuggestion action;
         if (Input.GetButtonDown("WeaponSwitch"))
         {
             WeaponSwitched = true;
-            if (SuggestionController.Instance.actions.TryGetValue("WeaponSwitch", out action)) action.incrementPressCounter();
+            weaponSwitchEvent?.Invoke();
+            //if (SuggestionController.Instance.actions.TryGetValue("WeaponSwitch", out action)) action.incrementPressCounter();
         }
         else
         {
@@ -119,6 +126,8 @@ public class InputManager : MonoBehaviour
             firingWithController = true;
         }
 
-        if (WeaponFireDown && SuggestionController.Instance.actions.TryGetValue("Fire1", out action)) action.incrementPressCounter();  
+        //if (WeaponFireDown && SuggestionController.Instance.actions.TryGetValue("Fire1", out action)) action.incrementPressCounter();  
+        if(WeaponFireDown)
+            weaponFireEvent?.Invoke();
     }
 }

@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Invector.vCharacterController
 {
     public class vThirdPersonController : vThirdPersonAnimator
     {
+        public UnityEvent sprintEvent;
+
+        private void Awake() {
+            EventTable.AddEvent("Sprint", sprintEvent);
+        }
+
         public virtual void ControlAnimatorRootMotion()
         {
             if (!this.enabled) return;
@@ -107,7 +114,9 @@ namespace Invector.vCharacterController
                 isSprinting = false;
             }
 
-            if (!isSprintingOld && isSprinting && SuggestionController.Instance.actions.TryGetValue("Sprint", out DoActionSuggestion action)) action.incrementPressCounter();
+            if (!isSprintingOld && isSprinting)
+                sprintEvent?.Invoke();
+            //if (!isSprintingOld && isSprinting && SuggestionController.Instance.actions.TryGetValue("Sprint", out DoActionSuggestion action)) action.incrementPressCounter();
         }
 
         public virtual void Strafe()
