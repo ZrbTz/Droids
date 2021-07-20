@@ -29,10 +29,14 @@ public class Proiettile_Inseguimento : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        foreach (Transform child in this.transform)
+        if (collision.gameObject.tag  != "Enemy")
         {
-            Destroy(child.gameObject);
+            foreach (Transform child in this.transform)
+            {
+                Destroy(child.gameObject);
+            }
+            Destroy(this.gameObject);
         }
-        Destroy(this);
+        
     }
 }

@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4967780036580690258, guid: c3a5377340e182e44ac94d354648d223, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7598146928578306445, guid: c3a5377340e182e44ac94d354648d223, type: 3}
       propertyPath: slowPercentuale
       value: 0.5
