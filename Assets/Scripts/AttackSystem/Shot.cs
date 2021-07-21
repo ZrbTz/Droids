@@ -51,11 +51,9 @@ public class Shot : MonoBehaviour
         Unit enemy = collision.collider.transform.root.GetComponent<Unit>();
         if (enemy && enemy.enemy) {
             Hit(enemy, collision.contacts[0].point);
-            Debug.Log("enemy found");
         }
         else {
             Hit(collision.contacts[0].point);
-            Debug.Log("enemy not found");
         }
     }
 

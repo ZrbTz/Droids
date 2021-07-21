@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Spiderdroid : Unit {
     private enum spiderState {
-        Hiding, Catching, Escaping
+        Hiding, Catching, Escaping, Hit
     }
 
+    private float currentDamage = 0.0f;
     public override float health {
         get => _health;
         set {
+            currentDamage += (_health - value);
             _health = value;
-            if (_health <= 0 && !dead) {
-                dead = true;
-                dropItem.Drop();
-                Die();
+            if(currentDamage >= 5f) {
+                //dropItem.Drop();
+                currentDamage = 0.0f;
+                currentState = spiderState.Hit;
+                rb.useGravity = true;
+                rb.isKinematic = false;
+                //transform.position = hidingSpot.transform.position;
+                jumpCounter = 0;
             }
+            //if (_health <= 0 && !dead) {
+            //    dead = true;
+            //    dropItem.Drop();
+            //    Die();
+            //}
         }
     }
 
@@ -90,6 +101,16 @@ public class Spiderdroid : Unit {
             jumpTimer = 5f;
             rb.useGravity = false;
             rb.isKinematic = true;
+        }
+        else if(currentState == spiderState.Hit && collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+            dropItem.Drop();
+            transform.position = hidingSpot.transform.position;
+            currentState = spiderState.Hiding;
+            jumpTimer = 5f;
+            if(_health <= 0) {
+                dead = true;
+                Die();
+            }
         }
     }
 }
