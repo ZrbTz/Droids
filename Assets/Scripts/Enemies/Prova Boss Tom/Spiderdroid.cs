@@ -51,9 +51,8 @@ public class Spiderdroid : Unit {
     }
 
     public float jumpTimer = 5f;
-    private Vector3 startingPosition;
     private int jumpCounter = 0;
-    private float interpolator = 0.0f;
+    private float speed = 50f;
     protected override void Update() {
         switch (currentState) {
             case spiderState.Hiding:
@@ -68,14 +67,12 @@ public class Spiderdroid : Unit {
             case spiderState.Escaping:
                 jumpTimer -= Time.deltaTime;
                 if(jumpTimer <= 0) {
-                    transform.position = Vector3.Lerp(startingPosition, jumpingGraph[jumpCounter].transform.position, interpolator);
-                    interpolator += 0.5f * Time.deltaTime;
-                    if(interpolator > 1f) {
-                        interpolator = 0.0f; 
+                    float step = speed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, jumpingGraph[jumpCounter].transform.position, step);
+                    if(Vector3.Distance(transform.position, jumpingGraph[jumpCounter].transform.position) < 0.001f) {
                         jumpTimer = 5f;
                         jumpCounter++;
                         if (jumpCounter == jumpingGraph.Length) jumpCounter = 0;
-                        startingPosition = transform.position;
                     }
                 }
                 break;
@@ -90,7 +87,6 @@ public class Spiderdroid : Unit {
             dropItem.toDrop = t.GetPlaceableItemPrefab();
             Destroy(tower.gameObject);
             currentState = spiderState.Escaping;
-            startingPosition = transform.position;
             jumpTimer = 5f;
             rb.useGravity = false;
             rb.isKinematic = true;
