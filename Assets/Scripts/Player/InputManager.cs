@@ -15,6 +15,8 @@ public class InputManager : MonoBehaviour
     public bool WeaponFire { get; set; }
     public bool WeaponFireDown { get; set; }
 
+    public bool isStunned = false;
+
     public UnityEvent weaponSwitchEvent;
     public UnityEvent weaponFireEvent;
 
@@ -33,11 +35,15 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         GetPauseMenuInput();
-        if (!gameManager.IsPaused())
+        if (!gameManager.IsPaused() && !isStunned)
         {
             GetInventoryInput();
             GetDashInput();
             GetWeaponInput();
+        }
+        if (isStunned)
+        {
+            WeaponFire = WeaponFireDown = false;
         }
     }
 
@@ -129,5 +135,17 @@ public class InputManager : MonoBehaviour
         //if (WeaponFireDown && SuggestionController.Instance.actions.TryGetValue("Fire1", out action)) action.incrementPressCounter();  
         if(WeaponFireDown)
             weaponFireEvent?.Invoke();
+    }
+
+    public void Stun(float durata)
+    {
+        isStunned = true;
+        StartCoroutine(rimaniInStun(durata));
+    }
+
+    IEnumerator rimaniInStun (float durata)
+    {
+        yield return new WaitForSeconds(durata);
+        isStunned = false;
     }
 }

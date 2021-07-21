@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Proiettile_Inseguimento : MonoBehaviour
 {
+    public float durataStun = 2.0f;
     public float velocitaProiettile = 10.0f;
     public float rotazioneProrietile = 1000.0f;
     public Transform target;
@@ -29,14 +30,17 @@ public class Proiettile_Inseguimento : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            InputManager im = collision.gameObject.GetComponent<InputManager>();
+            if (im != null)
+            {
+                im.Stun(durataStun);
+            }
+        }
         if (collision.gameObject.tag  != "Enemy")
         {
-            foreach (Transform child in this.transform)
-            {
-                Destroy(child.gameObject);
-            }
             Destroy(this.gameObject);
         }
-        
     }
 }

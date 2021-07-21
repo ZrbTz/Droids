@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f128e8ef3fb30449d708c0741ea7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durataStun: 2
   velocitaProiettile: 10
   rotazioneProrietile: 100
   target: {fileID: 0}
