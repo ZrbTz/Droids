@@ -11,6 +11,7 @@ public class Spiderdroid : Unit {
     public override float health {
         get => _health;
         set {
+            if (currentState != spiderState.Escaping) return;
             currentDamage += (_health - value);
             _health = value;
             if(currentDamage >= 5f) {
