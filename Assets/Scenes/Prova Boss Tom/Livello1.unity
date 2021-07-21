@@ -7262,6 +7262,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3399439120992501770, guid: 3de694aa1a659534cbe37d47c09aeb85, type: 3}
+      propertyPath: jumpTimer
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399439120992501770, guid: 3de694aa1a659534cbe37d47c09aeb85, type: 3}
       propertyPath: hidingSpot
       value: 
       objectReference: {fileID: 1293554422}

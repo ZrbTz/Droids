@@ -47,13 +47,16 @@ public class Spiderdroid : Unit {
         dropItem = this.gameObject.GetComponent<DropItem>();
         enemy = true;
         rb = this.gameObject.GetComponent<Rigidbody>();
+        jumpTimer = jumpTimerBaseValue;
+        searchcountdown = searchcountdownBaseValue;
     }
 
-    private float searchcountdown = 1f;
+    public float searchcountdownBaseValue = 20f;
+    private float searchcountdown;
     GameObject getRandomTower() {
         searchcountdown -= Time.deltaTime;
         if (searchcountdown <= 0f) {
-            searchcountdown = 5f;
+            searchcountdown = searchcountdownBaseValue;
             GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
             if (towers.Length == 0) return null;
             return towers[Random.Range(0, towers.Length)];
@@ -61,7 +64,8 @@ public class Spiderdroid : Unit {
         return null;
     }
 
-    public float jumpTimer = 5f;
+    public float jumpTimerBaseValue = 5f;
+    private float jumpTimer;
     private int jumpCounter = 0;
     private float speed = 50f;
     protected override void Update() {
@@ -81,7 +85,7 @@ public class Spiderdroid : Unit {
                     float step = speed * Time.deltaTime;
                     transform.position = Vector3.MoveTowards(transform.position, jumpingGraph[jumpCounter].transform.position, step);
                     if(Vector3.Distance(transform.position, jumpingGraph[jumpCounter].transform.position) < 0.001f) {
-                        jumpTimer = 5f;
+                        jumpTimer = jumpTimerBaseValue;
                         jumpCounter++;
                         if (jumpCounter == jumpingGraph.Length) jumpCounter = 0;
                     }
@@ -98,7 +102,7 @@ public class Spiderdroid : Unit {
             dropItem.toDrop = t.GetPlaceableItemPrefab();
             Destroy(tower.gameObject);
             currentState = spiderState.Escaping;
-            jumpTimer = 5f;
+            jumpTimer = jumpTimerBaseValue;
             rb.useGravity = false;
             rb.isKinematic = true;
         }
@@ -106,7 +110,7 @@ public class Spiderdroid : Unit {
             dropItem.Drop();
             transform.position = hidingSpot.transform.position;
             currentState = spiderState.Hiding;
-            jumpTimer = 5f;
+            jumpTimer = jumpTimerBaseValue;
             if(_health <= 0) {
                 dead = true;
                 Die();
