@@ -6,7 +6,7 @@ public class Unit : MonoBehaviour
 {
     private float maxHealth;
 
-    public float health { 
+    public virtual float health { 
         get => _health; 
         set { 
             _health = value;
@@ -20,8 +20,9 @@ public class Unit : MonoBehaviour
             }
         } 
     }
+
     [SerializeField]
-    private float _health;
+    protected float _health;
 
     [HideInInspector] public bool enemy = false;
     public bool dead = false;

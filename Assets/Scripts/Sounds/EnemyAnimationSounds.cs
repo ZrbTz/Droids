@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyAnimationSounds : MonoBehaviour
 {
     private GameManager gameManager;
-    private bool audioIsPaused = false;
     //SOlo per testing
     [SerializeField] bool mute;
     [SerializeField] [Range(0.0f, 1.0f)] float Volume = 0.1f;

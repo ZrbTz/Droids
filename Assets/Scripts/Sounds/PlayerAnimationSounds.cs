@@ -6,7 +6,6 @@ using Invector.vCharacterController;
 public class PlayerAnimationSounds : MonoBehaviour
 {
     private GameManager gameManager;
-    private bool audioIsPaused = false;
     [SerializeField] [Range(0.0f, 1.0f)] float Volume = 0.1f;
     [SerializeField] float maxDistance = 30.0f;
     [SerializeField] GameObject shootingPoint;
