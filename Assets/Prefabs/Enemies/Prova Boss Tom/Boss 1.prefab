@@ -104,7 +104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3402067961356211254}
-  - component: {fileID: 6136916810783342910}
   - component: {fileID: 3399439120992501770}
   - component: {fileID: 5360218229135920533}
   - component: {fileID: 1485270444049550444}
@@ -132,28 +131,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &6136916810783342910
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4568567406668229562}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &3399439120992501770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +150,7 @@ MonoBehaviour:
   destructionParticle: {fileID: 198572881580852744, guid: 2ff8ae4f57db87c4a83e0c557f92e690, type: 3}
   jumpingGraph: []
   hidingSpot: {fileID: 0}
+  jumpTimer: 5
 --- !u!54 &5360218229135920533
 Rigidbody:
   m_ObjectHideFlags: 0

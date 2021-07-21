@@ -24,16 +24,18 @@ public class Spiderdroid : Unit {
     [SerializeField] private GameObject hidingSpot;
     private DropItem dropItem;
 
-    private Tower targetTower;
+    //private Tower targetTower;
     private spiderState currentState;
+    private Rigidbody rb;
 
 
     protected override void Start() {
         base.Start();
         currentState = spiderState.Hiding;
-        targetTower = null;
+       // targetTower = null;
         dropItem = this.gameObject.GetComponent<DropItem>();
         enemy = true;
+        rb = this.gameObject.GetComponent<Rigidbody>();
     }
 
     private float searchcountdown = 1f;
@@ -48,6 +50,10 @@ public class Spiderdroid : Unit {
         return null;
     }
 
+    public float jumpTimer = 5f;
+    private Vector3 startingPosition;
+    private int jumpCounter = 0;
+    private float interpolator = 0.0f;
     protected override void Update() {
         switch (currentState) {
             case spiderState.Hiding:
@@ -57,7 +63,21 @@ public class Spiderdroid : Unit {
                     currentState = spiderState.Catching;
                 }
                 break;
+            case spiderState.Catching:
+                break;
             case spiderState.Escaping:
+                jumpTimer -= Time.deltaTime;
+                if(jumpTimer <= 0) {
+                    transform.position = Vector3.Lerp(startingPosition, jumpingGraph[jumpCounter].transform.position, interpolator);
+                    interpolator += 0.5f * Time.deltaTime;
+                    if(interpolator > 1f) {
+                        interpolator = 0.0f; 
+                        jumpTimer = 5f;
+                        jumpCounter++;
+                        if (jumpCounter == jumpingGraph.Length) jumpCounter = 0;
+                        startingPosition = transform.position;
+                    }
+                }
                 break;
         }
     }
@@ -70,6 +90,10 @@ public class Spiderdroid : Unit {
             dropItem.toDrop = t.GetPlaceableItemPrefab();
             Destroy(tower.gameObject);
             currentState = spiderState.Escaping;
+            startingPosition = transform.position;
+            jumpTimer = 5f;
+            rb.useGravity = false;
+            rb.isKinematic = true;
         }
     }
 }
