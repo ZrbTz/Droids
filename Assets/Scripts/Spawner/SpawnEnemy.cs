@@ -10,6 +10,7 @@ public class Horde {
     public float delay;
     public float tempoPerSpawnare = 5.0f;
     public HordeDifficulty difficulty;
+    public GameObject[] specialPath;
 }
 
 public enum HordeDifficulty {
@@ -140,7 +141,7 @@ public class SpawnEnemy : MonoBehaviour
                     
                     GameObject newEnemy = Instantiate(bigHorde.hordes[j].enemy, spawnPosition, Quaternion.identity);
                     newEnemy.GetComponent<Enemy>().destination = destination;
-                    newEnemy.GetComponent<Enemy>().path = this.path;
+                    newEnemy.GetComponent<Enemy>().path = bigHorde.hordes[j].specialPath.Length == 0 ? this.path : bigHorde.hordes[j].specialPath;
 
                     counter++;
                 }

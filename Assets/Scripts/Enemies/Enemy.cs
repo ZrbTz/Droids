@@ -62,6 +62,7 @@ public class Enemy : Unit {
         base.Start();
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.avoidancePriority = priorityCount++;
+        destination = path[passedPath];
         if (priorityCount == 99) priorityCount = 0;
         randomArea = Map.Instance.GetRandomArea();
         speedTemp = 0f;
@@ -83,6 +84,9 @@ public class Enemy : Unit {
         if (path[passedPath] == currentlyColliding) {
             passedPath++;
         }
+        destination = path[passedPath];
+        float destinationSize = destination.GetComponent<pathfinding>() == null ? 0.0f : destination.GetComponent<pathfinding>().size;
+        navMeshAgent.destination = destination.transform.position + new Vector3 (Random.Range(-destinationSize, destinationSize), Random.Range(-destinationSize, destinationSize), Random.Range(-destinationSize, destinationSize));
     }
 
     public float GetPathRemainingDistance() {
