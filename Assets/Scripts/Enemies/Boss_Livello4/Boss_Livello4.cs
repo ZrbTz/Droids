@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss_Livello4 : MonoBehaviour
+public class Boss_Livello4 : Enemy
 {
     public float intervalloProiettili = 4.0f;
     public Proiettile_Inseguimento missile;
