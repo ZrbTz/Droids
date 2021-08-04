@@ -12,7 +12,7 @@ public class Pickable : Interactable
     {
         //player.GetComponent<AudioSource>().PlayOneShot(pickSound, 0.5f);
         Obstacle o = this.gameObject.GetComponent<Obstacle>();
-        if (o != null) itemObject.setHealth(o.health);
+        if (o != null) itemObject.setHealth(o.health); //se vita == 0 non dovrebbe essere cancellato? Se no un oggetto nell'inventario appena piazzato "muore"
         if(player.GetComponent<Inventory>().AddItem(itemObject, inventorySlot))
         {
             Destroy(gameObject);

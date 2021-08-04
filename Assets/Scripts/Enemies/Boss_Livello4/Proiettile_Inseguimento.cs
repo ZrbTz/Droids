@@ -40,7 +40,7 @@ public class Proiettile_Inseguimento : MonoBehaviour
         }
         if (collision.gameObject.tag  != "Enemy")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     private InventorySlot[] inventory;
     [SerializeField]
     private int selectedSlot = 0;
-    public int[] inventorySlotSize = { 1, 5 };
+    public int[] inventorySlotSize = { 1, 5, 1 };
 
     private bool isShowingPreview = false;
     private GameObject previewItem;
@@ -93,6 +93,13 @@ public class Inventory : MonoBehaviour
             {
                 gameUI.AddTowerIcon(item.GetIconSprite());
             }
+            else if (slot == 2)
+            {
+                if (item.GetItemType() != ItemType.Resource)
+                {
+                    return false;
+                }
+            }
 
             return true;
         }
@@ -164,6 +171,16 @@ public class Inventory : MonoBehaviour
         if (inventory[selectedSlot] != null)
         {
             return inventory[selectedSlot].item;
+        }
+
+        return null;
+    }
+
+    public ItemObject GetSelectedItemObject(int slot)
+    {
+        if (inventory[slot] != null && inventory[slot].amount > 0)
+        {
+            return inventory[slot].item;
         }
 
         return null;

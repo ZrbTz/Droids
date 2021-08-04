@@ -80,13 +80,16 @@ public class Enemy : Unit {
         }
     }
 
-    public void updatePath(GameObject currentlyColliding) {
+    public virtual float updatePath(GameObject currentlyColliding) {
         if (path[passedPath] == currentlyColliding) {
+            Debug.Log("destinazione impostata");
             passedPath++;
+            destination = path[passedPath];
+            float destinationSize = destination.GetComponent<pathfinding>() == null ? 0.0f : destination.GetComponent<pathfinding>().size;
+            navMeshAgent.destination = destination.transform.position + new Vector3(Random.Range(-destinationSize, destinationSize), 0.0f, Random.Range(-destinationSize, destinationSize));
+            return ((destination.GetComponent<pathfinding>() != null) && destination.GetComponent<pathfinding>().no_stop) ? destination.GetComponent<pathfinding>().stopping_time : 0.0f;
         }
-        destination = path[passedPath];
-        float destinationSize = destination.GetComponent<pathfinding>() == null ? 0.0f : destination.GetComponent<pathfinding>().size;
-        navMeshAgent.destination = destination.transform.position + new Vector3 (Random.Range(-destinationSize, destinationSize), Random.Range(-destinationSize, destinationSize), Random.Range(-destinationSize, destinationSize));
+        return 0.0f;
     }
 
     public float GetPathRemainingDistance() {

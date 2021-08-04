@@ -5,7 +5,8 @@ using UnityEngine;
 public enum ItemType
 {
     Tower,
-    Throwable
+    Throwable,
+    Resource
 }
 
 [System.Serializable]
