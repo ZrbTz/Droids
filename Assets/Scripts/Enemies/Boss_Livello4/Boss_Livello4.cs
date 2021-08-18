@@ -13,7 +13,7 @@ public class Boss_Livello4 : Enemy
     public float durataStun = 15.0f;
     public float durata_esplosione = 0.5f;
 
-
+    public PuntoDeboleBoss pdb;
     private int vita = 3;
     private IEnumerator sparaProiettili;
     private IEnumerator ondataFinale;
@@ -28,6 +28,7 @@ public class Boss_Livello4 : Enemy
         sparaProiettili = coroutineSparaMissile(intervalloProiettili, -1);
         ondataFinale = coroutineSparaMissile(intervalloProiettili/10, 10);
         effettoStun = coroutineStun(durataStun);
+        pdb.DisableInteraction();
     }
 
     IEnumerator coroutineSparaMissile(float intervalloProiettili, int numProiettili)
@@ -70,6 +71,9 @@ public class Boss_Livello4 : Enemy
     public void danneggia ()
     {
         StopCoroutine(effettoStun);
+        //riprendi animazione
+        navMeshAgent.isStopped = false;
+        pdb.DisableInteraction();
         vita--;
         switch(vita)
         {
@@ -101,8 +105,9 @@ public class Boss_Livello4 : Enemy
                 StopCoroutine(sparaProiettili);
                 break;
         }
-        StopCoroutine(sospendiMovimento);
+        pdb.EnableInteraction();
         StartCoroutine(effettoStun);
+        StopCoroutine(sospendiMovimento);
     }
 
     IEnumerator coroutineStun(float durata_sosta)
@@ -126,5 +131,6 @@ public class Boss_Livello4 : Enemy
                 StartCoroutine(sparaProiettili);
                 break;
         }
+        pdb.EnableInteraction();
     }
 }

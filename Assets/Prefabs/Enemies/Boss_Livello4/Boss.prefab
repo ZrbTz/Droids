@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7372568222599159594}
   - component: {fileID: 2740244548491187868}
   - component: {fileID: 2038823929855321443}
+  - component: {fileID: 3821951312994669961}
   m_Layer: 0
   m_Name: Corpo
   m_TagString: Enemy
@@ -95,6 +96,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3821951312994669961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273579200616042379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d95b4b27ea77045b861a510d032798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  holdTime: 1
+  risorsaRichiesta: 1
+  boss: {fileID: 5589109404410976109}
 --- !u!1 &4568567406668229562
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +206,8 @@ MonoBehaviour:
   areaRallentante: {fileID: 7731508397306652430}
   colonnaStun: {fileID: 5239517049744238029}
   durataStun: 15
+  durata_esplosione: 0.5
+  pdb: {fileID: 3821951312994669961}
 --- !u!54 &2415001112272624833
 Rigidbody:
   m_ObjectHideFlags: 0

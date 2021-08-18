@@ -292,6 +292,9 @@ MonoBehaviour:
   groundMaxDistance: 0.5
   slopeLimit: 45
   isJumping: 0
+  sprintEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &945323987714172969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +317,9 @@ MonoBehaviour:
   cc: {fileID: 0}
   tpCamera: {fileID: 0}
   cameraMain: {fileID: 0}
+  jumpEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &945323987714172974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 5
   selectedSlot: 0
-  inventorySlotSize: 0100000005000000
+  inventorySlotSize: 010000000500000001000000
 --- !u!114 &945323987714172975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +362,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff9cb0a56427194991aba5295b5e648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStunned: 0
+  weaponSwitchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  weaponFireEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &945323987714172973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +423,9 @@ MonoBehaviour:
   trailTransform1: {fileID: 2922147046895158591}
   trailTransform2: {fileID: 8025856247860640064}
   trailPrefab: {fileID: 4559209429569807781, guid: 1b442cc4590d2fb4695a87dab7c24c96, type: 3}
+  dashEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &945323987714173014
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1125,7 +1141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cf163e1c98b9d204485c9d738b76a1e5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2892,7 +2908,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 049be966e20a34b4da19104157accc88, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

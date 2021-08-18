@@ -15,7 +15,7 @@ public class ResourceItem : ItemObject
 
     public override bool Use(GameObject player)
     {
-        return Activate();
+        return Activate(player);
     }
 
     public override void SetItemData(GameObject item)
@@ -23,7 +23,7 @@ public class ResourceItem : ItemObject
     }
 
     /* PLACEABLE */
-    public bool Activate()
+    public bool Activate(GameObject player)
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
         LayerMask tmpIgnoreLayers = ~ignoreLayers;
@@ -34,7 +34,12 @@ public class ResourceItem : ItemObject
             ResourceActivable target = hitInfo.collider.gameObject.GetComponent<ResourceActivable>();
             if (target != null)
             {
-                return target.TryActivate(this);
+                if(target.IsEnabled(player))
+                {
+                    target.Activate();
+                    return true;
+                }
+                 
             }
             return false;
         }
@@ -47,5 +52,10 @@ public class ResourceItem : ItemObject
     public LayerMask GetLayerMask()
     {
         return ignoreLayers;
+    }
+
+    public GameObject Oggetto()
+    {
+        return resourceItem;
     }
 }

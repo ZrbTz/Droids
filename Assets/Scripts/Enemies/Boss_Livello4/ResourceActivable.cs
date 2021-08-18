@@ -12,8 +12,9 @@ public class ResourceActivable : Interactable
         ItemObject it = inv.GetSelectedItemObject(2);
         if (it != null)
         {
-            if(TryActivate((ResourceItem) it))
+            if(CanActivate((ResourceItem) it))
             {
+                Activate();
                 inv.DecreaseItemAmount(2);
             }
         }
@@ -22,18 +23,18 @@ public class ResourceActivable : Interactable
 
     bool CanActivate(ResourceItem risorsaUtilizzata)
     {
-        return risorsaUtilizzata != null && risorsaUtilizzata.resourceType == risorsaRichiesta;
+        return risorsaUtilizzata != null && isEnabled && risorsaUtilizzata.resourceType == risorsaRichiesta;
     }
 
-    public bool TryActivate(ResourceItem risorsaUtilizzata)
+    /*public bool TryActivate(ResourceItem risorsaUtilizzata, GameObject player)
     {
-        if (CanActivate(risorsaUtilizzata))
+        if (CanActivate(risorsaUtilizzata, player))
         {
             Activate();
             return true;
         }
         return false;
-    }
+    }*/
 
     public virtual void Activate()
     {

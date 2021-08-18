@@ -15,7 +15,7 @@ public abstract class Interactable : MonoBehaviour
     private float holdTime = 1.0f;
     private float currentHoldTime;
 
-    private bool isEnabled = true;
+    protected bool isEnabled = true;
 
     public void IncreaseCurrentHoldTime()
     {

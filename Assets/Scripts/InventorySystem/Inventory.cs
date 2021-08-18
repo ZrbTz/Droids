@@ -120,7 +120,11 @@ public class Inventory : MonoBehaviour
         }
         else if (slot == 2)
         {
-
+            ResourceItem ri = (ResourceItem)inventory[slot].item;
+            Instantiate(ri.Oggetto(), transform.position, Quaternion.identity);
+            DecreaseItemAmount(slot);
+            inventory[slot] = new InventorySlot(item, item.GetAmount());
+            return true;
         }
 
         return false;
