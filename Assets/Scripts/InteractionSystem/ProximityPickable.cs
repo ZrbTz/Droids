@@ -20,7 +20,7 @@ public class ProximityPickable : Interactable
     public override void Interact(GameObject player)
     {
         //player.GetComponent<AudioSource>().PlayOneShot(pickSound, 0.5f);
-        if(IsEnabled())
+        if(IsEnabled(player))
         {
             if (player.GetComponent<Inventory>().AddItem(itemObject, inventorySlot))
             {

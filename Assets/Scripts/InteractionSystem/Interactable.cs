@@ -55,7 +55,7 @@ public abstract class Interactable : MonoBehaviour
         return holdTime;
     }
 
-    public bool IsEnabled()
+    public virtual bool IsEnabled(GameObject player)
     {
         return isEnabled;
     }

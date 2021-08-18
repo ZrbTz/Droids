@@ -9,6 +9,7 @@ public class TorreAntiBoss : ResourceActivable
 
     public override void Activate()
     {
-        boss.danneggia();
+        boss.stun();
+        //boss.danneggia();
     }
 }

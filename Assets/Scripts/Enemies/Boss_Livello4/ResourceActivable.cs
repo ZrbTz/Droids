@@ -8,19 +8,27 @@ public class ResourceActivable : Interactable
 
     public override void Interact(GameObject player)
     {
-        ItemObject it = player.GetComponent<Inventory>().GetSelectedItemObject(2);
+        Inventory inv = player.GetComponent<Inventory>();
+        ItemObject it = inv.GetSelectedItemObject(2);
         if (it != null)
         {
-            TryActivate((ResourceItem) it);
+            if(TryActivate((ResourceItem) it))
+            {
+                inv.DecreaseItemAmount(2);
+            }
         }
         
     }
 
+    bool CanActivate(ResourceItem risorsaUtilizzata)
+    {
+        return risorsaUtilizzata != null && risorsaUtilizzata.resourceType == risorsaRichiesta;
+    }
+
     public bool TryActivate(ResourceItem risorsaUtilizzata)
     {
-        if (risorsaUtilizzata.resourceType == risorsaRichiesta)
+        if (CanActivate(risorsaUtilizzata))
         {
-            Debug.Log("Funziona!");
             Activate();
             return true;
         }
@@ -30,5 +38,10 @@ public class ResourceActivable : Interactable
     public virtual void Activate()
     {
         //in base all'oggetto (classe ereditaria) comportamento diverso
+    }
+
+    public override bool IsEnabled(GameObject player)
+    {
+        return CanActivate((ResourceItem)player.GetComponent<Inventory>().GetSelectedItemObject(2));
     }
 }

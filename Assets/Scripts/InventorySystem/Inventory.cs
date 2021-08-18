@@ -118,6 +118,10 @@ public class Inventory : MonoBehaviour
             }
             return false;
         }
+        else if (slot == 2)
+        {
+
+        }
 
         return false;
     }
