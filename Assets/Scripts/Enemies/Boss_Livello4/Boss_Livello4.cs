@@ -27,7 +27,6 @@ public class Boss_Livello4 : Enemy
         navMeshAgent.destination = path[0].transform.position;
         sparaProiettili = coroutineSparaMissile(intervalloProiettili, -1);
         ondataFinale = coroutineSparaMissile(intervalloProiettili/10, 10);
-        effettoStun = coroutineStun(durataStun);
         pdb.DisableInteraction();
     }
 
@@ -94,8 +93,13 @@ public class Boss_Livello4 : Enemy
 
     public void stun()
     {
+        //Debug.Log("Stunnato");
         colonnaStun.SetActive(true);
-        switch(vita)
+        effettoStun = coroutineStun(durataStun);
+        StartCoroutine(effettoStun);
+        pdb.EnableInteraction();
+        //Debug.Log("Abilitata interazione");
+        switch (vita)
         {
             case 2:
                 areaRallentante.SetActive(false);
@@ -105,13 +109,12 @@ public class Boss_Livello4 : Enemy
                 StopCoroutine(sparaProiettili);
                 break;
         }
-        pdb.EnableInteraction();
-        StartCoroutine(effettoStun);
         StopCoroutine(sospendiMovimento);
     }
 
     IEnumerator coroutineStun(float durata_sosta)
     {
+        //Debug.Log("Partita coroutine");
         navMeshAgent.isStopped = true;
         yield return new WaitForSeconds(durata_esplosione);
         colonnaStun.SetActive(false);

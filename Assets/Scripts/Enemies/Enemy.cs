@@ -82,7 +82,7 @@ public class Enemy : Unit {
 
     public virtual float updatePath(GameObject currentlyColliding) {
         if (path[passedPath] == currentlyColliding) {
-            Debug.Log("destinazione impostata");
+            //Debug.Log("destinazione impostata");
             passedPath++;
             destination = path[passedPath];
             float destinationSize = destination.GetComponent<pathfinding>() == null ? 0.0f : destination.GetComponent<pathfinding>().size;
