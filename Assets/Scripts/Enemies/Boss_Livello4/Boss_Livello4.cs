@@ -134,6 +134,6 @@ public class Boss_Livello4 : Enemy
                 StartCoroutine(sparaProiettili);
                 break;
         }
-        pdb.EnableInteraction();
+        pdb.DisableInteraction();
     }
 }
