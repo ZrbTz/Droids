@@ -26,6 +26,15 @@ public class GameManager : MonoBehaviour
     //public KeyCode spawnKey;
     public Spawner[] spawners;
     public int numHordes;
+    public int _coins;
+    public int coins { 
+        get => _coins; 
+        set {
+            CoinsChanged?.Invoke(_coins, value);
+            _coins = value;
+        } 
+    }
+    public Action<int, int> CoinsChanged;
 
     public GameDifficulty difficulty;
     public bool ignoreDifficulty = true;

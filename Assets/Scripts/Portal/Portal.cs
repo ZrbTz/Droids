@@ -24,7 +24,7 @@ public class Portal : MonoBehaviour {
         } while (previous != this);
     }
 
-    private List<GameObject> GetTowers() {
+    public List<GameObject> GetTowers() {
         var towers = Physics.OverlapSphere(transform.position, radius).Where(collider => collider.CompareTag("Tower"))
             .Select(collider => collider.gameObject).Distinct().ToList();
         //towers = towers.Where(tower => tower != null).ToList();

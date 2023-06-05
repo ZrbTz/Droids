@@ -30,6 +30,8 @@ public class GameUI : MonoBehaviour
     private GameObject startWaveUI;
     [SerializeField]
     private NotificationUI notificationUI;
+    [SerializeField]
+    private ShopUI shopUI;
 
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
@@ -174,5 +176,12 @@ public class GameUI : MonoBehaviour
     public void UpdateNotification(string text)
     {
         notificationUI.SetNotification(text);
+    }
+
+    public void ShowShop(Merchant merchant) {
+        if (!shopUI.gameObject.activeSelf) {
+            shopUI.Set(merchant);
+            shopUI.gameObject.SetActive(true);
+        }
     }
 }
