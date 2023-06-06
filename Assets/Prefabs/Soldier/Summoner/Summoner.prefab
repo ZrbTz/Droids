@@ -209,10 +209,15 @@ MonoBehaviour:
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
+  marching: 1
   enemyName: Invoker
   enemyIcon: {fileID: 21300000, guid: f3340d1201027df44a8fa018226b50d1, type: 3}
   fadeSpeed: 1
+  path: []
+  passedPath: 0
+  moneyValue: 0
   animator: {fileID: 8865912680106573420}
+  navMeshAgent: {fileID: 0}
   spawnCount: 5
   spawnInterval: 1
   spawnCooldown: 7

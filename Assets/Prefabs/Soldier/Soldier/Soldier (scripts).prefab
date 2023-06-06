@@ -125,6 +125,7 @@ MonoBehaviour:
   fadeSpeed: 1
   path: []
   passedPath: 0
+  moneyValue: 10
   animator: {fileID: 2394213769199747572}
   navMeshAgent: {fileID: 0}
   obstacleLayerMask:

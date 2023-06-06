@@ -20,15 +20,20 @@ public class Enemy : Unit {
     public GameObject[] path;
     public int passedPath = 0;
 
+    public int moneyValue = 0;
     /*
     private Renderer[] rs;
     private List<Color> cs = new List<Color>();
     */
-    public void FadeAndDisappear()
-    {
+    public void FadeAndDisappear(){
         //in unity la trasparenza ha dei problemi con lo Z-buffer, il che produce artefatti significativi
         //StartCoroutine(LerpAlfa(fadeSpeed));
         this.Die(fadeSpeed);
+    }
+
+    protected override void Die() {
+        GameManager.Instance.coins += moneyValue;
+        base.Die();
     }
 
     /*
