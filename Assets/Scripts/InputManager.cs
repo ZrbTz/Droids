@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         GetPauseMenuInput();
-        if (!gameManager.IsPaused())
+        if (!gameManager.IsPaused() && GameManager.Instance.IsInputEnabled)
         {
             GetInventoryInput();
             GetDashInput();

@@ -56,6 +56,10 @@ namespace Invector.vCharacterController
 
         public virtual void UpdateMoveDirection(Transform referenceTransform = null)
         {
+            /*if (!GameManager.Instance.IsInputEnabled) {
+                moveDirection = Vector3.zero;
+                return;
+            }*/
             if (input.magnitude <= 0.01)
             {
                 moveDirection = Vector3.Lerp(moveDirection, Vector3.zero, (isStrafing ? strafeSpeed.movementSmooth : freeSpeed.movementSmooth) * Time.deltaTime);

@@ -96,8 +96,13 @@ namespace Invector.vCharacterController
 
         public virtual void MoveInput()
         {
-            cc.input.x = Input.GetAxis(horizontalInput);
-            cc.input.z = Input.GetAxis(verticallInput);
+            if (!GameManager.Instance.IsInputEnabled) {
+                cc.input.x = 0f;
+                cc.input.z = 0f;
+            } else {
+                cc.input.x = Input.GetAxis(horizontalInput);
+                cc.input.z = Input.GetAxis(verticallInput);
+            }
         }
 
         protected virtual void CameraInput()
@@ -117,18 +122,20 @@ namespace Invector.vCharacterController
                 cc.UpdateMoveDirection(cameraMain.transform);
             }
 
-            if (tpCamera == null)
-                return;
+            if(GameManager.Instance.IsInputEnabled) {
+                if (tpCamera == null)
+                    return;
 
-            var Y = Input.GetAxis(rotateCameraYInput);
-            var X = Input.GetAxis(rotateCameraXInput);
+                var Y = Input.GetAxis(rotateCameraYInput);
+                var X = Input.GetAxis(rotateCameraXInput);
 
-            tpCamera.RotateCamera(X, Y);
+                tpCamera.RotateCamera(X, Y);
+            }
         }
 
         protected virtual void StrafeInput()
         {
-            if (Input.GetKeyDown(strafeInput) && cc.isSprinting == false)
+            if (GameManager.Instance.IsInputEnabled && Input.GetKeyDown(strafeInput) && cc.isSprinting == false)
                 cc.Strafe();
         }
 
@@ -149,6 +156,9 @@ namespace Invector.vCharacterController
             else if (Input.GetButtonUp("Sprint") && cc.isSprinting) cc.Sprint(false);*/
             isShooting = inputManager.WeaponFire;
             sprintUp = sprintDown = false;
+            if (!GameManager.Instance.IsInputEnabled) {
+                return;
+            }
 
             if(Input.GetButtonDown("Sprint")
                 && !sprintingWithController) 
@@ -207,7 +217,7 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void JumpInput()
         {
-            if (Input.GetButtonDown("Jump") && JumpConditions())
+            if (GameManager.Instance.IsInputEnabled && Input.GetButtonDown("Jump") && JumpConditions())
             {
                 if (SuggestionController.Instance.actions.TryGetValue("Jump", out DoActionSuggestion action)) action.incrementPressCounter();
                 cc.Jump();

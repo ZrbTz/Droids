@@ -9,7 +9,7 @@ public class Merchant : Interactable {
 
     public override void Interact(GameObject player) {
         if (CheckSpawnArea()) {
-            FindObjectOfType<GameUI>().ShowShop(this);
+            FindObjectOfType<GameUI>().OpenShopMenu(this);
         } else {
             FindObjectOfType<GameUI>().UpdateNotification("Remove any turrets in the building area");
         }

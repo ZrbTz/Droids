@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Invector.vCharacterController;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     //public KeyCode spawnKey;
     public Spawner[] spawners;
     public int numHordes;
-    public int _coins;
+    private int _coins;
     public int coins { 
         get => _coins; 
         set {
@@ -39,9 +40,12 @@ public class GameManager : MonoBehaviour
     public GameDifficulty difficulty;
     public bool ignoreDifficulty = true;
 
+    private GameObject player; 
     private GameUI gameUI;
     private bool isPaused;
     private bool isGameOver = false;
+    private bool isInputEnabled = true;
+    public bool IsInputEnabled { get => isInputEnabled; }
 
     private void Awake()
     {
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;
+        player = GameObject.FindWithTag("Player");
 
         difficulty = (GameDifficulty)Enum.Parse(typeof(GameDifficulty), PlayerPrefs.GetString("Difficulty", "Normal"));
 
@@ -166,15 +171,17 @@ public class GameManager : MonoBehaviour
 
     public void HandlePause()
     {
-        if (!isGameOver)
-        {
-            if (isPaused)
-            {
+        if (isGameOver) {
+            return;
+        }
+
+        if (gameUI.IsInMenu) {
+            gameUI.CloseCurrentMenu();
+        } else {
+            if (isPaused) {
                 Resume();
                 gameUI.HidePauseMenu();
-            }
-            else
-            {
+            } else {
                 gameUI.ShowPauseMenu();
                 Pause();
             }
@@ -183,8 +190,6 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         Time.timeScale = 0f;
 
         isPaused = true;
@@ -192,8 +197,6 @@ public class GameManager : MonoBehaviour
 
     public void Resume()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         Time.timeScale = 1f;
 
         isPaused = false;
@@ -206,5 +209,15 @@ public class GameManager : MonoBehaviour
 
     public int getState() {
         return (int)state;
+    }
+
+    public void DisableInput() {
+        isInputEnabled = false;
+        player.GetComponent<AttackSystem>().enabled = false;
+    }
+
+    public void EnableInput() {
+        isInputEnabled = true;
+        player.GetComponent<AttackSystem>().enabled = true;
     }
 }

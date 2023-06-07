@@ -31,11 +31,6 @@ public class ShopUI : MonoBehaviour {
 
     private void OnEnable() {
         defaultAdapter.ClickSelect();
-        GameManager.Instance.Pause();
-    }
-
-    private void OnDisable() {
-        GameManager.Instance.Resume();
     }
 
     public void SelectItem(ShopItemAdapter adapter, ShopItemData item) {

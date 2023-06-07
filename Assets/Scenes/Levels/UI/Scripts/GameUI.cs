@@ -33,6 +33,10 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private ShopUI shopUI;
 
+    private bool isInMenu;
+    public bool IsInMenu { get => isInMenu; }
+    private GameObject currentMenu;
+
     public void UpdateNexusHealth(float currentHealth, float maxHealth)
     {
         float percentage = currentHealth / maxHealth;
@@ -84,11 +88,13 @@ public class GameUI : MonoBehaviour
     public void ShowPauseMenu()
     {
         pauseMenuUI.gameObject.SetActive(true);
+        ShowCursor();
     }
 
     public void HidePauseMenu()
     {
         pauseMenuUI.gameObject.SetActive(false);
+        HideCursor();
     }
 
 
@@ -178,10 +184,33 @@ public class GameUI : MonoBehaviour
         notificationUI.SetNotification(text);
     }
 
-    public void ShowShop(Merchant merchant) {
-        if (!shopUI.gameObject.activeSelf) {
-            shopUI.Set(merchant);
-            shopUI.gameObject.SetActive(true);
-        }
+    private void OpenMenu(GameObject menu) {
+        menu.SetActive(true);
+        isInMenu = true;
+        currentMenu = menu;
+        GameManager.Instance.DisableInput();
+        ShowCursor();
+    }
+
+    public void OpenShopMenu(Merchant merchant) {
+        shopUI.Set(merchant);
+        OpenMenu(shopUI.gameObject);
+    }
+
+    public void CloseCurrentMenu() {
+        currentMenu.gameObject.SetActive(false);
+        isInMenu = false;
+        GameManager.Instance.EnableInput();
+        HideCursor();
+    }
+
+    private void ShowCursor() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void HideCursor() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
