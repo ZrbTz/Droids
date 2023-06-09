@@ -30,11 +30,11 @@ public class SuggestionController : MonoBehaviour
     void Start()
     {
         numSuggestions = suggestions.Length;
-        if (numSuggestions > 0)
-        {
+        if (numSuggestions > 0) {
             currentSuggestionIndex = 0;
             StartSuggestion(0);
         }
+        else isActive = false;
     }
 
 
