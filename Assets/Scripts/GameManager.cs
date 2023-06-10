@@ -72,8 +72,8 @@ public class GameManager : MonoBehaviour
             Destroy(g);
         }
 
-        NewNexus[] areaNexus = GameObject.FindObjectsOfType<NewNexus>();
-        foreach(NewNexus n in areaNexus) n.StopAllCoroutines();
+        Nexus[] areaNexus = GameObject.FindObjectsOfType<Nexus>();
+        foreach(Nexus n in areaNexus) n.StopAllCoroutines();
 
         if (nextBigHorde == 2) {
             Debug.Log("object destroy");
