@@ -103,7 +103,7 @@ MonoBehaviour:
   type: 3
   dead: 0
   body: {fileID: 360552070363287902}
-  destructionParticle: {fileID: 198572881580852744, guid: ac5a8f22cfc3962499589a1b65cd844f, type: 3}
+  destructionParticle: {fileID: 198572881580852744, guid: c4f8e65e71be6b94fb5861a862b13146, type: 3}
   hitNexus: 0
   nexusDamage: 1
   destination: {fileID: 0}
