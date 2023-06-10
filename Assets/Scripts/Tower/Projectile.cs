@@ -18,13 +18,13 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         Transform root = other.gameObject.transform.root;
-        if (root.TryGetComponent(out NewInvoker newInvoker)) {
+        if (root.TryGetComponent(out Invoker newInvoker)) {
                 newInvoker.health -= damage*0.1f;
                 Destroy(gameObject);
             return;
         }
 
-        if (root.TryGetComponent(out NewBomber newbomber)) {
+        if (root.TryGetComponent(out Bomber newbomber)) {
             newbomber.health -= damage * 0.5f;
             Destroy(gameObject);
             return;

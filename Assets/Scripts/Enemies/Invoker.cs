@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-/*[RequireComponent(typeof(NavMeshAgent))]
 public class Invoker : Enemy {
-    private enum SoldierState {
+    public enum InvokerState {
         Marching,
-        Attacking,
+        Spawning,
         Idle
     }
 
-    private SoldierState state;
-    private NavMeshAgent navMeshAgent;
+    [SerializeField] private int spawnCount;
+    [SerializeField] private int spawnInterval;
+    [SerializeField] private int spawnCooldown;
+    [SerializeField] private int spawnDelay;
+    [SerializeField] private Transform spawnTransform;
+    private bool spawn;
+    private float spawnTime;
+    private int spawnIndex;
+    public InvokerState state;
     [SerializeField] private GameObject soldierToSpawn;
+
 
     protected override void Start() {
         base.Start();
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        nexus = GameManager.Instance.nexus;
         enemy = true;
-        randomArea = Map.Instance.GetRandomArea();
+        spawn = false;
+        spawnTime = Time.time;
         StartMarching();
     }
 
@@ -29,102 +35,70 @@ public class Invoker : Enemy {
         if (dead)
             return;
         switch (state) {
-            case SoldierState.Marching:
-                if (nexus.dead) {
+            case InvokerState.Marching:
+                UpdateAnimatorWalkSpeed();
+                if (CanSpawn())
                     StopMarching();
-                    state = SoldierState.Idle;
-                    break;
-                }
-                if (Distance(destination) <= attackRange) {
-                    StopMarching();
-                    StartAttacking();
-                    break;
+                break;
+            case InvokerState.Spawning:
+                if(Time.time - spawnTime >= spawnInterval) {
+                    SpawnSoldier();
+                    spawnTime = Time.time;
+                    spawnIndex++;
+                    if (spawnIndex >= spawnCount)
+                        StopSpawning();
                 }
                 break;
-            case SoldierState.Attacking:
-                if(nexus.dead) {
-                    StopAttacking();
-                    state = SoldierState.Idle;
-                    break;
-                }
-                if(Distance(destination) > attackRange) {
-                    StopAttacking();
-                    StartMarching();
-                    break;
-                }
-                if(Time.time - attackTime >= 1 / attackSpeed) {
-                    Attack();
-                    attackTime = Time.time;
-                }
-                break;
-            case SoldierState.Idle:
-                break;
-        }
-        switch (state) {
-            case SoldierState.Marching:
-                break;
-            case SoldierState.Attacking:
-                if (Time.time - attackTime >= 1 / attackSpeed) {
-                    Attack();
-                    attackTime = Time.time;
-                }
-                break;
-            case SoldierState.Idle:
+            case InvokerState.Idle:
                 break;
         }
     }
 
-    private void StartMarching() {
+    private bool CanSpawn() {
+        if (!spawn)
+            return Time.time - spawnTime >= spawnDelay;
+        else
+            return Time.time - spawnTime >= spawnCooldown;
+    }
+
+    public void StartSpawning() {
+        state = InvokerState.Spawning;
+        spawn = true;
+        spawnIndex = 1;
+    }
+
+    private void StopSpawning() {
+        animator.SetBool("Spawning", false);
+        state = InvokerState.Idle;
+    }
+
+    public void StartMarching() {
+        marching = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = destination.transform.position;
         navMeshAgent.SetAreaCost(randomArea, 1f);
-        state = SoldierState.Marching;
+        state = InvokerState.Marching;
+        UpdateAnimatorWalkSpeed();
     }
 
-    private void StopMarching() {
+    private void StopMarching()
+    {
+        marching = false;
+        this.GetComponent<EnemyAnimationSounds>().StopEngine();
         navMeshAgent.isStopped = true;
+        state = InvokerState.Idle;
+        animator.SetBool("Spawning", true);
     }
 
-    override protected void addTarget(Obstacle bersaglio) {
-        targets.Add(bersaglio);
-        StartAttacking();
-    }
+    private void StartAttacking() { }
 
-    override protected void removeTarget(Obstacle bersaglio) {
-        targets.Remove(bersaglio);
-        if (targets.Count > 0) {
-            StartAttacking();
-        }
-    }
+    private void StopAttacking() { }
 
-    private void StartAttacking() {
-        StopMarching();
-        state = SoldierState.Attacking;
+    private void SpawnSoldier() {
+        GameObject newEnemy = Instantiate(soldierToSpawn, spawnTransform.position, transform.rotation);
+        Enemy enemy = newEnemy.GetComponent<Enemy>();
+        enemy.destination = this.destination;
+        enemy.path = this.path;
+        enemy.passedPath = this.passedPath;
     }
-
-    private void StopAttacking() {
-        if (targets.Count > 0) {
-            StartAttacking();
-            return;
-        }
-        StartMarching();
-    }
-
-    private void Attack() {
-        GameObject newEnemy = Instantiate(soldierToSpawn, transform.position + 2*transform.forward, transform.rotation);
-        newEnemy.GetComponent<Enemy>().destination = this.destination;
-    }
-
-    protected override void Die() {
-        switch (state) {
-            case SoldierState.Attacking:
-                StopAttacking();
-                break;
-            case SoldierState.Marching:
-                StopMarching();
-                break;
-        }
-        state = SoldierState.Idle;
-        base.Die();
-    }
-}*/
+}

@@ -42,7 +42,7 @@ public class Shot : MonoBehaviour
         //    return;
         //}
 
-        if (root.TryGetComponent(out NewInvoker newInvoker)) {
+        if (root.TryGetComponent(out Invoker newInvoker)) {
             if (collision.collider.gameObject.name == "Core")
                 Hit(newInvoker, collision.contacts[0].point);
             return;
