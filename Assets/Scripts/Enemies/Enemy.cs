@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +13,11 @@ public class Enemy : Unit {
     protected int randomArea;
     public bool marching = true;
     public ParticleSystem damageParticle;
+
+    protected float attackRadius = 2f;
+    private int layerMask;
+    protected float attackTimeout = 2f;
+    protected float attackTimer = 0f;
 
     public string enemyName;
     public Sprite enemyIcon;
@@ -71,7 +77,8 @@ public class Enemy : Unit {
         if (priorityCount == 99) priorityCount = 0;
         randomArea = Map.Instance.GetRandomArea();
         speedTemp = 0f;
-        enemy = true;
+        type = UnitType.Enemy;
+        layerMask = LayerMask.GetMask("Player");
     }
 
     private float speedTemp;
@@ -101,5 +108,27 @@ public class Enemy : Unit {
             damageParticle.time = 0f;
             damageParticle.Play();
         }
+    }
+
+    protected void TryToAttackPlayer() {
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackTimeout) {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, layerMask);
+            if (hitColliders.Length > 0) {
+                PlayerUnit playerUnit = hitColliders[0].GetComponent<PlayerUnit>();
+                playerUnit.health -= nexusDamage;
+                attackTimer = 0;
+            }
+        }
+    }
+
+    protected override void Update() {
+        base.Update();
+        TryToAttackPlayer();
+    }
+
+    protected override void Die(float timeToDie) {
+        base.Die(timeToDie);
+        Instantiate(destructionParticle, body.position, body.rotation);
     }
 }

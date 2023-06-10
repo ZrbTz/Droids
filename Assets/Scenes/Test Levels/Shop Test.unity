@@ -3120,8 +3120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b520b1af62f25da419da32fdbc988ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nexus: {fileID: 0}
-  test: {fileID: 0}
 --- !u!114 &336769675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23707,8 +23705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b520b1af62f25da419da32fdbc988ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nexus: {fileID: 0}
-  test: {fileID: 0}
 --- !u!114 &2081205503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25120,7 +25116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1791907041927051841, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: suggestions.Array.size

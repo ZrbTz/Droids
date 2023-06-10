@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
-{
+public enum UnitType {
+    Enemy, Nexus, Player, None
+}
+
+public class Unit : MonoBehaviour{
+
     private float maxHealth;
     public float health = 100f;
-    [HideInInspector] public bool enemy = false;
+    [HideInInspector] public UnitType type = UnitType.None;
     public bool dead = false;
+
     public Transform body;
     public ParticleSystem destructionParticle;
 
@@ -47,10 +52,8 @@ public class Unit : MonoBehaviour
         return Vector3.Distance(p1, p2);
     }
 
-    protected virtual void Die()
-    {
+    protected virtual void Die(){
         Destroy(gameObject);
-        Instantiate(destructionParticle, body.position, body.rotation);
     }
 
     protected virtual void Die(float timeToDie)

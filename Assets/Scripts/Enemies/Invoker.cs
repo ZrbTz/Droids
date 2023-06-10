@@ -24,7 +24,7 @@ public class Invoker : Enemy {
 
     protected override void Start() {
         base.Start();
-        enemy = true;
+        type = UnitType.Enemy;
         spawn = false;
         spawnTime = Time.time;
         StartMarching();

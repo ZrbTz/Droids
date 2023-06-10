@@ -49,7 +49,7 @@ public class Shot : MonoBehaviour
         }
 
         Unit enemy = collision.collider.transform.root.GetComponent<Unit>();
-        if (enemy && enemy.enemy)
+        if (enemy && (enemy.type == UnitType.Enemy))
             Hit(enemy, collision.contacts[0].point);
         else
             Hit(collision.contacts[0].point);
