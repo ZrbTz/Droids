@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial/Tutorial.unity
     guid: e3ddd2633a0be3e4d987cdf8053de7ca
   - enabled: 1
-    path: Assets/Scenes/TestGrafica/Streets.unity
+    path: Assets/Scenes/Streets/Streets.unity
     guid: 453b6c0330c53be4287acf88f1e666d8
   - enabled: 1
-    path: Assets/Scenes/SpiralLevel/ZumaLevel.unity
+    path: Assets/Scenes/Zuma/ZumaLevel.unity
     guid: bd19999c9548021448f98e4fbdb7fb52
   - enabled: 1
     path: Assets/Scenes/Poli/poli.unity
