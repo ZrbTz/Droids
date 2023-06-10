@@ -31,7 +31,7 @@ public class GrenadeExplosion : MonoBehaviour
         {
             if (c.transform.root.GetComponent<Enemy>() != null)
             {
-                c.transform.root.GetComponent<Unit>().health -= danno;
+                c.transform.root.GetComponent<Unit>().Damage(danno);
             }
         }
         Instantiate(explosionParticle, transform.position + Vector3.up * 1f, transform.rotation);

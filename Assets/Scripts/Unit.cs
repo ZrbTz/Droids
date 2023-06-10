@@ -64,4 +64,11 @@ public class Unit : MonoBehaviour
     {
         return maxHealth;
     }
+
+    public void Damage(float damage) {
+        health -= damage;
+        OnDamage(damage);
+    }
+
+    public virtual void OnDamage(float damage) { }
 }

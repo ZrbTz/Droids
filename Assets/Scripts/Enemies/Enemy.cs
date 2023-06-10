@@ -11,6 +11,7 @@ public class Enemy : Unit {
     public GameObject destination;
     protected int randomArea;
     public bool marching = true;
+    public ParticleSystem damageParticle;
 
     public string enemyName;
     public Sprite enemyIcon;
@@ -93,5 +94,12 @@ public class Enemy : Unit {
     public float GetPathRemainingDistance() {
         float distance = Vector3.Distance(this.transform.position, path[passedPath].transform.position);
         return distance;
+    }
+
+    public override void OnDamage(float damage) {
+        if (damageParticle != null) {
+            damageParticle.time = 0f;
+            damageParticle.Play();
+        }
     }
 }
