@@ -18,6 +18,7 @@ public class Enemy : Unit {
     private int layerMask;
     protected float attackTimeout = 2f;
     protected float attackTimer = 0f;
+    protected float knockBackForce = 500f;
 
     public string enemyName;
     public Sprite enemyIcon;

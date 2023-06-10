@@ -4877,28 +4877,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7071240970571143646, guid: 13a86831ed2618d47b813c3b1f0f6906, type: 3}
   m_PrefabInstance: {fileID: 539144807}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &539711689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3651090487727187378, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
-  m_PrefabInstance: {fileID: 3651090488381690763}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &539711703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539711689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 662742d82e6e6c14290123456c544469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  type: 3
-  dead: 0
-  body: {fileID: 0}
-  destructionParticle: {fileID: 0}
 --- !u!1001 &555300709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21152,6 +21130,10 @@ PrefabInstance:
       propertyPath: suggestions.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: 632f945bf3102084f9919f91037c66f8, type: 2}
+    - target: {fileID: 3651090487727187406, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
+      propertyPath: jumpWithRigidbodyForce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3651090487980006206, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -21228,9 +21210,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3651090487727187378, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 539711703}
     - targetCorrespondingSourceObject: {fileID: 3651090487038945177, guid: e69c235e91ddfa3449a8a4f04be910a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2025354265}
