@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,6 +20,7 @@ public class Enemy : Unit {
     protected float attackTimeout = 2f;
     protected float attackTimer = 0f;
     protected float knockBackForce = 500f;
+    protected float attackDelay = 1f;
 
     public string enemyName;
     public Sprite enemyIcon;
@@ -116,10 +118,18 @@ public class Enemy : Unit {
         if (attackTimer >= attackTimeout) {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, layerMask);
             if (hitColliders.Length > 0) {
-                PlayerUnit playerUnit = hitColliders[0].GetComponent<PlayerUnit>();
-                playerUnit.health -= nexusDamage;
+                StartCoroutine(AttackPlayer(attackDelay));
                 attackTimer = 0;
             }
+        }
+    }
+
+    IEnumerator AttackPlayer(float attackDelay) {
+        yield return new WaitForSeconds(attackDelay);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, layerMask);
+        if (hitColliders.Length > 0) {
+            PlayerUnit playerUnit = hitColliders[0].GetComponent<PlayerUnit>();
+            playerUnit.health -= nexusDamage;
         }
     }
 
