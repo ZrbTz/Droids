@@ -46,6 +46,6 @@ public class ShopUI : MonoBehaviour {
     public void Build() {
         GameManager.Instance.coins -= selectedItem.cost;
         merchant.SpawnTurret(selectedItem);
-        gameObject.SetActive(false);
+        FindObjectOfType<GameUI>().CloseCurrentMenu();
     }
 }
