@@ -19,19 +19,19 @@ public class Projectile : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         Transform root = other.gameObject.transform.root;
         if (root.TryGetComponent(out Invoker newInvoker)) {
-                newInvoker.health -= damage*0.1f;
+                newInvoker.Damage(damage * 0.1f);
                 Destroy(gameObject);
             return;
         }
 
         if (root.TryGetComponent(out Bomber newbomber)) {
-            newbomber.health -= damage * 0.5f;
+            newbomber.Damage(damage * 0.5f);
             Destroy(gameObject);
             return;
         }
 
         if (other.transform.root.GetComponent<Unit>() == target) {
-            target.health -= damage;
+            target.Damage(damage);
             Destroy(gameObject);
         }
     }

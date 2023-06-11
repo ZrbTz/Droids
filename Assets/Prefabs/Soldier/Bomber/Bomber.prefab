@@ -107,6 +107,7 @@ MonoBehaviour:
   destination: {fileID: 0}
   marching: 1
   damageParticle: {fileID: 0}
+  attackParticle: {fileID: 198755127273645396, guid: adaf09d06840f2642892a9e513853168, type: 3}
   enemyName: Bomber
   enemyIcon: {fileID: 21300000, guid: 858e1313364beee4eb39bfcbceeb8352, type: 3}
   fadeSpeed: 1

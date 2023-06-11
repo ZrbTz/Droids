@@ -23,7 +23,6 @@ public class Soldier : Enemy {
     private float obstacleScanInterval;
     private List<Obstacle> targets = new List<Obstacle>();
     private Obstacle currentTarget;
-    [SerializeField] private float attackDamage = 1f;
 
     protected override void Start() {
         base.Start();

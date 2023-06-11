@@ -10,10 +10,12 @@ public class Enemy : Unit {
     static int priorityCount = 0;
     public bool hitNexus = false;
     public float nexusDamage = 1f;
+    public float attackDamage = 1f;
     public GameObject destination;
     protected int randomArea;
     public bool marching = true;
     public ParticleSystem damageParticle;
+    public ParticleSystem attackParticle;
 
     protected float attackRadius = 2f;
     private int layerMask;
@@ -119,6 +121,9 @@ public class Enemy : Unit {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, layerMask);
             if (hitColliders.Length > 0) {
                 StartCoroutine(AttackPlayer(attackDelay));
+                var attackParticleInstance = Instantiate(attackParticle);
+                attackParticleInstance.transform.SetParent(body);
+                attackParticleInstance.transform.localPosition = Vector3.zero;
                 attackTimer = 0;
             }
         }
@@ -129,7 +134,7 @@ public class Enemy : Unit {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, layerMask);
         if (hitColliders.Length > 0) {
             PlayerUnit playerUnit = hitColliders[0].GetComponent<PlayerUnit>();
-            playerUnit.health -= nexusDamage;
+            playerUnit.Damage(attackDamage);
         }
     }
 

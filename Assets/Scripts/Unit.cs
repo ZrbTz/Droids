@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum UnitType {
     Enemy, Nexus, Player, None
@@ -17,6 +18,8 @@ public class Unit : MonoBehaviour{
     public ParticleSystem destructionParticle;
 
     private new Collider collider;
+
+    public Action<float, float> HealthChanged;
 
     protected virtual void Start()
     {
@@ -69,6 +72,7 @@ public class Unit : MonoBehaviour{
     }
 
     public void Damage(float damage) {
+        HealthChanged?.Invoke(health, health - damage);
         health -= damage;
         OnDamage(damage);
     }
