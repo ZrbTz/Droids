@@ -45,6 +45,7 @@ public class Enemy : Unit {
 
     protected override void Die() {
         GameManager.Instance.coins += moneyValue;
+        Instantiate(destructionParticle, body.position, body.rotation);
         base.Die();
     }
 

@@ -84,7 +84,7 @@ Transform:
   - {fileID: 3651090488557636562}
   - {fileID: 794345192585495458}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3651090486660132932
 PrefabInstance:
@@ -278,11 +278,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nexus
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5918368235264970297, guid: efbe24b2f6f402e468350476b157a072, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5918368235264970302, guid: efbe24b2f6f402e468350476b157a072, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6394708806380810069}
   m_SourcePrefab: {fileID: 100100000, guid: efbe24b2f6f402e468350476b157a072, type: 3}
+--- !u!1 &6956095470150071483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5918368235264970302, guid: efbe24b2f6f402e468350476b157a072, type: 3}
+  m_PrefabInstance: {fileID: 3651090487413258885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6394708806380810069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956095470150071483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b52af73f6a994aba0752cb8f4be8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  type: 3
+  dead: 0
+  body: {fileID: 0}
+  destructionParticle: {fileID: 0}
 --- !u!4 &6956095470150071487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5918368235264970298, guid: efbe24b2f6f402e468350476b157a072, type: 3}
@@ -485,7 +511,7 @@ PrefabInstance:
     - target: {fileID: 2363944782531942494, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
       propertyPath: nexus
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6394708806380810069}
     - target: {fileID: 2363944782531942494, guid: e39f642f54d0f7442a2efc240ce4cca9, type: 3}
       propertyPath: spawnKey
       value: 102

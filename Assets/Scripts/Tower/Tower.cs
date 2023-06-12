@@ -74,10 +74,12 @@ public class Tower : Unit {
         int maxPassedPath = -100000;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, enemyLayerMask);
         foreach (Collider hitCollider in hitColliders) {
-            if (!(hitCollider.transform.root.TryGetComponent(out Enemy enemy) && !enemy.dead && (type == UnitType.Enemy)))
+            if (!(hitCollider.transform.root.TryGetComponent(out Enemy enemy) && !enemy.dead && (enemy.type == UnitType.Enemy))) {
                 continue;
-            if (!LineOfFire(enemy))
+            }
+            if (!LineOfFire(enemy)) {
                 continue;
+            }
             float distance = enemy.GetPathRemainingDistance();
             //Debug.Log(distance);
             //if (!enemy.marching) { distance = range; }

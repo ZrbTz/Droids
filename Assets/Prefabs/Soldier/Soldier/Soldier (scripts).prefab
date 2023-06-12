@@ -106,9 +106,10 @@ MonoBehaviour:
   destructionParticle: {fileID: 198572881580852744, guid: c4f8e65e71be6b94fb5861a862b13146, type: 3}
   hitNexus: 0
   nexusDamage: 1
+  attackDamage: 1
   destination: {fileID: 0}
   marching: 1
-  damageParticle: {fileID: 0}
+  damageParticle: {fileID: 7535021787186201556}
   attackParticle: {fileID: 198755127273645396, guid: adaf09d06840f2642892a9e513853168, type: 3}
   enemyName: Aracnodroid
   enemyIcon: {fileID: 21300000, guid: bffdb66059f8a484cb0fd2966f188445, type: 3}
@@ -123,7 +124,6 @@ MonoBehaviour:
     m_Bits: 16384
   obstacleScanIntervalMin: 0.5
   obstacleScanIntervalMax: 0.75
-  attackDamage: 1
 --- !u!195 &2394213769199747568
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -549,7 +549,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 6493c902dfdeeba4f943bad10dcfc3e1, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -4576437871796204779, guid: 6493c902dfdeeba4f943bad10dcfc3e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7535021787205600916}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 655502746153253314, guid: 6493c902dfdeeba4f943bad10dcfc3e1, type: 3}
       insertIndex: -1
@@ -823,3 +826,74 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: -1}
+--- !u!1001 &7622281967730021235
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 360552070363287902}
+    m_Modifications:
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96281432948099527, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+      propertyPath: m_Name
+      value: Core Damage VFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+--- !u!198 &7535021787186201556 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 96281432933650599, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+  m_PrefabInstance: {fileID: 7622281967730021235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7535021787205600916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 96281432947807719, guid: 20c0572d26c5f9549baf780ac294e70d, type: 3}
+  m_PrefabInstance: {fileID: 7622281967730021235}
+  m_PrefabAsset: {fileID: 0}
